@@ -1,0 +1,78 @@
+
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:storipod_app/app/constant/string.dart';
+
+import '../constant/colour.dart';
+import '../constant/image.dart';
+
+PreferredSizeWidget imageAppbarWidget({
+  BuildContext? context,
+}) {
+  return AppBar(
+    backgroundColor: ColorPicker.whiteColor,
+    title: Image.asset(
+      ImagePickerImage.onbordingName,
+      height: 30.h,
+      width: 75.w,
+    ),
+    centerTitle: true,
+    toolbarHeight: 70.h,
+    elevation: 2,
+  );
+}
+PreferredSizeWidget appbarWithBack({
+  BuildContext? context,
+  Function()? onTaped,
+}) {
+  return AppBar(
+    backgroundColor: ColorPicker.whiteColor,
+
+    title: Image.asset(
+      ImagePickerImage.onbordingName,
+      height: 30.h,
+      width: 75.w,
+    ),
+    centerTitle: true,
+    automaticallyImplyLeading: false,
+    leading: InkWell(
+      onTap: onTaped,
+      child: Icon(
+        Icons.arrow_back_ios_new,
+        color: ColorPicker.blackColor,
+      ),
+    ),
+    toolbarHeight: 70.h,
+    elevation: 2,
+  );
+}
+
+PreferredSizeWidget appbarWithSkip({
+  BuildContext? context,
+  Function()? onTaped,
+}) {
+  return AppBar(
+    backgroundColor: ColorPicker.whiteColor,
+    actions: [Center(
+      child: Text(AppStrings.skip,style: TextStyle(fontSize: 14.sp,fontWeight:FontWeight.w700 ,
+      color:ColorPicker.blackColor ),
+          ),
+    )],
+    title: Image.asset(
+      ImagePickerImage.onbordingName,
+      height: 30.h,
+      width: 75.w,
+    ),
+    centerTitle: true,
+    automaticallyImplyLeading: false,
+    leading: InkWell(
+      onTap: onTaped,
+      child: Icon(
+        Icons.arrow_back,
+        color: ColorPicker.blackColor,
+      ),
+    ),
+    toolbarHeight: 70.h,
+    elevation: 2,
+  );
+}
