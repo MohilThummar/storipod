@@ -1,39 +1,39 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:storipod_app/app/common/appbar.dart';
-import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/createAccount/username/views/username_view.dart';
-import 'package:storipod_app/app/modules/login/views/login_view.dart';
+import 'package:storipod_app/app/modules/createAccount/userdetail/views/userdetail_view.dart';
 
-import '../../../common/app_button.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
-import '../bottomsheet.dart';
-import '../controllers/create_account_controller.dart';
+import '../../../../common/app_button.dart';
+import '../../../../common/app_text_field.dart';
+import '../../../../common/appbar.dart';
+import '../../../../constant/colour.dart';
+import '../../../../constant/string.dart';
+import '../../../login/views/login_view.dart';
+import '../controllers/username_controller.dart';
 
-class CreateAccountView extends GetView<CreateAccountController> {
-  const CreateAccountView({Key? key}) : super(key: key);
+class UsernameView extends GetView<UsernameController> {
+  const UsernameView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Get.put(UsernameController());
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
-      appBar: appbarWithSkip(context: context, onTaped: () {}),
+      appBar: appbarWithSkip(context: context, icon: true, onTaped: () {}),
       body: Padding(
-        padding: EdgeInsets.all(26.0),
+        padding: const EdgeInsets.all(26.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
                 height: 10.h,
               ),
+
               Text(
-                AppStrings.letGo,
+                AppStrings.chooseUserName,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.w800,
@@ -44,7 +44,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
                 height: 12.h,
               ),
               Text(
-                AppStrings.upLoadImage,
+                AppStrings.preferredName,
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 14.sp,
@@ -53,30 +53,53 @@ class CreateAccountView extends GetView<CreateAccountController> {
               SizedBox(
                 height: 58.h,
               ),
-              GestureDetector(
-                onTap: () {
-                  Get.bottomSheet(
-                      elevation: 3, enableDrag: true, CustomBottomSheet());
-                },
-                child: Container(
-                  width: 110,
-                  height: 110,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: ColorPicker.offSkyColor.withOpacity(0.3),
-                  ),
-                  child: Image.asset(ImagePickerImage.scanIcon),
-                ),
+              CustomTextField(
+                padding: EdgeInsets.all(16),
+                fillColor: ColorPicker.lightWhiteColor,
+                isDense: true,
+                suffixIconData1: Icon(null),
+                boderColor: ColorPicker.boderBlackColor,
+                controller: controller.userNameController,
+                hintText: AppStrings.enterUsername,
+                onTap: () {},
+                inputType: TextInputType.emailAddress,
               ),
+              // TypeAheadField(
+              //   textFieldConfiguration: TextFieldConfiguration(
+              //       autofocus: true,
+              //       style: DefaultTextStyle.of(context).style.copyWith(
+              //           fontStyle: FontStyle.italic
+              //       ),
+              //       decoration: InputDecoration(
+              //           border: OutlineInputBorder()
+              //       )
+              //   ),
+              //   suggestionsCallback: (pattern) async {
+              //     return Container();
+              //     // return await BackendService.getSuggestions(pattern);
+              //   },
+              //   itemBuilder: (context, suggestion) {
+              //     return ListTile(
+              //       leading: Icon(Icons.shopping_cart),
+              //       title: Text("name"),
+              //       subtitle: Text('enter user name'),
+              //     );
+              //   },
+              //   onSuggestionSelected: (suggestion) {
+              //     // Navigator.of(context).push(MaterialPageRoute(
+              //     //     builder: (context) => ProductPage(product: suggestion)
+              //     // ));
+              //   },
+              // ),
               SizedBox(
-                height: 266.h,
+                height: 27.h,
               ),
               ButtonWidget(
                 context: context,
                 height: 55,
                 width: 335,
                 onPressed: () {
-                  Get.to(UsernameView());
+                  Get.to(UserdetailView());
                 },
                 textColor: ColorPicker.blackColor,
                 title: AppStrings.proceed,
@@ -84,8 +107,9 @@ class CreateAccountView extends GetView<CreateAccountController> {
                 bgColor: ColorPicker.offGreyColor,
                 disableColor: ColorPicker.appButtonColor,
               ),
+
               SizedBox(
-                height: 30.h,
+                height: 355.h,
               ),
               InkWell(
                 onTap: () {

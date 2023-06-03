@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:storipod_app/app/constant/string.dart';
@@ -21,13 +20,13 @@ PreferredSizeWidget imageAppbarWidget({
     elevation: 2,
   );
 }
+
 PreferredSizeWidget appbarWithBack({
   BuildContext? context,
   Function()? onTaped,
 }) {
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
-
     title: Image.asset(
       ImagePickerImage.onbordingName,
       height: 30.h,
@@ -50,14 +49,32 @@ PreferredSizeWidget appbarWithBack({
 PreferredSizeWidget appbarWithSkip({
   BuildContext? context,
   Function()? onTaped,
+  bool icon = false,
 }) {
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
-    actions: [Center(
-      child: Text(AppStrings.skip,style: TextStyle(fontSize: 14.sp,fontWeight:FontWeight.w700 ,
-      color:ColorPicker.blackColor ),
+    actions: [
+      Center(
+        child: InkWell(
+          onTap: onTaped,
+          child: Padding(
+            padding: const EdgeInsets.only(right: 18.0),
+            child: icon == true
+                ? Icon(
+                    Icons.info_outline,
+                    color: ColorPicker.boderBlackColor,
+                  )
+                : Text(
+                    AppStrings.skip,
+                    style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w700,
+                        color: ColorPicker.blackColor),
+                  ),
           ),
-    )],
+        ),
+      )
+    ],
     title: Image.asset(
       ImagePickerImage.onbordingName,
       height: 30.h,
@@ -65,13 +82,13 @@ PreferredSizeWidget appbarWithSkip({
     ),
     centerTitle: true,
     automaticallyImplyLeading: false,
-    leading: InkWell(
-      onTap: onTaped,
-      child: Icon(
-        Icons.arrow_back,
-        color: ColorPicker.blackColor,
-      ),
-    ),
+    // leading: InkWell(
+    //   onTap: onTaped,
+    //   child: Icon(
+    //     Icons.arrow_back,
+    //     color: ColorPicker.blackColor,
+    //   ),
+    // ),
     toolbarHeight: 70.h,
     elevation: 2,
   );

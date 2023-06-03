@@ -12,12 +12,14 @@ dependencies:
   fluttertoast: ^8.2.1
   lottie: ^2.3.1
   flutter_screenutil: ^5.7.0
+  path_provider: ^2.0.15
   flutter_svg: ^2.0.4
   get_storage: ^2.1.1
   dio: ^5.1.1
   connectivity_plus: ^3.0.3
   dots_indicator: ^3.0.0
   intl: ^0.18.0
+  flutter_typeahead: ^4.6.0
   crypto: ^3.0.2
   url_launcher: ^6.1.10
   image_picker: ^0.8.7+1

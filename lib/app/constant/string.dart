@@ -34,4 +34,27 @@ class AppStrings {
   static String goToEmail = " Go to email ";
   static String passwordDialogContain =
       "We’ve sent you an email! Follow the instructions in the email to reset your password.";
+
+///=================Create Account===========
+static String letGo="First, let’s get to know you.";
+static String upLoadImage=" Upload an image or memoji";
+static String doYouHave=" Do you have an account? ";
+static String selectImage='Select image';
+static String takeImage='Take image';
+static String picImage='Pick from gallery';
+static String removeImage="Remove image";
+static String createAnAccount="Create an account";
+static String firstName="First name";
+static String phoneNumber="Phone number";
+static String secureAccount="Secure your account";
+static String protectAccount="Protect what you have to say.";
+static String createWith="Create account with";
+static String lastName="Last name";
+static String enterPasswordText="Enter password";
+static String confirmPassword="Confirm password";
+static String enterUsername="Enter a username";
+static String chooseUserName="Choose a username";
+static String storiesAudience="Let’s get your stories an audience.";
+static String preferredName="Enter your preferred username";
+
 }

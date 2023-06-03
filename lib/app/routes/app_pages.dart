@@ -1,6 +1,12 @@
 import 'package:get/get.dart';
 
 import '../modules/createAccount/bindings/create_account_binding.dart';
+import '../modules/createAccount/secureaccount/bindings/secureaccount_binding.dart';
+import '../modules/createAccount/secureaccount/views/secureaccount_view.dart';
+import '../modules/createAccount/userdetail/bindings/userdetail_binding.dart';
+import '../modules/createAccount/userdetail/views/userdetail_view.dart';
+import '../modules/createAccount/username/bindings/username_binding.dart';
+import '../modules/createAccount/username/views/username_view.dart';
 import '../modules/createAccount/views/create_account_view.dart';
 import '../modules/forgotaccount/bindings/forgotaccount_binding.dart';
 import '../modules/forgotaccount/views/forgotaccount_view.dart';
@@ -38,6 +44,23 @@ class AppPages {
       name: _Paths.CREATE_ACCOUNT,
       page: () => const CreateAccountView(),
       binding: CreateAccountBinding(),
+      children: [
+        GetPage(
+          name: _Paths.USERNAME,
+          page: () => const UsernameView(),
+          binding: UsernameBinding(),
+        ),
+        GetPage(
+          name: _Paths.USERDETAIL,
+          page: () => const UserdetailView(),
+          binding: UserdetailBinding(),
+        ),
+        GetPage(
+          name: _Paths.SECUREACCOUNT,
+          page: () => const SecureaccountView(),
+          binding: SecureaccountBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.FORGOTACCOUNT,
