@@ -93,3 +93,41 @@ PreferredSizeWidget appbarWithSkip({
     elevation: 2,
   );
 }
+
+PreferredSizeWidget appbarWithSearch({
+  BuildContext? context,
+  Function()? onTaped,
+}) {
+  return AppBar(
+    backgroundColor: ColorPicker.whiteColor,
+    actions: [
+      Center(
+        child: InkWell(
+          onTap: onTaped,
+          child: Padding(
+              padding: const EdgeInsets.only(right: 18.0),
+              child: Icon(
+                Icons.search_rounded,size: 28,
+                color: ColorPicker.blackColor,
+              )),
+        ),
+      )
+    ],
+    title: Image.asset(
+      ImagePickerImage.onbordingName,
+      height: 30.h,
+      width: 75.w,
+    ),
+    centerTitle: false,
+    automaticallyImplyLeading: false,
+    // leading: InkWell(
+    //   onTap: onTaped,
+    //   child: Icon(
+    //     Icons.arrow_back,
+    //     color: ColorPicker.blackColor,
+    //   ),
+    // ),
+    toolbarHeight: 70.h,
+    elevation: 2,
+  );
+}

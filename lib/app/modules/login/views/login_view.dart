@@ -5,9 +5,11 @@ import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/createAccount/views/create_account_view.dart';
+import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 import '../../../common/app_text_field.dart';
 import '../../../constant/colour.dart';
 import '../../../constant/string.dart';
+import '../../explore/views/explore_view.dart';
 import '../../forgotaccount/views/forgotaccount_view.dart';
 import '../controllers/login_controller.dart';
 
@@ -122,7 +124,9 @@ class LoginView extends GetView<LoginController> {
                 context: context,
                 height: 55,
                 width: 335,
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(ExploreView());
+                },
                 textColor: ColorPicker.blackColor,
                 title: AppStrings.signIN,
                 fontSize: 16.sp,
@@ -132,9 +136,10 @@ class LoginView extends GetView<LoginController> {
               SizedBox(
                 height: 16.h,
               ),
-              InkWell(onTap: (){
-                Get.to(CreateAccountView());
-              },
+              InkWell(
+                onTap: () {
+                  Get.to(CreateAccountView());
+                },
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,

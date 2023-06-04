@@ -16,4 +16,6 @@ class ColorPicker {
   static const offSkyColor = Color(0xff00A1C1);
   static const greenColor = Color(0xff34A853);
   static const redColor = Color(0xffBD1818);
+  static const maroonColor = Color(0xffAF4367);
+  static const sky2Color = Color(0xff00A1C1);
 }

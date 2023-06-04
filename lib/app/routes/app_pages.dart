@@ -8,14 +8,22 @@ import '../modules/createAccount/userdetail/views/userdetail_view.dart';
 import '../modules/createAccount/username/bindings/username_binding.dart';
 import '../modules/createAccount/username/views/username_view.dart';
 import '../modules/createAccount/views/create_account_view.dart';
+import '../modules/explore/bindings/explore_binding.dart';
+import '../modules/explore/views/explore_view.dart';
+import '../modules/findnewstory/bindings/findnewstory_binding.dart';
+import '../modules/findnewstory/views/findnewstory_view.dart';
 import '../modules/forgotaccount/bindings/forgotaccount_binding.dart';
 import '../modules/forgotaccount/views/forgotaccount_view.dart';
 import '../modules/introduction/bindings/introduction_binding.dart';
 import '../modules/introduction/views/introduction_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/navbarScreen/bindings/navbar_screen_binding.dart';
+import '../modules/navbarScreen/views/navbar_screen_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
+import '../modules/recommendation/bindings/recommendation_binding.dart';
+import '../modules/recommendation/views/recommendation_view.dart';
 
 part 'app_routes.dart';
 
@@ -66,6 +74,26 @@ class AppPages {
       name: _Paths.FORGOTACCOUNT,
       page: () => const ForgotaccountView(),
       binding: ForgotaccountBinding(),
+    ),
+    GetPage(
+      name: _Paths.NAVBAR_SCREEN,
+      page: () => const NavbarScreenView(),
+      binding: NavbarScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXPLORE,
+      page: () => const ExploreView(),
+      binding: ExploreBinding(),
+    ),
+    GetPage(
+      name: _Paths.RECOMMENDATION,
+      page: () => const RecommendationView(),
+      binding: RecommendationBinding(),
+    ),
+    GetPage(
+      name: _Paths.FINDNEWSTORY,
+      page: () => const FindnewstoryView(),
+      binding: FindnewstoryBinding(),
     ),
   ];
 }
