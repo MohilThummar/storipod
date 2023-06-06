@@ -1,9 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:storipod_app/app/modules/createAccount/secureaccount/views/secureaccount_view.dart';
-
 import '../../../../common/app_button.dart';
 import '../../../../common/app_text_field.dart';
 import '../../../../common/appbar.dart';
@@ -14,6 +13,7 @@ import '../controllers/userdetail_controller.dart';
 
 class UserdetailView extends GetView<UserdetailController> {
   const UserdetailView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Get.put(UserdetailController());
@@ -27,7 +27,7 @@ class UserdetailView extends GetView<UserdetailController> {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+// mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 AppStrings.createAnAccount,

@@ -75,5 +75,28 @@ class AppStrings {
 /// =========Recommendation==============
   static String whatKinfOf ="What kind of stories are you interested in?";
   static String done ="Done";
+  static String followPeople ="Follow people to see their stories and posts.";
+  static String findNEwStory ="Find new stories";
   static String selectorMore ="Select 3 or more topics  and we’ll get you started with story recommendations just for you.";
+
+  static String yourStory= "Your Storie";
+  static String yearAgo="8h ago";
+  static String recent="Recent";
+  static String everyRound="My evergreen rounds";
+  static String citizens="The OBIdent citizens";
+  static String thePress="Ladies and gentlemen of the press";
+  static String isNever="The Tutsi and Hutu fight is never";
+  static String eyeryzGreen="My evergreen rounds";
+  static String ladies="Ladies and gentlemen of the press";
+  static String countryBrown="Coutney Brown";
+  static String adegeji="Adegbeji Oladele";
+  static String cheistable="Christabel Wu";
+  static String ramonda="Ramonda satti";
+  static String brown="Coutney Brown";
+  static String wu="Christabel Wu";
+  static String minsAgo="45mins ago";
+  static String selectBy="Select by";
+
+static String person="Person";
+static String intrested="Interests";
 }

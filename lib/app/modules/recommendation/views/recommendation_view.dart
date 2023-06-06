@@ -14,6 +14,7 @@ class RecommendationView extends GetView<RecommendationController> {
   const RecommendationView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Get.put(RecommendationController());
     return Scaffold(
       appBar: appbarWithSkip(context: context),
       body: Padding(
@@ -33,6 +34,8 @@ class RecommendationView extends GetView<RecommendationController> {
                     fontWeight: FontWeight.w800,
                     fontSize: 24.sp,
                     color: ColorPicker.blackColor),
+              ), SizedBox(
+                height: 5.h,
               ),
               Text(
                 AppStrings.selectorMore,
@@ -43,119 +46,57 @@ class RecommendationView extends GetView<RecommendationController> {
                     color: ColorPicker.boderBlackColor),
               ),
               SizedBox(
-                height: 23,
+                height: 23.h,
               ),
-              Column(
-                children: [
-                  SizedBox(height: 7),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 text text"),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 text text"),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 text text"),
-                              ),
-                            ],
+              Wrap(
+                // list of length 3
+                children: List.generate(
+                  controller.choicechip.length,
+                  (int index) {
+                    // choice chip allow us to
+                    // set its properties.
+                    return Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: ChoiceChip(
+                        backgroundColor:
+                            ColorPicker.lightWhiteColor.withOpacity(0.2),
+                        onSelected: (value) {},
+
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            width: 1.0,
+                            color: ColorPicker.boderBlackColor.withOpacity(0.1),
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text(" Art "),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 text name"),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 Design text"),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text(" Art "),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 Sports"),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6),
-                                  color: Colors.grey.shade200,
-                                ),
-                                child: Text("  😄 Geography "),
-                              ),
-                            ],
-                          ),
-                        ],
+                          borderRadius: BorderRadius.zero,
+                        ),
+
+                        padding: EdgeInsets.all(4),
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15.sp,
+                            color: controller.value == index
+                                ? ColorPicker.whiteColor
+                                : ColorPicker.greyColor),
+                        labelPadding:
+                            EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        label: Text(controller.choicechip[index]["name"]),
+                        // color of selected chip
+                        selectedColor: ColorPicker.skyColor,
+                        // selected chip value
+                        selected: controller.value == index,
+                        // onselected method
+                        // onSelected: (selected) {
+                        //   controller.value = selected ? index : null;
+                        //
+                        // },
                       ),
-                    ),
-                  ),
-                ],
+                    );
+                  },
+                ).toList(),
               ),
               // Spacer(),
               SizedBox(
-                height: 340.h,
+                height: 300.h,
               ),
               Align(
                 alignment: Alignment.bottomCenter,

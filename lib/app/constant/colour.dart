@@ -5,6 +5,7 @@ class ColorPicker {
   static const whiteColor = Color(0xffFFFFFF);
   static const blackColor = Color(0xff000000);
   static const blackEyeColor = Color(0xff444854);
+  static const greyColor = Color(0xff555661);
 
 
   static const subBlackColor = Color(0xff69696C);
@@ -18,4 +19,5 @@ class ColorPicker {
   static const redColor = Color(0xffBD1818);
   static const maroonColor = Color(0xffAF4367);
   static const sky2Color = Color(0xff00A1C1);
+  static const blueColor = Color(0xff2A3C65);
 }
