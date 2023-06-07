@@ -34,7 +34,8 @@ class RecommendationView extends GetView<RecommendationController> {
                     fontWeight: FontWeight.w800,
                     fontSize: 24.sp,
                     color: ColorPicker.blackColor),
-              ), SizedBox(
+              ),
+              SizedBox(
                 height: 5.h,
               ),
               Text(
@@ -101,6 +102,7 @@ class RecommendationView extends GetView<RecommendationController> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: ButtonWidget(
+                  redius: 10,
                   context: context,
                   height: 55,
                   width: 335,

@@ -1,10 +1,6 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:storipod_app/app/constant/colour.dart';
+
 
 /// <<< Common App button --------- >>>
 
@@ -82,6 +78,7 @@ Widget ButtonWidget(
     Color? textColor,
     Function()? onPressed,
     Color? bgColor,
+      double?redius,
     String? title,
     double? height,
     double? width,
@@ -91,7 +88,7 @@ Widget ButtonWidget(
       width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10), // Define the border radius
+            borderRadius: BorderRadius.circular(redius!), // Define the border radius
           ),
               disabledBackgroundColor: disableColor, backgroundColor: bgColor),
           onPressed: onPressed,

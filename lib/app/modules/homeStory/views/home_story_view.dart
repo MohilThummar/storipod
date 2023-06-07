@@ -6,6 +6,7 @@ import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/app/modules/homeStory/storyEdit/views/story_edit_view.dart';
 import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 import 'package:storipod_app/app/modules/homeStory/searchstory/views/searchstory_view.dart';
 
@@ -72,10 +73,15 @@ class HomeStoryView extends GetView<HomeStoryController> {
                     ],
                   ),
                   Spacer(),
-                  CircleAvatar(
-                    radius: 25,
-                    backgroundColor: ColorPicker.sky2Color.withOpacity(0.2),
-                    child: Image.asset(ImagePickerImage.editIcon),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(StoryEditView());
+                    },
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: ColorPicker.sky2Color.withOpacity(0.2),
+                      child: Image.asset(ImagePickerImage.editIcon),
+                    ),
                   ),
                 ],
               ),

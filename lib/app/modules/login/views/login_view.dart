@@ -120,7 +120,7 @@ class LoginView extends GetView<LoginController> {
               SizedBox(
                 height: 12.h,
               ),
-              ButtonWidget(
+              ButtonWidget(redius: 10,
                 context: context,
                 height: 55,
                 width: 335,

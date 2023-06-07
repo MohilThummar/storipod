@@ -94,7 +94,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
             // ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: ButtonWidget(
+              child: ButtonWidget(redius: 10,
                 context: context,
                 height: 55,
                 width: 335,

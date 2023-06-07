@@ -7,6 +7,7 @@ class AppStrings {
   static String okay = "Okay";
   static String yes = "Yes";
   static String no = "No";
+  static String continueText = "Continue ";
 
   // ---- Splash Screen ------------ >>>
   static String appName = "Storipod";

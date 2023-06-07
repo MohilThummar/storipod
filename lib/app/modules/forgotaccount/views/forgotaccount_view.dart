@@ -71,7 +71,7 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
               SizedBox(
                 height: 36.h,
               ),
-              ButtonWidget(
+              ButtonWidget(redius: 10,
                 context: context,
                 height: 55,
                 width: 335,
@@ -134,7 +134,7 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                               SizedBox(
                                 height: 26.h,
                               ),
-                              ButtonWidget(
+                              ButtonWidget(redius: 10,
                                   width: 335,
                                   height: 55,
                                   onPressed: () {},

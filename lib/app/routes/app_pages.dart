@@ -15,6 +15,8 @@ import '../modules/findnewstory/views/findnewstory_view.dart';
 import '../modules/forgotaccount/bindings/forgotaccount_binding.dart';
 import '../modules/forgotaccount/views/forgotaccount_view.dart';
 import '../modules/homeStory/bindings/home_story_binding.dart';
+import '../modules/homeStory/searchstory/bindings/searchstory_binding.dart';
+import '../modules/homeStory/searchstory/views/searchstory_view.dart';
 import '../modules/homeStory/views/home_story_view.dart';
 import '../modules/introduction/bindings/introduction_binding.dart';
 import '../modules/introduction/views/introduction_view.dart';
@@ -26,8 +28,8 @@ import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/recommendation/bindings/recommendation_binding.dart';
 import '../modules/recommendation/views/recommendation_view.dart';
-import '../modules/homeStory/searchstory/bindings/searchstory_binding.dart';
-import '../modules/homeStory/searchstory/views/searchstory_view.dart';
+import '../modules/homeStory/storyEdit/bindings/story_edit_binding.dart';
+import '../modules/homeStory/storyEdit/views/story_edit_view.dart';
 
 part 'app_routes.dart';
 
@@ -54,7 +56,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.CREATE_ACCOUNT,
-      page: () =>  CreateAccountView(),
+      page: () => CreateAccountView(),
       binding: CreateAccountBinding(),
       children: [
         GetPage(
@@ -64,7 +66,7 @@ class AppPages {
         ),
         GetPage(
           name: _Paths.USERDETAIL,
-          page: () =>  UserdetailView(),
+          page: () => UserdetailView(),
           binding: UserdetailBinding(),
         ),
         GetPage(
@@ -108,6 +110,11 @@ class AppPages {
       name: _Paths.SEARCHSTORY,
       page: () => const SearchstoryView(),
       binding: SearchstoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.STORY_EDIT,
+      page: () => const StoryEditView(),
+      binding: StoryEditBinding(),
     ),
   ];
 }

@@ -114,7 +114,7 @@ class UserdetailView extends GetView<UserdetailController> {
               SizedBox(
                 height: 20.h,
               ),
-              ButtonWidget(
+              ButtonWidget(redius: 10,
                 context: context,
                 height: 55,
                 width: 335,

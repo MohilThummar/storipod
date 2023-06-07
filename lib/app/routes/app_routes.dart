@@ -19,6 +19,7 @@ abstract class Routes {
   static const FINDNEWSTORY = _Paths.FINDNEWSTORY;
   static const HOME_STORY = _Paths.HOME_STORY;
   static const SEARCHSTORY = _Paths.SEARCHSTORY;
+  static const STORY_EDIT = _Paths.STORY_EDIT;
 }
 
 abstract class _Paths {
@@ -39,4 +40,5 @@ abstract class _Paths {
   static const FINDNEWSTORY = '/findnewstory';
   static const HOME_STORY = '/home-story';
   static const SEARCHSTORY = '/searchstory';
+  static const STORY_EDIT = '/story-edit';
 }

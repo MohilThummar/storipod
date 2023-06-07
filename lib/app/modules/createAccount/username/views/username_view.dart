@@ -94,7 +94,7 @@ class UsernameView extends GetView<UsernameController> {
               SizedBox(
                 height: 27.h,
               ),
-              ButtonWidget(
+              ButtonWidget(redius: 10,
                 context: context,
                 height: 55,
                 width: 335,
