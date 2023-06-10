@@ -32,11 +32,12 @@ Widget searchfildWidget(
           fillColor: ColorPicker.whiteColor,
           prefixIcon: Icon(Icons.search, color: ColorPicker.boderBlackColor),
           hintText: hintText,
-          suffixIcon: InkWell(onTap: suffixOnTap,
+          suffixIcon: GestureDetector(
+              onTap: suffixOnTap,
               child: Image.asset(
                 imageData!,
-            color: iconColorSuffix,
-          )),
+                color: iconColorSuffix,
+              )),
           hintStyle: TextStyle(
               color: ColorPicker.offGreyColor, fontWeight: FontWeight.w500),
         ),

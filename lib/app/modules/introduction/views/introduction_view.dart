@@ -37,14 +37,14 @@ class IntroductionViewState extends State<IntroductionView> {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(LoginView());
+                Get.offAll(LoginView());
               },
               child: Align(
                   widthFactor: 9.5.sw,
                   alignment: Alignment.topRight,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 18.0, vertical: 12),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 18.0.w, vertical: 12.h),
                     child: Text(
                       "Skip",
                       style: TextStyle(
@@ -76,7 +76,7 @@ class IntroductionViewState extends State<IntroductionView> {
                       _pages.length,
                       (index) => Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 4),
-                            child: InkWell(
+                            child: GestureDetector(
                               onTap: () {
                                 _pageController.animateToPage(index,
                                     duration: const Duration(milliseconds: 200),
@@ -110,7 +110,8 @@ class IntroductionViewState extends State<IntroductionView> {
                   redius: 12.r,
                   textColor: ColorPicker.whiteColor,
                   onPressed: () {
-                    Get.to(ExploreView());
+                    Get.offAll(ExploreView());
+                    // Get.to(ExploreView());
                   },
                   width: double.infinity,
                   fontSize: 16.sp,
@@ -132,7 +133,7 @@ PageOne() {
       padding: EdgeInsets.only(top: 0.46.sh),
       child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "It's Shories Time !",
@@ -170,7 +171,7 @@ PageTwo() {
       padding: EdgeInsets.only(top: 0.46.sh),
       child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "It's Shories Time !",
@@ -208,34 +209,34 @@ PageThree() {
       padding: EdgeInsets.only(top: 0.46.sh),
       child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "It's Shories Time !",
-                style: TextStyle(
-                    fontSize: 24.sp,
-                    color: ColorPicker.blackColor,
-                    fontWeight: FontWeight.w800),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 8),
-                child: Text(
-                  "Tell Your Story",
-                  style: TextStyle(
-                      fontSize: 14.sp,
-                      color: ColorPicker.blackColor,
-                      fontWeight: FontWeight.w600),
-                ),
-              ),
-              Text(
-                "Find New Ones",
-                style: TextStyle(
-                    fontSize: 14.sp,
-                    color: ColorPicker.blackColor,
-                    fontWeight: FontWeight.w600),
-              ),
-            ],
-          )),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "It's Shories Time !",
+            style: TextStyle(
+                fontSize: 24.sp,
+                color: ColorPicker.blackColor,
+                fontWeight: FontWeight.w800),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 8),
+            child: Text(
+              "Tell Your Story",
+              style: TextStyle(
+                  fontSize: 14.sp,
+                  color: ColorPicker.blackColor,
+                  fontWeight: FontWeight.w600),
+            ),
+          ),
+          Text(
+            "Find New Ones",
+            style: TextStyle(
+                fontSize: 14.sp,
+                color: ColorPicker.blackColor,
+                fontWeight: FontWeight.w600),
+          ),
+        ],
+      )),
     ),
   );
 }

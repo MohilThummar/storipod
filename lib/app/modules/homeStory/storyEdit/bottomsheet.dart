@@ -22,7 +22,8 @@ class DiscardStoeyView extends GetView<StoryEditController> {
         mainAxisAlignment: MainAxisAlignment.end,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(  alignment: Alignment.center,
+          Container(
+            alignment: Alignment.center,
             padding: EdgeInsets.all(12),
             margin: EdgeInsets.symmetric(horizontal: 5, vertical: 20),
             decoration: BoxDecoration(
@@ -42,18 +43,24 @@ class DiscardStoeyView extends GetView<StoryEditController> {
                         color: ColorPicker.whiteColor),
                   ),
                 ),
-                Divider(height: 1,color: ColorPicker.greylightColor,),
+                Divider(
+                  height: 1,
+                  color: ColorPicker.greylightColor,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
-   "Discard",
+                    "Discard",
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 16.sp,
                         color: ColorPicker.redColor),
                   ),
                 ),
-                Divider(height: 1,color: ColorPicker.greylightColor,),
+                Divider(
+                  height: 1,
+                  color: ColorPicker.greylightColor,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
@@ -71,7 +78,7 @@ class DiscardStoeyView extends GetView<StoryEditController> {
             height: 2.h,
           ),
           Container(
-            width: 355.w,
+              width:  double.infinity,
               padding: EdgeInsets.all(12),
               // margin: EdgeInsets.symmetric(horizontal: 5, vertical: 20),
               decoration: BoxDecoration(
@@ -79,12 +86,18 @@ class DiscardStoeyView extends GetView<StoryEditController> {
                 borderRadius: BorderRadius.circular(20),
               ),
               alignment: Alignment.center,
-              child: Text('Cancle', textScaleFactor: 2,
-              style: TextStyle(fontWeight: FontWeight.w600,
-              fontSize: 15.sp,color: ColorPicker.whiteColor),)),
+              child: Text(
+                'Cancle',
+                textScaleFactor: 2,
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15.sp,
+                    color: ColorPicker.whiteColor),
+              )),
           SizedBox(
             height: 7.h,
-          ),     ],
+          ),
+        ],
       ),
     );
   }

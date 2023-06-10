@@ -48,5 +48,9 @@ class ImagePickerImage {
   static const sendImage = "assets/Send.png";
   static const ggImage = "assets/gg.png";
   static const dp9Image = "assets/dp9.png";
+  static const SearchImage = "assets/Search.png";
+  static const smilyImage = "assets/smily.png";
+  static const hiddenImage = "assets/hiddeneye.png";
+  static const showEyeImage = "assets/Eye.png";
 
 }

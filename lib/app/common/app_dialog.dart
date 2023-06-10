@@ -19,16 +19,19 @@ Future<void> commonDialog({
     builder: (BuildContext context) {
       return Dialog(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 15.0 / 2, horizontal: 15.0),
+              padding: const EdgeInsets.symmetric(
+                  vertical: 15.0 / 2, horizontal: 15.0),
               width: Get.width,
               decoration: BoxDecoration(
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(10.0)),
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(10.0)),
                 color: Theme.of(context).primaryColor,
               ),
               child: Text(
@@ -41,7 +44,9 @@ Future<void> commonDialog({
               ),
             ),
             description,
-            Divider(height: 0, color: Theme.of(context).primaryColor.withOpacity(0.7)),
+            Divider(
+                height: 0,
+                color: Theme.of(context).primaryColor.withOpacity(0.7)),
             Padding(
               padding: const EdgeInsets.all(15.0 / 1.3),
               child: !onlyMessDialog!
@@ -50,19 +55,24 @@ Future<void> commonDialog({
                       children: [
                         SizedBox(
                           width: Get.width * 0.25,
-                          child: InkWell(
+                          child: GestureDetector(
                             onTap: () => Get.back(),
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20.0, vertical: 4.0),
                               decoration: BoxDecoration(
-                                color: Theme.of(context).scaffoldBackgroundColor,
+                                color:
+                                    Theme.of(context).scaffoldBackgroundColor,
                                 borderRadius: BorderRadius.circular(10.0 / 2),
-                                border: Border.all(color: Theme.of(context).primaryColor, width: 0.7),
+                                border: Border.all(
+                                    color: Theme.of(context).primaryColor,
+                                    width: 0.7),
                               ),
                               child: Center(
                                 child: Text(
                                   'રદ કરો',
-                                  style: TextStyle(color: Theme.of(context).primaryColor),
+                                  style: TextStyle(
+                                      color: Theme.of(context).primaryColor),
                                 ),
                               ),
                             ),
@@ -71,14 +81,17 @@ Future<void> commonDialog({
                         const SizedBox(width: 15.0 / 1.3),
                         SizedBox(
                           width: Get.width * 0.25,
-                          child: InkWell(
+                          child: GestureDetector(
                             onTap: onTap,
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20.0, vertical: 4.0),
                               decoration: BoxDecoration(
                                 color: Theme.of(context).primaryColor,
                                 borderRadius: BorderRadius.circular(10.0 / 2),
-                                border: Border.all(color: Theme.of(context).primaryColor, width: 1.5),
+                                border: Border.all(
+                                    color: Theme.of(context).primaryColor,
+                                    width: 1.5),
                               ),
                               child: const Center(
                                 child: Text(
@@ -94,19 +107,23 @@ Future<void> commonDialog({
                   : Center(
                       child: SizedBox(
                         width: Get.width * 0.25,
-                        child: InkWell(
+                        child: GestureDetector(
                           onTap: onTap ?? () => Get.back(),
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20.0, vertical: 4.0),
                             decoration: BoxDecoration(
                               color: Theme.of(context).primaryColor,
                               borderRadius: BorderRadius.circular(10.0 / 2),
-                              border: Border.all(color: Theme.of(context).primaryColor, width: 1.5),
+                              border: Border.all(
+                                  color: Theme.of(context).primaryColor,
+                                  width: 1.5),
                             ),
                             child: Center(
                               child: Text(
                                 okButtonText ?? 'બદલો',
-                                style: const TextStyle(color: Colors.white, fontSize: 18),
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 18),
                               ),
                             ),
                           ),
@@ -134,7 +151,8 @@ Future<void> confirmationDialog({
     builder: (BuildContext context) {
       return Dialog(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         child: Container(
           height: 130,
           decoration: BoxDecoration(
@@ -166,11 +184,15 @@ Future<void> logoutDialog({
     builder: (BuildContext context) {
       return Dialog(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         child: SizedBox(
           height: 130,
           child: Column(
-            children: [msgArea(title, description, context), footer(context, color, onTap)],
+            children: [
+              msgArea(title, description, context),
+              footer(context, color, onTap)
+            ],
           ),
         ),
       );
@@ -185,7 +207,8 @@ backOperation(BuildContext context) {
     builder: (BuildContext context) {
       return Dialog(
         backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         child: SizedBox(
           height: Get.width * 0.50,
           child: Column(
@@ -197,7 +220,8 @@ backOperation(BuildContext context) {
                 child: Container(
                   padding: const EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.vertical(top: Radius.circular(10.0)),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(10.0)),
                     color: Theme.of(context).primaryColor,
                   ),
                 ),
@@ -210,14 +234,20 @@ backOperation(BuildContext context) {
                     padding: EdgeInsets.only(top: 15.0, bottom: 15.0 / 2),
                     child: Text(
                       'એપ્લિકેશનમાંથી બહાર નીકળો',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: Text(
                       'શું તમે ખરેખર એપ્લિકેશનમાંથી બહાર નીકળવા માંગો છો?',
-                      style: TextStyle(fontSize: 16, color: Theme.of(context).iconTheme.color!.withOpacity(0.8)),
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Theme.of(context)
+                              .iconTheme
+                              .color!
+                              .withOpacity(0.8)),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -228,38 +258,50 @@ backOperation(BuildContext context) {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Theme.of(context).primaryColor)),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(
+                                  color: Theme.of(context).primaryColor)),
                           height: 40,
                           width: Get.height * 0.13,
-                          child: InkWell(
+                          child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).pop();
                             },
                             child: Center(
                               child: Text(
                                 'ના',
-                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor),
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Theme.of(context).primaryColor),
                               ),
                             ),
                           ),
                         ),
                         const SizedBox(width: 15.0),
                         Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Theme.of(context).primaryColor),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Theme.of(context).primaryColor),
                           height: 40,
                           width: Get.height * 0.13,
-                          child: InkWell(
+                          child: GestureDetector(
                             onTap: () async {
                               final cacheDir = await getTemporaryDirectory();
                               if (cacheDir.existsSync()) {
                                 cacheDir.deleteSync(recursive: true);
                               }
-                              SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                              SystemChannels.platform
+                                  .invokeMethod('SystemNavigator.pop');
                             },
                             child: const Center(
                               child: Text(
                                 'હા',
-                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
                               ),
                             ),
                           ),
@@ -332,7 +374,7 @@ Widget footer(context, color, onTap) => Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          InkWell(
+          GestureDetector(
             onTap: () => Navigator.pop(context),
             child: Container(
               decoration: BoxDecoration(
@@ -341,7 +383,8 @@ Widget footer(context, color, onTap) => Container(
                 color: Colors.white,
               ),
               margin: const EdgeInsets.all(5.0),
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
               child: const Text(
                 'ના',
                 style: TextStyle(color: Colors.black),
@@ -349,7 +392,7 @@ Widget footer(context, color, onTap) => Container(
             ),
           ),
           const SizedBox(width: 15.0 / 2.5),
-          InkWell(
+          GestureDetector(
             onTap: () => onTap(),
             child: Container(
               decoration: BoxDecoration(
@@ -358,7 +401,8 @@ Widget footer(context, color, onTap) => Container(
                 color: color,
               ),
               margin: const EdgeInsets.symmetric(vertical: 5.0),
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
               child: const Text(
                 'હા',
                 style: TextStyle(color: Colors.white),

@@ -10,10 +10,13 @@ PreferredSizeWidget imageAppbarWidget({
 }) {
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
-    title: Image.asset(
-      ImagePickerImage.onbordingName,
-      height: 30.h,
-      width: 75.w,
+    title: Padding(
+      padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
+      child: Image.asset(
+        ImagePickerImage.onbordingName,
+        height: 30.h,
+        width: 75.w,
+      ),
     ),
     centerTitle: true,
     toolbarHeight: 70.h,
@@ -34,7 +37,7 @@ PreferredSizeWidget appbarWithBack({
     ),
     centerTitle: true,
     automaticallyImplyLeading: false,
-    leading: InkWell(
+    leading: GestureDetector(
       onTap: onTaped,
       child: Icon(
         Icons.arrow_back_ios_new,
@@ -42,7 +45,7 @@ PreferredSizeWidget appbarWithBack({
       ),
     ),
     toolbarHeight: 70.h,
-    elevation: 2,
+    elevation: 1,
   );
 }
 
@@ -55,7 +58,7 @@ PreferredSizeWidget appbarWithSkip({
     backgroundColor: ColorPicker.whiteColor,
     actions: [
       Center(
-        child: InkWell(
+        child: GestureDetector(
           onTap: onTaped,
           child: Padding(
             padding: const EdgeInsets.only(right: 18.0),
@@ -75,14 +78,17 @@ PreferredSizeWidget appbarWithSkip({
         ),
       )
     ],
-    title: Image.asset(
-      ImagePickerImage.onbordingName,
-      height: 30.h,
-      width: 75.w,
+    title: Padding(
+      padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
+      child: Image.asset(
+        ImagePickerImage.onbordingName,
+        height: 30.h,
+        width: 75.w,
+      ),
     ),
     centerTitle: true,
     automaticallyImplyLeading: false,
-    // leading: InkWell(
+    // leading: GestureDetector(
     //   onTap: onTaped,
     //   child: Icon(
     //     Icons.arrow_back,
@@ -90,7 +96,7 @@ PreferredSizeWidget appbarWithSkip({
     //   ),
     // ),
     toolbarHeight: 70.h,
-    elevation: 2,
+    elevation: 1,
   );
 }
 
@@ -100,36 +106,36 @@ PreferredSizeWidget appbarWithSearch({
 }) {
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
+
     actions: [
       Center(
-        child: InkWell(
+        child: GestureDetector(
           onTap: onTaped,
           child: Padding(
-              padding: const EdgeInsets.only(right: 18.0),
-              child: Icon(
-                Icons.search_rounded,
-                size: 28,
+              padding: EdgeInsets.only(right: 19.0.w),
+              child: Image.asset(
+                ImagePickerImage.SearchImage,
+                height: 24.h,
+                width: 24.w,
                 color: ColorPicker.blackColor,
               )),
         ),
       )
     ],
-    title: Image.asset(
-      ImagePickerImage.onbordingName,
-      height: 30.h,
-      width: 75.w,
+    // titleSpacing:5.w,
+    title: Padding(
+      padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
+      child: Image.asset(
+        ImagePickerImage.onbordingName,
+        height: 30.h,
+        width: 75.w,
+      ),
     ),
     centerTitle: false,
     automaticallyImplyLeading: false,
-    // leading: InkWell(
-    //   onTap: onTaped,
-    //   child: Icon(
-    //     Icons.arrow_back,
-    //     color: ColorPicker.blackColor,
-    //   ),
-    // ),
-    toolbarHeight: 70.h,
-    elevation: 2,
+
+    toolbarHeight: 62.h,
+    elevation: 1,
   );
 }
 
@@ -142,7 +148,7 @@ PreferredSizeWidget appbarWithNotification({
     backgroundColor: ColorPicker.whiteColor,
     actions: [
       Center(
-        child: InkWell(
+        child: GestureDetector(
           onTap: onTapedNotificaton,
           child: Padding(
               padding: const EdgeInsets.only(right: 18.0),
@@ -154,7 +160,7 @@ PreferredSizeWidget appbarWithNotification({
         ),
       ),
       Center(
-        child: InkWell(
+        child: GestureDetector(
           onTap: onTaped,
           child: Padding(
               padding: const EdgeInsets.only(right: 18.0),
@@ -166,14 +172,17 @@ PreferredSizeWidget appbarWithNotification({
         ),
       )
     ],
-    title: Image.asset(
-      ImagePickerImage.onbordingName,
-      height: 30.h,
-      width: 75.w,
+    title: Padding(
+      padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
+      child: Image.asset(
+        ImagePickerImage.onbordingName,
+        height: 30.h,
+        width: 75.w,
+      ),
     ),
     centerTitle: false,
     automaticallyImplyLeading: false,
-    // leading: InkWell(
+    // leading: GestureDetector(
     //   onTap: onTaped,
     //   child: Icon(
     //     Icons.arrow_back,
@@ -181,6 +190,6 @@ PreferredSizeWidget appbarWithNotification({
     //   ),
     // ),
     toolbarHeight: 70.h,
-    elevation: 2,
+    elevation: 1,
   );
 }

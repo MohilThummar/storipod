@@ -3,21 +3,26 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../constant/colour.dart';
 import '../../constant/string.dart';
+import 'controllers/create_account_controller.dart';
 
 class CustomBottomSheet extends StatelessWidget {
+  CreateAccountController controller = Get.put(CreateAccountController());
   @override
   Widget build(BuildContext context) {
     File? image;
     return Container(
-      decoration: const BoxDecoration(
+      padding: EdgeInsets.only(left: 20.w, top: 24.h, right: 20.w),
+      decoration: BoxDecoration(
         color: ColorPicker.whiteColor,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+          topLeft: Radius.circular(20.r),
+          topRight: Radius.circular(20.r),
         ),
       ),
       child: Wrap(
@@ -26,20 +31,20 @@ class CustomBottomSheet extends StatelessWidget {
         children: [
           Center(
               child: Column(
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: ColorPicker.offGreyColor,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 7,
-                    width: 50,
-                  ),
-                ],
-              )),
+            children: [
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xffF1F1F1),
+                  borderRadius: BorderRadius.circular(20.r),
+                ),
+                height: 5.h,
+                width: 43.w,
+              ),
+            ],
+          )),
           ListTile(
             title: Text(
               AppStrings.selectImage,
@@ -57,35 +62,29 @@ class CustomBottomSheet extends StatelessWidget {
             thickness: 1,
           ),
           ListTile(
-            title: Text(
-              AppStrings.takeImage,
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.sp,
-                  color: ColorPicker.subBlackColor),
-            ),
-            onTap: () async {
-              final _pickedFile =
-              await ImagePicker().getImage(source: ImageSource.camera);
-              Navigator.of(context).pop();
-              image = _pickedFile == null ? null : File(_pickedFile.path);
-            },
-          ),
+              title: Text(
+                AppStrings.takeImage,
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14.sp,
+                    color: ColorPicker.subBlackColor),
+              ),
+              onTap: () {
+                controller.pickImageFromCamera();
+                Get.back();
+              }),
           ListTile(
-            title: Text(
-              AppStrings.picImage,
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.sp,
-                  color: ColorPicker.subBlackColor),
-            ),
-            onTap: () async {
-              final _pickedFile =
-              await ImagePicker().getImage(source: ImageSource.gallery);
-              Navigator.of(context).pop();
-              image = _pickedFile == null ? null : File(_pickedFile.path);
-            },
-          ),
+              title: Text(
+                AppStrings.picImage,
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14.sp,
+                    color: ColorPicker.subBlackColor),
+              ),
+              onTap: () {
+                controller.pickImageFromGallery();
+                Get.back();
+              }),
           ListTile(
             title: Text(
               AppStrings.removeImage,
@@ -95,6 +94,9 @@ class CustomBottomSheet extends StatelessWidget {
                   color: ColorPicker.redColor),
             ),
             onTap: () {
+              controller.pickedImage == "";
+              Get.back();
+
               ///delete this image
             },
           ),

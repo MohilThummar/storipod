@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/modules/explore/views/explore_view.dart';
 import 'package:storipod_app/app/modules/login/views/login_view.dart';
 import 'package:storipod_app/app/modules/recommendation/views/recommendation_view.dart';
 
@@ -30,7 +31,10 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
         onTap: controller.changeSelectedItem,
         items: [
           BottomNavigationBarItem(
-            icon: InkWell(onTap: (){},
+            icon: GestureDetector(
+              onTap: () {
+                Get.offAll(ExploreView());
+              },
               child: Image.asset(
                 ImagePickerImage.storiesIcon,
                 height: 30,
@@ -40,10 +44,10 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
             label: AppStrings.stories,
           ),
           BottomNavigationBarItem(
-            icon: InkWell(onTap: (){
-
-              Get.to(RecommendationView());
-            },
+            icon: GestureDetector(
+              onTap: () {
+                Get.offAll(RecommendationView());
+              },
               child: Icon(
                 Icons.search,
                 size: 35,
@@ -52,10 +56,10 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
             label: AppStrings.explore,
           ),
           BottomNavigationBarItem(
-            icon:InkWell(onTap: (){
-              Get.to(LoginView());
-
-            },
+            icon: GestureDetector(
+              onTap: () {
+                Get.to(LoginView());
+              },
               child: CircleAvatar(
                 minRadius: 18,
                 maxRadius: 18,

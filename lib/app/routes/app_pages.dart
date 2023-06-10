@@ -100,7 +100,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.FINDNEWSTORY,
-      page: () => const FindnewstoryView(),
+      page: () =>  FindnewstoryView(),
       binding: FindnewstoryBinding(),
     ),
     GetPage(

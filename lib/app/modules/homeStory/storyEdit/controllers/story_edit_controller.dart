@@ -40,6 +40,7 @@ class StoryEditController extends GetxController {
     "#BANGERS",
     "#BANGERS",
   ];
+  List<String>? selectedKeyword = [];
   List keyword = [
     "#BANGERS",
     "#Baskerv",

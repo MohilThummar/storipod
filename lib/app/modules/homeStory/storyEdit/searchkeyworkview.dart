@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:flutter/material.dart';
+import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/string.dart';
@@ -27,7 +28,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               color: ColorPicker.whiteColor),
         ),
         leading: Center(
-          child: InkWell(
+          child: GestureDetector(
             onTap: () {
               Get.back();
             },
@@ -39,10 +40,9 @@ class SearchKeyWordView extends GetView<StoryEditController> {
         ),
         backgroundColor: ColorPicker.blackColor,
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 18, vertical: 8.0),
-        child: SingleChildScrollView(
-            child: Column(
+      body: commanPaddingWidget(
+          child: GetBuilder<StoryEditController>(
+        builder: (_) => Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
@@ -90,7 +90,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
                   ),
-                  suffixIcon: InkWell(
+                  suffixIcon: GestureDetector(
                       onTap: () {},
                       child: CircleAvatar(
                           radius: 20.r,
@@ -150,55 +150,109 @@ class SearchKeyWordView extends GetView<StoryEditController> {
             SizedBox(
               height: 34.h,
             ),
-            Center(
-              child: Wrap(
-                // list of length 3
-                children: List.generate(
-                  controller.keyword.length,
-                  (int index) {
-                    // choice chip allow us to
-                    // set its properties.
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 10),
-                      child: ChoiceChip(
-                        backgroundColor:
-                            ColorPicker.blackColor.withOpacity(0.6),
-                        onSelected: (value) {},
+            Wrap(
+              children: controller.keyword.map(
+                (hobby) {
+                  bool isSelected = false;
+                  if (controller.selectedKeyword!.contains(hobby)) {
+                    isSelected = true;
+                  }
+                  return GestureDetector(
+                    onTap: () {
+                      controller.update();
+                      if (!controller.selectedKeyword!.contains(hobby)) {
+                        if (controller.selectedKeyword!.length < 5) {
+                          controller.selectedKeyword!.add(hobby);
 
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            width: 1.0,
-                            color: ColorPicker.boderBlackColor.withOpacity(0.1),
+                          print(controller.selectedKeyword);
+                        }
+                      } else {
+                        controller.selectedKeyword!
+                            .removeWhere((element) => element == hobby);
+                        print(controller.selectedKeyword);
+                      }
+                    },
+                    child: Container(
+                        margin:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 4),
+                        child: Container(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? ColorPicker.appButtonColor
+                                : ColorPicker.lightWhiteColor.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(5.r),
+                            border: Border.all(
+                                color: ColorPicker.boderBlackColor
+                                    .withOpacity(0.1),
+                                width: 2),
                           ),
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-
-                        padding: EdgeInsets.all(4),
-                        labelStyle: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 15.sp,
-                            color: controller.value == index
-                                ? ColorPicker.greyColor
-                                : ColorPicker.whiteColor),
-                        labelPadding:
-                            EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                        label: Text(controller.keyword[index]),
-                        // color of selected chip
-                        selectedColor: ColorPicker.whiteColor.withOpacity(0.4),
-                        // selected chip value
-                        selected: controller.value == index,
-                        // onselected method
-                        // onSelected: (selected) {
-                        //   controller.value = selected ? index : null;
-                        //
-                        // },
-                      ),
-                    );
-                  },
-                ).toList(),
-              ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Text(
+                              hobby,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15.sp,
+                                  color: isSelected
+                                      ? ColorPicker.whiteColor
+                                      : ColorPicker.greyColor),
+                            ),
+                          ),
+                        )),
+                  );
+                },
+              ).toList(),
             ),
+            // Center(
+            //   child: Wrap(
+            //     // list of length 3
+            //     children: List.generate(
+            //       controller.keyword.length,
+            //       (int index) {
+            //         // choice chip allow us to
+            //         // set its properties.
+            //         return Padding(
+            //           padding: const EdgeInsets.symmetric(
+            //               horizontal: 8.0, vertical: 10),
+            //           child: ChoiceChip(
+            //             backgroundColor: ColorPicker.blackColor.withOpacity(0.6),
+            //             onSelected: (value) {},
+            //
+            //             shape: RoundedRectangleBorder(
+            //               side: BorderSide(
+            //                 width: 1.0,
+            //                 color: ColorPicker.boderBlackColor.withOpacity(0.1),
+            //               ),
+            //               borderRadius: BorderRadius.circular(20.0),
+            //             ),
+            //
+            //             padding: EdgeInsets.all(4),
+            //             labelStyle: TextStyle(
+            //                 fontWeight: FontWeight.w700,
+            //                 fontSize: 15.sp,
+            //                 color: controller.value == index
+            //                     ? ColorPicker.greyColor
+            //                     : ColorPicker.whiteColor),
+            //             labelPadding:
+            //                 EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+            //             label: Text(controller.keyword[index]),
+            //             // color of selected chip
+            //             selectedColor: ColorPicker.whiteColor.withOpacity(0.4),
+            //             // selected chip value
+            //             selected: controller.value == index,
+            //             // onselected method
+            //             // onSelected: (selected) {
+            //             //   controller.value = selected ? index : null;
+            //             //
+            //             // },
+            //           ),
+            //         );
+            //       },
+            //     ).toList(),
+            //   ),
+            // ),
             SizedBox(
               height: 20.h,
             ),
@@ -207,7 +261,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               child: ButtonWidget(
                 redius: 30,
                 context: context,
-                height: 0.066.sh,
+                height: 55.h,
                 width: double.infinity,
                 onPressed: () {
                   // Get.to(FindnewstoryView());
@@ -220,8 +274,8 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               ),
             ),
           ],
-        )),
-      ),
+        ),
+      )),
     );
   }
 }

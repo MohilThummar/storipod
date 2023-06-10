@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';
+import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/homeStory/views/home_story_view.dart';
@@ -11,106 +12,228 @@ import '../../../common/app_button.dart';
 import '../../../constant/string.dart';
 import '../controllers/findnewstory_controller.dart';
 
-class FindnewstoryView extends GetView<FindnewstoryController> {
-  const FindnewstoryView({Key? key}) : super(key: key);
+class FindnewstoryView extends StatefulWidget {
+  FindnewstoryView({Key? key}) : super(key: key);
+
+  @override
+  State<FindnewstoryView> createState() => _FindnewstoryViewState();
+}
+
+class _FindnewstoryViewState extends State<FindnewstoryView> {
+  final PageController _pageController = PageController(initialPage: 0);
+
+  int _activePage = 0;
+
+  final List<Widget> _pages = [PageOne(), PageTwo(), PageThree()];
+
   @override
   Widget build(BuildContext context) {
-    // int? _value = 1;
-    Get.put(FindnewstoryController());
     return Scaffold(
-      appBar: imageAppbarWidget(context: context,),
+      appBar: imageAppbarWidget(
+        context: context,
+      ),
       backgroundColor: ColorPicker.whiteColor,
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: SingleChildScrollView(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              AppStrings.findNEwStory,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 24.sp,
-                  color: ColorPicker.blackColor),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            Text(
-              AppStrings.followPeople,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 15.sp,
-                  color: ColorPicker.boderBlackColor),
-            ),
-            SizedBox(
-              height: 23.h,
-            ),
-            Container(
-              height: 500.h,
-              padding: EdgeInsets.symmetric(horizontal: 2.w,vertical: 10.h),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                color: ColorPicker.lightWhiteColor.withOpacity(0.3),
+      body: commanPaddingWidget(
+        child: Stack(
+          children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+              SizedBox(
+                height: 10.h,
               ),
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3, // Number of columns in the grid
-                  mainAxisSpacing: 10, // Spacing between rows
-                  crossAxisSpacing: 10, // Spacing between columns
+              Text(
+                AppStrings.findNEwStory,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 24.sp,
+                    color: ColorPicker.blackColor),
+              ),
+              SizedBox(
+                height: 4.h,
+              ),
+              Text(
+                AppStrings.followPeople,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14.sp,
+                    color: ColorPicker.boderBlackColor),
+              ),
+              SizedBox(
+                height: 24.h,
+              ),
+              Container(
+                height: 380.h,
+                padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 10.h),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.r),
+                  color: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 ),
-                itemCount: 10, // Number of items in the grid
-                itemBuilder: (BuildContext context, int index) {
-                  // Build and return the individual grid items
-                  return Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundImage:
-                            AssetImage(ImagePickerImage.profileIcon),
-                        radius: 40.r,
-                      ),
-                      SizedBox(
-                        height: 8.h,
-                      ),
-                      Text("Richard")
-                    ],
-                  );
-                },
+                child: PageView.builder(
+                  controller: _pageController,
+                  onPageChanged: (int page) {
+                    setState(() {
+                      _activePage = page;
+                    });
+                  },
+                  itemCount: _pages.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return _pages[index % _pages.length];
+                  },
+                ),
+              ),
+              SizedBox(
+                height: 114.h,
+              ),
+              Center(
+                child: ButtonWidget(
+                  redius: 10,
+                  context: context,
+                  height: 55.h,
+                  width: double.infinity,
+                  onPressed: () {
+                    Get.to(HomeStoryView());
+                  },
+                  textColor: ColorPicker.blackColor,
+                  title: AppStrings.proceed,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.offGreyColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
+              ),
+            ]),
+            Positioned(
+              bottom: 60.h,
+              left: 0,
+              right: 0,
+              height: 0.22.sh,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List<Widget>.generate(
+                    _pages.length,
+                    (index) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          child: GestureDetector(
+                            onTap: () {
+                              _pageController.animateToPage(index,
+                                  duration: const Duration(milliseconds: 200),
+                                  curve: Curves.easeIn);
+                              setState(() {
+                                _activePage == _pages;
+                              });
+                            },
+                            child: CircleAvatar(
+                              radius: 4,
+                              backgroundColor: _activePage == index
+                                  ? Colors.blueAccent
+                                  : Colors.blueGrey,
+                            ),
+                          ),
+                        )),
               ),
             ),
-            // PageView.builder(
-            //   controller: controller.pageController,
-            //   onPageChanged: (int page) {
-            //     controller.activePage = page;
-            //   },
-            //   itemCount: 3,
-            //   itemBuilder: (BuildContext context, int index) {
-            //     return Container();
-            //   },
-            // ),
-            Center(
-          
-              child: ButtonWidget(redius: 10,
-                context: context,
-                 height: 0.066.sh,
-               width: double.infinity,
-                onPressed: () {
-                  Get.to(HomeStoryView());
-                },
-                textColor: ColorPicker.blackColor,
-                title: AppStrings.proceed,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
-                disableColor: ColorPicker.appButtonColor,
-              ),
-            ),
-          ]),
+          ],
         ),
       ),
     );
   }
+}
+
+PageOne() {
+  return GridView.builder(
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3, // Number of columns in the grid
+      mainAxisSpacing: 10,
+      mainAxisExtent: 120, // Spacing between rows
+      crossAxisSpacing: 10, // Spacing between columns
+    ),
+    itemCount: 9, // Number of items in the grid
+    itemBuilder: (BuildContext context, int index) {
+      // Build and return the individual grid items
+      return Column(
+        children: [
+          CircleAvatar(
+            backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+            radius: 31.r,
+          ),
+          SizedBox(
+            height: 8.h,
+          ),
+          Text(
+            "Richard",
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 14.sp,
+                color: ColorPicker.blackColor),
+          )
+        ],
+      );
+    },
+  );
+}
+
+PageTwo() {
+  return GridView.builder(
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3, // Number of columns in the grid
+      mainAxisSpacing: 10,
+      mainAxisExtent: 120, // Spacing between rows
+      crossAxisSpacing: 10, // Spacing between columns
+    ),
+    itemCount: 7, // Number of items in the grid
+    itemBuilder: (BuildContext context, int index) {
+      // Build and return the individual grid items
+      return Column(
+        children: [
+          CircleAvatar(
+            backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+            radius: 31.r,
+          ),
+          SizedBox(
+            height: 8.h,
+          ),
+          Text(
+            "Richard",
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 14.sp,
+                color: ColorPicker.blackColor),
+          )
+        ],
+      );
+    },
+  );
+}
+
+PageThree() {
+  return GridView.builder(
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3, // Number of columns in the grid
+      mainAxisSpacing: 10,
+      mainAxisExtent: 120, // Spacing between rows
+      crossAxisSpacing: 10, // Spacing between columns
+    ),
+    itemCount: 8, // Number of items in the grid
+    itemBuilder: (BuildContext context, int index) {
+      // Build and return the individual grid items
+      return Column(
+        children: [
+          CircleAvatar(
+            backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+            radius: 31.r,
+          ),
+          SizedBox(
+            height: 8.h,
+          ),
+          Text(
+            "Richard",
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 14.sp,
+                color: ColorPicker.blackColor),
+          )
+        ],
+      );
+    },
+  );
 }

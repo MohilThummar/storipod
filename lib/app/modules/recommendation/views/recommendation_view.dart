@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';
+import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/string.dart';
 
 import '../../../common/app_button.dart';
@@ -18,10 +19,10 @@ class RecommendationView extends GetView<RecommendationController> {
     List<String> hobbyList = [
       " 😍 Romance",
       "Sci-fi",
-      "Art",
-      "Art",
+      " ✎ Art",
+      " Art",
       "Sports",
-      "Art",
+      " ✏ Art",
       "Movies",
       "Geography",
       "Trending News",
@@ -32,10 +33,9 @@ class RecommendationView extends GetView<RecommendationController> {
     Get.put(RecommendationController());
     return Scaffold(
       appBar: appbarWithSkip(context: context),
-      body: Padding(
-        padding: EdgeInsets.all(12.0),
-        child: SingleChildScrollView(
-          child: Column(
+      body: commanPaddingWidget(
+        child: GetBuilder<RecommendationController>(
+          builder: (_) => Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -62,7 +62,7 @@ class RecommendationView extends GetView<RecommendationController> {
                     color: ColorPicker.boderBlackColor),
               ),
               SizedBox(
-                height: 23.h,
+                height: 46.h,
               ),
 
               Wrap(
@@ -74,6 +74,7 @@ class RecommendationView extends GetView<RecommendationController> {
                     }
                     return GestureDetector(
                       onTap: () {
+                        controller.update();
                         if (!selectedHobby!.contains(hobby)) {
                           if (selectedHobby!.length < 5) {
                             selectedHobby!.add(hobby);
@@ -97,7 +98,7 @@ class RecommendationView extends GetView<RecommendationController> {
                                   ? ColorPicker.appButtonColor
                                   : ColorPicker.lightWhiteColor
                                       .withOpacity(0.2),
-                              borderRadius: BorderRadius.circular(18),
+                              borderRadius: BorderRadius.circular(5.r),
                               border: Border.all(
                                   color: ColorPicker.boderBlackColor
                                       .withOpacity(0.1),
@@ -110,8 +111,9 @@ class RecommendationView extends GetView<RecommendationController> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 15.sp,
-                                    color:  ColorPicker.greyColor
-                                        ),
+                                    color: isSelected
+                                        ? ColorPicker.whiteColor
+                                        : ColorPicker.greyColor),
                               ),
                             ),
                           )),
@@ -122,14 +124,13 @@ class RecommendationView extends GetView<RecommendationController> {
 
               // Spacer(),
               SizedBox(
-                height: 300.h,
+                height: 259.h,
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
+              Center(
                 child: ButtonWidget(
-                  redius: 10,
+                  redius: 10.r,
                   context: context,
-                  height: 55,
+                  height: 55.h,
                   width: double.infinity,
                   onPressed: () {
                     Get.to(FindnewstoryView());
