@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -5,7 +6,6 @@ import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/createAccount/views/create_account_view.dart';
-import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 import '../../../common/app_text_field.dart';
 import '../../../constant/colour.dart';
 import '../../../constant/string.dart';
@@ -54,119 +54,121 @@ class LoginView extends GetView<LoginController> {
               ),
               CustomTextField(
                 padding: EdgeInsets.all(16),
-                fillColor: ColorPicker.lightWhiteColor,
+                fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
+                boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 isDense: true,
                 suffixIconData1: Icon(null),
-                boderColor: ColorPicker.boderBlackColor,
                 controller: controller.emailIdController,
                 hintText: AppStrings.enterEmail,
-                onTap: () {},
                 inputType: TextInputType.emailAddress,
               ),
               SizedBox(
                 height: 12.h,
               ),
-              CustomTextField(
-                padding: EdgeInsets.all(16),
-                suffixIconColor: ColorPicker.blackEyeColor,
-                suffixIconData1: Icon(
-                  Icons.remove_red_eye,
-                ),
-                desibleBoderColor: ColorPicker.offSkyColor,
-                fillColor: ColorPicker.lightWhiteColor,
-                isDense: true,
-                boderColor: ColorPicker.boderBlackColor,
-                controller: controller.passwordController,
-                hintText: AppStrings.enterPassword,
-                onTap: () {},
-                obscureText: true,
-                inputType: TextInputType.emailAddress,
-              ),
+              Obx(() {
+                return CustomTextField(
+                  OnTapSuffix: () {
+                    controller.togglePasswordVisibility();
+                  },
+                  padding: EdgeInsets.all(16),
+                  fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
+                  isDense: true,
+                  suffixIconData1: Icon(
+                      controller.showPassword.value
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: ColorPicker.blackEyeColor),
+                  boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
+                  controller: controller.passwordController,
+                  hintText: AppStrings.enterPassword,
+                  onTap: () {},
+                  obscureText: !controller.showPassword.value,
+                  inputType: TextInputType.text,
+                );
+              }),
               SizedBox(
                 height: 12.h,
               ),
-              InkWell(
-                onTap: () {
-                  Get.to(ForgotaccountView());
-                },
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    RichText(
-                      overflow: TextOverflow.clip,
-                      textAlign: TextAlign.end,
-                      textDirection: TextDirection.rtl,
-                      text: TextSpan(
-                        text: AppStrings.forGotPassword,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12.sp,
-                            color: ColorPicker.subBlackColor),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: AppStrings.recover,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 12.sp,
-                                color: ColorPicker.skyColor),
-                          ),
-                        ],
-                      ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  RichText(
+                    overflow: TextOverflow.clip,
+                    textAlign: TextAlign.end,
+                    textDirection: TextDirection.rtl,
+                    text: TextSpan(
+                      text: AppStrings.forGotPassword,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12.sp,
+                          color: ColorPicker.subBlackColor),
+                      children: <TextSpan>[
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Get.to(ForgotaccountView());
+                            },
+                          text: AppStrings.recover,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 12.sp,
+                              color: ColorPicker.skyColor),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 12.h,
               ),
-              ButtonWidget(redius: 10,
-                context: context,
-                height: 55,
-                width: 335,
-                onPressed: () {
-                  Get.to(ExploreView());
-                },
-                textColor: ColorPicker.blackColor,
-                title: AppStrings.signIN,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
-                disableColor: ColorPicker.appButtonColor,
+              Center(
+                child: ButtonWidget(
+                  redius: 10.r,
+                  context: context,
+                  height: 0.055.sh,
+                  width: double.infinity,
+                  onPressed: () {
+                    Get.to(CreateAccountView());
+                  },
+                  textColor: ColorPicker.blackColor,
+                  title: AppStrings.signIN,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.offGreyColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
               ),
               SizedBox(
                 height: 16.h,
               ),
-              InkWell(
-                onTap: () {
-                  Get.to(CreateAccountView());
-                },
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    RichText(
-                      overflow: TextOverflow.clip,
-                      textAlign: TextAlign.end,
-                      textDirection: TextDirection.rtl,
-                      text: TextSpan(
-                        text: AppStrings.dontAccount,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12.sp,
-                            color: ColorPicker.subBlackColor),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: AppStrings.createAccount,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 12.sp,
-                                color: ColorPicker.skyColor),
-                          ),
-                        ],
-                      ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    overflow: TextOverflow.clip,
+                    textAlign: TextAlign.end,
+                    textDirection: TextDirection.rtl,
+                    text: TextSpan(
+                      text: AppStrings.dontAccount,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12.sp,
+                          color: ColorPicker.subBlackColor),
+                      children: <TextSpan>[
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()..onTap = () {},
+                          text: AppStrings.createAccount,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 12.sp,
+                              color: ColorPicker.skyColor),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 125.h,
@@ -205,8 +207,8 @@ class LoginView extends GetView<LoginController> {
               ),
               ButtonIconWidget(
                 context: context,
-                height: 55,
-                width: 335,
+                height: 0.066.sh,
+                width: double.infinity,
                 iconColor: ColorPicker.whiteColor,
                 onPressed: () {},
                 iconData: Icons.apple,
@@ -221,8 +223,8 @@ class LoginView extends GetView<LoginController> {
               ),
               ButtonImageWidget(
                 context: context,
-                height: 55,
-                width: 335,
+                height: 0.066.sh,
+                width: double.infinity,
                 onPressed: () {},
                 image: ImagePickerImage.googleIcon,
                 textColor: ColorPicker.boderBlackColor,

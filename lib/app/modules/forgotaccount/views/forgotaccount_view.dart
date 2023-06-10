@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 
 import '../../../common/app_button.dart';
@@ -58,11 +59,11 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                 height: 35.h,
               ),
               CustomTextField(
+                fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
+                boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 padding: EdgeInsets.all(16),
-                fillColor: ColorPicker.lightWhiteColor,
                 isDense: true,
                 suffixIconData1: Icon(null),
-                boderColor: ColorPicker.boderBlackColor,
                 controller: controller.emailIdController,
                 hintText: AppStrings.emailAddress,
                 onTap: () {},
@@ -71,90 +72,80 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
               SizedBox(
                 height: 36.h,
               ),
-              ButtonWidget(redius: 10,
-                context: context,
-                height: 55,
-                width: 335,
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return Dialog(
-                        insetPadding:
-                            EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        elevation: 16,
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
+              Center(
+                child: ButtonWidget(
+                  redius: 10,
+                  context: context,
+                  height: 0.066.sh,
+                  width: double.infinity,
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          insetPadding: EdgeInsets.symmetric(
                               horizontal: 16, vertical: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            // mainAxisSize: MainAxisSize.max,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          elevation: 16,
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              // mainAxisSize: MainAxisSize.max,
 
-                            children: [
-                              CircleAvatar(
-                                maxRadius: 24,
-                                minRadius: 24,
-                                backgroundColor:
-                                    ColorPicker.greenColor.withOpacity(0.2),
-                                child: CircleAvatar(
-                                  backgroundColor:
-                                      ColorPicker.greenColor.withOpacity(0.3),
-                                  maxRadius: 20,
-                                  child: Icon(
-                                    Icons.done,
-                                    size: 24,
-                                    color: ColorPicker.greenColor,
-                                  ),
-                                  minRadius: 20,
+                              children: [
+                                Image.asset(ImagePickerImage.doneImage),
+                                SizedBox(
+                                  height: 16.h,
                                 ),
-                              ),
-                              SizedBox(
-                                height: 16.h,
-                              ),
-                              Text(
-                                AppStrings.passwordReser,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18.sp,
-                                    color: ColorPicker.blackColor),
-                              ),
-                              SizedBox(
-                                height: 8.h,
-                              ),
-                              Text(
-                                AppStrings.passwordDialogContain,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14.sp,
-                                    color: ColorPicker.boderBlackColor),
-                              ),
-                              SizedBox(
-                                height: 26.h,
-                              ),
-                              ButtonWidget(redius: 10,
-                                  width: 335,
-                                  height: 55,
-                                  onPressed: () {},
-                                  bgColor: ColorPicker.appButtonColor,
-                                  context: context,
-                                  fontSize: 16.sp,
-                                  textColor: ColorPicker.whiteColor,
-                                  title: AppStrings.goToEmail)
-                            ],
+                                Text(
+                                  AppStrings.passwordReser,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 18.sp,
+                                      color: ColorPicker.blackColor),
+                                ),
+                                SizedBox(
+                                  height: 8.h,
+                                ),
+                                Text(
+                                  AppStrings.passwordDialogContain,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14.sp,
+                                      color: ColorPicker.greyliColor),
+                                ),
+                                SizedBox(
+                                  height: 26.h,
+                                ),
+                                Center(
+                                  child: ButtonWidget(
+                                      redius: 10,
+                                      width: double.infinity,
+                                      height: 0.066.sh,
+                                      onPressed: () {},
+                                      bgColor: ColorPicker.appButtonColor,
+                                      context: context,
+                                      fontSize: 16.sp,
+                                      textColor: ColorPicker.whiteColor,
+                                      title: AppStrings.goToEmail),
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                  );
-                },
-                textColor: ColorPicker.blackColor,
-                title: AppStrings.proceed,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
-                disableColor: ColorPicker.appButtonColor,
+                        );
+                      },
+                    );
+                  },
+                  textColor: ColorPicker.blackColor,
+                  title: AppStrings.proceed,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.offGreyColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
               ),
             ],
           ),

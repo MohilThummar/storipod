@@ -17,6 +17,8 @@ import '../modules/forgotaccount/views/forgotaccount_view.dart';
 import '../modules/homeStory/bindings/home_story_binding.dart';
 import '../modules/homeStory/searchstory/bindings/searchstory_binding.dart';
 import '../modules/homeStory/searchstory/views/searchstory_view.dart';
+import '../modules/homeStory/storyEdit/bindings/story_edit_binding.dart';
+import '../modules/homeStory/storyEdit/views/story_edit_view.dart';
 import '../modules/homeStory/views/home_story_view.dart';
 import '../modules/introduction/bindings/introduction_binding.dart';
 import '../modules/introduction/views/introduction_view.dart';
@@ -24,12 +26,12 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/navbarScreen/bindings/navbar_screen_binding.dart';
 import '../modules/navbarScreen/views/navbar_screen_view.dart';
+import '../modules/notification/bindings/notification_binding.dart';
+import '../modules/notification/views/notification_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/recommendation/bindings/recommendation_binding.dart';
 import '../modules/recommendation/views/recommendation_view.dart';
-import '../modules/homeStory/storyEdit/bindings/story_edit_binding.dart';
-import '../modules/homeStory/storyEdit/views/story_edit_view.dart';
 
 part 'app_routes.dart';
 
@@ -46,12 +48,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.INTRODUCTION,
-      page: () => const IntroductionView(),
+      page: () =>  IntroductionView(),
       binding: IntroductionBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => const LoginView(),
+      page: () =>  LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
@@ -115,6 +117,12 @@ class AppPages {
       name: _Paths.STORY_EDIT,
       page: () => const StoryEditView(),
       binding: StoryEditBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.NOTIFICATION,
+      page: () => const NotificationView(),
+      binding: NotificationBinding(),
     ),
   ];
 }

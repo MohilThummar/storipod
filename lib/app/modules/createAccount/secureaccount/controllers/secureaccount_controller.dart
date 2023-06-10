@@ -8,6 +8,19 @@ class SecureaccountController extends GetxController {
   final count = 0.obs;
   RxBool showPassword = false.obs;
   RxBool conformShowPassword = false.obs;
+
+  // Focus focusNode.;
+
+  RxBool isTextFieldEnabled = false.obs;
+
+  void enableTextField() {
+    isTextFieldEnabled.value = true;
+  }
+
+  void disableTextField() {
+    isTextFieldEnabled.value = false;
+  }
+
   void togglePasswordVisibility() {
     showPassword.value = !showPassword.value;
   }
@@ -31,5 +44,5 @@ class SecureaccountController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+
 }

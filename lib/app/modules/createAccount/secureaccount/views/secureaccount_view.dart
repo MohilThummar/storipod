@@ -14,12 +14,6 @@ class SecureaccountView extends GetView<SecureaccountController> {
   const SecureaccountView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    bool passwordVisible = true;
-    @override
-    void initState() {
-      passwordVisible = false;
-    }
-
     Get.put(SecureaccountController());
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
@@ -98,18 +92,21 @@ class SecureaccountView extends GetView<SecureaccountController> {
                 SizedBox(
                   height: 20.h,
                 ),
-                ButtonWidget(redius: 10,
-                  context: context,
-                  height: 55,
-                  width: 335,
-                  onPressed: () {
-                    // Get.to(SecureaccountView());
-                  },
-                  textColor: ColorPicker.blackColor,
-                  title: AppStrings.proceed,
-                  fontSize: 16.sp,
-                  bgColor: ColorPicker.offGreyColor,
-                  disableColor: ColorPicker.appButtonColor,
+                Center(
+                  child: ButtonWidget(
+                    redius: 10,
+                    context: context,
+                    height: 0.066.sh,
+                    width: double.infinity,
+                    onPressed: () {
+                      // Get.to(SecureaccountView());
+                    },
+                    textColor: ColorPicker.blackColor,
+                    title: AppStrings.proceed,
+                    fontSize: 16.sp,
+                    bgColor: ColorPicker.offGreyColor,
+                    disableColor: ColorPicker.appButtonColor,
+                  ),
                 ),
               ],
             );

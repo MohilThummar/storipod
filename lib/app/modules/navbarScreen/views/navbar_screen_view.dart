@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/modules/login/views/login_view.dart';
 import 'package:storipod_app/app/modules/recommendation/views/recommendation_view.dart';
 
 import '../../../constant/string.dart';
@@ -51,7 +52,10 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
             label: AppStrings.explore,
           ),
           BottomNavigationBarItem(
-            icon:InkWell(onTap: (){},
+            icon:InkWell(onTap: (){
+              Get.to(LoginView());
+
+            },
               child: CircleAvatar(
                 minRadius: 18,
                 maxRadius: 18,

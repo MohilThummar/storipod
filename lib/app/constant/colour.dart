@@ -7,6 +7,8 @@ class ColorPicker {
   static const blackEyeColor = Color(0xff444854);
   static const greyColor = Color(0xff555661);
   static const greylightColor = Color(0xffEDEEFF);
+  static const greylight1Color = Color(0xff303030);
+  static const greyliColor = Color(0xff667085);
 
 
   static const subBlackColor = Color(0xff69696C);

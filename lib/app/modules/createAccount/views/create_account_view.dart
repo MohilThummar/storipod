@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -59,8 +60,8 @@ class CreateAccountView extends GetView<CreateAccountController> {
                       elevation: 3, enableDrag: true, CustomBottomSheet());
                 },
                 child: Container(
-                  width: 110,
-                  height: 110,
+                  width: 110.w,
+                  height: 110.h,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: ColorPicker.offSkyColor.withOpacity(0.3),
@@ -69,55 +70,73 @@ class CreateAccountView extends GetView<CreateAccountController> {
                 ),
               ),
               SizedBox(
-                height: 266.h,
+                height: 100.h,
               ),
-              ButtonWidget(redius: 10,
-                context: context,
-                height: 55,
-                width: 335,
-                onPressed: () {
-                  Get.to(UsernameView());
-                },
-                textColor: ColorPicker.blackColor,
-                title: AppStrings.proceed,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
-                disableColor: ColorPicker.appButtonColor,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 60.r,
+                    backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+                  ),
+                  Image.asset(ImagePickerImage.emojiImage)
+                ],
+              ),
+              SizedBox(
+                height: 100.h,
+              ),
+              // SizedBox(
+              //   height: 266.h,
+              // ),
+              Center(
+                child: ButtonWidget(
+                  redius: 10.r,
+                  context: context,
+                  height: 0.066.sh,
+                  width: double.infinity,
+                  onPressed: () {
+                    Get.to(UsernameView());
+                  },
+                  textColor: ColorPicker.blackColor,
+                  title: AppStrings.proceed,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.offGreyColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
               ),
               SizedBox(
                 height: 30.h,
               ),
-              InkWell(
-                onTap: () {
-                  Get.to(LoginView());
-                },
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    RichText(
-                      overflow: TextOverflow.clip,
-                      textAlign: TextAlign.end,
-                      textDirection: TextDirection.rtl,
-                      text: TextSpan(
-                        text: AppStrings.doYouHave,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12.sp,
-                            color: ColorPicker.subBlackColor),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: AppStrings.signIN,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 12.sp,
-                                color: ColorPicker.skyColor),
-                          ),
-                        ],
-                      ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    overflow: TextOverflow.clip,
+                    textAlign: TextAlign.end,
+                    textDirection: TextDirection.rtl,
+                    text: TextSpan(
+                      text: AppStrings.doYouHave,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12.sp,
+                          color: ColorPicker.subBlackColor),
+                      children: <TextSpan>[
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Get.to(LoginView());
+                            },
+                          text: AppStrings.signIN,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 12.sp,
+                              color: ColorPicker.skyColor),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

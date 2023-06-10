@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import 'package:get/get.dart';
+import 'package:searchfield/searchfield.dart';
 import 'package:storipod_app/app/modules/createAccount/userdetail/views/userdetail_view.dart';
 
 import '../../../../common/app_button.dart';
@@ -12,11 +13,13 @@ import '../../../../constant/colour.dart';
 import '../../../../constant/string.dart';
 import '../../../login/views/login_view.dart';
 import '../controllers/username_controller.dart';
+import 'country.dart';
 
 class UsernameView extends GetView<UsernameController> {
   const UsernameView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final countries = data.map((e) => Country.fromMap(e)).toList();
     Get.put(UsernameController());
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
@@ -53,17 +56,86 @@ class UsernameView extends GetView<UsernameController> {
               SizedBox(
                 height: 58.h,
               ),
-              CustomTextField(
-                padding: EdgeInsets.all(16),
-                fillColor: ColorPicker.lightWhiteColor,
-                isDense: true,
-                suffixIconData1: Icon(null),
-                boderColor: ColorPicker.boderBlackColor,
-                controller: controller.userNameController,
-                hintText: AppStrings.enterUsername,
-                onTap: () {},
-                inputType: TextInputType.emailAddress,
+
+              SearchField<Country>(
+                searchInputDecoration:
+
+                   InputDecoration(
+
+
+
+                    fillColor:  ColorPicker.lightWhiteColor.withOpacity(0.3),
+                    filled:  true,
+                    focusColor: ColorPicker.appButtonColor,
+                    contentPadding: EdgeInsets.all(16),
+                    hintText:  AppStrings.enterUsername,
+                    counter: null,
+                    counterText: "",
+                    hintStyle: TextStyle(
+                    fontWeight: FontWeight.w600,
+                   fontSize: 16,
+                     color: Colors.grey,
+                   ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                            width: 1,
+                            color: ColorPicker.boderBlackColor.withOpacity(0.3),)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                            width: 1,
+                            color: ColorPicker.appButtonColor )),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                            width: 1,
+                            color: ColorPicker.boderBlackColor.withOpacity(0.3),)),
+                    disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                            width: 1,
+                            color: ColorPicker.boderBlackColor.withOpacity(0.3))),
+                    errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: const BorderSide(
+                          color: Colors.red,
+                          width: 1,
+                        )),
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                            width: 1,
+                            color: ColorPicker.boderBlackColor.withOpacity(0.3),
+                         )),
+                  ),
+
+                suggestions: countries
+                    .map(
+                      (e) => SearchFieldListItem<Country>(
+                        e.name,
+                        item: e,
+                        // Use child to show Custom Widgets in the suggestions
+                        // defaults to Text widget
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              // CircleAvatar(
+                              //   backgroundImage: NetworkImage(e.flag),
+                              // ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(e.name),
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                    .toList(),
               ),
+
               // TypeAheadField(
               //   textFieldConfiguration: TextFieldConfiguration(
               //       autofocus: true,
@@ -94,18 +166,21 @@ class UsernameView extends GetView<UsernameController> {
               SizedBox(
                 height: 27.h,
               ),
-              ButtonWidget(redius: 10,
-                context: context,
-                height: 55,
-                width: 335,
-                onPressed: () {
-                  Get.to(UserdetailView());
-                },
-                textColor: ColorPicker.blackColor,
-                title: AppStrings.proceed,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
-                disableColor: ColorPicker.appButtonColor,
+              Center(
+                child: ButtonWidget(
+                  redius: 10.r,
+                  context: context,
+                  height: 0.066.sh,
+                  width: double.infinity,
+                  onPressed: () {
+                    Get.to(UserdetailView());
+                  },
+                  textColor: ColorPicker.blackColor,
+                  title: AppStrings.proceed,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.offGreyColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
               ),
 
               SizedBox(

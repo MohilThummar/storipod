@@ -32,6 +32,7 @@ class CustomTextField extends StatelessWidget {
   final bool? isMaxLines;
   final int? maxLength;
   final int? minLines;
+  final bool? Filled;
   final int? maxLines;
   final bool? isError;
   final bool? isHight;
@@ -44,6 +45,7 @@ class CustomTextField extends StatelessWidget {
     Key? key,
     required this.controller,
     this.obscureText = false,
+    this.Filled = true,
     this.hintText,
     this.color,
     this.fontSize,
@@ -104,12 +106,12 @@ class CustomTextField extends StatelessWidget {
         color: color ?? Colors.black,
       ),
       decoration: InputDecoration(
-        suffixIcon:
-            InkWell(onTap: OnTapSuffix , child: suffixIconData1),
+        suffixIcon: InkWell(onTap: OnTapSuffix, child: suffixIconData1),
         suffixIconColor: suffixIconColor,
         isDense: isDense,
         fillColor: fillColor ?? ColorPicker.lightWhiteColor,
-        filled: true,
+        filled: Filled ?? true,
+        focusColor: ColorPicker.appButtonColor,
         contentPadding: padding,
         hintText: hintText,
         counter: null,
@@ -128,7 +130,7 @@ class CustomTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
             borderSide: BorderSide(
                 width: 1,
-                color: boderColor ??
+                color: ColorPicker.appButtonColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
@@ -158,6 +160,7 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
+
 class CustomTextRoundField extends StatelessWidget {
   final TextEditingController? controller;
   final bool? obscureText;
@@ -232,6 +235,7 @@ class CustomTextRoundField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return TextField(
       controller: controller,
       cursorColor: ColorPicker.appButtonColor,
@@ -258,8 +262,7 @@ class CustomTextRoundField extends StatelessWidget {
         color: color ?? Colors.black,
       ),
       decoration: InputDecoration(
-        suffixIcon:
-        InkWell(onTap: OnTapSuffix , child: suffixIconData1),
+        suffixIcon: InkWell(onTap: OnTapSuffix, child: suffixIconData1),
         suffixIconColor: suffixIconColor,
         isDense: isDense,
         fillColor: fillColor ?? ColorPicker.lightWhiteColor,
@@ -268,6 +271,8 @@ class CustomTextRoundField extends StatelessWidget {
         hintText: hintText,
         counter: null,
         counterText: "",
+        focusColor: ColorPicker.appButtonColor,
+
         hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: fontSize ?? 12,

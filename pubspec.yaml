@@ -10,6 +10,7 @@ dependencies:
   get: 4.6.5
   status_view: ^0.0.2
   flutter_story_view: ^0.0.2
+  searchfield: ^0.8.3
   fluttertoast: ^8.2.1
   lottie: ^2.3.1
   flutter_screenutil: ^5.7.0

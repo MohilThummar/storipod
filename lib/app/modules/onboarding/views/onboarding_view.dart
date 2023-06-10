@@ -25,7 +25,7 @@ class OnboardingView extends GetView<OnboardingController> {
         ),
         child: Center(
             child: Image.asset(
-              ImagePickerImage.onbordingName,
+          ImagePickerImage.onbordingName,
           width: 189.w,
           height: 74.h,
         )),

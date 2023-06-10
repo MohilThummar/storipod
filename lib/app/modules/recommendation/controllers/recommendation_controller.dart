@@ -2,8 +2,11 @@ import 'package:get/get.dart';
 
 class RecommendationController extends GetxController {
   //TODO: Implement RecommendationController
-  RxInt? value = 0.obs;
+  RxInt? valueChip = 0.obs;
   final count = 0.obs;
+  RxInt? selectedValue = 0.obs;
+
+  RxBool isSelected = false.obs;
   List choicechip = [
     {"name": " 😍 Romance"},
     {"name": "Sci-fi"},
@@ -16,6 +19,7 @@ class RecommendationController extends GetxController {
     {"name": "Trending News"},
     {"name": "Art"},
   ];
+
   @override
   void onInit() {
     super.onInit();

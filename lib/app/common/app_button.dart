@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 
+import '../constant/colour.dart';
 
 /// <<< Common App button --------- >>>
 
@@ -78,7 +78,7 @@ Widget ButtonWidget(
     Color? textColor,
     Function()? onPressed,
     Color? bgColor,
-      double?redius,
+    double? redius,
     String? title,
     double? height,
     double? width,
@@ -87,10 +87,16 @@ Widget ButtonWidget(
       height: height,
       width: width,
       child: ElevatedButton(
-          style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(redius!), // Define the border radius
-          ),
-              disabledBackgroundColor: disableColor, backgroundColor: bgColor),
+          style: ElevatedButton.styleFrom(
+
+              onPrimary: ColorPicker.appButtonColor,
+              primary: ColorPicker.offGreyColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(redius!),
+                // Define the border radius
+              ),
+              disabledBackgroundColor: disableColor,
+              backgroundColor: bgColor),
           onPressed: onPressed,
           child: Text(
             title!,

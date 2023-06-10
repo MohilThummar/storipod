@@ -29,7 +29,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
         leading: Center(
           child: InkWell(
             onTap: () {
-         Get.back();
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,
@@ -207,8 +207,8 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               child: ButtonWidget(
                 redius: 30,
                 context: context,
-                height: 55,
-                width: 335,
+                height: 0.066.sh,
+                width: double.infinity,
                 onPressed: () {
                   // Get.to(FindnewstoryView());
                 },

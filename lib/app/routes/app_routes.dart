@@ -20,6 +20,8 @@ abstract class Routes {
   static const HOME_STORY = _Paths.HOME_STORY;
   static const SEARCHSTORY = _Paths.SEARCHSTORY;
   static const STORY_EDIT = _Paths.STORY_EDIT;
+
+  static const NOTIFICATION = _Paths.NOTIFICATION;
 }
 
 abstract class _Paths {
@@ -41,4 +43,6 @@ abstract class _Paths {
   static const HOME_STORY = '/home-story';
   static const SEARCHSTORY = '/searchstory';
   static const STORY_EDIT = '/story-edit';
+
+  static const NOTIFICATION = '/notification';
 }

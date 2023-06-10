@@ -9,6 +9,7 @@ import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/modules/homeStory/storyEdit/views/story_edit_view.dart';
 import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 import 'package:storipod_app/app/modules/homeStory/searchstory/views/searchstory_view.dart';
+import 'package:storipod_app/app/modules/notification/views/notification_view.dart';
 
 import '../controllers/home_story_controller.dart';
 
@@ -21,12 +22,15 @@ class HomeStoryView extends GetView<HomeStoryController> {
 
     return Scaffold(
       appBar: appbarWithNotification(
+          onTapedNotificaton: () {
+            Get.to(NotificationView());
+          },
           onTaped: () {
             Get.to(SearchstoryView());
           },
           context: context),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.symmetric(horizontal: 12.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +41,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
               Row(
                 children: [
                   StatusView(
-                    radius: 30.r,
+                    radius: 28.r,
                     spacing: 15.r,
                     strokeWidth: 3,
                     indexOfSeenStatus: 2,

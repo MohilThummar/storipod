@@ -17,7 +17,7 @@ PreferredSizeWidget imageAppbarWidget({
     ),
     centerTitle: true,
     toolbarHeight: 70.h,
-    elevation: 2,
+    elevation: 1,
   );
 }
 
@@ -136,13 +136,14 @@ PreferredSizeWidget appbarWithSearch({
 PreferredSizeWidget appbarWithNotification({
   BuildContext? context,
   Function()? onTaped,
+  Function()? onTapedNotificaton,
 }) {
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
     actions: [
       Center(
         child: InkWell(
-          onTap: onTaped,
+          onTap: onTapedNotificaton,
           child: Padding(
               padding: const EdgeInsets.only(right: 18.0),
               child: Icon(

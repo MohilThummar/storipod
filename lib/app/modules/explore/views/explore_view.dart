@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,7 +38,7 @@ class ExploreView extends GetView<ExploreController> {
                 height: 25.h,
               ),
               Container(
-                height: 200,
+                height: 200.h,
                 // color: Colors.amberAccent,
                 child: ListView.builder(
                   itemCount: controller.storiesData.length,
@@ -49,8 +51,7 @@ class ExploreView extends GetView<ExploreController> {
                       child: Column(
                         children: [
                           CircleAvatar(
-                            minRadius: 50,
-                            maxRadius: 50,
+                            radius: 50.r,
                             backgroundColor: controller.storiesData[index]
                                 ["color"],
                             child: Padding(
@@ -88,7 +89,7 @@ class ExploreView extends GetView<ExploreController> {
                                 backgroundImage: AssetImage(
                                   controller.storiesData[index]["image"],
                                 ),
-                                radius: 8,
+                                radius: 8.r,
                               ),
                               SizedBox(
                                 width: 4.w,
@@ -109,7 +110,7 @@ class ExploreView extends GetView<ExploreController> {
                 ),
               ),
               Container(
-                height: 200,
+                height: 200.h,
                 // color: Colors.amberAccent,
                 child: ListView.builder(
                   itemCount: controller.storiesData.length,
@@ -122,8 +123,7 @@ class ExploreView extends GetView<ExploreController> {
                       child: Column(
                         children: [
                           CircleAvatar(
-                            minRadius: 50,
-                            maxRadius: 50,
+                            radius: 50.r,
                             backgroundColor: controller.storiesData[index]
                                 ["color"],
                             child: Padding(
@@ -161,7 +161,7 @@ class ExploreView extends GetView<ExploreController> {
                                 backgroundImage: AssetImage(
                                   controller.storiesData[index]["image"],
                                 ),
-                                radius: 8,
+                                radius: 8.r,
                               ),
                               SizedBox(
                                 width: 4.w,
@@ -204,86 +204,92 @@ class ExploreView extends GetView<ExploreController> {
                 height: 16,
               ),
               Container(
-                height: Get.height,
-                child: GridView.count(
+                height: 450.h,
+                child: GridView.builder(
                   physics: NeverScrollableScrollPhysics(),
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 24,
-                  children: List.generate(controller.storiesGrideData.length,
-                      (index) {
-                    return Column(children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage:
-                            AssetImage(ImagePickerImage.profileIcon),
-                        // backgroundColor: controller.storiesGrideData[index]
-                        //     ["color"],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        controller.storiesGrideData[index]["username"],
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 13.sp,
-                            color: ColorPicker.blackColor),
-                      ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Text(
-                        controller.storiesGrideData[index]["subName"],
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 13.sp,
-                            color: ColorPicker.boderBlackColor),
-                      ),
-                    ]);
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, // Number of columns in the grid
+                    mainAxisSpacing: 8, // Spacing between rows
+                    crossAxisSpacing: 1, // Spacing between columns
+                  ),
+                  itemCount: controller
+                      .storiesGrideData.length, // Number of items in the grid
+                  itemBuilder: (BuildContext context, int index) {
+                    // Build and return the individual grid items
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: AssetImage(
+                              controller.storiesGrideData[index]["image"]),
+                          radius: 40.r,
+                        ),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        Text(
+                          controller.storiesGrideData[index]["username"],
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 13.sp,
+                              color: ColorPicker.blackColor),
+                        ),
+                        SizedBox(
+                          height: 3.h,
+                        ),
+                        Text(
+                          controller.storiesGrideData[index]["subName"],
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 13.sp,
+                              color: ColorPicker.boderBlackColor),
+                        ),
+                      ],
+                    );
+                  },
 
-                    //   Container(
-                    //   color: Colors.blue,
-                    //   // height: 400.h,
-                    //   margin: EdgeInsets.all(3.0),
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(3.0),
-                    //     child: GridTile(
-                    //       child: Column(
-                    //         // mainAxisSize: MainAxisSize.max,
-                    //         mainAxisAlignment: MainAxisAlignment.center,
-                    //         crossAxisAlignment: CrossAxisAlignment.center,
-                    //         children: [
-                    //           CircleAvatar(
-                    //             radius: 35,
-                    //             backgroundColor:
-                    //                 controller.storiesGrideData[index]["color"],
-                    //           ),
-                    //           SizedBox(
-                    //             height: 5,
-                    //           ),
-                    //           Text(
-                    //             controller.storiesGrideData[index]["username"],
-                    //             style: TextStyle(
-                    //                 fontWeight: FontWeight.w700,
-                    //                 fontSize: 13.sp,
-                    //                 color: ColorPicker.blackColor),
-                    //           ),
-                    //           SizedBox(
-                    //             height: 4.h,
-                    //           ),
-                    //           Text(
-                    //             controller.storiesGrideData[index]["subName"],
-                    //             style: TextStyle(
-                    //                 fontWeight: FontWeight.w700,
-                    //                 fontSize: 13.sp,
-                    //                 color: ColorPicker.boderBlackColor),
-                    //           ),
-                    //         ],
-                    //       ),
-                    //     ),
-                    //   ),
-                    // );
-                  }),
+                  //   Container(
+                  //   color: Colors.blue,
+                  //   // height: 400.h,
+                  //   margin: EdgeInsets.all(3.0),
+                  //   child: Padding(
+                  //     padding: const EdgeInsets.all(3.0),
+                  //     child: GridTile(
+                  //       child: Column(
+                  //         // mainAxisSize: MainAxisSize.max,
+                  //         mainAxisAlignment: MainAxisAlignment.center,
+                  //         crossAxisAlignment: CrossAxisAlignment.center,
+                  //         children: [
+                  //           CircleAvatar(
+                  //             radius: 35,
+                  //             backgroundColor:
+                  //                 controller.storiesGrideData[index]["color"],
+                  //           ),
+                  //           SizedBox(
+                  //             height: 5,
+                  //           ),
+                  //           Text(
+                  //             controller.storiesGrideData[index]["username"],
+                  //             style: TextStyle(
+                  //                 fontWeight: FontWeight.w700,
+                  //                 fontSize: 13.sp,
+                  //                 color: ColorPicker.blackColor),
+                  //           ),
+                  //           SizedBox(
+                  //             height: 4.h,
+                  //           ),
+                  //           Text(
+                  //             controller.storiesGrideData[index]["subName"],
+                  //             style: TextStyle(
+                  //                 fontWeight: FontWeight.w700,
+                  //                 fontSize: 13.sp,
+                  //                 color: ColorPicker.boderBlackColor),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
                 ),
               ),
             ],

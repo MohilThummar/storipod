@@ -22,6 +22,8 @@ class ImagePickerImage {
   static const tImage = "assets/T.png";
   static const sd1Image = "assets/sd1.png";
   static const sd2Image = "assets/sd2.png";
+  static const doneImage = "assets/done.png";
+  static const emojiImage = "assets/emoji.png";
   static const sd3Image = "assets/sd3.png";
   static const sd4Image = "assets/sd4.png";
   static const sd5Image = "assets/sd5.png";
@@ -34,4 +36,17 @@ class ImagePickerImage {
   static const girl2Image = "assets/girl2.png";
   static const girl3Image = "assets/girl3.png";
   static const boy1Image = "assets/boy1.png";
+  static const dp2Image = "assets/dp2.png";
+  static const dp3Image = "assets/dp2.png";
+  static const dp4Image = "assets/dp4.png";
+  static const dp5Image = "assets/dp5.png";
+  static const dp6Image = "assets/dp6.png";
+  static const dp7Image = "assets/dp7.png";
+  static const dp8Image = "assets/dp8.png";
+  static const ddImage = "assets/dd.png";
+  static const bbImage = "assets/bb.png";
+  static const sendImage = "assets/Send.png";
+  static const ggImage = "assets/gg.png";
+  static const dp9Image = "assets/dp9.png";
+
 }

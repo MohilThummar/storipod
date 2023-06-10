@@ -53,9 +53,9 @@ class UserdetailView extends GetView<UserdetailController> {
               CustomTextField(
                 padding: EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
+                boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 isDense: true,
                 suffixIconData1: Icon(null),
-                boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 controller: controller.emailController,
                 hintText: AppStrings.enterEmail,
                 onTap: () {},
@@ -114,18 +114,21 @@ class UserdetailView extends GetView<UserdetailController> {
               SizedBox(
                 height: 20.h,
               ),
-              ButtonWidget(redius: 10,
-                context: context,
-                height: 55,
-                width: 335,
-                onPressed: () {
-                  Get.to(SecureaccountView());
-                },
-                textColor: ColorPicker.blackColor,
-                title: AppStrings.proceed,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
-                disableColor: ColorPicker.appButtonColor,
+              Center(
+                child: ButtonWidget(
+                  redius: 10.r,
+                  context: context,
+                   height: 0.066.sh,
+                  width: double.infinity,
+                  onPressed: () {
+                    Get.to(SecureaccountView());
+                  },
+                  textColor: ColorPicker.blackColor,
+                  title: AppStrings.proceed,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.offGreyColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
               ),
               SizedBox(
                 height: 120.h,

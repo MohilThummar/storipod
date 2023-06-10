@@ -18,7 +18,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
     // int? _value = 1;
     Get.put(FindnewstoryController());
     return Scaffold(
-      appBar: imageAppbarWidget(context: context),
+      appBar: imageAppbarWidget(context: context,),
       backgroundColor: ColorPicker.whiteColor,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -92,12 +92,12 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
             //     return Container();
             //   },
             // ),
-            Align(
-              alignment: Alignment.bottomCenter,
+            Center(
+          
               child: ButtonWidget(redius: 10,
                 context: context,
-                height: 55,
-                width: 335,
+                 height: 0.066.sh,
+               width: double.infinity,
                 onPressed: () {
                   Get.to(HomeStoryView());
                 },

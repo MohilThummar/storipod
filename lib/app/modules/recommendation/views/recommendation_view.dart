@@ -12,8 +12,23 @@ import '../controllers/recommendation_controller.dart';
 
 class RecommendationView extends GetView<RecommendationController> {
   const RecommendationView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    List<String> hobbyList = [
+      " 😍 Romance",
+      "Sci-fi",
+      "Art",
+      "Art",
+      "Sports",
+      "Art",
+      "Movies",
+      "Geography",
+      "Trending News",
+      "Art",
+    ];
+
+    List<String>? selectedHobby = [];
     Get.put(RecommendationController());
     return Scaffold(
       appBar: appbarWithSkip(context: context),
@@ -25,7 +40,7 @@ class RecommendationView extends GetView<RecommendationController> {
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Text(
                 AppStrings.whatKinfOf,
@@ -49,52 +64,62 @@ class RecommendationView extends GetView<RecommendationController> {
               SizedBox(
                 height: 23.h,
               ),
+
               Wrap(
-                // list of length 3
-                children: List.generate(
-                  controller.choicechip.length,
-                  (int index) {
-                    // choice chip allow us to
-                    // set its properties.
-                    return Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ChoiceChip(
-                        backgroundColor:
-                            ColorPicker.lightWhiteColor.withOpacity(0.2),
-                        onSelected: (value) {},
+                children: hobbyList.map(
+                  (hobby) {
+                    bool isSelected = false;
+                    if (selectedHobby!.contains(hobby)) {
+                      isSelected = true;
+                    }
+                    return GestureDetector(
+                      onTap: () {
+                        if (!selectedHobby!.contains(hobby)) {
+                          if (selectedHobby!.length < 5) {
+                            selectedHobby!.add(hobby);
 
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            width: 1.0,
-                            color: ColorPicker.boderBlackColor.withOpacity(0.1),
-                          ),
-                          borderRadius: BorderRadius.zero,
-                        ),
-
-                        padding: EdgeInsets.all(4),
-                        labelStyle: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 15.sp,
-                            color: controller.value == index
-                                ? ColorPicker.whiteColor
-                                : ColorPicker.greyColor),
-                        labelPadding:
-                            EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                        label: Text(controller.choicechip[index]["name"]),
-                        // color of selected chip
-                        selectedColor: ColorPicker.skyColor,
-                        // selected chip value
-                        selected: controller.value == index,
-                        // onselected method
-                        // onSelected: (selected) {
-                        //   controller.value = selected ? index : null;
-                        //
-                        // },
-                      ),
+                            print(selectedHobby);
+                          }
+                        } else {
+                          selectedHobby!
+                              .removeWhere((element) => element == hobby);
+                          print(selectedHobby);
+                        }
+                      },
+                      child: Container(
+                          margin:
+                              EdgeInsets.symmetric(horizontal: 5, vertical: 4),
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 12),
+                            decoration: BoxDecoration(
+                              color: isSelected
+                                  ? ColorPicker.appButtonColor
+                                  : ColorPicker.lightWhiteColor
+                                      .withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(18),
+                              border: Border.all(
+                                  color: ColorPicker.boderBlackColor
+                                      .withOpacity(0.1),
+                                  width: 2),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Text(
+                                hobby,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15.sp,
+                                    color:  ColorPicker.greyColor
+                                        ),
+                              ),
+                            ),
+                          )),
                     );
                   },
                 ).toList(),
               ),
+
               // Spacer(),
               SizedBox(
                 height: 300.h,
@@ -105,7 +130,7 @@ class RecommendationView extends GetView<RecommendationController> {
                   redius: 10,
                   context: context,
                   height: 55,
-                  width: 335,
+                  width: double.infinity,
                   onPressed: () {
                     Get.to(FindnewstoryView());
                   },

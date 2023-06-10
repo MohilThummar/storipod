@@ -1,0 +1,1 @@
+export 'package:storipod_app/infrastructure/navigation/bindings/controllers/notification.controller.binding.dart'; 
