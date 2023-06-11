@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 
@@ -122,37 +123,37 @@ class CustomTextField extends StatelessWidget {
             fontSize: fontSize ?? 12,
             color: hintColor ?? Colors.grey),
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: boderColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: ColorPicker.appButtonColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: boderColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         disabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: desibleBoderColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: const BorderSide(
               color: Colors.red,
               width: 1,
             )),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: boderColor ??
@@ -437,19 +438,19 @@ class CustomPasswordTextField extends StatelessWidget {
             fontSize: fontSize ?? 12,
             color: hintColor ?? Colors.grey),
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: boderColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: ColorPicker.appButtonColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: boderColor ??
@@ -461,13 +462,13 @@ class CustomPasswordTextField extends StatelessWidget {
                 color: desibleBoderColor ??
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: const BorderSide(
               color: Colors.red,
               width: 1,
             )),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
                 width: 1,
                 color: boderColor ??

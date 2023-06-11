@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constant/colour.dart';
 
@@ -88,9 +89,8 @@ Widget ButtonWidget(
       width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-
               onPrimary: ColorPicker.appButtonColor,
-              primary: ColorPicker.offGreyColor,
+              primary: ColorPicker.appButtonColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(redius!),
                 // Define the border radius
@@ -140,6 +140,9 @@ Widget ButtonImageWidget(
                   height: imageheight,
                   width: imageWidth,
                 ),
+                SizedBox(
+                  width: 15.w,
+                ),
                 Text(
                   title!,
                   style: TextStyle(
@@ -179,6 +182,9 @@ Widget ButtonIconWidget(
               Icon(
                 iconData!,
                 color: iconColor,
+              ),
+              SizedBox(
+                width: 10.w,
               ),
               Text(
                 title!,

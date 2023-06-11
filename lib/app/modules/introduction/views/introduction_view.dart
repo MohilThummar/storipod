@@ -65,7 +65,7 @@ class IntroductionViewState extends State<IntroductionView> {
               },
             ),
             Positioned(
-              bottom: 250.h,
+              bottom: 220.h,
               left: 0,
               right: 0,
               height: 0.22.sh,
@@ -86,10 +86,10 @@ class IntroductionViewState extends State<IntroductionView> {
                                 });
                               },
                               child: CircleAvatar(
-                                radius: 4,
+                                radius: 4.r,
                                 backgroundColor: _activePage == index
                                     ? Colors.blueAccent
-                                    : Colors.blueGrey,
+                                    : Colors.blueAccent.withOpacity(0.4),
                               ),
                             ),
                           )),
@@ -115,7 +115,7 @@ class IntroductionViewState extends State<IntroductionView> {
                   },
                   width: double.infinity,
                   fontSize: 16.sp,
-                  height: 0.077.sh,
+                  height: 55.h,
                   title: "Get started",
                 ),
               )),
@@ -130,7 +130,7 @@ class IntroductionViewState extends State<IntroductionView> {
 PageOne() {
   return Container(
     child: Padding(
-      padding: EdgeInsets.only(top: 0.46.sh),
+      padding: EdgeInsets.only(top: 0.36.sh),
       child: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +168,7 @@ PageOne() {
 PageTwo() {
   return Container(
     child: Padding(
-      padding: EdgeInsets.only(top: 0.46.sh),
+      padding: EdgeInsets.only(top: 0.36.sh),
       child: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -206,7 +206,7 @@ PageTwo() {
 PageThree() {
   return Container(
     child: Padding(
-      padding: EdgeInsets.only(top: 0.46.sh),
+      padding: EdgeInsets.only(top: 0.36.sh),
       child: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -40,6 +40,9 @@ class NotificationView extends GetView<NotificationController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(
+              height: 24.h,
+            ),
             Text(
               'Today',
               style: TextStyle(
@@ -53,7 +56,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ddImage),
                 ),
                 SizedBox(
@@ -68,7 +71,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Ekaneoffiong started following you",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -78,21 +81,19 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 ButtonWidget(
-                  redius: 10,
+                  redius: 8.r,
                   context: context,
-                  height: 36.spMax,
-                  width: 67.spMax,
+                  height: 26.h,
+                  width: 70.w,
                   onPressed: () {
                     // Get.to(ExploreView());
                   },
@@ -110,7 +111,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ggImage),
                 ),
                 SizedBox(
@@ -125,7 +126,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Fidelis Antigha commented: Ride on Samurai",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -135,16 +136,14 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 Text(
                   "View story",
                   style: TextStyle(
@@ -160,7 +159,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.bbImage),
                 ),
                 SizedBox(
@@ -175,7 +174,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Ekaneoffiong started following you",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -185,18 +184,16 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 Container(
-                    height: 36.spMax,
+                    height: 26.h,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
@@ -230,7 +227,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ddImage),
                 ),
                 SizedBox(
@@ -245,7 +242,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Ekaneoffiong started following you",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -255,21 +252,19 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 ButtonWidget(
-                  redius: 10,
+                  redius: 8.r,
                   context: context,
-                  height: 36.spMax,
-                  width: 67.spMax,
+                  height: 26.h,
+                  width: 70.w,
                   onPressed: () {
                     // Get.to(ExploreView());
                   },
@@ -287,7 +282,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ggImage),
                 ),
                 SizedBox(
@@ -302,7 +297,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Fidelis Antigha commented: Ride on Samurai",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -312,16 +307,14 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 Text(
                   "View story",
                   style: TextStyle(
@@ -334,65 +327,76 @@ class NotificationView extends GetView<NotificationController> {
             SizedBox(
               height: 16.h,
             ),
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 30.r,
-                  backgroundImage: AssetImage(ImagePickerImage.bbImage),
-                ),
-                SizedBox(
-                  width: 12.w,
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Ekaneoffiong started following you",
-                        style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w600,
-                            color: ColorPicker.blackColor),
-                      ),
-                      SizedBox(
-                        height: 4.h,
-                      ),
-                      Text(
-                        "8:00 AM",
-                        style: TextStyle(
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w400,
-                            color: ColorPicker.greyColor),
-                      ),
-                    ],
+            Padding(
+              padding:  EdgeInsets.symmetric(vertical: 8.h),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 16.r,
+                    backgroundImage: AssetImage(ImagePickerImage.bbImage),
                   ),
-                ),
-                SizedBox(
-                  width: 32.w,
-                ),
-                Container(
-                    height: 36.spMax,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                  8.r), // Define the border radius
-                            ),
-                            backgroundColor: Color(0xffF3F3F3)),
-                        onPressed: () {},
-                        child: Text(
-                          "Following",
+                  SizedBox(
+                    width: 12.w,
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Ekaneoffiong started following you",
                           style: TextStyle(
-                              fontWeight: FontWeight.w700,
                               fontSize: 12.sp,
+                              fontWeight: FontWeight.w600,
                               color: ColorPicker.blackColor),
-                        )))
-              ],
+                        ),
+                        SizedBox(
+                          height: 4.h,
+                        ),
+                        Text(
+                          "8:00 AM",
+                          style: TextStyle(
+                              fontSize: 8.sp,
+                              fontWeight: FontWeight.w400,
+                              color: ColorPicker.greyColor),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                  Container(
+                      height: 26.h,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(
+                                    8.r), // Define the border radius
+                              ),
+                              backgroundColor: Color(0xffF3F3F3)),
+                          onPressed: () {},
+                          child: Text(
+                            "Following",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12.sp,
+                                color: ColorPicker.blackColor),
+                          )))
+                ],
+              ),
             ),
             SizedBox(
-              height: 24.h,
+              height: 32.h,
+            ),
+            Divider(
+              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              height: 1,
+              indent: 2,
+              endIndent: 1,
+              thickness: 1,
+            ),
+            SizedBox(
+              height: 10.h,
             ),
             Text(
               'Suggested for you',
@@ -402,12 +406,13 @@ class NotificationView extends GetView<NotificationController> {
                   color: ColorPicker.blackColor),
             ),
             SizedBox(
-              height: 19.h,
+              height: 20.h,
             ),
+
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ddImage),
                 ),
                 SizedBox(
@@ -422,7 +427,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Ekaneoffiong started following you",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -432,21 +437,19 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 ButtonWidget(
-                  redius: 10,
+                  redius: 8.r,
                   context: context,
-                  height: 36.spMax,
-                  width: 67.spMax,
+                  height: 26.h,
+                  width: 70.w,
                   onPressed: () {
                     // Get.to(ExploreView());
                   },
@@ -468,7 +471,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ddImage),
                 ),
                 SizedBox(
@@ -483,7 +486,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Ekaneoffiong started following you",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -493,21 +496,19 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 ButtonWidget(
-                  redius: 10,
+                  redius: 8.r,
                   context: context,
-                  height: 36.spMax,
-                  width: 67.spMax,
+                  height: 26.h,
+                  width: 70.w,
                   onPressed: () {
                     // Get.to(ExploreView());
                   },
@@ -529,7 +530,7 @@ class NotificationView extends GetView<NotificationController> {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
+                  radius: 16.r,
                   backgroundImage: AssetImage(ImagePickerImage.ddImage),
                 ),
                 SizedBox(
@@ -544,7 +545,7 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "Ekaneoffiong started following you",
                         style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w600,
                             color: ColorPicker.blackColor),
                       ),
@@ -554,21 +555,19 @@ class NotificationView extends GetView<NotificationController> {
                       Text(
                         "8:00 AM",
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 8.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorPicker.greyColor),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 32.w,
-                ),
+                Spacer(),
                 ButtonWidget(
-                  redius: 10,
+                  redius: 8.r,
                   context: context,
-                  height: 36.spMax,
-                  width: 67.spMax,
+                  height: 26.h,
+                  width: 70.w,
                   onPressed: () {
                     // Get.to(ExploreView());
                   },

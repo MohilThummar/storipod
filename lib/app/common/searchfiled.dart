@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:storipod_app/app/constant/image.dart';
 
 import '../constant/colour.dart';
 
@@ -22,24 +24,41 @@ Widget searchfildWidget(
           contentPadding: EdgeInsets.only(top: 5),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(width: 0.2, color: ColorPicker.greyColor),
-            borderRadius: BorderRadius.circular(9.73),
+            borderRadius: BorderRadius.circular(4.r),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(width: 0.2, color: ColorPicker.greyColor),
-            borderRadius: BorderRadius.circular(9.73),
+            borderRadius: BorderRadius.circular(4.r),
           ),
           filled: true,
           fillColor: ColorPicker.whiteColor,
-          prefixIcon: Icon(Icons.search, color: ColorPicker.boderBlackColor),
+          prefixIcon: ImageIcon(
+              AssetImage(
+                ImagePickerImage.Search1Icon,
+              ),
+              size: 16.sp),
+          // prefixIcon: Image.asset(
+          //   ImagePickerImage.SearchImage,
+          //   height: 16.h,
+          //   width: 16.w,
+          //   fit: BoxFit.fill,
+          //   // alignment: Alignment.center,
+          //   color: ColorPicker.boderBlackColor,
+          // ),
           hintText: hintText,
           suffixIcon: GestureDetector(
               onTap: suffixOnTap,
               child: Image.asset(
+                width: 8.w,
+                height: 8.h,
                 imageData!,
+                fit: BoxFit.fill,
                 color: iconColorSuffix,
               )),
           hintStyle: TextStyle(
-              color: ColorPicker.offGreyColor, fontWeight: FontWeight.w500),
+              fontSize: 12.sp,
+              color: ColorPicker.offgreGreen,
+              fontWeight: FontWeight.w500),
         ),
       ),
     ),

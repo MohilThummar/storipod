@@ -18,26 +18,20 @@ class SearchstoryView extends GetView<SearchstoryController> {
     Get.put(SearchstoryController());
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
+        elevation: 1,
+        toolbarHeight: 80.h,
         backgroundColor: ColorPicker.whiteColor,
         titleSpacing: 0,
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Colors.blue, Colors.green], // Set the desired gradient colors
-        //       begin: Alignment.topLeft,
-        //       end: Alignment.bottomRight,
-        //     ),
-        //   ),
-        // ),
-        leading: GestureDetector(
+
+        leading: InkWell(
           onTap: () {
             Get.back();
           },
-          child: const Padding(
+          child: Padding(
             padding: EdgeInsets.only(left: 15.0),
             child: Icon(
               Icons.arrow_back_ios,
+              size: 18.sp,
               color: ColorPicker.blackColor,
             ),
           ),
@@ -49,7 +43,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
               Get.bottomSheet(
                   elevation: 3, enableDrag: true, SearchBottomSheet());
             },
-            imageData: ImagePickerImage.filterImage,
+            imageData: ImagePickerImage.filter1Icon,
             controller: controller.searchController,
             hintText: "Search for user",
             context: context,
@@ -61,7 +55,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 10.h,
+              height: 24.h,
             ),
             Text(
               AppStrings.recent,
@@ -71,7 +65,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                   color: ColorPicker.blackColor),
             ),
             SizedBox(
-              height: 10,
+              height: 20.h,
             ),
             Row(
               children: [
@@ -81,10 +75,11 @@ class SearchstoryView extends GetView<SearchstoryController> {
                       color: ColorPicker.boderBlackColor.withOpacity(0.2),
                       width: 1.0,
                     ),
-                    borderRadius: BorderRadius.circular(20.0),
+                    borderRadius: BorderRadius.circular(20.r),
                     color: ColorPicker.offGreyColor.withOpacity(0.4),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
                   child: Text(
                     AppStrings.person,
                     style: TextStyle(
@@ -101,13 +96,13 @@ class SearchstoryView extends GetView<SearchstoryController> {
                   child: Icon(
                     color: ColorPicker.blackColor,
                     Icons.close,
-                    size: 25,
+                    size: 20.r,
                   ),
                 )
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 10.h,
             ),
             Row(
               children: [
@@ -120,22 +115,23 @@ class SearchstoryView extends GetView<SearchstoryController> {
                     ),
                   ),
                   child: CircleAvatar(
-                    backgroundColor: ColorPicker.whiteColor,
-                    radius: 25,
-                    child: Icon(
-                      Icons.search,
-                      color: ColorPicker.greyColor,
-                    ),
-                  ),
+                      backgroundColor: ColorPicker.whiteColor,
+                      radius: 26.r,
+                      child: Image.asset(
+                        ImagePickerImage.SearchImage,
+                        height: 24.h,
+                        width: 24.w,
+                        fit: BoxFit.fill,
+                      )),
                 ),
                 SizedBox(
-                  width: 15,
+                  width: 8.w,
                 ),
                 Text(
                   "Courtney",
                   style: TextStyle(
                       fontSize: 14.sp,
-                      fontWeight: FontWeight.w800,
+                      fontWeight: FontWeight.w700,
                       color: ColorPicker.blackColor),
                 ),
               ],
@@ -144,6 +140,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
               shrinkWrap: true,
               padding: EdgeInsets.symmetric(vertical: 16),
               physics: NeverScrollableScrollPhysics(),
+              // itemCount: 30,
               itemCount: controller.storyList.length,
               itemBuilder: (context, index) {
                 return Padding(
@@ -151,13 +148,13 @@ class SearchstoryView extends GetView<SearchstoryController> {
                   child: Row(
                     children: [
                       CircleAvatar(
-                          radius: 25,
+                          radius: 26.r,
                           backgroundImage:
                               AssetImage(ImagePickerImage.profileIcon)
                           // AssetImage( controller.storyList[index]["image"]),
                           ),
                       SizedBox(
-                        width: 15.w,
+                        width: 8.w,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,7 +163,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                             controller.storyList[index]["name"],
                             style: TextStyle(
                                 fontSize: 14.sp,
-                                fontWeight: FontWeight.w800,
+                                fontWeight: FontWeight.w700,
                                 color: ColorPicker.blackColor),
                           ),
                           SizedBox(
@@ -175,7 +172,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                           Text(
                             controller.storyList[index]["subName"],
                             style: TextStyle(
-                                fontSize: 12.sp,
+                                fontSize: 10.sp,
                                 fontWeight: FontWeight.w600,
                                 color: ColorPicker.boderBlackColor),
                           ),

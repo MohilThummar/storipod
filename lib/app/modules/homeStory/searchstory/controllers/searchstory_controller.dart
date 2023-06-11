@@ -8,6 +8,7 @@ class SearchstoryController extends GetxController {
   //TODO: Implement SearchstoryController
   TextEditingController searchController = TextEditingController();
   final count = 0.obs;
+  RxString maintain = "".obs;
   List storyList = [
     {
       "name": AppStrings.everyRound,

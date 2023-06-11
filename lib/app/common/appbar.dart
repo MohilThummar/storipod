@@ -61,7 +61,7 @@ PreferredSizeWidget appbarWithSkip({
         child: GestureDetector(
           onTap: onTaped,
           child: Padding(
-            padding: const EdgeInsets.only(right: 18.0),
+            padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
             child: icon == true
                 ? Icon(
                     Icons.info_outline,
@@ -112,11 +112,11 @@ PreferredSizeWidget appbarWithSearch({
         child: GestureDetector(
           onTap: onTaped,
           child: Padding(
-              padding: EdgeInsets.only(right: 19.0.w),
+              padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
               child: Image.asset(
                 ImagePickerImage.SearchImage,
-                height: 24.h,
-                width: 24.w,
+                height: 20.h,
+                width: 20.w,
                 color: ColorPicker.blackColor,
               )),
         ),
@@ -147,26 +147,45 @@ PreferredSizeWidget appbarWithNotification({
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
     actions: [
-      Center(
-        child: GestureDetector(
-          onTap: onTapedNotificaton,
-          child: Padding(
-              padding: const EdgeInsets.only(right: 18.0),
-              child: Icon(
-                Icons.notifications,
-                size: 28,
-                color: ColorPicker.blackColor,
-              )),
-        ),
+      Stack(
+        children: [
+          Center(
+            child: GestureDetector(
+              onTap: onTapedNotificaton,
+              child: Padding(
+                  padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
+                  child: Image.asset(
+                    ImagePickerImage.notificationImage,
+                    height: 20.h,
+                    width: 20.w,
+                    color: ColorPicker.blackColor,
+                  )),
+            ),
+          ),
+          Positioned(
+              top: 25.h,
+              left: 8.w,
+              child: CircleAvatar(
+                radius: 8.r,
+                backgroundColor: ColorPicker.redColor,
+                foregroundColor: ColorPicker.whiteColor,
+                child: Text(
+                  "3",
+                  style:
+                      TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700),
+                ),
+              ))
+        ],
       ),
       Center(
         child: GestureDetector(
           onTap: onTaped,
           child: Padding(
-              padding: const EdgeInsets.only(right: 18.0),
-              child: Icon(
-                Icons.search_rounded,
-                size: 28,
+              padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
+              child: Image.asset(
+                ImagePickerImage.SearchImage,
+                height: 20.h,
+                width: 20.w,
                 color: ColorPicker.blackColor,
               )),
         ),

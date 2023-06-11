@@ -37,7 +37,7 @@ class UserdetailView extends GetView<UserdetailController> {
                   color: ColorPicker.blackColor),
             ),
             SizedBox(
-              height: 12.h,
+              height: 8.h,
             ),
             Text(
               AppStrings.storiesAudience,
@@ -122,10 +122,10 @@ class UserdetailView extends GetView<UserdetailController> {
                 onPressed: () {
                   Get.to(SecureaccountView());
                 },
-                textColor: ColorPicker.blackColor,
+                textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
                 fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
+                bgColor: ColorPicker.appButtonColor,
                 disableColor: ColorPicker.appButtonColor,
               ),
             ),
@@ -166,8 +166,8 @@ class UserdetailView extends GetView<UserdetailController> {
             ),
             ButtonIconWidget(
               context: context,
-              height: 40,
-              width: 335,
+              height: 40.h,
+              width: double.infinity,
               iconColor: ColorPicker.whiteColor,
               onPressed: () {},
               iconData: Icons.apple,
@@ -182,8 +182,8 @@ class UserdetailView extends GetView<UserdetailController> {
             ),
             ButtonImageWidget(
               context: context,
-              height: 40,
-              width: 335,
+              height: 40.h,
+              width: double.infinity,
               onPressed: () {},
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,

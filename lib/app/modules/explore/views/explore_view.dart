@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/modules/homeStory/searchstory/views/searchstory_view.dart';
 import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 
 import '../../../common/commanpaddingcolumn.dart';
@@ -20,17 +20,24 @@ class ExploreView extends GetView<ExploreController> {
     Get.put(ExploreController());
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
-      appBar: appbarWithSearch(context: context, onTaped: () {}),
-      body: commanPaddingWidget(
+      appBar: appbarWithSearch(
+          context: context,
+          onTaped: () {
+            Get.to(SearchstoryView());
+          }),
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              AppStrings.topStories,
-              style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 14.sp,
-                  color: ColorPicker.blackColor),
+            Padding(
+              padding: EdgeInsets.only(left: 20.w, top: 24.h),
+              child: Text(
+                AppStrings.topStories,
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14.sp,
+                    color: ColorPicker.blackColor),
+              ),
             ),
             SizedBox(
               height: 16.h,
@@ -41,7 +48,7 @@ class ExploreView extends GetView<ExploreController> {
               child: ListView.builder(
                 itemCount: controller.storiesData.length,
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.zero,
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 shrinkWrap: true,
                 physics: AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
@@ -123,7 +130,7 @@ class ExploreView extends GetView<ExploreController> {
               child: ListView.builder(
                 itemCount: controller.storiesData.length,
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.zero,
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 shrinkWrap: true,
                 physics: AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
@@ -196,33 +203,33 @@ class ExploreView extends GetView<ExploreController> {
                 },
               ),
             ),
-            SizedBox(
-              height: 32.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  AppStrings.topFOLLOW,
-                  style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w700,
-                      color: ColorPicker.blackColor),
-                ),
-                Text(
-                  AppStrings.seeAll,
-                  style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w500,
-                      color: ColorPicker.blackColor),
-                )
-              ],
+            Padding(
+              padding: EdgeInsets.only(left: 20.w, top: 32.h, right: 24.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    AppStrings.topFOLLOW,
+                    style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w700,
+                        color: ColorPicker.blackColor),
+                  ),
+                  Text(
+                    AppStrings.seeAll,
+                    style: TextStyle(
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500,
+                        color: ColorPicker.blackColor),
+                  )
+                ],
+              ),
             ),
             SizedBox(
               height: 16.h,
             ),
             Container(
-              height: 460.h,
+              height: 465.h,
               width: double.infinity,
               child: GridView.builder(
                 shrinkWrap: true,
@@ -235,7 +242,7 @@ class ExploreView extends GetView<ExploreController> {
                   crossAxisCount: 3, // Number of columns in the grid
                   mainAxisSpacing: 24,
 
-                  mainAxisExtent: 135,
+                  mainAxisExtent: 127,
                   crossAxisSpacing: 0, // Spacing between columns
                 ),
                 itemCount: controller.storiesGrideData.length,

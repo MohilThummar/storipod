@@ -22,7 +22,7 @@ class LoginView extends GetView<LoginController> {
     Get.put(LoginController());
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
-      appBar: imageAppbarWidget(context: context),
+      appBar: imageAppbarWidget(context: context,),
       body: commanPaddingWidget(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -39,7 +39,7 @@ class LoginView extends GetView<LoginController> {
                   color: ColorPicker.blackColor),
             ),
             SizedBox(
-              height: 12.h,
+              height: 8.h,
             ),
             Row(
               children: [
@@ -134,10 +134,10 @@ class LoginView extends GetView<LoginController> {
                 onPressed: () {
                   Get.offAll(CreateAccountView());
                 },
-                textColor: ColorPicker.blackColor,
+                textColor: ColorPicker.whiteColor,
                 title: AppStrings.signIN,
                 fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
+                bgColor: ColorPicker.appButtonColor,
                 disableColor: ColorPicker.appButtonColor,
               ),
             ),
@@ -160,7 +160,10 @@ class LoginView extends GetView<LoginController> {
                         color: ColorPicker.subBlackColor),
                     children: <TextSpan>[
                       TextSpan(
-                        recognizer: TapGestureRecognizer()..onTap = () {Get.offAll(CreateAccountView());},
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Get.offAll(CreateAccountView());
+                          },
                         text: AppStrings.createAccount,
                         style: TextStyle(
                             fontWeight: FontWeight.w800,
@@ -209,7 +212,7 @@ class LoginView extends GetView<LoginController> {
             ),
             ButtonIconWidget(
               context: context,
-              height: 55.h,
+              height: 40.h,
               width: double.infinity,
               iconColor: ColorPicker.whiteColor,
               onPressed: () {},
@@ -225,7 +228,7 @@ class LoginView extends GetView<LoginController> {
             ),
             ButtonImageWidget(
               context: context,
-              height: 55.h,
+              height: 40.h,
               width: double.infinity,
               onPressed: () {},
               image: ImagePickerImage.googleIcon,

@@ -20,17 +20,14 @@ class StoryEditView extends GetView<StoryEditController> {
     Get.put(StoryEditController());
     return Scaffold(
       backgroundColor: ColorPicker.blackColor,
-      appBar: AppBar(
+      appBar: AppBar(elevation: 1,
         toolbarHeight: 80.h,
         automaticallyImplyLeading: false,
         backgroundColor: ColorPicker.blackColor,
         leading: Center(
           child: GestureDetector(
             onTap: () {
-              Get.bottomSheet(DiscardStoeyView(),
-                  isDismissible: true,
-                  backgroundColor: Colors.transparent,
-                  elevation: 2);
+              Get.back();
             },
             child: CircleAvatar(
                 backgroundColor: ColorPicker.boderBlackColor.withOpacity(0.3),
@@ -84,7 +81,11 @@ class StoryEditView extends GetView<StoryEditController> {
                     SizedBox(
                       width: 10.22.w,
                     ),
-                    Image.asset(ImagePickerImage.deleteImage),
+                    GestureDetector(onTap: (){ Get.bottomSheet(DiscardStoeyView(),
+                        isDismissible: true,
+                        backgroundColor: Colors.transparent,
+                        elevation: 2);},
+                        child: Image.asset(ImagePickerImage.deleteImage)),
                   ],
                 ),
                 GestureDetector(

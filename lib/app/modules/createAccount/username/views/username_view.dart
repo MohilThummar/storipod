@@ -43,7 +43,7 @@ class UsernameView extends GetView<UsernameController> {
                   color: ColorPicker.blackColor),
             ),
             SizedBox(
-              height: 12.h,
+              height: 8.h,
             ),
             Text(
               AppStrings.preferredName,
@@ -71,34 +71,34 @@ class UsernameView extends GetView<UsernameController> {
                   color: Colors.grey,
                 ),
                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(4.r),
                     borderSide: BorderSide(
                       width: 1,
                       color: ColorPicker.boderBlackColor.withOpacity(0.3),
                     )),
                 focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(4.r),
                     borderSide: BorderSide(
                         width: 1, color: ColorPicker.appButtonColor)),
                 enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(4.r),
                     borderSide: BorderSide(
                       width: 1,
                       color: ColorPicker.boderBlackColor.withOpacity(0.3),
                     )),
                 disabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(4.r),
                     borderSide: BorderSide(
                         width: 1,
                         color: ColorPicker.boderBlackColor.withOpacity(0.3))),
                 errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(4.r),
                     borderSide: const BorderSide(
                       color: Colors.red,
                       width: 1,
                     )),
                 focusedErrorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(4.r),
                     borderSide: BorderSide(
                       width: 1,
                       color: ColorPicker.boderBlackColor.withOpacity(0.3),
@@ -119,7 +119,7 @@ class UsernameView extends GetView<UsernameController> {
                             //   backgroundImage: NetworkImage(e.flag),
                             // ),
                             SizedBox(
-                              width: 10,
+                              width: 10.h,
                             ),
                             Text(e.name),
                           ],
@@ -130,33 +130,7 @@ class UsernameView extends GetView<UsernameController> {
                   .toList(),
             ),
 
-            // TypeAheadField(
-            //   textFieldConfiguration: TextFieldConfiguration(
-            //       autofocus: true,
-            //       style: DefaultTextStyle.of(context).style.copyWith(
-            //           fontStyle: FontStyle.italic
-            //       ),
-            //       decoration: InputDecoration(
-            //           border: OutlineInputBorder()
-            //       )
-            //   ),
-            //   suggestionsCallback: (pattern) async {
-            //     return Container();
-            //     // return await BackendService.getSuggestions(pattern);
-            //   },
-            //   itemBuilder: (context, suggestion) {
-            //     return ListTile(
-            //       leading: Icon(Icons.shopping_cart),
-            //       title: Text("name"),
-            //       subtitle: Text('enter user name'),
-            //     );
-            //   },
-            //   onSuggestionSelected: (suggestion) {
-            //     // Navigator.of(context).push(MaterialPageRoute(
-            //     //     builder: (context) => ProductPage(product: suggestion)
-            //     // ));
-            //   },
-            // ),
+
             SizedBox(
               height: 27.h,
             ),
@@ -169,10 +143,10 @@ class UsernameView extends GetView<UsernameController> {
                 onPressed: () {
                   Get.to(UserdetailView());
                 },
-                textColor: ColorPicker.blackColor,
+                textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
                 fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
+                bgColor: ColorPicker.appButtonColor,
                 disableColor: ColorPicker.appButtonColor,
               ),
             ),

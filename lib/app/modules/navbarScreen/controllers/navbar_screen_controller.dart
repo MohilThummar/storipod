@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 class NavbarScreenController extends GetxController {
   //TODO: Implement NavbarScreenController
   RxInt selectedItemIndex = 0.obs;
-
+  int SelectedItem = 2;
   void changeSelectedItem(int index) {
     selectedItemIndex.value = index;
   }

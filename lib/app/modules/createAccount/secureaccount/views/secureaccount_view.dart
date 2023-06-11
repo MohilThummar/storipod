@@ -36,7 +36,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                     color: ColorPicker.blackColor),
               ),
               SizedBox(
-                height: 12.h,
+                height: 8.h,
               ),
               Text(
                 AppStrings.protectAccount,
@@ -49,16 +49,16 @@ class SecureaccountView extends GetView<SecureaccountController> {
                 height: 32.h,
               ),
               CustomPasswordTextField(
-              suffixIconData1: controller.showPassword.value
-                  ? ImagePickerImage.showEyeImage
-                  : ImagePickerImage.hiddenImage,
+                suffixIconData1: controller.showPassword.value
+                    ? ImagePickerImage.showEyeImage
+                    : ImagePickerImage.hiddenImage,
                 OnTapSuffix: () {
                   controller.togglePasswordVisibility();
                 },
                 padding: EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 isDense: true,
-             boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
+                boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 controller: controller.passwordController,
                 hintText: AppStrings.enterPasswordText,
                 onTap: () {},
@@ -100,7 +100,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                   textColor: ColorPicker.blackColor,
                   title: AppStrings.proceed,
                   fontSize: 16.sp,
-                  bgColor: ColorPicker.offGreyColor,
+                  bgColor: ColorPicker.appButtonColor,
                   disableColor: ColorPicker.appButtonColor,
                 ),
               ),

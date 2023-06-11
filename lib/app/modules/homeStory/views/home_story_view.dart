@@ -30,81 +30,110 @@ class HomeStoryView extends GetView<HomeStoryController> {
             Get.to(SearchstoryView());
           },
           context: context),
-      body: commanPaddingWidget(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                StatusView(
-                  radius: 28.r,
-                  spacing: 15.r,
-                  strokeWidth: 3,
-                  indexOfSeenStatus: 2,
-                  numberOfStatus: 5,
-                  padding: 4,
-                  seenColor: Colors.grey,
-                  unSeenColor: ColorPicker.greenColor,
-                  centerImageUrl: "https://picsum.photos/200/300",
-                ),
-                SizedBox(
-                  width: 8.w,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      AppStrings.yourStory,
-                      style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w800,
-                          color: ColorPicker.blackColor),
-                    ),
-                    SizedBox(
-                      height: 4.h,
-                    ),
-                    Text(
-                      AppStrings.yearAgo,
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w600,
-                          color: ColorPicker.boderBlackColor),
-                    ),
-                  ],
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Get.to(StoryEditView());
-                  },
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundColor: ColorPicker.sky2Color.withOpacity(0.2),
-                    child: Image.asset(ImagePickerImage.editIcon),
+            SizedBox(
+              height: 24.h,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 20.w,
+                right: 20.w,
+              ),
+              child: Row(
+                children: [
+                  StatusView(
+                    radius: 28.r,
+                    spacing: 15.r,
+                    strokeWidth: 3,
+                    indexOfSeenStatus: 2,
+                    numberOfStatus: 5,
+                    padding: 4,
+                    seenColor: Colors.grey,
+                    unSeenColor: ColorPicker.greenColor,
+                    centerImageUrl: "https://picsum.photos/200/300",
                   ),
-                ),
-              ],
+                  SizedBox(
+                    width: 8.w,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        AppStrings.yourStory,
+                        style: TextStyle(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w800,
+                            color: ColorPicker.blackColor),
+                      ),
+                      SizedBox(
+                        height: 4.h,
+                      ),
+                      Text(
+                        AppStrings.yearAgo,
+                        style: TextStyle(
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w600,
+                            color: ColorPicker.boderBlackColor),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(StoryEditView());
+                    },
+                    child: CircleAvatar(
+                      radius: 21.r,
+                      backgroundColor: ColorPicker.sky2Color.withOpacity(0.2),
+                      child: Image.asset(
+                        ImagePickerImage.editIcon,
+                        height: 16.h,
+                        width: 18.w,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
-              height: 32.h,
+              height: 10.h,
             ),
-            Text(
-              AppStrings.recent,
-              style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w800,
-                  color: ColorPicker.blackColor),
+            Divider(
+              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              height: 1,
+              indent: 2,
+              endIndent: 1,
+              thickness: 1,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 20.w,
+                right: 20.w,
+              ),
+              child: Text(
+                AppStrings.recent,
+                style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w800,
+                    color: ColorPicker.blackColor),
+              ),
             ),
             ListView.builder(
               shrinkWrap: true,
-              padding: EdgeInsets.symmetric(vertical: 16.h),
+              padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 16.h),
               physics: NeverScrollableScrollPhysics(),
               itemCount: controller.storyList.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding:  EdgeInsets.symmetric(
-                    vertical: 6.0.h,horizontal: 1.5.w
-                  ),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 6.0.h, horizontal: 1.5.w),
                   child: Row(
                     children: [
                       StatusView(
@@ -130,7 +159,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
                               controller.storyList[index]["name"],
                               style: TextStyle(
                                   fontSize: 14.sp,
-                                  fontWeight: FontWeight.w800,
+                                  fontWeight: FontWeight.w700,
                                   color: ColorPicker.blackColor),
                             ),
                             SizedBox(
@@ -151,10 +180,12 @@ class HomeStoryView extends GetView<HomeStoryController> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Icon(
-                            Icons.lock,
+                          Image.asset(
+                            ImagePickerImage.lockImage,
+                            width: 15.w,
+                            height: 20.h,
                             color: ColorPicker.blueColor,
-                            size: 22,
+                            fit: BoxFit.fill,
                           ),
                           SizedBox(
                             height: 10,

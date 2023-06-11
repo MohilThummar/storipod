@@ -4,11 +4,14 @@ class ImagePickerImage {
   static const onbordingName = "assets/appname.png";
   static const onbordingIntroName = "assets/intro.png";
   static const googleIcon = "assets/google.png";
+  static const filter1Icon = "assets/filter1.png";
   static const scanIcon = "assets/scan.png";
+  static const Search1Icon = "assets/Search1.png";
   static const editIcon = "assets/Edit.png";
   static const storiesIcon = "assets/stories.png";
   static const profileIcon = "assets/profile.png";
   static const p1Image = "assets/p2.png";
+  static const lockImage = "assets/Lock.png";
   static const p2Image = "assets/p2.png";
   static const p3Image = "assets/p3.png";
   static const p4Image = "assets/p4.png";
@@ -52,5 +55,6 @@ class ImagePickerImage {
   static const smilyImage = "assets/smily.png";
   static const hiddenImage = "assets/hiddeneye.png";
   static const showEyeImage = "assets/Eye.png";
+  static const notificationImage = "assets/notification.png";
 
 }

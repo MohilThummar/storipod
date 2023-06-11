@@ -43,7 +43,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
                   color: ColorPicker.blackColor),
             ),
             SizedBox(
-              height: 12.h,
+              height: 8.h,
             ),
             Text(
               AppStrings.upLoadImage,
@@ -115,10 +115,10 @@ class CreateAccountView extends GetView<CreateAccountController> {
                 onPressed: () {
                   Get.to(UsernameView());
                 },
-                textColor: ColorPicker.blackColor,
+                textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
                 fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
+                bgColor: ColorPicker.appButtonColor,
                 disableColor: ColorPicker.appButtonColor,
               ),
             ),
