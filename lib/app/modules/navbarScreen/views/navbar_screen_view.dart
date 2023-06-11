@@ -23,6 +23,7 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
       return Container(
         height: 75.h,
         child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           unselectedFontSize: 12.sp,
           selectedFontSize: 12.sp,
           unselectedLabelStyle:
@@ -37,12 +38,15 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
             BottomNavigationBarItem(
               icon: GestureDetector(
                 onTap: () {
-                  Get.offAll(ExploreView());
+                  Get.offAll(HomeStoryView());
                 },
                 child: Image.asset(
                   ImagePickerImage.storiesIcon,
                   height: 30.h,
                   width: 20.w,
+                  color: controller.selectedItemIndex.value == 0
+                      ? ColorPicker.blackColor
+                      : ColorPicker.greyColor,
                 ),
               ),
               label: AppStrings.stories,
@@ -50,13 +54,15 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
             BottomNavigationBarItem(
               icon: GestureDetector(
                   onTap: () {
-                    Get.to(HomeStoryView());
+                    Get.to(ExploreView());
                   },
                   child: Image.asset(
                     ImagePickerImage.SearchImage,
                     height: 26.h,
                     width: 24.w,
-                    color: ColorPicker.greyColor,
+                    color: controller.selectedItemIndex.value == 1
+                        ? ColorPicker.blackColor
+                        : ColorPicker.greyColor,
                   )),
               label: AppStrings.explore,
             ),

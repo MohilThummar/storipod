@@ -1,13 +1,13 @@
 import 'package:get/get.dart';
 
-class NavbarScreenController extends GetxController {
-  //TODO: Implement NavbarScreenController
-  RxInt selectedItemIndex = 0.obs;
+class ProfileScreenController extends GetxController {
+  //TODO: Implement ProfileScreenController
 
-  void changeSelectedItem(int index) {
-    selectedItemIndex.value = index;
-  }
-
+  List imagess = [
+    "assets/images/1.png",
+    "assets/images/2.png",
+    "assets/images/3.png"
+  ];
   final count = 0.obs;
   @override
   void onInit() {

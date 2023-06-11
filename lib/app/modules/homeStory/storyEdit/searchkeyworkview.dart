@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 
 import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import '../../../common/app_button.dart';
 import 'bottomsheet.dart';
@@ -14,6 +15,7 @@ import 'controllers/story_edit_controller.dart';
 
 class SearchKeyWordView extends GetView<StoryEditController> {
   const SearchKeyWordView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +34,13 @@ class SearchKeyWordView extends GetView<StoryEditController> {
             onTap: () {
               Get.back();
             },
-            child: Icon(
-              Icons.arrow_back_ios,
-              color: ColorPicker.whiteColor,
+            child: Padding(
+              padding: EdgeInsets.only(left: 20.w),
+              child: ImageIcon(
+                  AssetImage(
+                    ImagePickerImage.backIcon,
+                  ),
+                  size: 19.sp),
             ),
           ),
         ),
@@ -56,6 +62,12 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                   hintText: "Enter KeyWord",
                   focusColor: Colors.white,
                   fillColor: Colors.grey,
+                  enabled: true,
+                  contentPadding: EdgeInsets.symmetric(vertical: 8.h),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide:
+                        BorderSide(color: ColorPicker.whiteColor, width: 3),
+                  ),
                   disabledBorder: UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: ColorPicker.whiteColor, width: 3),
@@ -92,14 +104,18 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                   ),
                   suffixIcon: GestureDetector(
                       onTap: () {},
-                      child: CircleAvatar(
-                          radius: 20.r,
-                          backgroundColor:
-                              ColorPicker.lightWhiteColor.withOpacity(0.3),
-                          child: Icon(
-                            Icons.close,
-                            color: ColorPicker.whiteColor,
-                          )))),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 8.h),
+                        child: CircleAvatar(
+                            radius: 20.r,
+                            backgroundColor:
+                                ColorPicker.lightWhiteColor.withOpacity(0.3),
+                            child: Icon(
+                              Icons.close,
+                              size: 15.sp,
+                              color: ColorPicker.whiteColor,
+                            )),
+                      ))),
             ),
             SizedBox(
               height: 20.h,
@@ -124,28 +140,31 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               ),
             ),
             SizedBox(
-              height: 47.h,
+              height: 46.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Most Popular Hashtags",
-                  style: TextStyle(
-                    color: ColorPicker.whiteColor,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w800,
+            Padding(
+              padding: const EdgeInsets.only(right: 30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Most Popular Hashtags",
+                    style: TextStyle(
+                      color: ColorPicker.whiteColor,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
-                ),
-                Text(
-                  "5/30",
-                  style: TextStyle(
-                    color: ColorPicker.whiteColor.withOpacity(0.6),
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w700,
+                  Text(
+                    "5/30",
+                    style: TextStyle(
+                      color: ColorPicker.whiteColor.withOpacity(0.6),
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height: 34.h,
@@ -173,34 +192,29 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                       }
                     },
                     child: Container(
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 5, vertical: 4),
-                        child: Container(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 5, horizontal: 12),
-                          decoration: BoxDecoration(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 6.w, vertical: 13.h),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? ColorPicker.offwhiteColor
+                            : ColorPicker.lightWhiteColor.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(60.r),
+                        border: Border.all(
+                            color: ColorPicker.boderBlackColor.withOpacity(0.1),
+                            width: 2),
+                      ),
+                      child: Text(
+                        hobby,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15.sp,
                             color: isSelected
-                                ? ColorPicker.appButtonColor
-                                : ColorPicker.lightWhiteColor.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(5.r),
-                            border: Border.all(
-                                color: ColorPicker.boderBlackColor
-                                    .withOpacity(0.1),
-                                width: 2),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: Text(
-                              hobby,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 15.sp,
-                                  color: isSelected
-                                      ? ColorPicker.whiteColor
-                                      : ColorPicker.greyColor),
-                            ),
-                          ),
-                        )),
+                                ? ColorPicker.greyColor
+                                : ColorPicker.whiteColor),
+                      ),
+                    ),
                   );
                 },
               ).toList(),
@@ -254,23 +268,26 @@ class SearchKeyWordView extends GetView<StoryEditController> {
             //   ),
             // ),
             SizedBox(
-              height: 20.h,
+              height: 72.h,
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: ButtonWidget(
-                redius: 30,
-                context: context,
-                height: 55.h,
-                width: double.infinity,
-                onPressed: () {
-                  // Get.to(FindnewstoryView());
-                },
-                textColor: ColorPicker.whiteColor,
-                title: AppStrings.continueText,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.appButtonColor,
-                disableColor: ColorPicker.appButtonColor,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0.w),
+                child: ButtonWidget(
+                  redius: 30.r,
+                  context: context,
+                  height: 55.h,
+                  width: double.infinity,
+                  onPressed: () {
+                    Get.back(); // Get.to(FindnewstoryView());
+                  },
+                  textColor: ColorPicker.whiteColor,
+                  title: AppStrings.continueText,
+                  fontSize: 16.sp,
+                  bgColor: ColorPicker.appButtonColor,
+                  disableColor: ColorPicker.appButtonColor,
+                ),
               ),
             ),
           ],

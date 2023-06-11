@@ -20,7 +20,8 @@ class StoryEditView extends GetView<StoryEditController> {
     Get.put(StoryEditController());
     return Scaffold(
       backgroundColor: ColorPicker.blackColor,
-      appBar: AppBar(elevation: 1,
+      appBar: AppBar(
+        elevation: 1,
         toolbarHeight: 80.h,
         automaticallyImplyLeading: false,
         backgroundColor: ColorPicker.blackColor,
@@ -29,13 +30,17 @@ class StoryEditView extends GetView<StoryEditController> {
             onTap: () {
               Get.back();
             },
-            child: CircleAvatar(
-                backgroundColor: ColorPicker.boderBlackColor.withOpacity(0.3),
-                radius: 25.r,
-                child: Icon(
-                  Icons.close,
-                  color: ColorPicker.whiteColor,
-                )),
+            child: Padding(
+              padding: EdgeInsets.only(left: 18.0.w),
+              child: CircleAvatar(
+                  backgroundColor: ColorPicker.boderBlackColor.withOpacity(0.3),
+                  radius: 18.r,
+                  child: Icon(
+                    Icons.close,
+                    size: 14.sp,
+                    color: ColorPicker.whiteColor,
+                  )),
+            ),
           ),
         ),
         title: Container(
@@ -69,23 +74,46 @@ class StoryEditView extends GetView<StoryEditController> {
               children: [
                 Row(
                   children: [
-                    Image.asset(ImagePickerImage.tImage),
+                    Image.asset(
+                      ImagePickerImage.tImage,
+                      height: 29.h,
+                      width: 29.w,
+                      fit: BoxFit.fill,
+                    ),
                     SizedBox(
                       width: 10.22.w,
                     ),
-                    Image.asset(ImagePickerImage.aImage),
+                    Image.asset(
+                      ImagePickerImage.aImage,
+                      height: 29.h,
+                      width: 29.w,
+                      fit: BoxFit.fill,
+                    ),
                     SizedBox(
                       width: 10.22.w,
                     ),
-                    Image.asset(ImagePickerImage.colorImage),
+                    Image.asset(
+                      ImagePickerImage.colorImage,
+                      height: 29.h,
+                      width: 29.w,
+                      fit: BoxFit.fill,
+                    ),
                     SizedBox(
                       width: 10.22.w,
                     ),
-                    GestureDetector(onTap: (){ Get.bottomSheet(DiscardStoeyView(),
-                        isDismissible: true,
-                        backgroundColor: Colors.transparent,
-                        elevation: 2);},
-                        child: Image.asset(ImagePickerImage.deleteImage)),
+                    GestureDetector(
+                        onTap: () {
+                          Get.bottomSheet(DiscardStoeyView(),
+                              isDismissible: true,
+                              backgroundColor: Colors.transparent,
+                              elevation: 2);
+                        },
+                        child: Image.asset(
+                          ImagePickerImage.deleteImage,
+                          height: 29.h,
+                          width: 29.w,
+                          fit: BoxFit.fill,
+                        )),
                   ],
                 ),
                 GestureDetector(
@@ -180,10 +208,10 @@ class StoryEditView extends GetView<StoryEditController> {
               children: [
                 Container(
                   height: 57,
-                  width: 290.w,
+                  width: 288.w,
                   child: ListView.builder(
                     shrinkWrap: true,
-                    padding: EdgeInsets.zero,
+                    padding: EdgeInsets.only(right: 10.w),
                     scrollDirection: Axis.horizontal,
                     physics: AlwaysScrollableScrollPhysics(),
                     itemCount: controller.colorBox.length,
@@ -214,7 +242,7 @@ class StoryEditView extends GetView<StoryEditController> {
                     backgroundColor: ColorPicker.whiteColor,
                     radius: 24.r,
                     child: Icon(
-                      Icons.add,
+                      Icons.add,size: 12.sp,
                       color: ColorPicker.sky2Color,
                     ),
                   ),

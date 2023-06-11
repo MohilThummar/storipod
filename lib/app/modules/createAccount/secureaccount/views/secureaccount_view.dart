@@ -27,6 +27,9 @@ class SecureaccountView extends GetView<SecureaccountController> {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 40.h,
+              ),
               Text(
                 AppStrings.secureAccount,
                 textAlign: TextAlign.center,

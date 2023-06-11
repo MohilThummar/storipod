@@ -32,7 +32,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 10.h,
+              height: 40.h,
             ),
             Text(
               AppStrings.letGo,

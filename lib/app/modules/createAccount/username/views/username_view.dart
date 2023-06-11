@@ -31,7 +31,7 @@ class UsernameView extends GetView<UsernameController> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              height: 10.h,
+              height: 40.h,
             ),
 
             Text(

@@ -10,6 +10,7 @@ class ColorPicker {
   static const greylight1Color = Color(0xff303030);
   static const greyliColor = Color(0xff667085);
   static const subgreyColor = Color(0xffA4A3A3);
+  static const offwhiteColor = Color(0xffF9FBFA);
 
 
   static const subBlackColor = Color(0xff69696C);

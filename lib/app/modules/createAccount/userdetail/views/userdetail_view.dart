@@ -28,6 +28,9 @@ class UserdetailView extends GetView<UserdetailController> {
           crossAxisAlignment: CrossAxisAlignment.start,
 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            SizedBox(
+              height: 40.h,
+            ),
             Text(
               AppStrings.createAnAccount,
               textAlign: TextAlign.center,
@@ -185,6 +188,7 @@ class UserdetailView extends GetView<UserdetailController> {
               height: 40.h,
               width: double.infinity,
               onPressed: () {},
+              imageWidth: 22.w,imageheight: 22.h,
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,
               title: AppStrings.signInWithGoogle,

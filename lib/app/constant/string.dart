@@ -103,4 +103,7 @@ class AppStrings {
 
   static String person = "Person";
   static String intrested = "Interests";
+  static const GrisLover = "GrisLover";
+  static const strytxt = "Courtney Brown is \n here to give y’all \n premium gist. follow \n me through the \n following slides...";
+  static const accounts = "You’ve reached +200% more accounts between \n Jun 5 - Jun 14";
 }

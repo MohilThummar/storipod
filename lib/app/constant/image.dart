@@ -6,6 +6,7 @@ class ImagePickerImage {
   static const googleIcon = "assets/google.png";
   static const filter1Icon = "assets/filter1.png";
   static const scanIcon = "assets/scan.png";
+  static const backIcon = "assets/backIcon.png";
   static const Search1Icon = "assets/Search1.png";
   static const editIcon = "assets/Edit.png";
   static const storiesIcon = "assets/stories.png";
@@ -56,5 +57,21 @@ class ImagePickerImage {
   static const hiddenImage = "assets/hiddeneye.png";
   static const showEyeImage = "assets/Eye.png";
   static const notificationImage = "assets/notification.png";
+
+
+
+  static const Profile = "assets/images/profile.png";
+  static const search = "assets/images/search.png";
+
+  static const story = "assets/images/story.png";
+  static const image1 = "assets/images/1.png";
+  static const image2 = "assets/images/2.png";
+  static const image3 = "assets/images/3.png";
+  static const image4 = "assets/images/4.png";
+  static const image5 = "assets/images/5.png";
+  static const image6 = "assets/images/6.png";
+  static const image7 = "assets/images/7.png";
+  static const laugh = "assets/images/laugh.png";
+  static const heart = "assets/images/7.png";
 
 }

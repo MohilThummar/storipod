@@ -22,14 +22,16 @@ class LoginView extends GetView<LoginController> {
     Get.put(LoginController());
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
-      appBar: imageAppbarWidget(context: context,),
+      appBar: imageAppbarWidget(
+        context: context,
+      ),
       body: commanPaddingWidget(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 16.h,
+              height: 40.h,
             ),
             Text(
               AppStrings.welcome,
@@ -230,7 +232,7 @@ class LoginView extends GetView<LoginController> {
               context: context,
               height: 40.h,
               width: double.infinity,
-              onPressed: () {},
+              onPressed: () {},imageheight: 22.h,imageWidth: 22.w,
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,
               title: AppStrings.signInWithGoogle,

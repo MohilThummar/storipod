@@ -24,17 +24,23 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                    radius: 17.r,
-                    backgroundColor: ColorPicker.whiteColor.withOpacity(0.2),
-                    child: Icon(
-                      Icons.close,
-                      color: ColorPicker.whiteColor,
-                      size: 22.sp,
-                    )),
-                GestureDetector(onTap: (){
-                  Get.to(WatchStoryView());
-                },
+                GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: CircleAvatar(
+                      radius: 17.r,
+                      backgroundColor: ColorPicker.whiteColor.withOpacity(0.2),
+                      child: Icon(
+                        Icons.close,
+                        color: ColorPicker.whiteColor,
+                        size: 22.sp,
+                      )),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(WatchStoryView());
+                  },
                   child: Container(
                       width: 60.w,
                       height: 38.h,
@@ -63,10 +69,8 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.bottomSheet(
-                    BottomsheetImage(),
-                    elevation: 2,
-                    isDismissible: true);
+                Get.bottomSheet(BottomsheetImage(),
+                    elevation: 2, isDismissible: true);
               },
               child: Center(
                 child: Text(
@@ -93,66 +97,88 @@ class BottomsheetImage extends GetView<StoryEditController> {
   Widget build(BuildContext context) {
     Get.put(StoryEditController());
     return Container(
-      padding: EdgeInsets.all(10),
-      decoration: const BoxDecoration(
-        color: ColorPicker.whiteColor,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+        padding: EdgeInsets.only(
+          top: 12.h,
         ),
-      ),
-      child: Wrap(
-        crossAxisAlignment: WrapCrossAlignment.center,
-        alignment: WrapAlignment.start,
-        children: [
-          Center(
-              child: Column(
+        decoration: BoxDecoration(
+          color: ColorPicker.whiteColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.r),
+            topRight: Radius.circular(20.r),
+          ),
+        ),
+        child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.start,
             children: [
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: ColorPicker.offGreyColor,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                height: 7,
-                width: 50,
-              ),
-            ],
-          )),
-          ListTile(
-            title: Text(
-              "Choose a skin",
-              style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 14.sp,
-                  color: ColorPicker.blackColor),
-            ),
-          ),
-          Container(
-            height: 225,
-            child: GridView.builder(
-                padding: EdgeInsets.all(10),
-                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 70,
-                    // childAspectRatio: 3 / 4,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10),
-                itemCount: controller.imageList.length,
-                itemBuilder: (BuildContext ctx, index) {
-                  return Center(
-                    child: CircleAvatar(
-                      radius: 40.r,
-                      backgroundImage: AssetImage(
-                        controller.imageList[index],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 10,
                       ),
-                    ),
-                  );
-                }),
-          ),
-        ],
-      ),
-    );
+                      Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xffF1F1F1),
+                            borderRadius: BorderRadius.circular(20.r),
+                          ),
+                          height: 5.h,
+                          width: 43.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      Text(
+                        "Choose a skin",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 14.sp,
+                            color: ColorPicker.blackColor),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      Divider(
+                        color: ColorPicker.subgreyColor.withOpacity(0.3),
+                        height: 1,
+                        indent: 2,
+                        endIndent: 1,
+                        thickness: 1,
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      Container(
+                        height: 225.h,
+                        child: GridView.builder(
+                            padding: EdgeInsets.symmetric(horizontal: 10.w),
+                            gridDelegate:
+                                const SliverGridDelegateWithMaxCrossAxisExtent(
+                                    maxCrossAxisExtent: 70,
+                                    // childAspectRatio: 3 / 4,
+                                    crossAxisSpacing: 10,
+                                    mainAxisSpacing: 10),
+                            itemCount: controller.imageList.length,
+                            itemBuilder: (BuildContext ctx, index) {
+                              return Center(
+                                child: CircleAvatar(
+                                  radius: 30.r,
+                                  backgroundImage: AssetImage(
+                                    controller.imageList[index],
+                                  ),
+                                ),
+                              );
+                            }),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ]));
   }
 }

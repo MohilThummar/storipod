@@ -69,31 +69,29 @@ class IntroductionViewState extends State<IntroductionView> {
               left: 0,
               right: 0,
               height: 0.22.sh,
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List<Widget>.generate(
-                      _pages.length,
-                      (index) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 4),
-                            child: GestureDetector(
-                              onTap: () {
-                                _pageController.animateToPage(index,
-                                    duration: const Duration(milliseconds: 200),
-                                    curve: Curves.easeIn);
-                                setState(() {
-                                  _activePage == _pages;
-                                });
-                              },
-                              child: CircleAvatar(
-                                radius: 4.r,
-                                backgroundColor: _activePage == index
-                                    ? Colors.blueAccent
-                                    : Colors.blueAccent.withOpacity(0.4),
-                              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List<Widget>.generate(
+                    _pages.length,
+                    (index) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          child: GestureDetector(
+                            onTap: () {
+                              _pageController.animateToPage(index,
+                                  duration: const Duration(milliseconds: 200),
+                                  curve: Curves.easeIn);
+                              setState(() {
+                                _activePage == _pages;
+                              });
+                            },
+                            child: CircleAvatar(
+                              radius: 4.r,
+                              backgroundColor: _activePage == index
+                                  ? Colors.blueAccent
+                                  : Colors.blueAccent.withOpacity(0.4),
                             ),
-                          )),
-                ),
+                          ),
+                        )),
               ),
             ),
             Positioned(

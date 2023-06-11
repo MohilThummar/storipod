@@ -30,6 +30,8 @@ import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/views/notification_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
+import '../modules/profileScreen/bindings/profile_screen_binding.dart';
+import '../modules/profileScreen/views/profile_screen_view.dart';
 import '../modules/recommendation/bindings/recommendation_binding.dart';
 import '../modules/recommendation/views/recommendation_view.dart';
 
@@ -48,12 +50,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.INTRODUCTION,
-      page: () =>  IntroductionView(),
+      page: () => IntroductionView(),
       binding: IntroductionBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () =>  LoginView(),
+      page: () => LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
@@ -100,7 +102,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.FINDNEWSTORY,
-      page: () =>  FindnewstoryView(),
+      page: () => FindnewstoryView(),
       binding: FindnewstoryBinding(),
     ),
     GetPage(
@@ -118,11 +120,15 @@ class AppPages {
       page: () => const StoryEditView(),
       binding: StoryEditBinding(),
     ),
-
     GetPage(
       name: _Paths.NOTIFICATION,
       page: () => const NotificationView(),
       binding: NotificationBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE_SCREEN,
+      page: () => const ProfileScreenView(),
+      binding: ProfileScreenBinding(),
     ),
   ];
 }
