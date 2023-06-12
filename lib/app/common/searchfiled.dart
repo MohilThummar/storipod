@@ -15,13 +15,13 @@ Widget searchfildWidget(
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
     child: Container(
-      height: 50,
+      height: 55.h,
       child: TextField(
         controller: controller,
         onEditingComplete: OnEditComplate,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(top: 5),
+          contentPadding: EdgeInsets.only(top: 5.h),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(width: 0.2, color: ColorPicker.greyColor),
             borderRadius: BorderRadius.circular(4.r),
@@ -47,20 +47,16 @@ Widget searchfildWidget(
           // ),
           hintText: hintText,
           suffixIcon: GestureDetector(
-              onTap: suffixOnTap,
-              child:ImageIcon(
-                  AssetImage(
-                      imageData!
-                  ),
-                  size: 14.sp),
+            onTap: suffixOnTap,
+            child: ImageIcon(AssetImage(imageData!), size: 12.sp),
 
-              // Image.asset(
-              //   width: 8.w,
-              //   height: 8.h,
-              //   imageData!,
-              //   fit: BoxFit.fill,
-              //   color: iconColorSuffix,
-              // ),
+            // Image.asset(
+            //   width: 8.w,
+            //   height: 8.h,
+            //   imageData!,
+            //   fit: BoxFit.fill,
+            //   color: iconColorSuffix,
+            // ),
           ),
           hintStyle: TextStyle(
               fontSize: 12.sp,

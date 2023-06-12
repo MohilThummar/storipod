@@ -23,6 +23,7 @@ abstract class Routes {
 
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
+  static const SEE_ALL_PROFILE = _Paths.EXPLORE + _Paths.SEE_ALL_PROFILE;
 }
 
 abstract class _Paths {
@@ -47,4 +48,6 @@ abstract class _Paths {
 
   static const NOTIFICATION = '/notification';
   static const PROFILE_SCREEN = '/profile-screen';
+
+  static const SEE_ALL_PROFILE = '/see-all-profile';
 }

@@ -7,6 +7,7 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/homeStory/views/home_story_view.dart';
+import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 
 import '../../../common/app_button.dart';
 import '../../../constant/string.dart';
@@ -38,7 +39,7 @@ class _FindnewstoryViewState extends State<FindnewstoryView> {
           children: [
             Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
               SizedBox(
-                height: 10.h,
+                height: 24.h,
               ),
               Text(
                 AppStrings.findNEwStory,
@@ -64,7 +65,7 @@ class _FindnewstoryViewState extends State<FindnewstoryView> {
               ),
               Container(
                 height: 380.h,
-                padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 10.h),
+                padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 16.h),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.r),
                   color: ColorPicker.lightWhiteColor.withOpacity(0.3),
@@ -92,12 +93,12 @@ class _FindnewstoryViewState extends State<FindnewstoryView> {
                   height: 55.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.to(HomeStoryView());
+                    Get.offAll(NavbarScreenView());
                   },
-                  textColor: ColorPicker.blackColor,
+                  textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
                   fontSize: 16.sp,
-                  bgColor: ColorPicker.offGreyColor,
+                  bgColor: ColorPicker.appButtonColor,
                   disableColor: ColorPicker.appButtonColor,
                 ),
               ),
@@ -123,10 +124,10 @@ class _FindnewstoryViewState extends State<FindnewstoryView> {
                               });
                             },
                             child: CircleAvatar(
-                              radius: 4,
+                              radius: 4.r,
                               backgroundColor: _activePage == index
                                   ? Colors.blueAccent
-                                  : Colors.blueGrey,
+                                  : Colors.blueAccent.withOpacity(0.4),
                             ),
                           ),
                         )),
@@ -144,7 +145,7 @@ PageOne() {
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
       mainAxisSpacing: 10,
-      mainAxisExtent: 120, // Spacing between rows
+      mainAxisExtent: 120.h, // Spacing between rows
       crossAxisSpacing: 10, // Spacing between columns
     ),
     itemCount: 9, // Number of items in the grid
@@ -153,8 +154,12 @@ PageOne() {
       return Column(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage(ImagePickerImage.profileIcon),
-            radius: 31.r,
+            radius: 40.r,
+            backgroundColor: ColorPicker.skyColor.withOpacity(0.2),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+              radius: 36.r,
+            ),
           ),
           SizedBox(
             height: 8.h,
@@ -177,7 +182,7 @@ PageTwo() {
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
       mainAxisSpacing: 10,
-      mainAxisExtent: 120, // Spacing between rows
+      mainAxisExtent: 120.h, // Spacing between rows
       crossAxisSpacing: 10, // Spacing between columns
     ),
     itemCount: 7, // Number of items in the grid
@@ -186,8 +191,12 @@ PageTwo() {
       return Column(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage(ImagePickerImage.profileIcon),
-            radius: 31.r,
+            radius: 40.r,
+            backgroundColor: ColorPicker.skyColor.withOpacity(0.2),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+              radius: 36.r,
+            ),
           ),
           SizedBox(
             height: 8.h,
@@ -210,7 +219,7 @@ PageThree() {
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
       mainAxisSpacing: 10,
-      mainAxisExtent: 120, // Spacing between rows
+      mainAxisExtent: 120.h, // Spacing between rows
       crossAxisSpacing: 10, // Spacing between columns
     ),
     itemCount: 8, // Number of items in the grid
@@ -219,8 +228,12 @@ PageThree() {
       return Column(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage(ImagePickerImage.profileIcon),
-            radius: 31.r,
+            radius: 40.r,
+            backgroundColor: ColorPicker.skyColor.withOpacity(0.2),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+              radius: 36.r,
+            ),
           ),
           SizedBox(
             height: 8.h,

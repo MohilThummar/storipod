@@ -8,6 +8,8 @@ import '../modules/createAccount/userdetail/views/userdetail_view.dart';
 import '../modules/createAccount/username/bindings/username_binding.dart';
 import '../modules/createAccount/username/views/username_view.dart';
 import '../modules/createAccount/views/create_account_view.dart';
+import '../modules/explore/SeeAllProfile/bindings/see_all_profile_binding.dart';
+import '../modules/explore/SeeAllProfile/views/see_all_profile_view.dart';
 import '../modules/explore/bindings/explore_binding.dart';
 import '../modules/explore/views/explore_view.dart';
 import '../modules/findnewstory/bindings/findnewstory_binding.dart';
@@ -94,6 +96,13 @@ class AppPages {
       name: _Paths.EXPLORE,
       page: () => const ExploreView(),
       binding: ExploreBinding(),
+      children: [
+        GetPage(
+          name: _Paths.SEE_ALL_PROFILE,
+          page: () => const SeeAllProfileView(),
+          binding: SeeAllProfileBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.RECOMMENDATION,
@@ -130,5 +139,6 @@ class AppPages {
       page: () => const ProfileScreenView(),
       binding: ProfileScreenBinding(),
     ),
+
   ];
 }

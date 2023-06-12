@@ -8,6 +8,7 @@ import '../../../common/app_button.dart';
 import '../../../constant/colour.dart';
 
 import '../../explore/views/explore_view.dart';
+import '../../recommendation/views/recommendation_view.dart';
 import '../controllers/introduction_controller.dart';
 
 class IntroductionView extends StatefulWidget {
@@ -40,6 +41,9 @@ class IntroductionViewState extends State<IntroductionView> {
               onTap: () {
                 Get.offAll(LoginView());
               },
+              // onTap: () {
+              //   Get.offAll(LoginView());
+              // },
               child: Align(
                   widthFactor: 9.5.sw,
                   alignment: Alignment.topRight,
@@ -110,8 +114,8 @@ class IntroductionViewState extends State<IntroductionView> {
                   textColor: ColorPicker.whiteColor,
                   onPressed: () {
                     //Get.offAll(ExploreView());
-                    // Get.to(ExploreView());
-                    Get.offAll(const NavbarScreenView());
+                    Get.offAll(RecommendationView());
+                    // Get.offAll(const NavbarScreenView());
                   },
                   width: double.infinity,
                   fontSize: 16.sp,

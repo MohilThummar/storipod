@@ -40,7 +40,7 @@ class RecommendationView extends GetView<RecommendationController> {
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 10.h,
+                height: 24.h,
               ),
               Text(
                 AppStrings.whatKinfOf,
@@ -51,7 +51,7 @@ class RecommendationView extends GetView<RecommendationController> {
                     color: ColorPicker.blackColor),
               ),
               SizedBox(
-                height: 5.h,
+                height: 4.h,
               ),
               Text(
                 AppStrings.selectorMore,
@@ -135,10 +135,10 @@ class RecommendationView extends GetView<RecommendationController> {
                   onPressed: () {
                     Get.to(FindnewstoryView());
                   },
-                  textColor: ColorPicker.blackColor,
+                  textColor: ColorPicker.whiteColor,
                   title: AppStrings.done,
                   fontSize: 16.sp,
-                  bgColor: ColorPicker.offGreyColor,
+                  bgColor: ColorPicker.appButtonColor,
                   disableColor: ColorPicker.appButtonColor,
                 ),
               ),

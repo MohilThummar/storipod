@@ -1,35 +1,18 @@
 import 'package:get/get.dart';
-import 'package:storipod_app/app/constant/colour.dart';
 
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+import '../../../../constant/colour.dart';
+import '../../../../constant/image.dart';
+import '../../../../constant/string.dart';
 
-class ExploreController extends GetxController {
-  //TODO: Implement ExploreController
+class SeeAllProfileController extends GetxController {
+  //TODO: Implement SeeAllProfileController
 
-  List storiesData = [
-    {
-      "imgText": AppStrings.img1,
-      "color": ColorPicker.maroonColor,
-      "image": ImagePickerImage.profileIcon,
-      "username": AppStrings.mellow,
-      "subName": AppStrings.profileName,
-    },
-    {
-      "imgText": AppStrings.img1,
-      "color": ColorPicker.sky2Color,
-      "image": ImagePickerImage.profileIcon,
-      "username": AppStrings.mellow,
-      "subName": AppStrings.profileName,
-    },
-    {
-      "imgText": AppStrings.img1,
-      "color": ColorPicker.boderBlackColor,
-      "image": ImagePickerImage.profileIcon,
-      "username": AppStrings.mellow,
-      "subName": AppStrings.profileName,
-    }
-  ];
+  final count = 0.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+  }
 
   List storiesGrideData = [
     {
@@ -82,17 +65,45 @@ class ExploreController extends GetxController {
     },
     {
       "color": ColorPicker.maroonColor,
+      "image": ImagePickerImage.dp9Image,
+      "username": AppStrings.profile2Name,
+      "subName": AppStrings.SubProfile,
+    },   {
+      "color": ColorPicker.maroonColor,
+      "image": ImagePickerImage.dp7Image,
+      "username": AppStrings.profile2Name,
+      "subName": AppStrings.SubProfile,
+    },
+    {
+      "color": ColorPicker.maroonColor,
       "image": ImagePickerImage.dp8Image,
       "username": AppStrings.profile2Name,
       "subName": AppStrings.SubProfile,
     },
+    {
+      "color": ColorPicker.maroonColor,
+      "image": ImagePickerImage.dp9Image,
+      "username": AppStrings.profile2Name,
+      "subName": AppStrings.SubProfile,
+    },   {
+      "color": ColorPicker.maroonColor,
+      "image": ImagePickerImage.dp7Image,
+      "username": AppStrings.profile2Name,
+      "subName": AppStrings.SubProfile,
+    },
+    {
+      "color": ColorPicker.maroonColor,
+      "image": ImagePickerImage.dp8Image,
+      "username": AppStrings.profile2Name,
+      "subName": AppStrings.SubProfile,
+    },
+    {
+      "color": ColorPicker.maroonColor,
+      "image": ImagePickerImage.dp9Image,
+      "username": AppStrings.profile2Name,
+      "subName": AppStrings.SubProfile,
+    },
   ];
-  final count = 0.obs;
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   @override
   void onReady() {

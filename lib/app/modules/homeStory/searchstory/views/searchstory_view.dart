@@ -13,6 +13,7 @@ import '../controllers/searchstory_controller.dart';
 
 class SearchstoryView extends GetView<SearchstoryController> {
   const SearchstoryView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Get.put(SearchstoryController());
@@ -55,17 +56,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 24.h,
-            ),
-            Text(
-              AppStrings.recent,
-              style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w800,
-                  color: ColorPicker.blackColor),
-            ),
-            SizedBox(
-              height: 20.h,
+              height: 16.h,
             ),
             Row(
               children: [
@@ -76,7 +67,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                       width: 1.0,
                     ),
                     borderRadius: BorderRadius.circular(20.r),
-                    color: ColorPicker.offGreyColor.withOpacity(0.4),
+                    color: ColorPicker.greylightColor.withOpacity(0.3),
                   ),
                   padding:
                       EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
@@ -92,7 +83,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                   width: 20,
                 ),
                 CircleAvatar(
-                  backgroundColor: ColorPicker.lightWhiteColor.withOpacity(0.5),
+                  backgroundColor:  ColorPicker.greylightColor.withOpacity(0.3),
                   child: Icon(
                     color: ColorPicker.blackColor,
                     Icons.close,
@@ -101,44 +92,59 @@ class SearchstoryView extends GetView<SearchstoryController> {
                 )
               ],
             ),
+
+            /// Recent text
             SizedBox(
-              height: 10.h,
+              height: 24.h,
             ),
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: ColorPicker.offGreyColor,
-                      width: 2.0,
-                    ),
-                  ),
-                  child: CircleAvatar(
-                      backgroundColor: ColorPicker.whiteColor,
-                      radius: 26.r,
-                      child: Image.asset(
-                        ImagePickerImage.SearchImage,
-                        height: 24.h,
-                        width: 24.w,
-                        fit: BoxFit.fill,
-                      )),
-                ),
-                SizedBox(
-                  width: 8.w,
-                ),
-                Text(
-                  "Courtney",
-                  style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w700,
-                      color: ColorPicker.blackColor),
-                ),
-              ],
+            Text(
+              AppStrings.recent,
+              style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w800,
+                  color: ColorPicker.blackColor),
             ),
+            SizedBox(
+              height: 20.h,
+            ),
+            // SizedBox(
+            //   height: 10.h,
+            // ),
+            // Row(
+            //   children: [
+            //     Container(
+            //       decoration: BoxDecoration(
+            //         shape: BoxShape.circle,
+            //         border: Border.all(
+            //           color: ColorPicker.offGreyColor,
+            //           width: 2.0,
+            //         ),
+            //       ),
+            //       child: CircleAvatar(
+            //           backgroundColor: ColorPicker.whiteColor,
+            //           radius: 26.r,
+            //           child: Image.asset(
+            //             ImagePickerImage.SearchImage,
+            //             height: 24.h,
+            //             width: 24.w,
+            //             fit: BoxFit.fill,
+            //           )),
+            //     ),
+            //     SizedBox(
+            //       width: 8.w,
+            //     ),
+            //     Text(
+            //       "Courtney",
+            //       style: TextStyle(
+            //           fontSize: 14.sp,
+            //           fontWeight: FontWeight.w700,
+            //           color: ColorPicker.blackColor),
+            //     ),
+            //   ],
+            // ),
             ListView.builder(
               shrinkWrap: true,
-              padding: EdgeInsets.symmetric(vertical: 16),
+              padding: EdgeInsets.zero,
               physics: NeverScrollableScrollPhysics(),
               // itemCount: 30,
               itemCount: controller.storyList.length,
