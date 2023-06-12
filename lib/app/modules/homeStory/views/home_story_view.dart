@@ -207,7 +207,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
           ],
         ),
       ),
-      bottomNavigationBar: NavbarScreenView(),
+     // bottomNavigationBar: NavbarScreenView(),
     );
   }
 }

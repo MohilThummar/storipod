@@ -78,7 +78,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                 padding: EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 isDense: true,
-                suffixIconData1: controller.showPassword.value
+                suffixIconData1: controller.conformShowPassword.value
                     ? ImagePickerImage.showEyeImage
                     : ImagePickerImage.hiddenImage,
                 boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
@@ -100,7 +100,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                   onPressed: () {
                     // Get.to(SecureaccountView());
                   },
-                  textColor: ColorPicker.blackColor,
+                  textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
                   fontSize: 16.sp,
                   bgColor: ColorPicker.appButtonColor,

@@ -30,18 +30,24 @@ PreferredSizeWidget appbarWithBack({
 }) {
   return AppBar(
     backgroundColor: ColorPicker.whiteColor,
-    title: Image.asset(
-      ImagePickerImage.onbordingName,
-      height: 30.h,
-      width: 75.w,
+    title: Padding(
+      padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
+      child: Image.asset(
+        ImagePickerImage.onbordingName,
+        height: 30.h,
+        width: 75.w,
+      ),
     ),
     centerTitle: true,
     automaticallyImplyLeading: false,
     leading: GestureDetector(
       onTap: onTaped,
-      child: Icon(
-        Icons.arrow_back_ios_new,
-        color: ColorPicker.blackColor,
+      child: Padding(
+        padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
+        child: Icon(
+          Icons.arrow_back_ios_new,
+          color: ColorPicker.blackColor,
+        ),
       ),
     ),
     toolbarHeight: 70.h,

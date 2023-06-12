@@ -242,7 +242,7 @@ class ExploreView extends GetView<ExploreController> {
                   crossAxisCount: 3, // Number of columns in the grid
                   mainAxisSpacing: 24,
 
-                  mainAxisExtent: 127,
+                  mainAxisExtent: 127.h,
                   crossAxisSpacing: 0, // Spacing between columns
                 ),
                 itemCount: controller.storiesGrideData.length,
@@ -328,7 +328,7 @@ class ExploreView extends GetView<ExploreController> {
           ],
         ),
       ),
-      bottomNavigationBar: NavbarScreenView(),
+     // bottomNavigationBar: NavbarScreenView(),
     );
   }
 }

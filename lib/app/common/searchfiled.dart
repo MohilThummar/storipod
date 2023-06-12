@@ -36,7 +36,7 @@ Widget searchfildWidget(
               AssetImage(
                 ImagePickerImage.Search1Icon,
               ),
-              size: 16.sp),
+              size: 14.sp),
           // prefixIcon: Image.asset(
           //   ImagePickerImage.SearchImage,
           //   height: 16.h,
@@ -48,13 +48,20 @@ Widget searchfildWidget(
           hintText: hintText,
           suffixIcon: GestureDetector(
               onTap: suffixOnTap,
-              child: Image.asset(
-                width: 8.w,
-                height: 8.h,
-                imageData!,
-                fit: BoxFit.fill,
-                color: iconColorSuffix,
-              )),
+              child:ImageIcon(
+                  AssetImage(
+                      imageData!
+                  ),
+                  size: 14.sp),
+
+              // Image.asset(
+              //   width: 8.w,
+              //   height: 8.h,
+              //   imageData!,
+              //   fit: BoxFit.fill,
+              //   color: iconColorSuffix,
+              // ),
+          ),
           hintStyle: TextStyle(
               fontSize: 12.sp,
               color: ColorPicker.offgreGreen,

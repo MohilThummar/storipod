@@ -139,10 +139,11 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                     },
                   );
                 },
-                textColor: ColorPicker.blackColor,
+                textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
                 fontSize: 16.sp,
-                bgColor: ColorPicker.offGreyColor,
+                bgColor: ColorPicker.appButtonColor
+                ,
                 disableColor: ColorPicker.appButtonColor,
               ),
             ),

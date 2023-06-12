@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/modules/login/views/login_view.dart';
+import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
 import '../../../common/app_button.dart';
 import '../../../constant/colour.dart';
 
@@ -108,8 +109,9 @@ class IntroductionViewState extends State<IntroductionView> {
                   redius: 12.r,
                   textColor: ColorPicker.whiteColor,
                   onPressed: () {
-                    Get.offAll(ExploreView());
+                    //Get.offAll(ExploreView());
                     // Get.to(ExploreView());
+                    Get.offAll(const NavbarScreenView());
                   },
                   width: double.infinity,
                   fontSize: 16.sp,
