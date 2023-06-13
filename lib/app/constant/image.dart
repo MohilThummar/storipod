@@ -69,6 +69,9 @@ class ImagePickerImage {
   static const link = "assets/link.png";
   static const whatsapp = "assets/whatsapp.png";
   static const linkedin = "assets/linkedin.png";
+  static const draftTab = "assets/drafts.png";
+  static const saveTab = "assets/save.png";
+  static const storiesTab = "assets/box.png";
 
 
 }

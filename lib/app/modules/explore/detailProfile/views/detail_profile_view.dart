@@ -8,6 +8,7 @@ import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/homeStory/viewStory.dart';
+import 'package:storipod_app/app/modules/personProfileScreen/views/person_profile_screen_view.dart';
 
 import '../../../../constant/colour.dart';
 import '../controllers/detail_profile_controller.dart';
@@ -179,8 +180,10 @@ class DetailProfileView extends GetView<DetailProfileController> {
                   children: [
                     ButtonWidget(
                         title: "Edit profile",
-                        // context: context,
-                        onPressed: () {},
+                        context: context,
+                        onPressed: () {
+                          Get.to(PersonProfileScreenView());
+                        },
                         fontSize: 14.sp,
                         height: 38.h,
                         width: 158.w,
@@ -211,7 +214,10 @@ class DetailProfileView extends GetView<DetailProfileController> {
                     }),
                   ],
                 ),
-              ),  SizedBox(height: 24.h,),
+              ),
+              SizedBox(
+                height: 24.h,
+              ),
               Container(
                 color: ColorPicker.GrewhiteColor,
                 padding: EdgeInsets.only(top: 16.h, left: 20.w, right: 20.w),
@@ -236,7 +242,8 @@ class DetailProfileView extends GetView<DetailProfileController> {
                           crossAxisSpacing: 25,
                           mainAxisSpacing: 25),
                       itemBuilder: (context, index) {
-                        return GestureDetector(onTap: (){},
+                        return GestureDetector(
+                          onTap: () {},
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
@@ -251,7 +258,9 @@ class DetailProfileView extends GetView<DetailProfileController> {
                                 unSeenColor: ColorPicker.skyColor,
                                 centerImageUrl: "https://picsum.photos/200/300",
                               ),
-                              SizedBox(height: 6.h,),
+                              SizedBox(
+                                height: 6.h,
+                              ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -261,10 +270,13 @@ class DetailProfileView extends GetView<DetailProfileController> {
                                       children: [
                                         Positioned(
                                             child: CircleAvatar(
-                                                radius: 12.r, backgroundColor: ColorPicker
-                                                .yellowColor
-                                                .withOpacity(0.4),
-                                                child: Image.asset(height: 12.h,width: 12.w,
+                                                radius: 12.r,
+                                                backgroundColor: ColorPicker
+                                                    .yellowColor
+                                                    .withOpacity(0.4),
+                                                child: Image.asset(
+                                                    height: 12.h,
+                                                    width: 12.w,
                                                     ImagePickerImage.laugh))),
                                         Positioned(
                                             left: 15,

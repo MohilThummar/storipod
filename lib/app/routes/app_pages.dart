@@ -34,10 +34,9 @@ import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/views/notification_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
-import '../modules/profileScreen/bindings/profile_screen_binding.dart';
-import '../modules/profileScreen/personProfileScreen/bindings/person_profile_screen_binding.dart';
-import '../modules/profileScreen/personProfileScreen/views/person_profile_screen_view.dart';
-import '../modules/profileScreen/views/profile_screen_view.dart';
+import '../modules/personProfileScreen/bindings/person_profile_screen_binding.dart';
+import '../modules/personProfileScreen/views/person_profile_screen_view.dart';
+
 import '../modules/recommendation/bindings/recommendation_binding.dart';
 import '../modules/recommendation/views/recommendation_view.dart';
 
@@ -143,17 +142,6 @@ class AppPages {
       page: () => const NotificationView(),
       binding: NotificationBinding(),
     ),
-    GetPage(
-      name: _Paths.PROFILE_SCREEN,
-      page: () => const ProfileScreenView(),
-      binding: ProfileScreenBinding(),
-      children: [
-        GetPage(
-          name: _Paths.PERSON_PROFILE_SCREEN,
-          page: () => const PersonProfileScreenView(),
-          binding: PersonProfileScreenBinding(),
-        ),
-      ],
-    ),
+
   ];
 }
