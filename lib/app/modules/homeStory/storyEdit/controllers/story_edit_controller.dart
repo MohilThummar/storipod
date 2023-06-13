@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:storipod_app/app/constant/colour.dart';
@@ -8,16 +9,28 @@ class StoryEditController extends GetxController {
   //TODO: Implement StoryEditController
   RxInt? value = 0.obs;
   final count = 0.obs;
+  TextEditingController searchController=TextEditingController();
   List StoryViewer = [
     {
       "image": ImagePickerImage.girl1Image,
       "name": "Agberedo Jackson",
-      "name": "The curious incident of the dog in the"
+      "LName": "The curious incident of the dog in the"
+    },
+    {
+      "image": ImagePickerImage.girl2Image,
+      "name": "Jamie Oliver",
+      "LName":
+          "We are happy you are back courtney, we wait for premium gist. go girllll!!!!"
     },
     {
       "image": ImagePickerImage.boy1Image,
       "name": "Agberedo Jackson",
-      "name": "The curious incident of the dog in the"
+      "LName": "The curious incident of the dog in the"
+    },
+    {
+      "image": ImagePickerImage.boy1Image,
+      "name": "Agberedo Jackson",
+      "LName": "The curious incident of the dog in the"
     }
   ];
   List imageList = [
@@ -87,6 +100,7 @@ class StoryEditController extends GetxController {
     },
   ];
   final StoryController storyController = StoryController();
+
   @override
   void onInit() {
     super.onInit();
@@ -101,11 +115,13 @@ class StoryEditController extends GetxController {
   void onClose() {
     super.onClose();
   }
-@override
+
+  @override
   void dispose() {
     // TODO: implement dispose
-  storyController.dispose();
-  super.dispose();
+    storyController.dispose();
+    super.dispose();
   }
+
   void increment() => count.value++;
 }

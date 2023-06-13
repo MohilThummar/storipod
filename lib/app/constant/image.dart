@@ -63,6 +63,12 @@ class ImagePickerImage {
 
 
   static const laugh = "assets/laugh.png";
+  static const download = "assets/download.png";
+  static const facebook = "assets/facebook.png";
+  static const instragram = "assets/instragram.png";
+  static const link = "assets/link.png";
+  static const whatsapp = "assets/whatsapp.png";
+  static const linkedin = "assets/linkedin.png";
 
 
 }

@@ -41,7 +41,11 @@ class AppStrings {
   static String upLoadImage = " Upload an image or memoji";
   static String doYouHave = " Do you have an account? ";
   static String selectImage = 'Select image';
+  static String selectAction = 'Select action';
   static String takeImage = 'Take image';
+  static String hidecmt = 'Hide comment';
+  static String Save = 'Save';
+  static String ExportAshare = 'Export & Share';
   static String picImage = 'Pick from gallery';
   static String removeImage = "Remove image";
   static String createAnAccount = "Create an account";
