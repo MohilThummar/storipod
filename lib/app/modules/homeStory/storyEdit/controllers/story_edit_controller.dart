@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:story_view/controller/story_controller.dart';
 
 class StoryEditController extends GetxController {
   //TODO: Implement StoryEditController
@@ -85,7 +86,7 @@ class StoryEditController extends GetxController {
       "textColor": ColorPicker.whiteColor,
     },
   ];
-
+  final StoryController storyController = StoryController();
   @override
   void onInit() {
     super.onInit();
@@ -100,6 +101,11 @@ class StoryEditController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
+@override
+  void dispose() {
+    // TODO: implement dispose
+  storyController.dispose();
+  super.dispose();
+  }
   void increment() => count.value++;
 }

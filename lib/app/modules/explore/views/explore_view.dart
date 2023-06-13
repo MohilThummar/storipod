@@ -11,6 +11,7 @@ import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.d
 
 import '../../../common/commanpaddingcolumn.dart';
 import '../../../constant/string.dart';
+import '../../homeStory/viewStory.dart';
 import '../controllers/explore_controller.dart';
 import '../detailProfile/views/detail_profile_view.dart';
 
@@ -55,7 +56,9 @@ class ExploreView extends GetView<ExploreController> {
                 physics: AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(WatchStoryLiveView());
+                    },
                     child: Container(
                       padding: EdgeInsets.only(right: 10.w),
                       width: 134.w,
@@ -258,7 +261,9 @@ class ExploreView extends GetView<ExploreController> {
                 itemBuilder: (BuildContext context, int index) {
                   // Build and return the individual grid items
                   return GestureDetector(
-                    onTap: () {Get.to(DetailProfileView());},
+                    onTap: () {
+                      Get.to(DetailProfileView());
+                    },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,

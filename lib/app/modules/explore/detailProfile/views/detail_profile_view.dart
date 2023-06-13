@@ -7,6 +7,7 @@ import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/modules/homeStory/viewStory.dart';
 
 import '../../../../constant/colour.dart';
 import '../controllers/detail_profile_controller.dart';
@@ -235,60 +236,62 @@ class DetailProfileView extends GetView<DetailProfileController> {
                           crossAxisSpacing: 25,
                           mainAxisSpacing: 25),
                       itemBuilder: (context, index) {
-                        return Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            StatusView(
-                              radius: 48.r,
-                              spacing: 7.r,
-                              strokeWidth: 3.w,
-                              indexOfSeenStatus: 2,
-                              numberOfStatus: 7,
-                              padding: 4.w,
-                              seenColor: ColorPicker.skyColor,
-                              unSeenColor: ColorPicker.skyColor,
-                              centerImageUrl: "https://picsum.photos/200/300",
-                            ),
-                            SizedBox(height: 6.h,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  width: 40.w,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                          child: CircleAvatar(
-                                              radius: 12.r, backgroundColor: ColorPicker
-                                              .yellowColor
-                                              .withOpacity(0.4),
-                                              child: Image.asset(height: 12.h,width: 12.w,
-                                                  ImagePickerImage.laugh))),
-                                      Positioned(
-                                          left: 15,
-                                          child: CircleAvatar(
-                                              backgroundColor: ColorPicker
-                                                  .redColor
-                                                  .withOpacity(0.4),
-                                              radius: 12.r,
-                                              child: Icon(
-                                                Icons.favorite,
-                                                color: ColorPicker.redColor,
-                                                size: 16.sp,
-                                              ))),
-                                    ],
+                        return GestureDetector(onTap: (){},
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              StatusView(
+                                radius: 48.r,
+                                spacing: 7.r,
+                                strokeWidth: 3.w,
+                                indexOfSeenStatus: 2,
+                                numberOfStatus: 7,
+                                padding: 4.w,
+                                seenColor: ColorPicker.skyColor,
+                                unSeenColor: ColorPicker.skyColor,
+                                centerImageUrl: "https://picsum.photos/200/300",
+                              ),
+                              SizedBox(height: 6.h,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: 40.w,
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                            child: CircleAvatar(
+                                                radius: 12.r, backgroundColor: ColorPicker
+                                                .yellowColor
+                                                .withOpacity(0.4),
+                                                child: Image.asset(height: 12.h,width: 12.w,
+                                                    ImagePickerImage.laugh))),
+                                        Positioned(
+                                            left: 15,
+                                            child: CircleAvatar(
+                                                backgroundColor: ColorPicker
+                                                    .redColor
+                                                    .withOpacity(0.4),
+                                                radius: 12.r,
+                                                child: Icon(
+                                                  Icons.favorite,
+                                                  color: ColorPicker.redColor,
+                                                  size: 16.sp,
+                                                ))),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  "200",
-                                  style: TextStyle(
-                                      color: ColorPicker.blackColor,
-                                      fontSize: 12.sp,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            )
-                          ],
+                                  Text(
+                                    "200",
+                                    style: TextStyle(
+                                        color: ColorPicker.blackColor,
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w500),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
                         );
                       },
                     ),

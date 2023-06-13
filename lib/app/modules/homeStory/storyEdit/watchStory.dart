@@ -33,17 +33,19 @@ class WatchStoryView extends GetView<StoryEditController> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                    radius: 17.r,
-                    backgroundColor: ColorPicker.whiteColor.withOpacity(0.2),
-                    child: Icon(
-                      Icons.close,
-                      color: ColorPicker.whiteColor,
-                      size: 22.sp,
-                    )),
+                GestureDetector(onTap: (){Get.back();},
+                  child: CircleAvatar(
+                      radius: 17.r,
+                      backgroundColor: ColorPicker.whiteColor.withOpacity(0.2),
+                      child: Icon(
+                        Icons.close,
+                        color: ColorPicker.whiteColor,
+                        size: 22.sp,
+                      )),
+                ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(WatchStoryLiveView());
+                    // Get.to(WatchStoryLiveView());
                   },
                   child: Container(
                       width: 60.w,
