@@ -5,6 +5,7 @@ import 'package:storipod_app/app/common/app_text_field.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/homeStory/storyEdit/controllers/story_edit_controller.dart';
+import 'package:story_view/widgets/story_view.dart';
 
 class WatchStoryLiveView extends GetView<StoryEditController> {
   WatchStoryLiveView({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
     return Scaffold(
         body: Container(
       height: 812.h,
-      width: 372.w,
+      // width: Get.,
       color: ColorPicker.sky2Color,
       child: SingleChildScrollView(
         child: Column(
@@ -135,112 +136,113 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 54.h,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Center(
-                  child: Text(
-                    "Courtney Brown is here to give you the hottest stories. Follow me through the next slides to get the full gist!",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 32.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.whiteColor),
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: ListView.builder(
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.all(3.0),
-                              child: Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 28.r,
-                                    backgroundImage:
-                                        AssetImage(abc[index]["image"]),
-                                  ),
-                                  SizedBox(
-                                    width: 8.w,
-                                  ),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          abc[index]["name"],
-                                          style: TextStyle(
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w700,
-                                              color: ColorPicker.whiteColor),
-                                        ),
-                                        Text(
-                                          abc[index]["subName"],
-                                          style: TextStyle(
-                                              fontSize: 12.sp,
-                                              fontWeight: FontWeight.w600,
-                                              color: ColorPicker.whiteColor),
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            );
-                          },
-                          shrinkWrap: true,
-                          physics: AlwaysScrollableScrollPhysics(),
-                          itemCount: abc.length,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 25.w,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          // Spacer(),
-                          CircleAvatar(
-                            radius: 30.r,
-                            backgroundColor: ColorPicker.whiteColor,
-                            child: Icon(
-                              Icons.pause,
-                              color: ColorPicker.blackColor,
-                              size: 28.h,
-                            ),
-                          )
-                        ],
-                      )
-                    ]),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: CustomTextRoundField(
-                  padding: EdgeInsets.all(16),
-                  fillColor: Colors.transparent,
-                  isDense: true,
-                  hintColor: ColorPicker.whiteColor,
-                  boderColor: ColorPicker.whiteColor,
-                  controller: cmtController,
-                  hintText: "Add comment",
-                  onTap: () {},
-                  // suffixIconData1: ,
-                  inputType: TextInputType.emailAddress,
-                ),
-              ),
+             
+              // SizedBox(
+              //   height: 54.h,
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              //   child: Center(
+              //     child: Text(
+              //       "Courtney Brown is here to give you the hottest stories. Follow me through the next slides to get the full gist!",
+              //       textAlign: TextAlign.center,
+              //       style: TextStyle(
+              //           fontSize: 32.sp,
+              //           fontWeight: FontWeight.w700,
+              //           color: ColorPicker.whiteColor),
+              //     ),
+              //   ),
+              // ),
+              // Container(
+              //   padding: EdgeInsets.symmetric(horizontal: 12),
+              //   child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //       children: [
+              //         Expanded(
+              //           flex: 2,
+              //           child: ListView.builder(
+              //             itemBuilder: (context, index) {
+              //               return Padding(
+              //                 padding: const EdgeInsets.all(3.0),
+              //                 child: Row(
+              //                   children: [
+              //                     CircleAvatar(
+              //                       radius: 28.r,
+              //                       backgroundImage:
+              //                           AssetImage(abc[index]["image"]),
+              //                     ),
+              //                     SizedBox(
+              //                       width: 8.w,
+              //                     ),
+              //                     Expanded(
+              //                       child: Column(
+              //                         crossAxisAlignment:
+              //                             CrossAxisAlignment.start,
+              //                         mainAxisAlignment:
+              //                             MainAxisAlignment.center,
+              //                         children: [
+              //                           Text(
+              //                             abc[index]["name"],
+              //                             style: TextStyle(
+              //                                 fontSize: 14.sp,
+              //                                 fontWeight: FontWeight.w700,
+              //                                 color: ColorPicker.whiteColor),
+              //                           ),
+              //                           Text(
+              //                             abc[index]["subName"],
+              //                             style: TextStyle(
+              //                                 fontSize: 12.sp,
+              //                                 fontWeight: FontWeight.w600,
+              //                                 color: ColorPicker.whiteColor),
+              //                           )
+              //                         ],
+              //                       ),
+              //                     )
+              //                   ],
+              //                 ),
+              //               );
+              //             },
+              //             shrinkWrap: true,
+              //             physics: AlwaysScrollableScrollPhysics(),
+              //             itemCount: abc.length,
+              //           ),
+              //         ),
+              //         SizedBox(
+              //           width: 25.w,
+              //         ),
+              //         Column(
+              //           crossAxisAlignment: CrossAxisAlignment.end,
+              //           mainAxisAlignment: MainAxisAlignment.end,
+              //           children: [
+              //             // Spacer(),
+              //             CircleAvatar(
+              //               radius: 30.r,
+              //               backgroundColor: ColorPicker.whiteColor,
+              //               child: Icon(
+              //                 Icons.pause,
+              //                 color: ColorPicker.blackColor,
+              //                 size: 28.h,
+              //               ),
+              //             )
+              //           ],
+              //         )
+              //       ]),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              //   child: CustomTextRoundField(
+              //     padding: EdgeInsets.all(16),
+              //     fillColor: Colors.transparent,
+              //     isDense: true,
+              //     hintColor: ColorPicker.whiteColor,
+              //     boderColor: ColorPicker.whiteColor,
+              //     controller: cmtController,
+              //     hintText: "Add comment",
+              //     onTap: () {},
+              //     // suffixIconData1: ,
+              //     inputType: TextInputType.emailAddress,
+              //   ),
+              // ),
             ]),
       ),
     ));

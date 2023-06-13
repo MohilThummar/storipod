@@ -13,13 +13,6 @@ class SecureaccountController extends GetxController {
 
   RxBool isTextFieldEnabled = false.obs;
 
-  void enableTextField() {
-    isTextFieldEnabled.value = true;
-  }
-
-  void disableTextField() {
-    isTextFieldEnabled.value = false;
-  }
 
   void togglePasswordVisibility() {
     showPassword.value = !showPassword.value;

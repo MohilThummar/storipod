@@ -12,6 +12,7 @@ import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.d
 import '../../../common/commanpaddingcolumn.dart';
 import '../../../constant/string.dart';
 import '../controllers/explore_controller.dart';
+import '../detailProfile/views/detail_profile_view.dart';
 
 class ExploreView extends GetView<ExploreController> {
   const ExploreView({Key? key}) : super(key: key);
@@ -219,12 +220,17 @@ class ExploreView extends GetView<ExploreController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Text(
-                    AppStrings.seeAll,
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: ColorPicker.blackColor),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(SeeAllProfileView());
+                    },
+                    child: Text(
+                      AppStrings.seeAll,
+                      style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                          color: ColorPicker.blackColor),
+                    ),
                   )
                 ],
               ),
@@ -252,9 +258,7 @@ class ExploreView extends GetView<ExploreController> {
                 itemBuilder: (BuildContext context, int index) {
                   // Build and return the individual grid items
                   return GestureDetector(
-                    onTap: () {
-                      Get.to(SeeAllProfileView());
-                    },
+                    onTap: () {Get.to(DetailProfileView());},
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,

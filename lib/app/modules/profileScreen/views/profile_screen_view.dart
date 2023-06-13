@@ -17,17 +17,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
     // SampleItem? selectedMenu;
     bool clicked = false;
 
-    List Story = [
-      ImagePickerImage.image1,
-      ImagePickerImage.image2,
-      ImagePickerImage.image3,
-      ImagePickerImage.image4,
-      ImagePickerImage.image5,
-      ImagePickerImage.image5,
-      ImagePickerImage.image6,
-      ImagePickerImage.image7,
-      ImagePickerImage.image1,
-    ];
+
     Get.put(ProfileScreenController());
     return Scaffold(
       body: SafeArea(
@@ -98,7 +88,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                           backgroundColor: Colors.transparent,
                           child: CircleAvatar(
                             backgroundImage:
-                                AssetImage(ImagePickerImage.Profile),
+                                AssetImage(ImagePickerImage.laugh),
                             radius: 48,
                           ),
                         ),
@@ -238,7 +228,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                                 radius: 42.r,
                                 backgroundColor: Colors.transparent,
                                 child: CircleAvatar(
-                                  backgroundImage: AssetImage(Story[index]),
+                                  backgroundImage: AssetImage(ImagePickerImage.p1Image),
                                   radius: 40.r,
                                   child: Text(
                                     AppStrings.strytxt,
@@ -252,7 +242,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                               children: [
                                 Image.asset(ImagePickerImage.laugh),
                                 Image.asset(
-                                  ImagePickerImage.heart,
+                                  ImagePickerImage.laugh,
                                   height: 12,
                                   fit: BoxFit.fill,
                                 ),

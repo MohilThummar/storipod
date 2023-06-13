@@ -60,18 +60,9 @@ class ImagePickerImage {
 
 
 
-  static const Profile = "assets/images/profile.png";
-  static const search = "assets/images/search.png";
 
-  static const story = "assets/images/story.png";
-  static const image1 = "assets/images/1.png";
-  static const image2 = "assets/images/2.png";
-  static const image3 = "assets/images/3.png";
-  static const image4 = "assets/images/4.png";
-  static const image5 = "assets/images/5.png";
-  static const image6 = "assets/images/6.png";
-  static const image7 = "assets/images/7.png";
-  static const laugh = "assets/images/laugh.png";
-  static const heart = "assets/images/7.png";
+
+  static const laugh = "assets/laugh.png";
+
 
 }

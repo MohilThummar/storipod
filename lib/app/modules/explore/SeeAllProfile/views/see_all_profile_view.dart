@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import '../../../../constant/colour.dart';
+import '../../detailProfile/views/detail_profile_view.dart';
 import '../controllers/see_all_profile_controller.dart';
 
 class SeeAllProfileView extends GetView<SeeAllProfileController> {
@@ -50,12 +51,11 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
           crossAxisSpacing: 0,
         ),
         itemCount: controller.storiesGrideData.length,
-        // Number of items in the grid
         itemBuilder: (BuildContext context, int index) {
-          // Build and return the individual grid items
           return GestureDetector(
             onTap: () {
-              // Get.to(SeeAllProfileView());
+              Get.to(DetailProfileView());
+              print("asjfgj0");
             },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

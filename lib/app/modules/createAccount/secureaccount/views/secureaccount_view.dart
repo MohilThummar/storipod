@@ -97,9 +97,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                   context: context,
                   height: 55.h,
                   width: double.infinity,
-                  onPressed: () {
-                    // Get.to(SecureaccountView());
-                  },
+                  onPressed: () {},
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
                   fontSize: 16.sp,

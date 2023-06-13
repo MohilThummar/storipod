@@ -11,6 +11,8 @@ import '../modules/createAccount/views/create_account_view.dart';
 import '../modules/explore/SeeAllProfile/bindings/see_all_profile_binding.dart';
 import '../modules/explore/SeeAllProfile/views/see_all_profile_view.dart';
 import '../modules/explore/bindings/explore_binding.dart';
+import '../modules/explore/detailProfile/bindings/detail_profile_binding.dart';
+import '../modules/explore/detailProfile/views/detail_profile_view.dart';
 import '../modules/explore/views/explore_view.dart';
 import '../modules/findnewstory/bindings/findnewstory_binding.dart';
 import '../modules/findnewstory/views/findnewstory_view.dart';
@@ -102,6 +104,11 @@ class AppPages {
           page: () => const SeeAllProfileView(),
           binding: SeeAllProfileBinding(),
         ),
+        GetPage(
+          name: _Paths.DETAIL_PROFILE,
+          page: () => const DetailProfileView(),
+          binding: DetailProfileBinding(),
+        ),
       ],
     ),
     GetPage(
@@ -139,6 +146,5 @@ class AppPages {
       page: () => const ProfileScreenView(),
       binding: ProfileScreenBinding(),
     ),
-
   ];
 }
