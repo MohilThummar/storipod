@@ -263,11 +263,7 @@ class ExploreView extends GetView<ExploreController> {
                   // Build and return the individual grid items
                   return GestureDetector(
                     onTap: () {
-                      showNavBar.value = true;
-                      print(showNavBar.value
-                          .toString()); // Get.to(DetailProfileView(
-                      //
-                      // ));
+                      Get.to(DetailProfileView());
                     },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
