@@ -422,8 +422,14 @@ class CustomPasswordTextField extends StatelessWidget {
       decoration: InputDecoration(
         suffixIcon: GestureDetector(
             onTap: OnTapSuffix,
-            child: Image.asset(suffixIconData1!,
-                color: ColorPicker.blackEyeColor)),
+            child: Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 12.w),
+              child: Image.asset(suffixIconData1!,
+                  fit: BoxFit.contain,
+                  height: 17.w,
+                  width: 19.w,
+                  color: ColorPicker.blackEyeColor),
+            )),
         suffixIconColor: suffixIconColor,
         isDense: isDense,
         fillColor: fillColor ?? ColorPicker.lightWhiteColor,

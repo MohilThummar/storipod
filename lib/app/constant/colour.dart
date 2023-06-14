@@ -16,6 +16,8 @@ class ColorPicker {
   static const offGreishColor = Color(0xff747474);
   static const pureWhiteColor = Color(0xffEAEEF1);
   static const linkColor = Color(0xff004C8B);
+  static const light2Color = Color(0xff69696C);
+  static const light2greyColor = Color(0xff6E717C);
 
 
   static const subBlackColor = Color(0xff69696C);

@@ -4,6 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/modules/Analytics/views/analytics_view.dart';
+import 'package:storipod_app/app/modules/notification/views/notification_view.dart';
+import 'package:storipod_app/app/modules/profileSetting/Notification/notification.screen.dart';
 import 'package:storipod_app/app/modules/profileSetting/views/profile_setting_view.dart';
 
 import '../../../constant/colour.dart';
@@ -73,7 +76,8 @@ class ProfileBottomSheet extends StatelessWidget {
 
               GestureDetector(
                 onTap: () {
-                  Get.back();
+                  Get.to(AnalyticsView());
+                  // Get.back();
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5..h),
@@ -121,7 +125,7 @@ class ProfileBottomSheet extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.back();
+           Get.to(NotificationScreen());
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5..h),

@@ -30,6 +30,7 @@ abstract class Routes {
   static const REACTIONS = _Paths.REACTIONS;
   static const PROFILE_SETTING = _Paths.PROFILE_SETTING;
   static const USER_FOLLOWER = _Paths.USER_FOLLOWER;
+  static const ANALYTICS = _Paths.ANALYTICS;
 }
 
 abstract class _Paths {
@@ -61,4 +62,5 @@ abstract class _Paths {
   static const REACTIONS = '/reactions';
   static const PROFILE_SETTING = '/profile-setting';
   static const USER_FOLLOWER = '/user-follower';
+  static const ANALYTICS = '/analytics';
 }

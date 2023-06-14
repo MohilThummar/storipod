@@ -76,14 +76,15 @@ class CreateAccountView extends GetView<CreateAccountController> {
                     enableDrag: true,
                     CustomBottomSheet());
               },
-              child: Container(
-                width: 110.w,
-                height: 110.h,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: ColorPicker.offSkyColor.withOpacity(0.3),
+              child: CircleAvatar(
+                radius: 55.r,
+                backgroundColor: ColorPicker.offSkyColor.withOpacity(0.3),
+                child: Image.asset(
+                  ImagePickerImage.scanIcon,
+                  height: 36.h,
+                  width: 36.w,
+                  fit: BoxFit.fill,
                 ),
-                child: Image.asset(ImagePickerImage.scanIcon),
               ),
             ),
 

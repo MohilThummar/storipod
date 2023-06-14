@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/Analytics/bindings/analytics_binding.dart';
+import '../modules/Analytics/views/analytics_view.dart';
 import '../modules/UserFollower/bindings/user_follower_binding.dart';
 import '../modules/UserFollower/views/user_follower_view.dart';
 import '../modules/createAccount/bindings/create_account_binding.dart';
@@ -36,8 +38,6 @@ import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/views/notification_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
-import '../modules/personProfileScreen/bindings/person_profile_screen_binding.dart';
-import '../modules/personProfileScreen/views/person_profile_screen_view.dart';
 import '../modules/profileSetting/bindings/profile_setting_binding.dart';
 import '../modules/profileSetting/views/profile_setting_view.dart';
 import '../modules/reactions/bindings/reactions_binding.dart';
@@ -97,7 +97,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.NAVBAR_SCREEN,
-      page: () =>  NavbarScreenView(),
+      page: () => NavbarScreenView(),
       binding: NavbarScreenBinding(),
     ),
     GetPage(
@@ -146,6 +146,13 @@ class AppPages {
       name: _Paths.NOTIFICATION,
       page: () => const NotificationView(),
       binding: NotificationBinding(),
+      children: [
+        GetPage(
+          name: _Paths.NOTIFICATION,
+          page: () => const NotificationView(),
+          binding: NotificationBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.REACTIONS,
@@ -161,6 +168,11 @@ class AppPages {
       name: _Paths.USER_FOLLOWER,
       page: () => const UserFollowerView(),
       binding: UserFollowerBinding(),
+    ),
+    GetPage(
+      name: _Paths.ANALYTICS,
+      page: () => const AnalyticsView(),
+      binding: AnalyticsBinding(),
     ),
   ];
 }

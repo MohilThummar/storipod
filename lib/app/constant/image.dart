@@ -66,6 +66,8 @@ class ImagePickerImage {
   static const hiddenImage = "assets/hiddeneye.png";
   static const showEyeImage = "assets/Eye.png";
   static const notificationImage = "assets/notification.png";
+  static const soundImage = "assets/sound.png";
+  static const msgImage = "assets/msg.png";
 
   static const laugh = "assets/laugh.png";
   static const download = "assets/download.png";

@@ -106,7 +106,7 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(UserFollowerView());
+                  // Get.to(UserFollowerView());
                 },
                 child: Column(
                   children: [
@@ -132,7 +132,7 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(UserFollowerView());
+                  // Get.to(UserFollowerView());
                 },
                 child: Column(
                   children: [

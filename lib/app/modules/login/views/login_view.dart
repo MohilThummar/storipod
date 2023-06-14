@@ -52,7 +52,12 @@ class LoginView extends GetView<LoginController> {
                       fontSize: 14.sp,
                       color: ColorPicker.subBlackColor),
                 ),
-                Image.asset(ImagePickerImage.smilyImage)
+                Image.asset(
+                  ImagePickerImage.smilyImage,
+                  height: 20.h,
+                  width: 20.w,
+                  fit: BoxFit.fill,
+                )
               ],
             ),
             SizedBox(
@@ -232,7 +237,9 @@ class LoginView extends GetView<LoginController> {
               context: context,
               height: 40.h,
               width: double.infinity,
-              onPressed: () {},imageheight: 22.h,imageWidth: 22.w,
+              onPressed: () {},
+              imageheight: 22.h,
+              imageWidth: 22.w,
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,
               title: AppStrings.signInWithGoogle,
