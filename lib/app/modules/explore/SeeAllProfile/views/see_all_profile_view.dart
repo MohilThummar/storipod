@@ -55,7 +55,6 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
           return GestureDetector(
             onTap: () {
               Get.to(DetailProfileView());
-              print("asjfgj0");
             },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

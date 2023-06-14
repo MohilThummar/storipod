@@ -1,11 +1,13 @@
 import 'package:get/get.dart';
+import 'package:storipod_app/main.dart';
 
 class NavbarScreenController extends GetxController {
   //TODO: Implement NavbarScreenController
-  RxInt selectedItemIndex = 1.obs;
+
 
   void changeSelectedItem(int index) {
-    selectedItemIndex.value = index;
+    correntIndex.value=index;
+    // selectedItemIndex.value = index;
   }
 
   final count = 0.obs;

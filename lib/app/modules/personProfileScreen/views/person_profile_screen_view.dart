@@ -24,18 +24,11 @@ class PersonProfileScreenView extends StatefulWidget {
 
 class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
     with SingleTickerProviderStateMixin {
-  late TabController tabController;
+
   PersonProfileScreenController controller =
       Get.put(PersonProfileScreenController());
-  int indexTab = 2;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    tabController =
-        TabController(length: 3, vsync: this, animationDuration: Duration.zero);
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -111,9 +104,10 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
               SizedBox(
                 width: 24.w,
               ),
-              GestureDetector(onTap: (){
-                Get.to(UserFollowerView());
-              },
+              GestureDetector(
+                onTap: () {
+                  Get.to(UserFollowerView());
+                },
                 child: Column(
                   children: [
                     Text(
@@ -136,9 +130,10 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
               SizedBox(
                 width: 24.w,
               ),
-              GestureDetector(onTap: (){
-                Get.to(UserFollowerView());
-              },
+              GestureDetector(
+                onTap: () {
+                  Get.to(UserFollowerView());
+                },
                 child: Column(
                   children: [
                     Text(
@@ -231,12 +226,8 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
         ),
         TabBar(
           physics: NeverScrollableScrollPhysics(),
-          controller: tabController,
+          controller: controller.tabController,
           indicatorWeight: 2.h,
-
-          // indicator: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(50), // Creates border
-          //     color: ColorPicker.blackColor),
           indicatorSize: TabBarIndicatorSize.tab,
           unselectedLabelColor: ColorPicker.greyColor,
           labelColor: Colors.black,
@@ -250,7 +241,7 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
               fontSize: 14.sp,
               fontWeight: FontWeight.w700),
           onTap: (v) {
-            if (v == indexTab) {
+            if (v == controller.indexTab.value) {
               Get.to(SaveTabScreenScreen());
             }
           },
@@ -288,9 +279,12 @@ class _PersonProfileScreenViewState extends State<PersonProfileScreenView>
           ],
         ),
         Expanded(
-          child: TabBarView(controller: tabController, children: [
+          child: TabBarView(
+         // viewportFraction:1,
+              controller: controller.tabController, children: [
             StoriesTabScreenScreen(),
             DraftTabScreenScreen(),
+            Container()
           ]),
         )
       ]),

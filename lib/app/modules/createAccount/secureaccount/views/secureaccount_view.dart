@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
+import 'package:storipod_app/main.dart';
 
 import '../../../../common/app_button.dart';
 import '../../../../common/app_text_field.dart';
@@ -97,7 +99,11 @@ class SecureaccountView extends GetView<SecureaccountController> {
                   context: context,
                   height: 55.h,
                   width: double.infinity,
-                  onPressed: () {},
+                  onPressed: () {
+                    correntIndex.value=1;
+                    isLogin.value=true;
+                    Get.offAll(NavbarScreenView());
+                  },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
                   fontSize: 16.sp,

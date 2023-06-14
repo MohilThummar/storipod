@@ -3,6 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'app/constant/string.dart';
 import 'app/routes/app_pages.dart';
+RxBool showNavBar=false.obs;
+RxBool isLogin=false.obs;
+RxBool showProfile=false.obs;
+RxInt correntIndex = 1.obs;
+
 
 void main() {
   runApp(

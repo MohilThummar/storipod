@@ -226,7 +226,11 @@ class ExploreView extends GetView<ExploreController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.to(SeeAllProfileView());
+                      showProfile.value=true;
+                      print("===object");
+                      // showNavBar.value=true;
+                      correntIndex.value=1;
+                      // Get.to(SeeAllProfileView());
                     },
                     child: Text(
                       AppStrings.seeAll,
@@ -263,7 +267,10 @@ class ExploreView extends GetView<ExploreController> {
                   // Build and return the individual grid items
                   return GestureDetector(
                     onTap: () {
-                      Get.to(DetailProfileView());
+                      showNavBar.value=true;
+                      correntIndex.value=2;
+
+                      // Get.to(DetailProfileView());
                     },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
