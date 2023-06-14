@@ -1,12 +1,14 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class SecureaccountController extends GetxController {
-  //TODO: Implement SecureaccountController
+class ChangePasswordController extends GetxController {
+  //TODO: Implement ChangePasswordController
   TextEditingController confirmPasswordController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController oldPasswordController = TextEditingController();
   final count = 0.obs;
   RxBool showPassword = false.obs;
+  RxBool oldShowPassword = false.obs;
   RxBool conformShowPassword = false.obs;
 
   // Focus focusNode.;
@@ -16,7 +18,9 @@ class SecureaccountController extends GetxController {
   void togglePasswordVisibility() {
     showPassword.value = !showPassword.value;
   }
-
+  void toggleOldPasswordVisibility() {
+    oldShowPassword.value = !oldShowPassword.value;
+  }
   void toggleconformPasswordVisibility() {
     conformShowPassword.value = !conformShowPassword.value;
   }
@@ -35,4 +39,6 @@ class SecureaccountController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  void increment() => count.value++;
 }

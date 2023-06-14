@@ -355,7 +355,6 @@ class CustomBottomSheet extends StatelessWidget {
                 ),
                 onTap: () {
                   Get.bottomSheet(ShareBottomSheet(),
-
                       elevation: 2, isDismissible: true, enableDrag: true);
                 },
               ),
@@ -491,7 +490,10 @@ class ShareBottomSheet extends StatelessWidget {
                     physics: AlwaysScrollableScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      return GestureDetector(onTap: (){  Get.back();},
+                      return GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
                         child: Padding(
                           padding: EdgeInsets.only(right: 15.w),
                           child: Column(

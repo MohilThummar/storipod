@@ -1,1 +1,14 @@
+export 'package:storipod_app/app/modules/personProfileScreen/draftTabScreen/draft_tab_screen.screen.dart';
+export 'package:storipod_app/app/modules/personProfileScreen/saveTabScreen/save_tab_screen.screen.dart';
+export 'package:storipod_app/app/modules/personProfileScreen/storiesTabScreen/stories_tab_screen.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/Wallet/wallet.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/aboutApp/about_app.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/account/account.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/changePassword/change_password.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/editEmail/edit_email.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/editInformation/edit_information.screen.dart';
+export 'package:storipod_app/app/modules/profileSetting/editProfile/edit_profile.screen.dart';
+export 'package:storipod_app/app/modules/reactions/AllviewTab/allview_tab.screen.dart';
+export 'package:storipod_app/app/modules/reactions/laughTab/laugh_tab.screen.dart';
+export 'package:storipod_app/app/modules/reactions/likeTab/like_tab.screen.dart';
 export 'package:storipod_app/presentation/notification/notification.screen.dart';

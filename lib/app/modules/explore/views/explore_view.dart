@@ -8,6 +8,7 @@ import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/modules/explore/SeeAllProfile/views/see_all_profile_view.dart';
 import 'package:storipod_app/app/modules/homeStory/searchstory/views/searchstory_view.dart';
 import 'package:storipod_app/app/modules/navbarScreen/views/navbar_screen_view.dart';
+import 'package:storipod_app/main.dart';
 
 import '../../../common/commanpaddingcolumn.dart';
 import '../../../constant/string.dart';
@@ -253,7 +254,7 @@ class ExploreView extends GetView<ExploreController> {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3, // Number of columns in the grid
                   mainAxisSpacing: 24,
-                  mainAxisExtent: 127.h,
+                  mainAxisExtent: 130.h,
                   crossAxisSpacing: 0, // Spacing between columns
                 ),
                 itemCount: controller.storiesGrideData.length,
@@ -262,7 +263,11 @@ class ExploreView extends GetView<ExploreController> {
                   // Build and return the individual grid items
                   return GestureDetector(
                     onTap: () {
-                      Get.to(DetailProfileView());
+                      showNavBar.value = true;
+                      print(showNavBar.value
+                          .toString()); // Get.to(DetailProfileView(
+                      //
+                      // ));
                     },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -297,48 +302,6 @@ class ExploreView extends GetView<ExploreController> {
                     ),
                   );
                 },
-
-                //   Container(
-                //   color: Colors.blue,
-                //   // height: 400.h,
-                //   margin: EdgeInsets.all(3.0),
-                //   child: Padding(
-                //     padding: const EdgeInsets.all(3.0),
-                //     child: GridTile(
-                //       child: Column(
-                //         // mainAxisSize: MainAxisSize.max,
-                //         mainAxisAlignment: MainAxisAlignment.center,
-                //         crossAxisAlignment: CrossAxisAlignment.center,
-                //         children: [
-                //           CircleAvatar(
-                //             radius: 35,
-                //             backgroundColor:
-                //                 controller.storiesGrideData[index]["color"],
-                //           ),
-                //           SizedBox(
-                //             height: 5,
-                //           ),
-                //           Text(
-                //             controller.storiesGrideData[index]["username"],
-                //             style: TextStyle(
-                //                 fontWeight: FontWeight.w700,
-                //                 fontSize: 13.sp,
-                //                 color: ColorPicker.blackColor),
-                //           ),
-                //           SizedBox(
-                //             height: 4.h,
-                //           ),
-                //           Text(
-                //             controller.storiesGrideData[index]["subName"],
-                //             style: TextStyle(
-                //                 fontWeight: FontWeight.w700,
-                //                 fontSize: 13.sp,
-                //                 color: ColorPicker.boderBlackColor),
-                //           ),
-                //         ],
-                //       ),
-                //     ),
-                //   ),
               ),
             ),
           ],

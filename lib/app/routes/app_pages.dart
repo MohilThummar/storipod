@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/UserFollower/bindings/user_follower_binding.dart';
+import '../modules/UserFollower/views/user_follower_view.dart';
 import '../modules/createAccount/bindings/create_account_binding.dart';
 import '../modules/createAccount/secureaccount/bindings/secureaccount_binding.dart';
 import '../modules/createAccount/secureaccount/views/secureaccount_view.dart';
@@ -36,7 +38,10 @@ import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/personProfileScreen/bindings/person_profile_screen_binding.dart';
 import '../modules/personProfileScreen/views/person_profile_screen_view.dart';
-
+import '../modules/profileSetting/bindings/profile_setting_binding.dart';
+import '../modules/profileSetting/views/profile_setting_view.dart';
+import '../modules/reactions/bindings/reactions_binding.dart';
+import '../modules/reactions/views/reactions_view.dart';
 import '../modules/recommendation/bindings/recommendation_binding.dart';
 import '../modules/recommendation/views/recommendation_view.dart';
 
@@ -92,7 +97,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.NAVBAR_SCREEN,
-      page: () => const NavbarScreenView(),
+      page: () =>  NavbarScreenView(),
       binding: NavbarScreenBinding(),
     ),
     GetPage(
@@ -142,6 +147,20 @@ class AppPages {
       page: () => const NotificationView(),
       binding: NotificationBinding(),
     ),
-
+    GetPage(
+      name: _Paths.REACTIONS,
+      page: () => const ReactionsView(),
+      binding: ReactionsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE_SETTING,
+      page: () => const ProfileSettingView(),
+      binding: ProfileSettingBinding(),
+    ),
+    GetPage(
+      name: _Paths.USER_FOLLOWER,
+      page: () => const UserFollowerView(),
+      binding: UserFollowerBinding(),
+    ),
   ];
 }

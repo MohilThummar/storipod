@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/common/app_button.dart';
-import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/homeStory/viewStory.dart';
+import 'package:storipod_app/app/modules/explore/detailProfile/profilrbottonsheet.dart';
 import 'package:storipod_app/app/modules/personProfileScreen/views/person_profile_screen_view.dart';
-
+import 'package:storipod_app/app/modules/profileSetting/editProfile/edit_profile.screen.dart';
 import '../../../../constant/colour.dart';
 import '../controllers/detail_profile_controller.dart';
 
@@ -20,18 +17,25 @@ class DetailProfileView extends GetView<DetailProfileController> {
   Widget build(BuildContext context) {
     Get.put(DetailProfileController());
     return Scaffold(
+        backgroundColor: ColorPicker.whiteColor,
         appBar: AppBar(
           backgroundColor: ColorPicker.whiteColor,
           actions: [
-            Padding(
-                padding: EdgeInsets.only(
-                  right: 24.w,
-                ),
-                child: Icon(
-                  Icons.more_horiz,
-                  size: 24.sp,
-                  color: ColorPicker.blackColor,
-                ))
+            GestureDetector(
+              onTap: () {
+                Get.bottomSheet(ProfileBottomSheet(),
+                    isDismissible: true, enableDrag: true);
+              },
+              child: Padding(
+                  padding: EdgeInsets.only(
+                    right: 24.w,
+                  ),
+                  child: Icon(
+                    Icons.more_horiz,
+                    size: 24.sp,
+                    color: ColorPicker.blackColor,
+                  )),
+            )
           ],
           leadingWidth: 0,
           elevation: 1,
@@ -82,16 +86,21 @@ class DetailProfileView extends GetView<DetailProfileController> {
                         ],
                       ),
                     ),
-                    StatusView(
-                      radius: 37.8.r,
-                      spacing: 7.r,
-                      strokeWidth: 3.w,
-                      indexOfSeenStatus: 2,
-                      numberOfStatus: 8,
-                      padding: 4.w,
-                      seenColor: ColorPicker.skyColor,
-                      unSeenColor: ColorPicker.skyColor,
-                      centerImageUrl: "https://picsum.photos/200/300",
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(PersonProfileScreenView());
+                      },
+                      child: StatusView(
+                        radius: 37.8.r,
+                        spacing: 7.r,
+                        strokeWidth: 3.w,
+                        indexOfSeenStatus: 2,
+                        numberOfStatus: 8,
+                        padding: 4.w,
+                        seenColor: ColorPicker.skyColor,
+                        unSeenColor: ColorPicker.skyColor,
+                        centerImageUrl: "https://picsum.photos/200/300",
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 25.w),
@@ -182,7 +191,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                         title: "Edit profile",
                         context: context,
                         onPressed: () {
-                          Get.to(PersonProfileScreenView());
+                          Get.to(EditProfileScreen());
                         },
                         fontSize: 14.sp,
                         height: 38.h,
