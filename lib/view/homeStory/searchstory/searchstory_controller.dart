@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
 
 class SearchstoryController extends GetxController {
   //TODO: Implement SearchstoryController
@@ -18,7 +18,7 @@ class SearchstoryController extends GetxController {
     },
     {
       "name": AppStrings.citizens,
-      "image": ImagePickerImage.p7Image,
+      "image":ImagePickerImage.p7Image,
       "subName": AppStrings.adegeji,
 
     }

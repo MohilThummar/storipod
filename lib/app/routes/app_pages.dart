@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import '../../view/Analytics/analytics_binding.dart';
 import '../../view/Analytics/analytics_view.dart';
 import '../../view/createAccount/create_account_binding.dart';

@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/createAccount/bottomsheet.dart';
-import 'package:storipod_app/app/modules/profileSetting/editEmail/edit_email.screen.dart';
 
-import '../../../common/commanpaddingcolumn.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
+import '../../../../app/common/commanpaddingcolumn.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/string.dart';
+import '../../../createAccount/bottomsheet.dart';
+import '../editEmail/edit_email.screen.dart';
 import 'edit_profile.controller.dart';
 
 class EditProfileScreen extends GetView<EditProfileController> {
@@ -18,7 +18,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorPicker.whiteColor,
+      backgroundColor:ColorPicker.whiteColor,
       appBar: AppBar(
         backgroundColor: ColorPicker.whiteColor,
         leading: GestureDetector(

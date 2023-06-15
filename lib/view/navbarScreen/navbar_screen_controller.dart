@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/main.dart';
+import '../explore/SeeAllProfile/see_all_profile_view.dart';
+import '../explore/detailProfile/detail_profile_view.dart';import '../explore/explore_view.dart';
+import '../homeStory/home_story_view.dart';
+import '../login/login_view.dart';
 
-import '../explore/SeeAllProfile/views/see_all_profile_view.dart';
-import '../explore/detailProfile/views/detail_profile_view.dart';
-import '../explore/views/explore_view.dart';
-import '../homeStory/views/home_story_view.dart';
-import '../login/views/login_view.dart';
 
 class NavbarScreenController extends GetxController {
   //TODO: Implement NavbarScreenController

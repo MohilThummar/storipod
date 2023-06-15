@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
+
+import '../../../app/constant/colour.dart';
 import 'laugh_tab.controller.dart';
 
 class LaughTabScreen extends GetView<LaughTabController> {

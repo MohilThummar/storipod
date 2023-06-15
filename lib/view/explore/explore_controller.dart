@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 
-import '../../constant/image.dart';
-import '../../constant/string.dart';
+import '../../app/constant/image.dart';
+import '../../app/constant/string.dart';
 
 class ExploreController extends GetxController {
   //TODO: Implement ExploreController

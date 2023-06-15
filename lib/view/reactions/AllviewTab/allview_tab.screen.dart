@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/string.dart';
 import 'allview_tab.controller.dart';
 
 class AllviewTabScreen extends GetView<AllviewTabController> {

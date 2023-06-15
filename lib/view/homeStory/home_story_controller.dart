@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/image.dart';
-
-import '../../constant/string.dart';
+import '../../app/constant/string.dart';
 
 class HomeStoryController extends GetxController {
   //TODO: Implement HomeStoryController

@@ -2,13 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:storipod_app/app/modules/profileSetting/editProfile/edit_profile.screen.dart';
 
-import '../../../common/app_button.dart';
-import '../../../common/app_text_field.dart';
-import '../../../common/commanpaddingcolumn.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
 import 'edit_email.controller.dart';
 
 class EditEmailScreen extends GetView<EditEmailController> {

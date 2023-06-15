@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
-import '../../../constant/image.dart';
+import '../../../app/constant/image.dart';
+
+
 
 class LaughTabController extends GetxController {
   //TODO: Implement LaughTabController
