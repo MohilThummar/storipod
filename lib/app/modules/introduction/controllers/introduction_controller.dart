@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../views/introduction_view.dart';
+
 class IntroductionController extends GetxController {
-  //TODO: Implement IntroductionController
   final PageController pageController = PageController(initialPage: 0);
-  final count = 0.obs;
+
+  RxInt activePage = 0.obs;
+
+  final List<Widget> pages = [PageOne(), PageTwo(), PageThree()];
 
   @override
   void onInit() {
@@ -21,5 +25,5 @@ class IntroductionController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void increment() => activePage.value++;
 }

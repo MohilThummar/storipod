@@ -25,8 +25,7 @@ abstract class Routes {
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
   static const SEE_ALL_PROFILE = _Paths.EXPLORE + _Paths.SEE_ALL_PROFILE;
   static const DETAIL_PROFILE = _Paths.EXPLORE + _Paths.DETAIL_PROFILE;
-  static const PERSON_PROFILE_SCREEN =
-      _Paths.PROFILE_SCREEN + _Paths.PERSON_PROFILE_SCREEN;
+  static const PERSON_PROFILE_SCREEN = _Paths.PROFILE_SCREEN + _Paths.PERSON_PROFILE_SCREEN;
   static const REACTIONS = _Paths.REACTIONS;
   static const PROFILE_SETTING = _Paths.PROFILE_SETTING;
   static const USER_FOLLOWER = _Paths.USER_FOLLOWER;

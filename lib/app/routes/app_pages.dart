@@ -36,8 +36,8 @@ import '../modules/navbarScreen/bindings/navbar_screen_binding.dart';
 import '../modules/navbarScreen/views/navbar_screen_view.dart';
 import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/views/notification_view.dart';
-import '../modules/onboarding/bindings/onboarding_binding.dart';
-import '../modules/onboarding/views/onboarding_view.dart';
+import '../modules/onboarding/onboarding_binding.dart';
+import '../modules/onboarding/onboarding_view.dart';
 import '../modules/profileSetting/bindings/profile_setting_binding.dart';
 import '../modules/profileSetting/views/profile_setting_view.dart';
 import '../modules/reactions/bindings/reactions_binding.dart';
@@ -55,12 +55,12 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.ONBOARDING,
-      page: () => const OnboardingView(),
-      binding: OnboardingBinding(),
+      page: () => const OnBoardingView(),
+      binding: OnBoardingBinding(),
     ),
     GetPage(
       name: _Paths.INTRODUCTION,
-      page: () => IntroductionView(),
+      page: () => const IntroductionScreen(),
       binding: IntroductionBinding(),
     ),
     GetPage(

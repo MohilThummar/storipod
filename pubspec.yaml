@@ -44,7 +44,7 @@ flutter:
   uses-material-design: true
 
   fonts:
-    - family: lato
+    - family: Lato
       fonts:
         - asset: assets/fonts/Lato-Black.ttf
         - asset: assets/fonts/Lato-BlackItalic.ttf
@@ -56,10 +56,8 @@ flutter:
         - asset: assets/fonts/Lato-Regular.ttf
         - asset: assets/fonts/Lato-Thin.ttf
         - asset: assets/fonts/Lato-ThinItalic.ttf
-        - asset: assets/fonts/OFL.txt
 
 
     - family: Bangers
       fonts:
-        - asset: assets/fonts/Bangers/OFL.txt
         - asset: assets/fonts/Bangers/Bangers-Regular.ttf
