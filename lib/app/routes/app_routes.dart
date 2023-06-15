@@ -20,7 +20,6 @@ abstract class Routes {
   static const HOME_STORY = _Paths.HOME_STORY;
   static const SEARCHSTORY = _Paths.SEARCHSTORY;
   static const STORY_EDIT = _Paths.STORY_EDIT;
-
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
   static const SEE_ALL_PROFILE = _Paths.EXPLORE + _Paths.SEE_ALL_PROFILE;

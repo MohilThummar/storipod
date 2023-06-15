@@ -1,50 +1,47 @@
 import 'package:get/get.dart';
 
-import '../modules/Analytics/bindings/analytics_binding.dart';
-import '../modules/Analytics/views/analytics_view.dart';
-import '../modules/UserFollower/bindings/user_follower_binding.dart';
-import '../modules/UserFollower/views/user_follower_view.dart';
-import '../modules/createAccount/bindings/create_account_binding.dart';
-import '../modules/createAccount/secureaccount/bindings/secureaccount_binding.dart';
-import '../modules/createAccount/secureaccount/views/secureaccount_view.dart';
-import '../modules/createAccount/userdetail/bindings/userdetail_binding.dart';
-import '../modules/createAccount/userdetail/views/userdetail_view.dart';
-import '../modules/createAccount/username/bindings/username_binding.dart';
-import '../modules/createAccount/username/views/username_view.dart';
-import '../modules/createAccount/views/create_account_view.dart';
-import '../modules/explore/SeeAllProfile/bindings/see_all_profile_binding.dart';
-import '../modules/explore/SeeAllProfile/views/see_all_profile_view.dart';
-import '../modules/explore/bindings/explore_binding.dart';
-import '../modules/explore/detailProfile/bindings/detail_profile_binding.dart';
-import '../modules/explore/detailProfile/views/detail_profile_view.dart';
-import '../modules/explore/views/explore_view.dart';
-import '../modules/findnewstory/bindings/findnewstory_binding.dart';
-import '../modules/findnewstory/views/findnewstory_view.dart';
-import '../modules/forgotaccount/bindings/forgotaccount_binding.dart';
-import '../modules/forgotaccount/views/forgotaccount_view.dart';
-import '../modules/homeStory/bindings/home_story_binding.dart';
-import '../modules/homeStory/searchstory/bindings/searchstory_binding.dart';
-import '../modules/homeStory/searchstory/views/searchstory_view.dart';
-import '../modules/homeStory/storyEdit/bindings/story_edit_binding.dart';
-import '../modules/homeStory/storyEdit/views/story_edit_view.dart';
-import '../modules/homeStory/views/home_story_view.dart';
-import '../modules/introduction/bindings/introduction_binding.dart';
-import '../modules/introduction/views/introduction_view.dart';
-import '../modules/login/bindings/login_binding.dart';
-import '../modules/login/views/login_view.dart';
-import '../modules/navbarScreen/bindings/navbar_screen_binding.dart';
-import '../modules/navbarScreen/views/navbar_screen_view.dart';
-import '../modules/notification/bindings/notification_binding.dart';
-import '../modules/notification/views/notification_view.dart';
-import '../modules/onboarding/onboarding_binding.dart';
-import '../modules/onboarding/onboarding_view.dart';
-import '../modules/profileSetting/bindings/profile_setting_binding.dart';
-import '../modules/profileSetting/views/profile_setting_view.dart';
-import '../modules/reactions/bindings/reactions_binding.dart';
-import '../modules/reactions/views/reactions_view.dart';
-import '../modules/recommendation/bindings/recommendation_binding.dart';
-import '../modules/recommendation/views/recommendation_view.dart';
-
+import '../../view/Analytics/analytics_binding.dart';
+import '../../view/Analytics/analytics_view.dart';
+import '../../view/createAccount/create_account_binding.dart';
+import '../../view/createAccount/create_account_view.dart';
+import '../../view/createAccount/secureaccount/secureaccount_binding.dart';
+import '../../view/createAccount/secureaccount/secureaccount_view.dart';
+import '../../view/createAccount/userdetail/userdetail_binding.dart';
+import '../../view/createAccount/userdetail/userdetail_view.dart';
+import '../../view/createAccount/username/username_binding.dart';
+import '../../view/createAccount/username/username_view.dart';
+import '../../view/explore/SeeAllProfile/see_all_profile_binding.dart';
+import '../../view/explore/SeeAllProfile/see_all_profile_view.dart';
+import '../../view/explore/detailProfile/detail_profile_view.dart';
+import '../../view/explore/detail_profile_binding.dart';
+import '../../view/explore/explore_binding.dart';
+import '../../view/explore/explore_view.dart';
+import '../../view/findnewstory/findnewstory_binding.dart';
+import '../../view/findnewstory/findnewstory_view.dart';
+import '../../view/forgotaccount/forgotaccount_binding.dart';
+import '../../view/forgotaccount/forgotaccount_view.dart';
+import '../../view/homeStory/home_story_binding.dart';
+import '../../view/homeStory/home_story_view.dart';
+import '../../view/homeStory/searchstory/searchstory_binding.dart';
+import '../../view/homeStory/searchstory/searchstory_view.dart';
+import '../../view/homeStory/storyEdit/story_edit_binding.dart';
+import '../../view/homeStory/storyEdit/story_edit_view.dart';
+import '../../view/introduction/introduction_binding.dart';
+import '../../view/introduction/introduction_view.dart';
+import '../../view/login/login_binding.dart';
+import '../../view/login/login_view.dart';
+import '../../view/navbarScreen/navbar_screen_binding.dart';
+import '../../view/navbarScreen/navbar_screen_view.dart';
+import '../../view/notification/notification_binding.dart';
+import '../../view/notification/notification_view.dart';
+import '../../view/onboarding/onboarding_binding.dart';
+import '../../view/onboarding/onboarding_view.dart';
+import '../../view/reactions/profileSetting/profile_setting_binding.dart';
+import '../../view/reactions/profileSetting/profile_setting_view.dart';
+import '../../view/reactions/reactions_binding.dart';
+import '../../view/reactions/reactions_view.dart';
+import '../../view/recommendation/recommendation_binding.dart';
+import '../../view/recommendation/recommendation_view.dart';
 part 'app_routes.dart';
 
 class AppPages {
@@ -55,7 +52,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.ONBOARDING,
-      page: () => const OnBoardingView(),
+      page: () => OnBoardingView(),
       binding: OnBoardingBinding(),
     ),
     GetPage(
@@ -85,7 +82,7 @@ class AppPages {
         ),
         GetPage(
           name: _Paths.SECUREACCOUNT,
-          page: () => const SecureaccountView(),
+          page: () => SecureaccountView(),
           binding: SecureaccountBinding(),
         ),
       ],
@@ -119,7 +116,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.RECOMMENDATION,
-      page: () => const RecommendationView(),
+      page: () => RecommendationView(),
       binding: RecommendationBinding(),
     ),
     GetPage(
@@ -144,34 +141,29 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.NOTIFICATION,
-      page: () => const NotificationView(),
+      page: () => NotificationView(),
       binding: NotificationBinding(),
       children: [
         GetPage(
           name: _Paths.NOTIFICATION,
-          page: () => const NotificationView(),
+          page: () => NotificationView(),
           binding: NotificationBinding(),
         ),
       ],
     ),
     GetPage(
       name: _Paths.REACTIONS,
-      page: () => const ReactionsView(),
+      page: () => ReactionsView(),
       binding: ReactionsBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE_SETTING,
-      page: () => const ProfileSettingView(),
+      page: () => ProfileSettingView(),
       binding: ProfileSettingBinding(),
     ),
     GetPage(
-      name: _Paths.USER_FOLLOWER,
-      page: () => const UserFollowerView(),
-      binding: UserFollowerBinding(),
-    ),
-    GetPage(
       name: _Paths.ANALYTICS,
-      page: () => const AnalyticsView(),
+      page: () => AnalyticsView(),
       binding: AnalyticsBinding(),
     ),
   ];
