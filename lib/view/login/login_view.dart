@@ -11,6 +11,7 @@ import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/create_account_view.dart';
+import 'package:storipod_app/view/forgotaccount/forgotaccount_binding.dart';
 import 'package:storipod_app/view/forgotaccount/forgotaccount_view.dart';
 
 import 'login_controller.dart';
@@ -116,7 +117,7 @@ class LoginView extends GetView<LoginController> {
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(const ForgotaccountView());
+                            Get.to(const ForgotaccountView(),binding: ForgotaccountBinding());
                           },
                         text: AppStrings.recover,
                         style: TextStyle(
@@ -133,13 +134,19 @@ class LoginView extends GetView<LoginController> {
               height: 12.h,
             ),
             Center(
-              child: AppButton(
-                textColor: ColorPicker.whiteColor,
+              child: buttonWidget(
+                redius: 10.r,
+                context: context,
+                height: 0.055.sh,
+                width: double.infinity,
                 onPressed: () {
-                  Get.offNamedUntil(Routes.createAccount, (route) => false);
+                  Get.offAll(const CreateAccountView());
                 },
-                disableButton: true,
+                textColor: ColorPicker.whiteColor,
                 title: AppStrings.signIN,
+                fontSize: 16.sp,
+                bgColor: ColorPicker.appButtonColor,
+                disableColor: ColorPicker.appButtonColor,
               ),
             ),
             SizedBox(

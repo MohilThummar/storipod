@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/main.dart';
+import 'package:storipod_app/view/homeStory/searchstory/searchstory_binding.dart';
 import '../../../view/homeStory/searchstory/searchstory_view.dart';
 import '../../../view/homeStory/viewStory.dart';
 import '../../app/constant/string.dart';
@@ -20,7 +21,7 @@ class ExploreView extends GetView<ExploreController> {
       appBar: appbarWithSearch(
           context: context,
           onTaped: () {
-            Get.to(const SearchstoryView());
+            Get.to(const SearchstoryView(),binding: SearchstoryBinding());
           }),
       body: SingleChildScrollView(
         child: Column(

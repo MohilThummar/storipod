@@ -101,7 +101,9 @@ class SecureAccountView extends GetView<SecureaccountController> {
                   onPressed: () {
                    // controller. correntIndex.value=1;
                    // controller. isLogin.value=true;
-                    Get.offNamedUntil(Routes.navBarScreen,(route)=>false);
+                    Get.offNamedUntil(Routes.navBarScreen,
+
+                            (route)=>false);
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,

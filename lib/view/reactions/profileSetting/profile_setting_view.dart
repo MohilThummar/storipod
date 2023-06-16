@@ -85,7 +85,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(Routes.account);
+                      Get.toNamed(Routes.account);
 
                     },
                     child: Icon(
@@ -171,7 +171,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(Routes.wallet);
+                      Get.toNamed(Routes.wallet);
                       // Get.to(const WalletScreen());
                     },
                     child: Icon(

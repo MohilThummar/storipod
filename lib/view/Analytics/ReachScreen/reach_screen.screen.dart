@@ -6,6 +6,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:storipod_app/app/common/app_text_field.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/view/Analytics/analytics_binding.dart';
 
 import '../Engagement/engagement.screen.dart';
 import 'reach_screen.controller.dart';
@@ -165,7 +166,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                 itemCount: 2,
                 itemBuilder: (context, int index) {
                   return GestureDetector(onTap: (){
-                    Get.to(const EngagementScreen());
+                    Get.to(const EngagementScreen(),binding: AnalyticsBinding());
                   },
                     child: Container(
                       width: 291.w,

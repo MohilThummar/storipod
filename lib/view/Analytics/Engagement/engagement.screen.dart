@@ -8,6 +8,7 @@ import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 
 
+import '../analytics_binding.dart';
 import 'engagement.controller.dart';
 
 class EngagementScreen extends GetView<EngagementController> {
@@ -168,7 +169,7 @@ class EngagementScreen extends GetView<EngagementController> {
                 itemBuilder: (context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      Get.to(const EngagementScreen());
+                      Get.to(const EngagementScreen(),binding: AnalyticsBinding());
                     },
                     child: Container(
                       width: 291.w,

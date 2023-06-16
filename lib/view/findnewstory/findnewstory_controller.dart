@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:storipod_app/view/findnewstory/findnewstory_view.dart';
 
-import '../../../view/introduction/introduction_view.dart';
 
 class FindnewstoryController extends GetxController {
   //TODO: Implement FindnewstoryController
@@ -10,6 +10,6 @@ class FindnewstoryController extends GetxController {
   final count = 0.obs;
 
 
-  final List<Widget> pages = [pageOne(), pageTwo(), pageThree()];
+  final List<Widget> pagesGrid = [pageOneDone(), pageOneDone(), pageOneDone()];
 
 }

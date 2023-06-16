@@ -6,6 +6,7 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
+import 'package:storipod_app/view/navbarScreen/navbar_screen_binding.dart';
 import '../../../view/navbarScreen/navbar_screen_view.dart';
 
 import '../../app/common/app_button.dart';
@@ -63,9 +64,10 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                   onPageChanged: (int page) {
                     controller.activePage = page;
                   },
-                  itemCount: controller.pages.length,
+                  itemCount: controller.pagesGrid.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return controller.pages[index % controller.pages.length];
+                    return controller
+                        .pagesGrid[index % controller.pagesGrid.length];
                   },
                 ),
               ),
@@ -74,12 +76,13 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
               ),
               Center(
                 child: buttonWidget(
-                  redius: 12.r,
+                  redius: 10,
                   context: context,
-                  height: 48.h,
+                  height: 55.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.offNamedUntil(Routes.navBarScreen, (route) => false);
+                    Get.offAll(const NavbarScreenView(),
+                        binding: NavbarScreenBinding());
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
@@ -97,7 +100,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List<Widget>.generate(
-                    controller.pages.length,
+                    controller.pagesGrid.length,
                     (index) => Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 4),
                           child: GestureDetector(
@@ -105,8 +108,6 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                               controller.pageController.animateToPage(index,
                                   duration: const Duration(milliseconds: 200),
                                   curve: Curves.easeIn);
-
-                              // controller.activePage == controller.pages;
                             },
                             child: CircleAvatar(
                               radius: 4.r,
@@ -125,7 +126,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
   }
 }
 
-pageOne() {
+pageOneDone() {
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
@@ -162,7 +163,7 @@ pageOne() {
   );
 }
 
-pageTwo() {
+pageTwoDone() {
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
@@ -199,7 +200,7 @@ pageTwo() {
   );
 }
 
-pageThree() {
+pageThreeDone() {
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid

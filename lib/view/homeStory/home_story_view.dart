@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/view/homeStory/searchstory/searchstory_binding.dart';
 import 'package:storipod_app/view/homeStory/searchstory/searchstory_view.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/story_edit_binding.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/story_edit_view.dart';
 
 
@@ -25,7 +27,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
             Get.to(const NotificationView());
           },
           onTaped: () {
-            Get.to(const SearchstoryView());
+            Get.to(const SearchstoryView(),binding: SearchstoryBinding());
           },
           context: context),
       body: SingleChildScrollView(
@@ -81,7 +83,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(const StoryEditView());
+                      Get.to(const StoryEditView(),binding: StoryEditBinding());
                     },
                     child: CircleAvatar(
                       radius: 21.r,

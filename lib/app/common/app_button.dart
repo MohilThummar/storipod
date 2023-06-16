@@ -105,7 +105,7 @@ Widget textButton({
     child: Padding(
       padding: EdgeInsets.only(right: 20.w, top: 15.h),
       child: Align(
-        alignment: Alignment.bottomRight,
+        alignment: Alignment.topRight,
         child: GestureDetector(
           onTap: onPressed,
           child: Text(

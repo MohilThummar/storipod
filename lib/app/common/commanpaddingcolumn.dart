@@ -6,8 +6,13 @@ Widget commanPaddingWidget({
   Widget? child,
 }) {
   return Padding(
-      padding: EdgeInsets.only(left: 20.w, right: 20.w, ),
-      child: SingleChildScrollView(
-        child: child,
-      ));
+    padding: EdgeInsets.only(
+      left: 20.w,
+      right: 20.w,
+    ),
+    child: SingleChildScrollView(
+      child: child??Container(),
+
+    ),
+  );
 }
