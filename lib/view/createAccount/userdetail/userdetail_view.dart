@@ -119,9 +119,9 @@ class UserdetailView extends GetView<UserdetailController> {
             ),
             Center(
               child: buttonWidget(
-                redius: 10.r,
+                redius: 12.r,
                 context: context,
-                height: 55.h,
+                height: 46.h,
                 width: double.infinity,
                 onPressed: () {
                   Get.to(const SecureAccountView());

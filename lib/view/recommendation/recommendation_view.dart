@@ -8,7 +8,6 @@ import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
 
-
 import 'recommendation_controller.dart';
 
 class RecommendationView extends GetView<RecommendationController> {
@@ -63,18 +62,15 @@ class RecommendationView extends GetView<RecommendationController> {
                         if (!controller.selectedHobby!.contains(hobby)) {
                           if (controller.selectedHobby!.length < 5) {
                             controller.selectedHobby!.add(hobby);
-
-
                           }
                         } else {
                           controller.selectedHobby!
                               .removeWhere((element) => element == hobby);
-
                         }
                       },
                       child: Container(
-                          margin:
-                              const EdgeInsets.symmetric(horizontal: 5, vertical: 4),
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 4),
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 12),
@@ -113,9 +109,9 @@ class RecommendationView extends GetView<RecommendationController> {
               ),
               Center(
                 child: buttonWidget(
-                  redius: 10.r,
+                  redius: 12.r,
                   context: context,
-                  height: 55.h,
+                  height: 48.h,
                   width: double.infinity,
                   onPressed: () {
                     Get.to(Routes.findNewStory);

@@ -108,9 +108,9 @@ class CreateAccountView extends GetView<CreateAccountController> {
               child: 
               
               buttonWidget(
-                redius: 10.r,
+                redius: 12.r,
                 context: context,
-                height: 55.h,
+                height: 48.h,
                 width: double.infinity,
                 onPressed: () {
                   Get.to(Routes.userName);

@@ -211,12 +211,12 @@ class DetailProfileView extends GetView<DetailProfileController> {
                             controller.buttonUnfollow();
                           },
                           fontSize: 14.sp,
-                          height: 38.h,
+                          height: 48.h,
                           width: 158.w,
                           bgColor: controller.clicked.value
                               ? ColorPicker.appButtonColor
                               : ColorPicker.pureWhiteColor,
-                          redius: 8.r,
+                          redius: 12.r,
                           textColor: controller.clicked.value
                               ? ColorPicker.whiteColor
                               : ColorPicker.blackColor);

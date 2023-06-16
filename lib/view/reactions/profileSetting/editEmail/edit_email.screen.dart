@@ -15,7 +15,6 @@ class EditEmailScreen extends GetView<EditEmailController> {
   const EditEmailScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: ColorPicker.whiteColor,
         appBar: AppBar(
@@ -81,9 +80,9 @@ class EditEmailScreen extends GetView<EditEmailController> {
               ),
               Center(
                 child: buttonWidget(
-                  redius: 10,
+                  redius: 12.r,
                   context: context,
-                  height: 55.h,
+                  height: 48.h,
                   width: double.infinity,
                   onPressed: () {
                     Get.to(const EditProfileScreen());

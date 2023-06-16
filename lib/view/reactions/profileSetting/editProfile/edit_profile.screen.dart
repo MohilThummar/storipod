@@ -18,7 +18,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:ColorPicker.whiteColor,
+      backgroundColor: ColorPicker.whiteColor,
       appBar: AppBar(
         backgroundColor: ColorPicker.whiteColor,
         leading: GestureDetector(
@@ -225,9 +225,9 @@ class EditProfileScreen extends GetView<EditProfileController> {
             ),
             Center(
               child: buttonWidget(
-                redius: 8.r,
+                redius: 12.r,
                 context: context,
-                height: 55.h,
+                height: 48.h,
                 width: double.infinity,
                 onPressed: () {},
                 textColor: ColorPicker.whiteColor,

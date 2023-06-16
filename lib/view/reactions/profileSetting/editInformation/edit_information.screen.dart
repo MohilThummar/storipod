@@ -13,7 +13,6 @@ class EditInformationScreen extends GetView<EditInformationController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: ColorPicker.whiteColor,
         appBar: AppBar(
@@ -79,9 +78,9 @@ class EditInformationScreen extends GetView<EditInformationController> {
               ),
               Center(
                 child: buttonWidget(
-                  redius: 10,
+                  redius: 12.r,
                   context: context,
-                  height: 55.h,
+                  height: 48.h,
                   width: double.infinity,
                   onPressed: () {
                     Get.back();

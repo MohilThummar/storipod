@@ -7,12 +7,9 @@ import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/story_edit_controller.dart';
 import 'package:story_view/widgets/story_view.dart';
 
-
-
-
 class WatchStoryLiveView extends GetView<StoryEditController> {
   WatchStoryLiveView({Key? key}) : super(key: key);
- final  TextEditingController cmtController = TextEditingController();
+  final TextEditingController cmtController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +43,8 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                 controller: controller.storyController,
               ),
             ],
-            onStoryShow: (s) {
-
-            },
-            onComplete: () {
-
-            },
+            onStoryShow: (s) {},
+            onComplete: () {},
             progressPosition: ProgressPosition.top,
             repeat: true,
             indicatorColor: ColorPicker.whiteColor,
@@ -204,7 +197,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
           Positioned(
             top: 738.h,
             bottom: 10.h,
-            // height: 55.h,
+            // height: 48.h,
             left: 20.w,
             right: 20.w,
             child: TextField(
@@ -239,20 +232,20 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                     color: Colors.white),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
-                    borderSide:
-                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                    borderSide: const BorderSide(
+                        width: 1, color: ColorPicker.whiteColor)),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
-                    borderSide:
-                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                    borderSide: const BorderSide(
+                        width: 1, color: ColorPicker.whiteColor)),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
-                    borderSide:
-                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                    borderSide: const BorderSide(
+                        width: 1, color: ColorPicker.whiteColor)),
                 disabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
-                    borderSide:
-                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                    borderSide: const BorderSide(
+                        width: 1, color: ColorPicker.whiteColor)),
                 errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
                     borderSide: const BorderSide(
@@ -261,8 +254,8 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                     )),
                 focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
-                    borderSide:
-                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                    borderSide: const BorderSide(
+                        width: 1, color: ColorPicker.whiteColor)),
               ),
             ),
           )
@@ -388,35 +381,33 @@ class CustomBottomSheet extends StatelessWidget {
 }
 
 class ShareBottomSheet extends StatelessWidget {
-
-
-   ShareBottomSheet({Key? key}) : super(key: key);
- final   List shareList = [
-     {
-       "image": ImagePickerImage.download,
-       "name": "Save",
-     },
-     {
-       "image": ImagePickerImage.link,
-       "name": "Copy link",
-     },
-     {
-       "image": ImagePickerImage.facebook,
-       "name": "Facebook",
-     },
-     {
-       "image": ImagePickerImage.instragram,
-       "name": "Instagram",
-     },
-     {
-       "image": ImagePickerImage.whatsapp,
-       "name": "WhatsApp",
-     },
-     {
-       "image": ImagePickerImage.linkedin,
-       "name": "LinkedIn",
-     },
-   ];
+  ShareBottomSheet({Key? key}) : super(key: key);
+  final List shareList = [
+    {
+      "image": ImagePickerImage.download,
+      "name": "Save",
+    },
+    {
+      "image": ImagePickerImage.link,
+      "name": "Copy link",
+    },
+    {
+      "image": ImagePickerImage.facebook,
+      "name": "Facebook",
+    },
+    {
+      "image": ImagePickerImage.instragram,
+      "name": "Instagram",
+    },
+    {
+      "image": ImagePickerImage.whatsapp,
+      "name": "WhatsApp",
+    },
+    {
+      "image": ImagePickerImage.linkedin,
+      "name": "LinkedIn",
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(

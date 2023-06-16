@@ -79,7 +79,7 @@ class IntroductionScreen extends GetView<IntroductionController> {
                   },
                   width: double.infinity,
                   fontSize: 16.sp,
-                  height: 55.h,
+                  height: 48.h,
                   title: "Get started",
                 ),
               ),

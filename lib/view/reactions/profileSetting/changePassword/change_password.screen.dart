@@ -15,7 +15,6 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
       appBar: AppBar(
@@ -130,7 +129,7 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
                 child: buttonWidget(
                   redius: 12.r,
                   context: context,
-                  height: 55.h,
+                  height: 48.h,
                   width: double.infinity,
                   onPressed: () {
                     Get.back();

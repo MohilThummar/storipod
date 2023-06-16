@@ -177,13 +177,10 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                       if (!controller.selectedKeyword!.contains(hobby)) {
                         if (controller.selectedKeyword!.length < 5) {
                           controller.selectedKeyword!.add(hobby);
-
-
                         }
                       } else {
                         controller.selectedKeyword!
                             .removeWhere((element) => element == hobby);
-
                       }
                     },
                     child: Container(
@@ -270,9 +267,9 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                 child: buttonWidget(
-                  redius: 30.r,
+                  redius: 12.r,
                   context: context,
-                  height: 55.h,
+                  height: 48.h,
                   width: double.infinity,
                   onPressed: () {
                     Get.back(); // Get.to(FindnewstoryView());

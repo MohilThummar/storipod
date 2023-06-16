@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +11,6 @@ import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 
-
 import 'forgotaccount_controller.dart';
 
 class ForgotaccountView extends GetView<ForgotaccountController> {
@@ -21,7 +18,6 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
       appBar: appbarWithBack(
@@ -73,9 +69,9 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
             ),
             Center(
               child: buttonWidget(
-                redius: 10.r,
+                redius: 12.r,
                 context: context,
-                height: 55.h,
+                height: 48.h,
                 width: double.infinity,
                 onPressed: () {
                   showDialog(
@@ -122,9 +118,9 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                               ),
                               Center(
                                 child: buttonWidget(
-                                    redius: 10.r,
+                                    redius: 12.r,
                                     width: double.infinity,
-                                    height: 55.h,
+                                    height: 48.h,
                                     onPressed: () {},
                                     bgColor: ColorPicker.appButtonColor,
                                     context: context,
@@ -142,8 +138,7 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
                 fontSize: 16.sp,
-                bgColor: ColorPicker.appButtonColor
-                ,
+                bgColor: ColorPicker.appButtonColor,
                 disableColor: ColorPicker.appButtonColor,
               ),
             ),

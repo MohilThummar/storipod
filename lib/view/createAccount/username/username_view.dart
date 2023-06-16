@@ -50,7 +50,8 @@ class UsernameView extends GetView<UsernameController> {
             SizedBox(
               height: 30.h,
             ),
-            SizedBox(height: 55.h,
+            SizedBox(
+              height: 55.h,
               child: SearchField<Country>(
                 searchInputDecoration: InputDecoration(
                   fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
@@ -137,7 +138,7 @@ class UsernameView extends GetView<UsernameController> {
             ),
             Center(
               child: buttonWidget(
-                redius: 10.r,
+                redius: 12.r,
                 context: context,
                 height: 55.h,
                 width: double.infinity,

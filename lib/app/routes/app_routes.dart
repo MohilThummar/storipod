@@ -7,7 +7,6 @@ abstract class Routes {
 
   static const onBoarding = _Paths.onBoarding;
 
-
   static const introduction = _Paths.introduction;
   static const logIn = _Paths.login;
   static const createAccount = _Paths.createAccount;
@@ -27,7 +26,8 @@ abstract class Routes {
   static const profileScreen = _Paths.profileScreen;
   static const sellAllProfile = _Paths.explore + _Paths.seeAllProfile;
   static const detailProfile = _Paths.explore + _Paths.detailProfile;
-  static const personProfileScreen = _Paths.profileScreen + _Paths.personProfileScreen;
+  static const personProfileScreen =
+      _Paths.profileScreen + _Paths.personProfileScreen;
   static const reactions = _Paths.reactions;
   static const profileSetting = _Paths.profileSetting;
   static const userFollower = _Paths.userFollower;
@@ -44,7 +44,6 @@ abstract class _Paths {
   static const changePassword = '/changePassword';
 
   static const onBoarding = '/onboarding';
-
 
   static const introduction = '/introduction';
   static const login = '/login';
