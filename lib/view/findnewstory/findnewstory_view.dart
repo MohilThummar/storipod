@@ -5,6 +5,7 @@ import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 import '../../../view/navbarScreen/navbar_screen_view.dart';
 
 import '../../app/common/app_button.dart';
@@ -78,7 +79,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                   height: 48.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.offAll(const NavbarScreenView());
+                    Get.offNamedUntil(Routes.navBarScreen, (route) => false);
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,

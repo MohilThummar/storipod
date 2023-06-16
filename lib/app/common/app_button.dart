@@ -43,7 +43,8 @@ class AppButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: ElevatedButton(
-        onPressed: disableButton! ? null : onPressed,
+        // onPressed: disableButton! ? null : onPressed,
+        onPressed:  onPressed,
         onLongPress: disableButton! ? null : onLongPress,
         style: ElevatedButton.styleFrom(
           onPrimary: ColorPicker.appButtonColor,

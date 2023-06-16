@@ -7,6 +7,7 @@ import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/userdetail/userdetail_view.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 import 'username_controller.dart';
@@ -143,7 +144,7 @@ class UsernameView extends GetView<UsernameController> {
                 height: 55.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(const UserdetailView());
+                  Get.toNamed(Routes.userDetail);
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -157,7 +158,7 @@ class UsernameView extends GetView<UsernameController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(const LoginView());
+                Get.toNamed(Routes.logIn);
               },
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 
 import '../../../app/common/app_button.dart';
 import '../../../app/common/app_text_field.dart';
@@ -18,7 +18,6 @@ class UserdetailView extends GetView<UserdetailController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
       appBar: imageAppbarWidget(
@@ -124,7 +123,7 @@ class UserdetailView extends GetView<UserdetailController> {
                 height: 46.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(const SecureAccountView());
+                  Get.toNamed(Routes.secureAccount);
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -189,7 +188,8 @@ class UserdetailView extends GetView<UserdetailController> {
               height: 40.h,
               width: double.infinity,
               onPressed: () {},
-              imageWidth: 22.w,imageHeight: 22.h,
+              imageWidth: 22.w,
+              imageHeight: 22.h,
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,
               title: AppStrings.signInWithGoogle,

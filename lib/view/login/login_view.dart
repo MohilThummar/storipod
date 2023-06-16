@@ -133,19 +133,18 @@ class LoginView extends GetView<LoginController> {
               height: 12.h,
             ),
             Center(
-                child: AppButton(
-              textColor: ColorPicker.whiteColor,
-              onPressed: () {
-                Get.offAll(Routes.createAccount);
-              },
-              disableButton: false,
-              title: AppStrings.signIN,
-            ),
+              child: AppButton(
+                textColor: ColorPicker.whiteColor,
+                onPressed: () {
+                  Get.offNamedUntil(Routes.createAccount, (route) => false);
+                },
+                disableButton: true,
+                title: AppStrings.signIN,
+              ),
             ),
             SizedBox(
               height: 16.h,
             ),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -212,7 +211,6 @@ class LoginView extends GetView<LoginController> {
             SizedBox(
               height: 18.h,
             ),
-
             buttonIconWidget(
               context: context,
               height: 48.h,

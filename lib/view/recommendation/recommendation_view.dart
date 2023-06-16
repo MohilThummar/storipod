@@ -114,7 +114,7 @@ class RecommendationView extends GetView<RecommendationController> {
                   height: 48.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.to(Routes.findNewStory);
+                    Get.toNamed(Routes.findNewStory);
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.done,

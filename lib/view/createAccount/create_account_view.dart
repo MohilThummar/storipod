@@ -113,7 +113,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
                 height: 48.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(Routes.userName);
+                  Get.toNamed(Routes.userName);
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -143,7 +143,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(Routes.logIn);
+                            Get.toNamed(Routes.logIn);
                           },
                         text: AppStrings.signIN,
                         style: TextStyle(
