@@ -16,11 +16,13 @@ class AppButton extends StatelessWidget {
   final double? width;
   final Widget? child;
   final IconData? icon;
+  final Color?textColor;
 
   final String? image;
 
   const AppButton({
     super.key,
+    this.textColor,
     this.title = "",
     required this.onPressed,
     this.onLongPress,
@@ -35,10 +37,10 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 50.h,
+      height: height ?? 48.h,
       width: width ?? Get.width,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(2.h),
+        borderRadius: BorderRadius.circular(12.r),
       ),
       child: ElevatedButton(
         onPressed: disableButton! ? null : onPressed,
@@ -46,6 +48,8 @@ class AppButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           onPrimary: ColorPicker.appButtonColor,
           primary: ColorPicker.appButtonColor,
+
+
         ),
         child: child ??
             Row(
@@ -74,13 +78,44 @@ class AppButton extends StatelessWidget {
                 if (title!.isNotEmpty)
                   Text(
                     title!,
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.center,  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+
+                      color: textColor),
                   )
               ],
             ),
       ),
     );
   }
+}
+
+Widget textButton({
+  BuildContext? context,
+  Function()? onPressed,
+  double? redius,
+  String? title,
+  double? height,
+  double? width,
+}) {
+  return SizedBox(
+    height: height,
+    width: width,
+    child: Padding(
+      padding: EdgeInsets.only(right: 20.w, top: 15.h),
+      child: Align(
+        alignment: Alignment.bottomRight,
+        child: GestureDetector(
+          onTap: onPressed,
+          child: Text(
+            textAlign: TextAlign.end,
+            title!,
+            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 Widget buttonWidget(

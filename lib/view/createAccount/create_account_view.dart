@@ -8,6 +8,7 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/username/username_view.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 import 'bottomsheet.dart';
@@ -18,7 +19,6 @@ class CreateAccountView extends GetView<CreateAccountController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
       appBar: appbarWithSkip(context: context, onTaped: () {}),
@@ -103,14 +103,17 @@ class CreateAccountView extends GetView<CreateAccountController> {
             SizedBox(
               height: 266.h,
             ),
+
             Center(
-              child: buttonWidget(
+              child: 
+              
+              buttonWidget(
                 redius: 10.r,
                 context: context,
                 height: 55.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(const UsernameView());
+                  Get.to(Routes.userName);
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -140,7 +143,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(const LoginView());
+                            Get.to(Routes.logIn);
                           },
                         text: AppStrings.signIN,
                         style: TextStyle(

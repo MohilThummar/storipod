@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
-import '../../app/common/app_button.dart';
-import '../../app/constant/colour.dart';
+
 
 import 'recommendation_controller.dart';
 

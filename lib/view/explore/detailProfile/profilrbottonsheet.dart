@@ -8,7 +8,6 @@ import 'package:storipod_app/view/Analytics/analytics_view.dart';
 import 'package:storipod_app/view/reactions/profileSetting/Notification/notification.screen.dart';
 import 'package:storipod_app/view/reactions/profileSetting/profile_setting_view.dart';
 
-
 class ProfileBottomSheet extends StatelessWidget {
   const ProfileBottomSheet({Key? key}) : super(key: key);
 
@@ -122,7 +121,7 @@ class ProfileBottomSheet extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-           Get.to(const NotificationScreen());
+                  Get.to(const NotificationScreen());
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5..h),

@@ -9,6 +9,7 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/create_account_view.dart';
 import 'package:storipod_app/view/forgotaccount/forgotaccount_view.dart';
 
@@ -19,7 +20,6 @@ class LoginView extends GetView<LoginController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
       appBar: imageAppbarWidget(
@@ -133,24 +133,19 @@ class LoginView extends GetView<LoginController> {
               height: 12.h,
             ),
             Center(
-              child: buttonWidget(
-                redius: 10.r,
-                context: context,
-                height: 0.055.sh,
-                width: double.infinity,
-                onPressed: () {
-                  Get.offAll(const CreateAccountView());
-                },
-                textColor: ColorPicker.whiteColor,
-                title: AppStrings.signIN,
-                fontSize: 16.sp,
-                bgColor: ColorPicker.appButtonColor,
-                disableColor: ColorPicker.appButtonColor,
-              ),
+                child: AppButton(
+              textColor: ColorPicker.whiteColor,
+              onPressed: () {
+                Get.offAll(Routes.createAccount);
+              },
+              disableButton: false,
+              title: AppStrings.signIN,
+            ),
             ),
             SizedBox(
               height: 16.h,
             ),
+
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -217,9 +212,10 @@ class LoginView extends GetView<LoginController> {
             SizedBox(
               height: 18.h,
             ),
+
             buttonIconWidget(
               context: context,
-              height: 40.h,
+              height: 48.h,
               width: double.infinity,
               iconColor: ColorPicker.whiteColor,
               onPressed: () {},
