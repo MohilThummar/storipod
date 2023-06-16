@@ -4,10 +4,14 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/main.dart';
+import 'package:storipod_app/view/explore/SeeAllProfile/see_all_profile_binding.dart';
+import 'package:storipod_app/view/homeStory/home_story_binding.dart';
 import 'package:storipod_app/view/homeStory/searchstory/searchstory_binding.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/watchStory.dart';
 import '../../../view/homeStory/searchstory/searchstory_view.dart';
 import '../../../view/homeStory/viewStory.dart';
 import '../../app/constant/string.dart';
+import 'SeeAllProfile/see_all_profile_view.dart';
 import 'explore_controller.dart';
 
 class ExploreView extends GetView<ExploreController> {
@@ -52,7 +56,7 @@ class ExploreView extends GetView<ExploreController> {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                      Get.to(WatchStoryLiveView());
+                      Get.to(WatchStoryLiveView(),binding: HomeStoryBinding());
                     },
                     child: Container(
                       padding: EdgeInsets.only(right: 10.w),
@@ -220,11 +224,11 @@ class ExploreView extends GetView<ExploreController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      showProfile.value=true;
-                      // print("===object");
-                      // showNavBar.value=true;
-                      correntIndex.value=1;
-                      // Get.to(SeeAllProfileView());
+                      // showProfile.value=true;
+                      // // print("===object");
+                      // // showNavBar.value=true;
+                      // correntIndex.value=1;
+                      Get.to(SeeAllProfileView(),binding: SeeAllProfileBinding());
                     },
                     child: Text(
                       AppStrings.seeAll,
