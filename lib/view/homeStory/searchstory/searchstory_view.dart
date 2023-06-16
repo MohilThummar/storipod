@@ -29,7 +29,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
             Get.back();
           },
           child: Padding(
-            padding: EdgeInsets.only(left: 15.0),
+            padding: const EdgeInsets.only(left: 15.0),
             child: Icon(
               Icons.arrow_back_ios,
               size: 18.sp,
@@ -48,7 +48,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
             controller: controller.searchController,
             hintText: "Search for user",
             context: context,
-            OnEditComplate: () {}),
+            onEditComplete: () {}),
         // centerTitle: true,
       ),
       body: commanPaddingWidget(
@@ -67,7 +67,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                       width: 1.0,
                     ),
                     borderRadius: BorderRadius.circular(20.r),
-                    color: ColorPicker.greylightColor.withOpacity(0.3),
+                    color: ColorPicker.greyLightColor.withOpacity(0.3),
                   ),
                   padding:
                       EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
@@ -79,11 +79,11 @@ class SearchstoryView extends GetView<SearchstoryController> {
                         color: ColorPicker.blackColor),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 CircleAvatar(
-                  backgroundColor:  ColorPicker.greylightColor.withOpacity(0.3),
+                  backgroundColor:  ColorPicker.greyLightColor.withOpacity(0.3),
                   child: Icon(
                     color: ColorPicker.blackColor,
                     Icons.close,
@@ -145,7 +145,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
             ListView.builder(
               shrinkWrap: true,
               padding: EdgeInsets.zero,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               // itemCount: 30,
               itemCount: controller.storyList.length,
               itemBuilder: (context, index) {
@@ -156,7 +156,7 @@ class SearchstoryView extends GetView<SearchstoryController> {
                       CircleAvatar(
                           radius: 26.r,
                           backgroundImage:
-                              AssetImage(ImagePickerImage.profileIcon)
+                              const AssetImage(ImagePickerImage.profileIcon)
                           // AssetImage( controller.storyList[index]["image"]),
                           ),
                       SizedBox(

@@ -20,7 +20,7 @@ void main() {
           title: AppStrings.appName,
           // initialBinding: BaseBinding(),
           themeMode: ThemeMode.light,
-          initialRoute: AppPages.INITIAL,
+          initialRoute: AppPages.intIal,
           getPages: AppPages.routes,
           theme: ThemeData(
             fontFamily: "Lato",

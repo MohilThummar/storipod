@@ -16,6 +16,7 @@ class AppButton extends StatelessWidget {
   final double? width;
   final Widget? child;
   final IconData? icon;
+
   final String? image;
 
   const AppButton({
@@ -43,9 +44,8 @@ class AppButton extends StatelessWidget {
         onPressed: disableButton! ? null : onPressed,
         onLongPress: disableButton! ? null : onLongPress,
         style: ElevatedButton.styleFrom(
-          elevation: 0,
-          backgroundColor: ColorPicker.bottelGreenColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.h)),
+          onPrimary: ColorPicker.appButtonColor,
+          primary: ColorPicker.appButtonColor,
         ),
         child: child ??
             Row(
@@ -83,8 +83,18 @@ class AppButton extends StatelessWidget {
   }
 }
 
-Widget ButtonWidget({BuildContext? context, Color? disableColor, Color? textColor, Function()? onPressed, Color? bgColor, double? redius, String? title, double? height, double? width, double? fontSize}) {
-  return Container(
+Widget buttonWidget(
+    {BuildContext? context,
+    Color? textColor,
+    Function()? onPressed,
+    Color? bgColor,
+    double? redius,
+    Color? disableColor,
+    String? title,
+    double? height,
+    double? width,
+    double? fontSize}) {
+  return SizedBox(
       height: height,
       width: width,
       child: ElevatedButton(
@@ -100,14 +110,30 @@ Widget ButtonWidget({BuildContext? context, Color? disableColor, Color? textColo
           onPressed: onPressed,
           child: Text(
             title!,
-            style: TextStyle(fontWeight: FontWeight.w700, fontSize: fontSize, color: textColor),
+            style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: fontSize,
+                color: textColor),
           )));
 }
 
-Widget ButtonImageWidget({BuildContext? context, Color? disableColor, Color? textColor, Function()? onPressed, Color? bgColor, IconData? iconData, String? title, String? image, double? height, double? imageheight, double? imageWidth, double? width, double? fontSize}) {
+Widget buttonImageWidget(
+    {BuildContext? context,
+    Color? disableColor,
+    Color? textColor,
+    Function()? onPressed,
+    Color? bgColor,
+    IconData? iconData,
+    String? title,
+    String? image,
+    double? height,
+    double? imageHeight,
+    double? imageWidth,
+    double? width,
+    double? fontSize}) {
   return Card(
     elevation: 5,
-    child: Container(
+    child: SizedBox(
         height: height,
         width: width,
         child: ElevatedButton(
@@ -121,7 +147,7 @@ Widget ButtonImageWidget({BuildContext? context, Color? disableColor, Color? tex
               children: [
                 Image.asset(
                   image!,
-                  height: imageheight,
+                  height: imageHeight,
                   width: imageWidth,
                 ),
                 SizedBox(
@@ -129,19 +155,36 @@ Widget ButtonImageWidget({BuildContext? context, Color? disableColor, Color? tex
                 ),
                 Text(
                   title!,
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: fontSize, color: textColor),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: fontSize,
+                      color: textColor),
                 ),
               ],
             ))),
   );
 }
 
-Widget ButtonIconWidget({BuildContext? context, Color? disableColor, Color? textColor, Color? iconColor, Function()? onPressed, Color? bgColor, IconData? iconData, String? title, double? height, double? width, double? fontSize}) {
-  return Container(
+Widget buttonIconWidget(
+    {BuildContext? context,
+    Color? disableColor,
+    Color? textColor,
+    Color? iconColor,
+    Function()? onPressed,
+    Color? bgColor,
+    IconData? iconData,
+    String? title,
+    double? height,
+    double? width,
+    double? fontSize}) {
+  return SizedBox(
       height: height,
       width: width,
       child: ElevatedButton(
-          style: ElevatedButton.styleFrom(elevation: 4, disabledBackgroundColor: disableColor, backgroundColor: bgColor),
+          style: ElevatedButton.styleFrom(
+              elevation: 4,
+              disabledBackgroundColor: disableColor,
+              backgroundColor: bgColor),
           onPressed: onPressed,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -155,7 +198,10 @@ Widget ButtonIconWidget({BuildContext? context, Color? disableColor, Color? text
               ),
               Text(
                 title!,
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: fontSize, color: textColor),
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: fontSize,
+                    color: textColor),
               ),
             ],
           )));

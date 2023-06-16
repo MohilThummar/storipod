@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
 import 'about_app.controller.dart';
 
 class AboutAppScreen extends GetView<AboutAppController> {
@@ -55,7 +52,7 @@ class AboutAppScreen extends GetView<AboutAppController> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -71,7 +68,7 @@ class AboutAppScreen extends GetView<AboutAppController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       // Get.to(AccountScreen());
@@ -94,7 +91,7 @@ class AboutAppScreen extends GetView<AboutAppController> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -110,7 +107,7 @@ class AboutAppScreen extends GetView<AboutAppController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       // Get.to(AccountScreen());
@@ -134,7 +131,7 @@ class AboutAppScreen extends GetView<AboutAppController> {
               'This information will not be displayed to the public except you agree to let the general public have access to it, it remains private to you. This information will not be displayed to the public except you agree to let the general public have access to it, it remains private to you.',
               style: TextStyle(
                   fontSize: 12.sp,
-                  color: ColorPicker.offGreishColor,
+                  color: ColorPicker.offGreyLightColor,
                   fontWeight: FontWeight.w500),
             ),
             SizedBox(
@@ -144,7 +141,7 @@ class AboutAppScreen extends GetView<AboutAppController> {
               "This information will not be displayed to the public except you agree to let the general public have access to it, it remains private to you. ",
               style: TextStyle(
                   fontSize: 12.sp,
-                  color: ColorPicker.offGreishColor,
+                  color: ColorPicker.offGreyLightColor,
                   fontWeight: FontWeight.w500),
             ),
           ],

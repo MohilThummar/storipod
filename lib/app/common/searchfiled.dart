@@ -9,32 +9,32 @@ Widget searchfildWidget(
     Color? iconColorSuffix,
     String? imageData,
     String? hintText,
-    Function()? OnEditComplate,
+    Function()? onEditComplete,
     Function()? suffixOnTap,
     TextEditingController? controller}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-    child: Container(
+    child: SizedBox(
       height: 55.h,
       child: TextField(
         controller: controller,
-        onEditingComplete: OnEditComplate,
+        onEditingComplete: onEditComplete,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(top: 5.h),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 0.2, color: ColorPicker.greyColor),
+            borderSide: const BorderSide(width: 0.2, color: ColorPicker.greyColor),
             borderRadius: BorderRadius.circular(4.r),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 0.2, color: ColorPicker.greyColor),
+            borderSide: const BorderSide(width: 0.2, color: ColorPicker.greyColor),
             borderRadius: BorderRadius.circular(4.r),
           ),
           filled: true,
           fillColor: ColorPicker.whiteColor,
           prefixIcon: ImageIcon(
-              AssetImage(
-                ImagePickerImage.Search1Icon,
+              const AssetImage(
+                ImagePickerImage.search1Icon,
               ),
               size: 14.sp),
           // prefixIcon: Image.asset(

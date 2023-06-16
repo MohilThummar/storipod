@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:storipod_app/app/common/app_text_field.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 
-import '../../../app/common/app_text_field.dart';
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';import '../Engagement/engagement.screen.dart';
+import '../Engagement/engagement.screen.dart';
 import 'reach_screen.controller.dart';
 
 class ReachScreenScreen extends GetView<ReachScreenController> {
@@ -58,7 +58,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomTextField(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 isDense: true,
@@ -100,7 +100,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                     TextSpan(
                       text: "You've Reached",
                       style: TextStyle(
-                          color: ColorPicker.offGreishColor,
+                          color: ColorPicker.offGreyLightColor,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600),
                     ),
@@ -109,11 +109,11 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 14.sp,
-                            color: Color(0xff34A853))),
+                            color: const Color(0xff34A853))),
                     TextSpan(
                       text: "more Accounnts Beetween Jun 5 - Jun 14",
                       style: TextStyle(
-                          color: ColorPicker.offGreishColor,
+                          color: ColorPicker.offGreyLightColor,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600),
                     )
@@ -125,7 +125,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
               height: 24.h,
             ),
             Divider(
-              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              color: ColorPicker.subGreyColor.withOpacity(0.3),
               height: 1,
               indent: 2,
               endIndent: 1,
@@ -156,16 +156,16 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
             SizedBox(
               height: 16.h,
             ),
-            Container(
+            SizedBox(
               height: 227.h,
               child: ListView.builder(
                 padding: EdgeInsets.only(left: 20.w, right: 20.w),
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: 2,
                 itemBuilder: (context, int index) {
                   return GestureDetector(onTap: (){
-                    Get.to(EngagementScreen());
+                    Get.to(const EngagementScreen());
                   },
                     child: Container(
                       width: 291.w,
@@ -219,8 +219,8 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                             // width: 259.w,
                             lineHeight: 8.0,
                             percent: 0.8,
-                            barRadius: Radius.circular(10),
-                            progressColor: Color(0xff5F6DEF),
+                            barRadius: const Radius.circular(10),
+                            progressColor:const Color(0xff5F6DEF),
                             animation: true,
                           ),
                           SizedBox(
@@ -256,8 +256,8 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                             // width: 259.w,
                             lineHeight: 8.0,
                             percent: 0.15,
-                            barRadius: Radius.circular(10),
-                            progressColor: Color(0xff5F6DEF),
+                            barRadius: const Radius.circular(10),
+                            progressColor: const Color(0xff5F6DEF),
                             animation: true,
                           ),
                           SizedBox(
@@ -293,8 +293,8 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                             // width: 259.w,
                             lineHeight: 8.0,
                             percent: 0.02,
-                            barRadius: Radius.circular(10),
-                            progressColor: Color(0xff5F6DEF),
+                            barRadius: const Radius.circular(10),
+                            progressColor: const Color(0xff5F6DEF),
                             animation: true,
                           ),
                           SizedBox(
@@ -330,8 +330,8 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                             // width: 259.w,
                             lineHeight: 8.0,
                             percent: 0.03,
-                            barRadius: Radius.circular(10),
-                            progressColor: Color(0xff5F6DEF),
+                            barRadius:const Radius.circular(10),
+                            progressColor: const Color(0xff5F6DEF),
                             animation: true,
                           ),
                           SizedBox(
@@ -368,7 +368,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                   top: 20.h,
                 ),
                 shrinkWrap: true,
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Container(
                     padding: EdgeInsets.only(right: 23.w),
@@ -442,7 +442,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -455,7 +455,7 @@ class ReachScreenScreen extends GetView<ReachScreenController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [

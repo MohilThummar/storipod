@@ -9,17 +9,11 @@ class LoginController extends GetxController {
   TextEditingController passwordController = TextEditingController();
   RxBool isNameFocused = false.obs;
   RxBool showPassword = false.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+
   void togglePasswordVisibility() {
     showPassword.value = !showPassword.value;
   }
-  @override
-  void onReady() {
-    super.onReady();
-  }
+
   final RxBool _isFocused = false.obs;
 
   void onTextFieldClicked() {

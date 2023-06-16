@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/story_edit_controller.dart';
 import 'package:story_view/widgets/story_view.dart';
 
-import '../../app/constant/string.dart';
+
 
 
 class WatchStoryLiveView extends GetView<StoryEditController> {
   WatchStoryLiveView({Key? key}) : super(key: key);
-  TextEditingController cmtController = TextEditingController();
+ final  TextEditingController cmtController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
               StoryItem.text(
                 title: "Nice!\n\nTap to continue.",
                 backgroundColor: Colors.red,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontFamily: 'Dancing',
                   fontSize: 40,
                 ),
@@ -48,10 +47,10 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
               ),
             ],
             onStoryShow: (s) {
-              print("Showing a story");
+
             },
             onComplete: () {
-              print("Completed a cycle");
+
             },
             progressPosition: ProgressPosition.top,
             repeat: true,
@@ -117,7 +116,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.bottomSheet(CustomBottomSheet(),
+                    Get.bottomSheet(const CustomBottomSheet(),
                         elevation: 2, isDismissible: true, enableDrag: true);
                   },
                   child: Icon(
@@ -139,11 +138,11 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                   Expanded(
                     flex: 3,
                     child: ListView.builder(
-                      itemCount: controller.StoryViewer.length,
+                      itemCount: controller.storyViewer.length,
                       padding: EdgeInsets.symmetric(
                           horizontal: 21.w, vertical: 10.h),
                       shrinkWrap: true,
-                      physics: AlwaysScrollableScrollPhysics(),
+                      physics: const AlwaysScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: EdgeInsets.only(bottom: 12.w),
@@ -152,7 +151,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                               CircleAvatar(
                                 radius: 16.r,
                                 backgroundImage: AssetImage(
-                                    controller.StoryViewer[index]["image"]),
+                                    controller.storyViewer[index]["image"]),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -163,7 +162,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      controller.StoryViewer[index]["name"],
+                                      controller.storyViewer[index]["name"],
                                       style: TextStyle(
                                           fontSize: 14.sp,
                                           fontWeight: FontWeight.w700,
@@ -173,7 +172,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                                       height: 4.h,
                                     ),
                                     Text(
-                                      controller.StoryViewer[index]["LName"],
+                                      controller.storyViewer[index]["LName"],
                                       style: TextStyle(
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w600,
@@ -195,7 +194,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                         child: CircleAvatar(
                             radius: 32.r,
                             backgroundColor: ColorPicker.whiteColor,
-                            child: Icon(
+                            child: const Icon(
                               Icons.pause,
                               color: ColorPicker.blackColor,
                             )),
@@ -241,19 +240,19 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
                     borderSide:
-                        BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
                     borderSide:
-                        BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
                     borderSide:
-                        BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
                 disabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
                     borderSide:
-                        BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
                 errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
                     borderSide: const BorderSide(
@@ -263,7 +262,7 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
                 focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.r),
                     borderSide:
-                        BorderSide(width: 1, color: ColorPicker.whiteColor)),
+                        const BorderSide(width: 1, color: ColorPicker.whiteColor)),
               ),
             ),
           )
@@ -274,6 +273,8 @@ class WatchStoryLiveView extends GetView<StoryEditController> {
 }
 
 class CustomBottomSheet extends StatelessWidget {
+  const CustomBottomSheet({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -295,13 +296,13 @@ class CustomBottomSheet extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Center(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color(0xffF1F1F1),
+                    color: const Color(0xffF1F1F1),
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                   height: 5.h,
@@ -319,7 +320,7 @@ class CustomBottomSheet extends StatelessWidget {
                 ),
               ),
               Divider(
-                color: ColorPicker.subgreyColor.withOpacity(0.3),
+                color: ColorPicker.subGreyColor.withOpacity(0.3),
                 height: 1,
                 indent: 2,
                 endIndent: 1,
@@ -332,7 +333,7 @@ class CustomBottomSheet extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, top: 16.h),
                   child: Text(
-                    AppStrings.hidecmt,
+                    AppStrings.hideCmt,
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 14.sp,
@@ -347,7 +348,7 @@ class CustomBottomSheet extends StatelessWidget {
                     top: 16.h,
                   ),
                   child: Text(
-                    AppStrings.ExportAshare,
+                    AppStrings.exportAShare,
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 14.sp,
@@ -364,7 +365,7 @@ class CustomBottomSheet extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 20.0.w, top: 16.h, bottom: 30.h),
                   child: Text(
-                    AppStrings.Save,
+                    AppStrings.save,
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 14.sp,
@@ -387,33 +388,35 @@ class CustomBottomSheet extends StatelessWidget {
 }
 
 class ShareBottomSheet extends StatelessWidget {
-  List shareList = [
-    {
-      "image": ImagePickerImage.download,
-      "name": "Save",
-    },
-    {
-      "image": ImagePickerImage.link,
-      "name": "Copy link",
-    },
-    {
-      "image": ImagePickerImage.facebook,
-      "name": "Facebook",
-    },
-    {
-      "image": ImagePickerImage.instragram,
-      "name": "Instagram",
-    },
-    {
-      "image": ImagePickerImage.whatsapp,
-      "name": "WhatsApp",
-    },
-    {
-      "image": ImagePickerImage.linkedin,
-      "name": "LinkedIn",
-    },
-  ];
 
+
+   ShareBottomSheet({Key? key}) : super(key: key);
+ final   List shareList = [
+     {
+       "image": ImagePickerImage.download,
+       "name": "Save",
+     },
+     {
+       "image": ImagePickerImage.link,
+       "name": "Copy link",
+     },
+     {
+       "image": ImagePickerImage.facebook,
+       "name": "Facebook",
+     },
+     {
+       "image": ImagePickerImage.instragram,
+       "name": "Instagram",
+     },
+     {
+       "image": ImagePickerImage.whatsapp,
+       "name": "WhatsApp",
+     },
+     {
+       "image": ImagePickerImage.linkedin,
+       "name": "LinkedIn",
+     },
+   ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -435,13 +438,13 @@ class ShareBottomSheet extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Center(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color(0xffF1F1F1),
+                    color: const Color(0xffF1F1F1),
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                   height: 5.h,
@@ -459,7 +462,7 @@ class ShareBottomSheet extends StatelessWidget {
                 ),
               ),
               Divider(
-                color: ColorPicker.subgreyColor.withOpacity(0.3),
+                color: ColorPicker.subGreyColor.withOpacity(0.3),
                 height: 1,
                 indent: 2,
                 endIndent: 1,
@@ -483,12 +486,12 @@ class ShareBottomSheet extends StatelessWidget {
               SizedBox(
                 height: 22.h,
               ),
-              Container(
+              SizedBox(
                   height: 75.h,
                   child: ListView.builder(
                     itemCount: shareList.length,
                     padding: EdgeInsets.only(left: 15.w),
-                    physics: AlwaysScrollableScrollPhysics(),
+                    physics: const AlwaysScrollableScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return GestureDetector(
@@ -502,7 +505,7 @@ class ShareBottomSheet extends StatelessWidget {
                               CircleAvatar(
                                 radius: 25.r,
                                 backgroundColor:
-                                    ColorPicker.greyliColor.withOpacity(0.4),
+                                    ColorPicker.greyLiColor.withOpacity(0.4),
                                 child: CircleAvatar(
                                   backgroundColor: ColorPicker.whiteColor,
                                   radius: 24.r,
@@ -522,7 +525,7 @@ class ShareBottomSheet extends StatelessWidget {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 12.sp,
-                                    color: ColorPicker.greyliColor),
+                                    color: ColorPicker.greyLiColor),
                               )
                             ],
                           ),

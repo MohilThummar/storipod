@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/common/app_text_field.dart';
+import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
-import '../../../app/common/app_button.dart';
-import '../../../app/common/app_text_field.dart';
-import '../../../app/common/appbar.dart';
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
-import '../../../main.dart';
-import '../../../main.dart';
-import '../../navbarScreen/navbar_screen_view.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/view/navbarScreen/navbar_screen_view.dart';
+
 import 'secureaccount_controller.dart';
 
 class SecureaccountView extends GetView<SecureaccountController> {
@@ -56,10 +55,10 @@ class SecureaccountView extends GetView<SecureaccountController> {
                 suffixIconData1: controller.showPassword.value
                     ? ImagePickerImage.showEyeImage
                     : ImagePickerImage.hiddenImage,
-                OnTapSuffix: () {
+                onTapSuffix: () {
                   controller.togglePasswordVisibility();
                 },
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 isDense: true,
                 boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
@@ -73,10 +72,10 @@ class SecureaccountView extends GetView<SecureaccountController> {
                 height: 12.h,
               ),
               CustomPasswordTextField(
-                OnTapSuffix: () {
+                onTapSuffix: () {
                   controller.toggleconformPasswordVisibility();
                 },
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 isDense: true,
                 suffixIconData1: controller.conformShowPassword.value
@@ -93,7 +92,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                 height: 20.h,
               ),
               Center(
-                child: ButtonWidget(
+                child: buttonWidget(
                   redius: 10,
                   context: context,
                   height: 55.h,
@@ -101,7 +100,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                   onPressed: () {
                    // controller. correntIndex.value=1;
                    // controller. isLogin.value=true;
-                    Get.offAll(NavbarScreenView());
+                    Get.offAll(const NavbarScreenView());
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,

@@ -103,7 +103,7 @@ class StoryEditView extends GetView<StoryEditController> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          Get.bottomSheet(DiscardStoeyView(),
+                          Get.bottomSheet(const DiscardStoeyView(),
                               isDismissible: true,
                               backgroundColor: Colors.transparent,
                               elevation: 2);
@@ -118,7 +118,7 @@ class StoryEditView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(SetBackGroundColorView());
+                    Get.to(const SetBackGroundColorView());
                   },
                   child: Container(
                       width: 60.w,
@@ -160,18 +160,18 @@ class StoryEditView extends GetView<StoryEditController> {
             Row(
               children: [
                 Image.asset(ImagePickerImage.hastagImage),
-                Container(
+                SizedBox(
                   height: 40.h,
                   width: 290.w,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     itemCount: controller.datStoryName.length,
-                    physics: AlwaysScrollableScrollPhysics(),
+                    physics: const AlwaysScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 4),
+                          margin: const EdgeInsets.symmetric(horizontal: 4),
                           padding: EdgeInsets.symmetric(
                               vertical: 8.h, horizontal: 12.w),
                           decoration: BoxDecoration(
@@ -206,18 +206,18 @@ class StoryEditView extends GetView<StoryEditController> {
             ),
             Row(
               children: [
-                Container(
+                SizedBox(
                   height: 57,
                   width: 288.w,
                   child: ListView.builder(
                     shrinkWrap: true,
                     padding: EdgeInsets.only(right: 10.w),
                     scrollDirection: Axis.horizontal,
-                    physics: AlwaysScrollableScrollPhysics(),
+                    physics: const AlwaysScrollableScrollPhysics(),
                     itemCount: controller.colorBox.length,
                     itemBuilder: (context, index) {
                       return Container(
-                        margin: EdgeInsets.symmetric(horizontal: 5),
+                        margin: const EdgeInsets.symmetric(horizontal: 5),
                         height: 56.w,
                         width: 56.w,
                         color: controller.colorBox[index]["color"],
@@ -236,7 +236,7 @@ class StoryEditView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(SearchKeyWordView());
+                    Get.to(const SearchKeyWordView());
                   },
                   child: CircleAvatar(
                     backgroundColor: ColorPicker.whiteColor,

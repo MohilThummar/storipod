@@ -20,7 +20,7 @@ class ExploreView extends GetView<ExploreController> {
       appBar: appbarWithSearch(
           context: context,
           onTaped: () {
-            Get.to(SearchstoryView());
+            Get.to(const SearchstoryView());
           }),
       body: SingleChildScrollView(
         child: Column(
@@ -39,7 +39,7 @@ class ExploreView extends GetView<ExploreController> {
             SizedBox(
               height: 16.h,
             ),
-            Container(
+            SizedBox(
               height: 154.h,
               // color: Colors.amberAccent,
               child: ListView.builder(
@@ -47,7 +47,7 @@ class ExploreView extends GetView<ExploreController> {
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 shrinkWrap: true,
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
@@ -126,7 +126,7 @@ class ExploreView extends GetView<ExploreController> {
             SizedBox(
               height: 24.h,
             ),
-            Container(
+            SizedBox(
               height: 154.h,
               // color: Colors.amberAccent,
               child: ListView.builder(
@@ -134,7 +134,7 @@ class ExploreView extends GetView<ExploreController> {
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 shrinkWrap: true,
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Container(
                     padding: EdgeInsets.only(right: 10.w),
@@ -220,7 +220,7 @@ class ExploreView extends GetView<ExploreController> {
                   GestureDetector(
                     onTap: () {
                       showProfile.value=true;
-                      print("===object");
+                      // print("===object");
                       // showNavBar.value=true;
                       correntIndex.value=1;
                       // Get.to(SeeAllProfileView());
@@ -239,7 +239,7 @@ class ExploreView extends GetView<ExploreController> {
             SizedBox(
               height: 16.h,
             ),
-            Container(
+            SizedBox(
               height: 465.h,
               width: double.infinity,
               child: GridView.builder(
@@ -247,7 +247,7 @@ class ExploreView extends GetView<ExploreController> {
                 cacheExtent: 0.0,
                 // scrollDirection: Axis.vertical,
                 padding: EdgeInsets.only(bottom: 20.h),
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3, // Number of columns in the grid
                   mainAxisSpacing: 24,

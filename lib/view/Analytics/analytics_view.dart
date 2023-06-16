@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
 import '../../app/common/app_text_field.dart';
 import 'ReachScreen/reach_screen.screen.dart';
 import 'analytics_controller.dart';
@@ -56,7 +53,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
             height: 24.h,
           ),
           CustomTextField(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
             boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
             isDense: true,
@@ -90,7 +87,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
                 TextSpan(
                   text: "You've Reached",
                   style: TextStyle(
-                      color: ColorPicker.offGreishColor,
+                      color: ColorPicker.offGreyLightColor,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600),
                 ),
@@ -99,11 +96,11 @@ class AnalyticsView extends GetView<AnalyticsController> {
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 14.sp,
-                        color: Color(0xff34A853))),
+                        color: const Color(0xff34A853))),
                 TextSpan(
                   text: "more Accounnts Beetween Jun 5 - Jun 14",
                   style: TextStyle(
-                      color: ColorPicker.offGreishColor,
+                      color: ColorPicker.offGreyLightColor,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600),
                 )
@@ -119,7 +116,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
             // margin: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              color: ColorPicker.GrewhiteColor,
+              color: ColorPicker.greWhiteColor,
             ),
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -132,7 +129,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
                       fontWeight: FontWeight.w700,
                       color: ColorPicker.blackColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -160,7 +157,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(ReachScreenScreen());
+                    Get.to(const ReachScreenScreen());
                   },
                   child: Icon(
                     Icons.arrow_forward_ios_outlined,
@@ -180,7 +177,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
             // margin: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              color: ColorPicker.GrewhiteColor,
+              color: ColorPicker.greWhiteColor,
             ),
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -193,7 +190,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
                       fontWeight: FontWeight.w700,
                       color: ColorPicker.blackColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -236,7 +233,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
             // margin: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              color: ColorPicker.GrewhiteColor,
+              color: ColorPicker.greWhiteColor,
             ),
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -249,7 +246,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
                       fontWeight: FontWeight.w700,
                       color: ColorPicker.blackColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [

@@ -1,19 +1,20 @@
-import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/homeStory/searchstory/searchstory_controller.dart';
 
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/string.dart';
 
 
 class SearchBottomSheet extends StatelessWidget {
-  List<String> options = ['0', '1'];
-  SearchstoryController controller = Get.put(SearchstoryController());
+
+
+  SearchBottomSheet({super.key});
+
+ final  List<String> options = ['0', '1'];
+  final SearchstoryController controller = Get.put(SearchstoryController());
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,13 +36,13 @@ class SearchBottomSheet extends StatelessWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Center(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xffF1F1F1),
+                        color: const Color(0xffF1F1F1),
                         borderRadius: BorderRadius.circular(20.r),
                       ),
                       height: 5.h,
@@ -60,7 +61,7 @@ class SearchBottomSheet extends StatelessWidget {
                     ),
                   ),
                   Divider(
-                    color: ColorPicker.subgreyColor.withOpacity(0.3),
+                    color: ColorPicker.subGreyColor.withOpacity(0.3),
                     height: 1,
                     indent: 2,
                     endIndent: 1,
@@ -87,8 +88,7 @@ class SearchBottomSheet extends StatelessWidget {
                               groupValue: controller.maintain.value,
                               onChanged: (value) {
                                 controller.maintain.value = value.toString();
-                                print(value);
-                              }),
+                                  }),
                         ),
                       ],
                     ),
@@ -100,7 +100,7 @@ class SearchBottomSheet extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            AppStrings.intrested,
+                            AppStrings.interested,
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 14.sp,
@@ -113,7 +113,7 @@ class SearchBottomSheet extends StatelessWidget {
                               groupValue: controller.maintain.value,
                               onChanged: (value) {
                                 controller.maintain.value = value.toString();
-                                print(value);
+
                               }),
                         ],
                       ),

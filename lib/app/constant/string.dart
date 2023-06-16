@@ -43,9 +43,9 @@ class AppStrings {
   static String selectImage = 'Select image';
   static String selectAction = 'Select action';
   static String takeImage = 'Take image';
-  static String hidecmt = 'Hide comment';
-  static String Save = 'Save';
-  static String ExportAshare = 'Export & Share';
+  static String hideCmt = 'Hide comment';
+  static String save = 'Save';
+  static String exportAShare = 'Export & Share';
   static String picImage = 'Pick from gallery';
   static String removeImage = "Remove image";
   static String createAnAccount = "Create an account";
@@ -73,7 +73,7 @@ class AppStrings {
   static String mellow = "Mellow drama in the east";
   static String profileName = "Courtney Brown";
   static String profile2Name = "Courtney Brown";
-  static String SubProfile = "10k Subscribers";
+  static String subProfile = "10k Subscribers";
   static String topFOLLOW = "Follow top contributors";
   static String seeAll = "See all";
   static String img1 =
@@ -98,16 +98,18 @@ class AppStrings {
   static String ladies = "Ladies and gentlemen of the press";
   static String countryBrown = "Coutney Brown";
   static String adegeji = "Adegbeji Oladele";
-  static String cheistable = "Christabel Wu";
+  static String cheisTable = "Christabel Wu";
   static String ramonda = "Ramonda satti";
   static String brown = "Coutney Brown";
   static String wu = "Christabel Wu";
-  static String minsAgo = "45mins ago";
+  static String minutesAgo = "45mins ago";
   static String selectBy = "Select by";
 
   static String person = "Person";
-  static String intrested = "Interests";
-  static const GrisLover = "GrisLover";
-  static const strytxt = "Courtney Brown is \n here to give y’all \n premium gist. follow \n me through the \n following slides...";
-  static const accounts = "You’ve reached +200% more accounts between \n Jun 5 - Jun 14";
+  static String interested = "Interests";
+  static const grisLover = "GrisLover";
+  static const sTryTxt =
+      "Courtney Brown is \n here to give y’all \n premium gist. follow \n me through the \n following slides...";
+  static const accounts =
+      "You’ve reached +200% more accounts between \n Jun 5 - Jun 14";
 }

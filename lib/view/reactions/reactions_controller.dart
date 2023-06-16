@@ -15,15 +15,6 @@ class ReactionsController extends GetxController with GetSingleTickerProviderSta
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void increment() => count.value++;
 }

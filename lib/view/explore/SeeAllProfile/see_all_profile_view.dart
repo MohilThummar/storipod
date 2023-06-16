@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
-import '../detailProfile/detail_profile_view.dart';
+import 'package:storipod_app/view/explore/detailProfile/detail_profile_view.dart';
 import 'see_all_profile_controller.dart';
 
 class SeeAllProfileView extends GetView<SeeAllProfileController> {
@@ -21,7 +19,7 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
           Padding(
             padding: EdgeInsets.only(right: 12.w, top: 10.h),
             child: Image.asset(
-              ImagePickerImage.SearchImage,
+              ImagePickerImage.searchImage,
               height: 21.h,
               width: 21.w,
             ),
@@ -56,7 +54,7 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             onTap: () {
-              Get.to(DetailProfileView());
+              Get.to(const DetailProfileView());
             },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

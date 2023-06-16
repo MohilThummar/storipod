@@ -1,17 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:flutter/material.dart';
+import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
-
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
-
-import '../../../app/common/app_button.dart';
-import 'bottomsheet.dart';
 import 'story_edit_controller.dart';
 
 class SearchKeyWordView extends GetView<StoryEditController> {
@@ -38,7 +32,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
             child: Padding(
               padding: EdgeInsets.only(left: 20.w),
               child: ImageIcon(
-                  AssetImage(
+                  const AssetImage(
                     ImagePickerImage.backIcon,
                   ),
                   size: 19.sp),
@@ -54,7 +48,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
           children: [
             TextFormField(
               onTap: () {},
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 color: Colors.blue,
                 fontWeight: FontWeight.w600,
@@ -65,19 +59,19 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                   fillColor: Colors.grey,
                   enabled: true,
                   contentPadding: EdgeInsets.symmetric(vertical: 8.h),
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: ColorPicker.whiteColor, width: 3),
                   ),
-                  disabledBorder: UnderlineInputBorder(
+                  disabledBorder: const UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: ColorPicker.whiteColor, width: 3),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: ColorPicker.whiteColor, width: 3),
                   ),
-                  focusedBorder: UnderlineInputBorder(
+                  focusedBorder: const UnderlineInputBorder(
                     borderSide:
                         BorderSide(color: ColorPicker.whiteColor, width: 3),
                   ),
@@ -184,12 +178,12 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                         if (controller.selectedKeyword!.length < 5) {
                           controller.selectedKeyword!.add(hobby);
 
-                          print(controller.selectedKeyword);
+
                         }
                       } else {
                         controller.selectedKeyword!
                             .removeWhere((element) => element == hobby);
-                        print(controller.selectedKeyword);
+
                       }
                     },
                     child: Container(
@@ -199,7 +193,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
                           EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? ColorPicker.offwhiteColor
+                            ? ColorPicker.offWhiteColor
                             : ColorPicker.lightWhiteColor.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(60.r),
                         border: Border.all(
@@ -275,7 +269,7 @@ class SearchKeyWordView extends GetView<StoryEditController> {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0.w),
-                child: ButtonWidget(
+                child: buttonWidget(
                   redius: 30.r,
                   context: context,
                   height: 55.h,

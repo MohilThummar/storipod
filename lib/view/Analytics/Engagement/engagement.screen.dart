@@ -58,7 +58,7 @@ class EngagementScreen extends GetView<EngagementController> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomTextField(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 isDense: true,
@@ -100,7 +100,7 @@ class EngagementScreen extends GetView<EngagementController> {
                     TextSpan(
                       text: "You've Reached",
                       style: TextStyle(
-                          color: ColorPicker.offGreishColor,
+                          color: ColorPicker.offGreyLightColor,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600),
                     ),
@@ -109,11 +109,11 @@ class EngagementScreen extends GetView<EngagementController> {
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 14.sp,
-                            color: Color(0xff34A853))),
+                            color: const Color(0xff34A853))),
                     TextSpan(
                       text: "more Accounnts Beetween Jun 5 - Jun 14",
                       style: TextStyle(
-                          color: ColorPicker.offGreishColor,
+                          color: ColorPicker.offGreyLightColor,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600),
                     )
@@ -125,7 +125,7 @@ class EngagementScreen extends GetView<EngagementController> {
               height: 24.h,
             ),
             Divider(
-              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              color: ColorPicker.subGreyColor.withOpacity(0.3),
               height: 1,
               indent: 2,
               endIndent: 1,
@@ -158,17 +158,17 @@ class EngagementScreen extends GetView<EngagementController> {
             SizedBox(
               height: 16.h,
             ),
-            Container(
+            SizedBox(
               height: 105.h,
               child: ListView.builder(
                 padding: EdgeInsets.only(left: 20.w, right: 20.w),
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: 2,
                 itemBuilder: (context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      Get.to(EngagementScreen());
+                      Get.to(const EngagementScreen());
                     },
                     child: Container(
                       width: 291.w,
@@ -212,8 +212,8 @@ class EngagementScreen extends GetView<EngagementController> {
                             // width: 259.w,
                             lineHeight: 8.0,
                             percent: 0.9,
-                            barRadius: Radius.circular(10),
-                            progressColor: Color(0xff5F6DEF),
+                            barRadius: const Radius.circular(10),
+                            progressColor: const Color(0xff5F6DEF),
                             animation: true,
                           ),
                           SizedBox(
@@ -249,8 +249,8 @@ class EngagementScreen extends GetView<EngagementController> {
                             // width: 259.w,
                             lineHeight: 8.0,
                             percent: 0.3,
-                            barRadius: Radius.circular(10),
-                            progressColor: Color(0xff5F6DEF),
+                            barRadius: const Radius.circular(10),
+                            progressColor: const Color(0xff5F6DEF),
                             animation: true,
                           ),
                         ],
@@ -291,7 +291,7 @@ class EngagementScreen extends GetView<EngagementController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -315,11 +315,11 @@ class EngagementScreen extends GetView<EngagementController> {
                         style: TextStyle(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
-                            color: ColorPicker.offGreishColor),
+                            color: ColorPicker.offGreyLightColor),
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -371,7 +371,7 @@ class EngagementScreen extends GetView<EngagementController> {
             SizedBox(height: 16.h,),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),              child: Divider(
-                color: ColorPicker.subgreyColor.withOpacity(0.3),
+                color: ColorPicker.subGreyColor.withOpacity(0.3),
                 height: 1,
                 indent: 2,
                 endIndent: 1,
@@ -420,7 +420,7 @@ class EngagementScreen extends GetView<EngagementController> {
                   top: 20.h,
                 ),
                 shrinkWrap: true,
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Container(
                     padding: EdgeInsets.only(right: 23.w),

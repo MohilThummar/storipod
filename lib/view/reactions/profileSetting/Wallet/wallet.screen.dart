@@ -59,7 +59,7 @@ class WalletScreen extends GetView<WalletController> {
               child: Text(
                 "This information is private. To make public, please update your settings. ",
                 style: TextStyle(
-                    color: ColorPicker.offGreishColor,
+                    color: ColorPicker.offGreyLightColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 12.sp),
               ),
@@ -71,7 +71,7 @@ class WalletScreen extends GetView<WalletController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -93,14 +93,14 @@ class WalletScreen extends GetView<WalletController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(ChangePasswordScreen());
+                      Get.to(const ChangePasswordScreen());
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
-                      color: ColorPicker.offGreishColor,
+                      color: ColorPicker.offGreyLightColor,
                       size: 16.sp,
                     ),
                   )
@@ -114,7 +114,7 @@ class WalletScreen extends GetView<WalletController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -136,7 +136,7 @@ class WalletScreen extends GetView<WalletController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                       onTap: () {
                         // Get.to(WalletScreen());

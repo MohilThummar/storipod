@@ -22,10 +22,10 @@ class HomeStoryView extends GetView<HomeStoryController> {
     return Scaffold(
       appBar: appbarWithNotification(
           onTapedNotificaton: () {
-            Get.to(NotificationView());
+            Get.to(const NotificationView());
           },
           onTaped: () {
-            Get.to(SearchstoryView());
+            Get.to(const SearchstoryView());
           },
           context: context),
       body: SingleChildScrollView(
@@ -78,10 +78,10 @@ class HomeStoryView extends GetView<HomeStoryController> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(StoryEditView());
+                      Get.to(const StoryEditView());
                     },
                     child: CircleAvatar(
                       radius: 21.r,
@@ -101,7 +101,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
               height: 10.h,
             ),
             Divider(
-              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              color: ColorPicker.subGreyColor.withOpacity(0.3),
               height: 1,
               indent: 2,
               endIndent: 1,
@@ -126,7 +126,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
             ListView.builder(
               shrinkWrap: true,
               padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 16.h),
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: controller.storyList.length,
               itemBuilder: (context, index) {
                 return Padding(
@@ -173,7 +173,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
                           ],
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -185,7 +185,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
                             color: ColorPicker.blueColor,
                             fit: BoxFit.fill,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(

@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/view/personProfileScreen/saveTabScreen/save_tab_screen.screen.dart';
 import 'package:storipod_app/view/personProfileScreen/storiesTabScreen/stories_tab_screen.screen.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
 import 'draftTabScreen/draft_tab_screen.screen.dart';
 import 'person_profile_screen_controller.dart';
 class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
@@ -195,7 +192,7 @@ class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
         ),
         Padding(
           padding: EdgeInsets.only(left: 17.w, right: 17.w),
-          child: ButtonWidget(
+          child: buttonWidget(
               context: context,
               fontSize: 14.sp,
               title: "Follow",
@@ -210,7 +207,7 @@ class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
           height: 13.h,
         ),
         TabBar(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           controller: controller.tabController,
           indicatorWeight: 2.h,
           indicatorSize: TabBarIndicatorSize.tab,
@@ -218,7 +215,7 @@ class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
           labelColor: Colors.black,
           unselectedLabelStyle: TextStyle(
               fontSize: 14.sp,
-              color: Color(0xff00000),
+              color: const Color(0x0ff00000),
               fontWeight: FontWeight.w700),
           indicatorColor: ColorPicker.blackColor,
           labelStyle: TextStyle(
@@ -227,29 +224,29 @@ class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
               fontWeight: FontWeight.w700),
           onTap: (v) {
             if (v == controller.indexTab.value) {
-              Get.to(SaveTabScreenScreen());
+              Get.to(const SaveTabScreenScreen());
 
             }
           },
           tabs: [
             Tab(
               icon: ImageIcon(
-                  AssetImage(
+                  const AssetImage(
                     ImagePickerImage.storiesTab,
                   ),
                   size: 27.sp),
-              child: Text(
+              child: const Text(
                 "Stories",
               ),
               // text: 'My Lead',
             ),
             Tab(
               icon: ImageIcon(
-                  AssetImage(
+                  const AssetImage(
                     ImagePickerImage.draftTab,
                   ),
                   size: 27.sp),
-              child: Text(
+              child: const Text(
                 "Draft",
               ),
               // text: 'My Lead',
@@ -257,7 +254,7 @@ class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
             Tab(
               text: "Saved",
               icon: ImageIcon(
-                  AssetImage(
+                  const AssetImage(
                     ImagePickerImage.saveTab,
                   ),
                   size: 27.sp),
@@ -268,8 +265,8 @@ class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
           child: TabBarView(
             // viewportFraction:1,
               controller: controller.tabController, children: [
-            StoriesTabScreenScreen(),
-            DraftTabScreenScreen(),
+            const StoriesTabScreenScreen(),
+            const DraftTabScreenScreen(),
             Container()
           ]),
         )

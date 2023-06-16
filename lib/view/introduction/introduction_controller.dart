@@ -8,22 +8,9 @@ class IntroductionController extends GetxController {
 
   RxInt activePage = 0.obs;
 
-  final List<Widget> pages = [PageOne(), PageTwo(), PageThree()];
+  final List<Widget> pages = [pageOne(), pageTwo(), pageThree()];
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void increment() => activePage.value++;
 }

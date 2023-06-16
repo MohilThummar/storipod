@@ -1,22 +1,22 @@
-import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/string.dart';
 
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
 import 'create_account_controller.dart';
 
-class CustomBottomSheet extends StatelessWidget {
-  CreateAccountController controller = Get.put(CreateAccountController());
 
+class CustomBottomSheet extends StatelessWidget {
+
+
+   CustomBottomSheet({Key? key}) : super(key: key);
+
+ final  CreateAccountController controller = Get.put(CreateAccountController());
   @override
   Widget build(BuildContext context) {
-    File? image;
+
     return Container(
       padding: EdgeInsets.only(
         top: 12.h,
@@ -36,13 +36,13 @@ class CustomBottomSheet extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 10,
+               SizedBox(
+                height: 10.h,
               ),
               Center(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color(0xffF1F1F1),
+                    color: const Color(0xffF1F1F1),
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                   height: 5.h,
@@ -60,7 +60,7 @@ class CustomBottomSheet extends StatelessWidget {
                 ),
               ),
               Divider(
-                color: ColorPicker.subgreyColor.withOpacity(0.3),
+                color: ColorPicker.subGreyColor.withOpacity(0.3),
                 height: 1,
                 indent: 2,
                 endIndent: 1,
@@ -114,7 +114,7 @@ class CustomBottomSheet extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  controller.pickedImage == "";
+                  controller.pickedImage = null;
                   Get.back();
 
                   ///delete this image

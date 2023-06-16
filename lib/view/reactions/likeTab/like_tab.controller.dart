@@ -1,18 +1,12 @@
 import 'package:get/get.dart';
+import 'package:storipod_app/app/constant/image.dart';
 
-import '../../../app/constant/image.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
 
 class LikeTabController extends GetxController {
   //TODO: Implement LikeTabController
 
   final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+
   List allViewList = [
     {
       "name": "Robert Antigha",
@@ -28,15 +22,7 @@ class LikeTabController extends GetxController {
     },
 
   ];
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void increment() => count.value++;
 }

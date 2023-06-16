@@ -6,19 +6,18 @@ class ColorPicker {
   static const blackColor = Color(0xff000000);
   static const blackEyeColor = Color(0xff444854);
   static const greyColor = Color(0xff555661);
-  static const GrewhiteColor = Color(0xffF8F8F8);
-  static const greylightColor = Color(0xffEDEEFF);
-  static const greylight1Color = Color(0xff303030);
-  static const greyliColor = Color(0xff667085);
+  static const greWhiteColor = Color(0xffF8F8F8);
+  static const greyLightColor = Color(0xffEDEEFF);
+  static const greyLight1Color = Color(0xff303030);
+  static const greyLiColor = Color(0xff667085);
   static const greySubColor = Color(0xff878D98);
-  static const subgreyColor = Color(0xffA4A3A3);
-  static const offwhiteColor = Color(0xffF9FBFA);
-  static const offGreishColor = Color(0xff747474);
+  static const subGreyColor = Color(0xffA4A3A3);
+  static const offWhiteColor = Color(0xffF9FBFA);
+  static const offGreyLightColor = Color(0xff747474);
   static const pureWhiteColor = Color(0xffEAEEF1);
   static const linkColor = Color(0xff004C8B);
   static const light2Color = Color(0xff69696C);
   static const light2greyColor = Color(0xff6E717C);
-
 
   static const subBlackColor = Color(0xff69696C);
   static const boderBlackColor = Color(0xffa3a2a2);
@@ -36,6 +35,6 @@ class ColorPicker {
   static const yellowColor = Color(0xffFFBF35);
   static const offGreen = Color(0xff20E682);
   static const offgreGreen = Color(0xff88888F);
-    static const lightGreenColor = Color(0xffC6FFF5);
-    static const lightPinkColor = Color(0xffE87E84);
+  static const lightGreenColor = Color(0xffC6FFF5);
+  static const lightPinkColor = Color(0xffE87E84);
 }

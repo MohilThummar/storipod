@@ -1,14 +1,14 @@
 class ImagePickerImage {
   ImagePickerImage._();
 
-  static const onbordingImage = "assets/boardingscreen.png";
-  static const onbordingName = "assets/appname.png";
-  static const onbordingIntroName = "assets/intro.png";
+  static const onBoardingImage = "assets/boardingscreen.png";
+  static const onBoardingName = "assets/appname.png";
+  static const onBoardingIntroName = "assets/intro.png";
   static const googleIcon = "assets/google.png";
   static const filter1Icon = "assets/filter1.png";
   static const scanIcon = "assets/scan.png";
   static const backIcon = "assets/backIcon.png";
-  static const Search1Icon = "assets/Search1.png";
+  static const search1Icon = "assets/Search1.png";
   static const editIcon = "assets/Edit.png";
   static const storiesIcon = "assets/stories.png";
   static const profileIcon = "assets/profile.png";
@@ -61,8 +61,8 @@ class ImagePickerImage {
   static const sendImage = "assets/Send.png";
   static const ggImage = "assets/gg.png";
   static const dp9Image = "assets/dp9.png";
-  static const SearchImage = "assets/Search.png";
-  static const smilyImage = "assets/smily.png";
+  static const searchImage = "assets/Search.png";
+  static const smileyImage = "assets/smily.png";
   static const hiddenImage = "assets/hiddeneye.png";
   static const showEyeImage = "assets/Eye.png";
   static const notificationImage = "assets/notification.png";

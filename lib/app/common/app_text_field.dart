@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/constant/image.dart';
 
 /// <<< Common TextField --------- >>>
 
@@ -21,7 +20,7 @@ class CustomTextField extends StatelessWidget {
   final double? fontSize;
   final bool? enabled;
   final bool? isDense;
-  final Function()? OnTapSuffix;
+  final Function()? onTapSuffix;
   final TextAlign? textAlign;
   final TextInputType? inputType;
   final List<TextInputFormatter>? inputFormat;
@@ -34,7 +33,7 @@ class CustomTextField extends StatelessWidget {
   final bool? isMaxLines;
   final int? maxLength;
   final int? minLines;
-  final bool? Filled;
+  final bool? filled;
   final int? maxLines;
   final bool? isError;
   final bool? isHight;
@@ -47,11 +46,11 @@ class CustomTextField extends StatelessWidget {
     Key? key,
     required this.controller,
     this.obscureText = false,
-    this.Filled = true,
+    this.filled = true,
     this.hintText,
     this.color,
     this.fontSize,
-    this.OnTapSuffix,
+    this.onTapSuffix,
     this.suffixIconData1,
     this.boderColor,
     this.hintColor,
@@ -108,11 +107,11 @@ class CustomTextField extends StatelessWidget {
         color: color ?? Colors.black,
       ),
       decoration: InputDecoration(
-        suffixIcon: GestureDetector(onTap: OnTapSuffix, child: suffixIconData1),
+        suffixIcon: GestureDetector(onTap: onTapSuffix, child: suffixIconData1),
         suffixIconColor: suffixIconColor,
         isDense: isDense,
         fillColor: fillColor ?? ColorPicker.lightWhiteColor,
-        filled: Filled ?? true,
+        filled: filled ?? true,
         focusColor: ColorPicker.appButtonColor,
         contentPadding: padding,
         hintText: hintText,
@@ -130,10 +129,9 @@ class CustomTextField extends StatelessWidget {
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4.r),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
                 width: 1,
-                color: ColorPicker.appButtonColor ??
-                    Theme.of(context).primaryColor.withOpacity(0.4))),
+                color: ColorPicker.appButtonColor)),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(
@@ -178,7 +176,7 @@ class CustomTextRoundField extends StatelessWidget {
   final double? fontSize;
   final bool? enabled;
   final bool? isDense;
-  final Function()? OnTapSuffix;
+  final Function()? onTapSuffix;
   final TextAlign? textAlign;
   final TextInputType? inputType;
   final List<TextInputFormatter>? inputFormat;
@@ -206,7 +204,7 @@ class CustomTextRoundField extends StatelessWidget {
     this.hintText,
     this.color,
     this.fontSize,
-    this.OnTapSuffix,
+    this.onTapSuffix,
     this.suffixIconData1,
     this.boderColor,
     this.hintColor,
@@ -263,7 +261,7 @@ class CustomTextRoundField extends StatelessWidget {
         color: color ?? Colors.black,
       ),
       decoration: InputDecoration(
-        suffixIcon: GestureDetector(onTap: OnTapSuffix, child: suffixIconData1),
+        suffixIcon: GestureDetector(onTap: onTapSuffix, child: suffixIconData1),
         suffixIconColor: suffixIconColor,
         isDense: isDense,
         fillColor: fillColor ?? ColorPicker.lightWhiteColor,
@@ -333,7 +331,7 @@ class CustomPasswordTextField extends StatelessWidget {
   final double? fontSize;
   final bool? enabled;
   final bool? isDense;
-  final Function()? OnTapSuffix;
+  final Function()? onTapSuffix;
   final TextAlign? textAlign;
   final TextInputType? inputType;
   final List<TextInputFormatter>? inputFormat;
@@ -346,7 +344,7 @@ class CustomPasswordTextField extends StatelessWidget {
   final bool? isMaxLines;
   final int? maxLength;
   final int? minLines;
-  final bool? Filled;
+  final bool? filled;
   final int? maxLines;
   final bool? isError;
   final bool? isHight;
@@ -359,11 +357,11 @@ class CustomPasswordTextField extends StatelessWidget {
     Key? key,
     required this.controller,
     this.obscureText = false,
-    this.Filled = true,
+    this.filled = true,
     this.hintText,
     this.color,
     this.fontSize,
-    this.OnTapSuffix,
+    this.onTapSuffix,
     this.suffixIconData1,
     this.boderColor,
     this.hintColor,
@@ -421,7 +419,7 @@ class CustomPasswordTextField extends StatelessWidget {
       ),
       decoration: InputDecoration(
         suffixIcon: GestureDetector(
-            onTap: OnTapSuffix,
+            onTap: onTapSuffix,
             child: Padding(
               padding:  EdgeInsets.symmetric(horizontal: 12.w),
               child: Image.asset(suffixIconData1!,
@@ -433,7 +431,7 @@ class CustomPasswordTextField extends StatelessWidget {
         suffixIconColor: suffixIconColor,
         isDense: isDense,
         fillColor: fillColor ?? ColorPicker.lightWhiteColor,
-        filled: Filled ?? true,
+        filled: filled ?? true,
         focusColor: ColorPicker.appButtonColor,
         contentPadding: padding,
         hintText: hintText,
@@ -451,10 +449,9 @@ class CustomPasswordTextField extends StatelessWidget {
                     Theme.of(context).primaryColor.withOpacity(0.4))),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4.r),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
                 width: 1,
-                color: ColorPicker.appButtonColor ??
-                    Theme.of(context).primaryColor.withOpacity(0.4))),
+                color: ColorPicker.appButtonColor)),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4.r),
             borderSide: BorderSide(

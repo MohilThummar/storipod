@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/common/app_text_field.dart';
 import 'package:storipod_app/app/common/appbar.dart';
+import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
-import '../../app/common/app_text_field.dart';
-import '../../app/common/commanpaddingcolumn.dart';
-import '../createAccount/create_account_view.dart';
-import '../forgotaccount/forgotaccount_view.dart';
+import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/view/createAccount/create_account_view.dart';
+import 'package:storipod_app/view/forgotaccount/forgotaccount_view.dart';
+
 import 'login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -53,7 +53,7 @@ class LoginView extends GetView<LoginController> {
                       color: ColorPicker.subBlackColor),
                 ),
                 Image.asset(
-                  ImagePickerImage.smilyImage,
+                  ImagePickerImage.smileyImage,
                   height: 20.h,
                   width: 20.w,
                   fit: BoxFit.fill,
@@ -64,11 +64,11 @@ class LoginView extends GetView<LoginController> {
               height: 34.h,
             ),
             CustomTextField(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
               boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
               isDense: true,
-              suffixIconData1: Icon(null),
+              suffixIconData1: const Icon(null),
               controller: controller.emailIdController,
               hintText: AppStrings.enterEmail,
               inputType: TextInputType.emailAddress,
@@ -81,10 +81,10 @@ class LoginView extends GetView<LoginController> {
                 suffixIconData1: controller.showPassword.value
                     ? ImagePickerImage.showEyeImage
                     : ImagePickerImage.hiddenImage,
-                OnTapSuffix: () {
+                onTapSuffix: () {
                   controller.togglePasswordVisibility();
                 },
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 isDense: true,
                 boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
@@ -116,7 +116,7 @@ class LoginView extends GetView<LoginController> {
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(ForgotaccountView());
+                            Get.to(const ForgotaccountView());
                           },
                         text: AppStrings.recover,
                         style: TextStyle(
@@ -133,13 +133,13 @@ class LoginView extends GetView<LoginController> {
               height: 12.h,
             ),
             Center(
-              child: ButtonWidget(
+              child: buttonWidget(
                 redius: 10.r,
                 context: context,
                 height: 0.055.sh,
                 width: double.infinity,
                 onPressed: () {
-                  Get.offAll(CreateAccountView());
+                  Get.offAll(const CreateAccountView());
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.signIN,
@@ -169,7 +169,7 @@ class LoginView extends GetView<LoginController> {
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.offAll(CreateAccountView());
+                            Get.offAll(const CreateAccountView());
                           },
                         text: AppStrings.createAccount,
                         style: TextStyle(
@@ -187,7 +187,7 @@ class LoginView extends GetView<LoginController> {
             ),
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Divider(
                     height: 2,
                     color: ColorPicker.offGreyColor,
@@ -203,7 +203,7 @@ class LoginView extends GetView<LoginController> {
                       fontSize: 12.sp,
                       color: ColorPicker.boderBlackColor),
                 ),
-                Expanded(
+                const Expanded(
                   child: Divider(
                     height: 2,
                     color: ColorPicker.offGreyColor,
@@ -217,7 +217,7 @@ class LoginView extends GetView<LoginController> {
             SizedBox(
               height: 18.h,
             ),
-            ButtonIconWidget(
+            buttonIconWidget(
               context: context,
               height: 40.h,
               width: double.infinity,
@@ -233,12 +233,12 @@ class LoginView extends GetView<LoginController> {
             SizedBox(
               height: 16.h,
             ),
-            ButtonImageWidget(
+            buttonImageWidget(
               context: context,
               height: 40.h,
               width: double.infinity,
               onPressed: () {},
-              imageheight: 22.h,
+              imageHeight: 22.h,
               imageWidth: 22.w,
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,

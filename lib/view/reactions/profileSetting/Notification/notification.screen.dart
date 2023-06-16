@@ -1,13 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
 import 'notification.controller.dart';
 
 class NotificationScreen extends GetView<NotificationController> {
@@ -58,7 +55,7 @@ class NotificationScreen extends GetView<NotificationController> {
               // margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
@@ -71,7 +68,7 @@ class NotificationScreen extends GetView<NotificationController> {
                     fit: BoxFit.fill,
                     color: ColorPicker.blackEyeColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 16.5,
                   ),
                   Text(
@@ -81,7 +78,7 @@ class NotificationScreen extends GetView<NotificationController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Obx(() {
                     return CupertinoSwitch(applyTheme: true,
 
@@ -108,7 +105,7 @@ class NotificationScreen extends GetView<NotificationController> {
               // margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
@@ -121,7 +118,7 @@ class NotificationScreen extends GetView<NotificationController> {
                     fit: BoxFit.fill,
                     color: ColorPicker.blackEyeColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 16.5,
                   ),
                   Text(
@@ -131,7 +128,7 @@ class NotificationScreen extends GetView<NotificationController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Obx(() {
                     return CupertinoSwitch(applyTheme: true,
 
@@ -158,7 +155,7 @@ class NotificationScreen extends GetView<NotificationController> {
               // margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 19.h),
@@ -171,7 +168,7 @@ class NotificationScreen extends GetView<NotificationController> {
                     fit: BoxFit.fill,
                     color: ColorPicker.blackEyeColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 16.5,
                   ),
                   Text(
@@ -181,7 +178,7 @@ class NotificationScreen extends GetView<NotificationController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       // Get.to(ReachScreenScreen());

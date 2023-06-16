@@ -14,7 +14,7 @@ class DraftTabScreenScreen extends GetView<DraftTabScreenController> {
   Widget build(BuildContext context) {
     return  GridView.builder(
       shrinkWrap: true,
-      physics: AlwaysScrollableScrollPhysics(),
+      physics: const AlwaysScrollableScrollPhysics(),
       itemCount: 6,
       padding: EdgeInsets.only(top: 29.h, left: 15.w, right: 15.w),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

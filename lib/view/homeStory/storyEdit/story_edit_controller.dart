@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
+
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:story_view/controller/story_controller.dart';
@@ -12,7 +12,7 @@ class StoryEditController extends GetxController {
 
   final count = 0.obs;
   TextEditingController searchController=TextEditingController();
-  List StoryViewer = [
+  List storyViewer = [
     {
       "image": ImagePickerImage.girl1Image,
       "name": "Agberedo Jackson",
@@ -103,20 +103,7 @@ class StoryEditController extends GetxController {
   ];
   final StoryController storyController = StoryController();
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   @override
   void dispose() {

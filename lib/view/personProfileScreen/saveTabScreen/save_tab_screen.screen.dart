@@ -3,9 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/image.dart';
 import '../person_profile_screen_view.dart';
 import 'save_tab_screen.controller.dart';
 
@@ -18,7 +17,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
     return WillPopScope(
       onWillPop: () async {
         controller.personProfileScreenController.tabController.index = 1;
-        Get.off(PersonProfileScreenView());
+        Get.off(const PersonProfileScreenView());
         return true;
       },
       child: Scaffold(
@@ -29,7 +28,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
             onTap: () {
               // controller.personProfileScreenController.indexTab.value = 1;
               controller.personProfileScreenController.tabController.index = 1;
-              Get.off(PersonProfileScreenView());
+              Get.off(const PersonProfileScreenView());
             },
             child: Padding(
                 padding: EdgeInsets.only(left: 10.w, top: 18.h, bottom: 16.h),
@@ -56,7 +55,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
         ),
         body: GridView.builder(
           shrinkWrap: true,
-          physics: AlwaysScrollableScrollPhysics(),
+          physics: const AlwaysScrollableScrollPhysics(),
           itemCount: 10,
           padding: EdgeInsets.only(top: 24.h, left: 10.w, right: 10.w),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -87,7 +86,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      SizedBox(
                         width: 40.w,
                         child: Stack(
                           children: [

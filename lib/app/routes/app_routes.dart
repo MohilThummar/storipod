@@ -3,62 +3,67 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const HOME = _Paths.HOME;
-  static const ONBOARDING = _Paths.ONBOARDING;
+  static const home = _Paths.home;
 
-  static const INTRODUCTION = _Paths.INTRODUCTION;
-  static const LOGIN = _Paths.LOGIN;
-  static const CREATE_ACCOUNT = _Paths.CREATE_ACCOUNT;
-  static const FORGOTACCOUNT = _Paths.FORGOTACCOUNT;
-  static const USERNAME = _Paths.CREATE_ACCOUNT + _Paths.USERNAME;
-  static const USERDETAIL = _Paths.CREATE_ACCOUNT + _Paths.USERDETAIL;
-  static const SECUREACCOUNT = _Paths.CREATE_ACCOUNT + _Paths.SECUREACCOUNT;
-  static const NAVBAR_SCREEN = _Paths.NAVBAR_SCREEN;
-  static const EXPLORE = _Paths.EXPLORE;
-  static const RECOMMENDATION = _Paths.RECOMMENDATION;
-  static const FINDNEWSTORY = _Paths.FINDNEWSTORY;
-  static const HOME_STORY = _Paths.HOME_STORY;
-  static const SEARCHSTORY = _Paths.SEARCHSTORY;
-  static const STORY_EDIT = _Paths.STORY_EDIT;
-  static const NOTIFICATION = _Paths.NOTIFICATION;
-  static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
-  static const SEE_ALL_PROFILE = _Paths.EXPLORE + _Paths.SEE_ALL_PROFILE;
-  static const DETAIL_PROFILE = _Paths.EXPLORE + _Paths.DETAIL_PROFILE;
-  static const PERSON_PROFILE_SCREEN = _Paths.PROFILE_SCREEN + _Paths.PERSON_PROFILE_SCREEN;
-  static const REACTIONS = _Paths.REACTIONS;
-  static const PROFILE_SETTING = _Paths.PROFILE_SETTING;
-  static const USER_FOLLOWER = _Paths.USER_FOLLOWER;
-  static const ANALYTICS = _Paths.ANALYTICS;
+  static const onBoarding = _Paths.onBoarding;
+
+
+  static const introduction = _Paths.introduction;
+  static const logIn = _Paths.login;
+  static const createAccount = _Paths.createAccount;
+  static const forgotPassword = _Paths.forgotAccount;
+  static const userName = _Paths.createAccount + _Paths.username;
+  static const userDetail = _Paths.createAccount + _Paths.userDetail;
+  static const secureAccount = _Paths.createAccount + _Paths.secureAccount;
+  static const navBarScreen = _Paths.navbarScreen;
+  static const explore = _Paths.explore;
+  static const recommendation = _Paths.recommendation;
+  static const findNewStory = _Paths.findNewStory;
+  static const homeStory = _Paths.homeStory;
+
+  static const searchStory = _Paths.searchStory;
+  static const storyEdit = _Paths.storyEdit;
+  static const notification = _Paths.notification;
+  static const profileScreen = _Paths.profileScreen;
+  static const sellAllProfile = _Paths.explore + _Paths.seeAllProfile;
+  static const detailProfile = _Paths.explore + _Paths.detailProfile;
+  static const personProfileScreen = _Paths.profileScreen + _Paths.personProfileScreen;
+  static const reactions = _Paths.reactions;
+  static const profileSetting = _Paths.profilSetting;
+  static const userFollower = _Paths.userFollower;
+  static const analytics = _Paths.analytics;
 }
 
 abstract class _Paths {
   _Paths._();
-  static const HOME = '/home';
-  static const ONBOARDING = '/onboarding';
+  static const home = '/home';
 
-  static const INTRODUCTION = '/introduction';
-  static const LOGIN = '/login';
-  static const CREATE_ACCOUNT = '/create-account';
-  static const FORGOTACCOUNT = '/forgotaccount';
-  static const USERNAME = '/username';
-  static const USERDETAIL = '/userdetail';
-  static const SECUREACCOUNT = '/secureaccount';
-  static const NAVBAR_SCREEN = '/navbar-screen';
-  static const EXPLORE = '/explore';
-  static const RECOMMENDATION = '/recommendation';
-  static const FINDNEWSTORY = '/findnewstory';
-  static const HOME_STORY = '/home-story';
-  static const SEARCHSTORY = '/searchstory';
-  static const STORY_EDIT = '/story-edit';
+  static const onBoarding = '/onboarding';
 
-  static const NOTIFICATION = '/notification';
-  static const PROFILE_SCREEN = '/profile-screen';
 
-  static const SEE_ALL_PROFILE = '/see-all-profile';
-  static const DETAIL_PROFILE = '/detail-profile';
-  static const PERSON_PROFILE_SCREEN = '/person-profile-screen';
-  static const REACTIONS = '/reactions';
-  static const PROFILE_SETTING = '/profile-setting';
-  static const USER_FOLLOWER = '/user-follower';
-  static const ANALYTICS = '/analytics';
+  static const introduction = '/introduction';
+  static const login = '/login';
+  static const createAccount = '/create-account';
+  static const forgotAccount = '/forgotaccount';
+  static const username = '/username';
+  static const userDetail = '/userdetail';
+  static const secureAccount = '/secureaccount';
+  static const navbarScreen = '/navbar-screen';
+  static const explore = '/explore';
+  static const recommendation = '/recommendation';
+  static const findNewStory = '/findnewstory';
+  static const homeStory = '/home-story';
+  static const searchStory = '/searchstory';
+  static const storyEdit = '/story-edit';
+
+  static const notification = '/notification';
+  static const profileScreen = '/profile-screen';
+
+  static const seeAllProfile = '/see-all-profile';
+  static const detailProfile = '/detail-profile';
+  static const personProfileScreen = '/person-profile-screen';
+  static const reactions = '/reactions';
+  static const profilSetting = '/profile-setting';
+  static const userFollower = '/user-follower';
+  static const analytics = '/analytics';
 }

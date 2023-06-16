@@ -61,7 +61,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -83,15 +83,15 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(AccountScreen());
+                      Get.to(const AccountScreen());
 
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
-                      color: ColorPicker.offGreishColor,
+                      color: ColorPicker.offGreyLightColor,
                       size: 16.sp,
                     ),
                   )
@@ -107,7 +107,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -129,10 +129,10 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Icon(
                     Icons.arrow_forward_ios_outlined,
-                    color: ColorPicker.offGreishColor,
+                    color: ColorPicker.offGreyLightColor,
                     size: 16.sp,
                   )
                 ],
@@ -147,7 +147,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -169,14 +169,14 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(WalletScreen());
+                      Get.to(const WalletScreen());
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
-                      color: ColorPicker.offGreishColor,
+                      color: ColorPicker.offGreyLightColor,
                       size: 16.sp,
                     ),
                   )
@@ -192,7 +192,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -214,14 +214,14 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                         fontWeight: FontWeight.w700,
                         color: ColorPicker.blackColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(AboutAppScreen());
+                      Get.to(const AboutAppScreen());
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
-                      color: ColorPicker.offGreishColor,
+                      color: ColorPicker.offGreyLightColor,
                       size: 16.sp,
                     ),
                   )
@@ -232,7 +232,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
               height: 72.h,
             ),
             Divider(
-              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              color: ColorPicker.subGreyColor.withOpacity(0.3),
               height: 1,
               indent: 2,
               endIndent: 1,
@@ -266,7 +266,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
               height: 17.h,
             ),
             Divider(
-              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              color: ColorPicker.subGreyColor.withOpacity(0.3),
               height: 1,
               indent: 2,
               endIndent: 1,
@@ -286,7 +286,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                       Text(
                         "Log out",
                         style: TextStyle(
-                            color: ColorPicker.offGreishColor,
+                            color: ColorPicker.offGreyLightColor,
                             fontWeight: FontWeight.w600,
                             fontSize: 12.sp),
                       ),
@@ -299,7 +299,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Icon(
                     Icons.login_outlined,
                     color: ColorPicker.redColor,

@@ -3,14 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/view/explore/detailProfile/profilrbottonsheet.dart';
-
-import '../../../../view/personProfileScreen/person_profile_screen_view.dart';
-import '../../../../view/reactions/profileSetting/editProfile/edit_profile.screen.dart';
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
-import '../../../app/constant/colour.dart';
+import 'package:storipod_app/view/personProfileScreen/person_profile_screen_view.dart';
+import 'package:storipod_app/view/reactions/profileSetting/editProfile/edit_profile.screen.dart';
 import 'detail_profile_controller.dart';
 
 class DetailProfileView extends GetView<DetailProfileController> {
@@ -26,7 +23,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
           actions: [
             GestureDetector(
               onTap: () {
-                Get.bottomSheet(ProfileBottomSheet(),
+                Get.bottomSheet(const ProfileBottomSheet(),
                     isDismissible: true, enableDrag: true);
               },
               child: Padding(
@@ -91,7 +88,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(PersonProfileScreenView());
+                        Get.to(const PersonProfileScreenView());
                       },
                       child: StatusView(
                         radius: 37.8.r,
@@ -161,7 +158,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                     Text(
                       "@counBorawn",
                       style: TextStyle(
-                          color: ColorPicker.offGreishColor,
+                          color: ColorPicker.offGreyLightColor,
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w600),
                     )
@@ -190,11 +187,11 @@ class DetailProfileView extends GetView<DetailProfileController> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ButtonWidget(
+                    buttonWidget(
                         title: "Edit profile",
                         context: context,
                         onPressed: () {
-                          Get.to(EditProfileScreen());
+                          Get.to(const EditProfileScreen());
                         },
                         fontSize: 14.sp,
                         height: 38.h,
@@ -203,7 +200,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                         redius: 8.r,
                         textColor: ColorPicker.blackColor),
                     Obx(() {
-                      return ButtonWidget(
+                      return buttonWidget(
                           context: context,
                           // title: "UnFollow",
                           title: controller.clicked.value
@@ -231,7 +228,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                 height: 24.h,
               ),
               Container(
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
                 padding: EdgeInsets.only(top: 16.h, left: 20.w, right: 20.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,7 +242,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                     ),
                     GridView.builder(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: 10,
                       padding: EdgeInsets.only(top: 16.h),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -276,7 +273,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Container(
+                                  SizedBox(
                                     width: 40.w,
                                     child: Stack(
                                       children: [

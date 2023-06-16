@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
+
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/string.dart';
 
-
-import '../../../app/constant/colour.dart';
 import 'laugh_tab.controller.dart';
 
 class LaughTabScreen extends GetView<LaughTabController> {
@@ -19,7 +17,7 @@ class LaughTabScreen extends GetView<LaughTabController> {
         body: ListView.builder(
       padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 24.h),
       itemCount: controller.allViewList.length,
-      physics: AlwaysScrollableScrollPhysics(),
+      physics: const AlwaysScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.only(bottom: 12.h),
@@ -27,7 +25,7 @@ class LaughTabScreen extends GetView<LaughTabController> {
             children: [
               Stack(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 50.w,
                     height: 60.h,
                     child: StatusView(
@@ -78,13 +76,13 @@ class LaughTabScreen extends GetView<LaughTabController> {
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               Text(
-                AppStrings.minsAgo,
+                AppStrings.minutesAgo,
                 style: TextStyle(
                     fontSize: 10.sp,
                     fontWeight: FontWeight.w600,
-                    color: ColorPicker.offGreishColor),
+                    color: ColorPicker.offGreyLightColor),
               ),
             ],
           ),

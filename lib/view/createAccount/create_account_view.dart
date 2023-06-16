@@ -1,25 +1,20 @@
-import 'dart:io';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/createAccount/username/username_view.dart';
-
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
-import '../../app/common/app_button.dart';
-import '../login/login_view.dart';
+import 'package:storipod_app/view/login/login_view.dart';
 import 'bottomsheet.dart';
 import 'create_account_controller.dart';
 
 class CreateAccountView extends GetView<CreateAccountController> {
-  CreateAccountView({Key? key}) : super(key: key);
+  const CreateAccountView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -109,13 +104,13 @@ class CreateAccountView extends GetView<CreateAccountController> {
               height: 266.h,
             ),
             Center(
-              child: ButtonWidget(
+              child: buttonWidget(
                 redius: 10.r,
                 context: context,
                 height: 55.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(UsernameView());
+                  Get.to(const UsernameView());
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -145,7 +140,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(LoginView());
+                            Get.to(const LoginView());
                           },
                         text: AppStrings.signIN,
                         style: TextStyle(

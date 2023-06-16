@@ -63,19 +63,19 @@ class RecommendationView extends GetView<RecommendationController> {
                           if (controller.selectedHobby!.length < 5) {
                             controller.selectedHobby!.add(hobby);
 
-                            print(controller.selectedHobby);
+
                           }
                         } else {
                           controller.selectedHobby!
                               .removeWhere((element) => element == hobby);
-                          print(controller.selectedHobby);
+
                         }
                       },
                       child: Container(
                           margin:
-                              EdgeInsets.symmetric(horizontal: 5, vertical: 4),
+                              const EdgeInsets.symmetric(horizontal: 5, vertical: 4),
                           child: Container(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 12),
                             decoration: BoxDecoration(
                               color: isSelected
@@ -111,13 +111,13 @@ class RecommendationView extends GetView<RecommendationController> {
                 height: 259.h,
               ),
               Center(
-                child: ButtonWidget(
+                child: buttonWidget(
                   redius: 10.r,
                   context: context,
                   height: 55.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.to(Routes.FINDNEWSTORY);
+                    Get.to(Routes.findNewStory);
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.done,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../app/common/app_button.dart';
-import '../../../../app/common/app_text_field.dart';
-import '../../../../app/common/commanpaddingcolumn.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
+
 import 'package:get/get.dart';
+import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/common/app_text_field.dart';
+import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/string.dart';
 
 import '../editProfile/edit_profile.screen.dart';
 import 'edit_email.controller.dart';
@@ -60,17 +60,17 @@ class EditEmailScreen extends GetView<EditEmailController> {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 12.sp,
-                    color: ColorPicker.offGreishColor),
+                    color: ColorPicker.offGreyLightColor),
               ),
               SizedBox(
                 height: 24.h,
               ),
               CustomTextField(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                 boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                 isDense: true,
-                suffixIconData1: Icon(null),
+                suffixIconData1: const Icon(null),
                 controller: controller.emailController,
                 hintText: AppStrings.enterEmail,
                 onTap: () {},
@@ -80,13 +80,13 @@ class EditEmailScreen extends GetView<EditEmailController> {
                 height: 28.h,
               ),
               Center(
-                child: ButtonWidget(
+                child: buttonWidget(
                   redius: 10,
                   context: context,
                   height: 55.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.to(EditProfileScreen());
+                    Get.to(const EditProfileScreen());
                   },
                   textColor: ColorPicker.whiteColor,
                   title: "Confirm",

@@ -19,7 +19,7 @@ class LikeTabScreen extends GetView<LikeTabController> {
       body:ListView.builder(
         padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 24.h),
         itemCount: controller.allViewList.length,
-        physics: AlwaysScrollableScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(bottom: 12.h),
@@ -27,7 +27,7 @@ class LikeTabScreen extends GetView<LikeTabController> {
               children: [
                 Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 50.w,
                       height: 60.h,
                       child: StatusView(
@@ -78,13 +78,13 @@ class LikeTabScreen extends GetView<LikeTabController> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
-                  AppStrings.minsAgo,
+                  AppStrings.minutesAgo,
                   style: TextStyle(
                       fontSize: 10.sp,
                       fontWeight: FontWeight.w600,
-                      color: ColorPicker.offGreishColor),
+                      color: ColorPicker.offGreyLightColor),
                 ),
               ],
             ),

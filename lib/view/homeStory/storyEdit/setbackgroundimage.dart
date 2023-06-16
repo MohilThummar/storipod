@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -40,7 +39,7 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(WatchStoryView());
+                    Get.to(const WatchStoryView());
                   },
                   child: Container(
                       width: 60.w,
@@ -65,12 +64,12 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 162,
             ),
             GestureDetector(
               onTap: () {
-                Get.bottomSheet(BottomsheetImage(),
+                Get.bottomSheet(const BottomsheetImage(),
                     elevation: 2, isDismissible: true);
               },
               child: Center(
@@ -118,13 +117,13 @@ class BottomsheetImage extends GetView<StoryEditController> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Center(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xffF1F1F1),
+                            color: const Color(0xffF1F1F1),
                             borderRadius: BorderRadius.circular(20.r),
                           ),
                           height: 5.h,
@@ -145,7 +144,7 @@ class BottomsheetImage extends GetView<StoryEditController> {
                         height: 12.h,
                       ),
                       Divider(
-                        color: ColorPicker.subgreyColor.withOpacity(0.3),
+                        color: ColorPicker.subGreyColor.withOpacity(0.3),
                         height: 1,
                         indent: 2,
                         endIndent: 1,
@@ -154,7 +153,7 @@ class BottomsheetImage extends GetView<StoryEditController> {
                       SizedBox(
                         height: 12.h,
                       ),
-                      Container(
+                      SizedBox(
                         height: 225.h,
                         child: GridView.builder(
                             padding: EdgeInsets.symmetric(horizontal: 10.w),

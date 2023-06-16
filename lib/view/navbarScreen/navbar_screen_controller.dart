@@ -10,9 +10,9 @@ import '../login/login_view.dart';
 class NavbarScreenController extends GetxController {
   //TODO: Implement NavbarScreenController
   List screen = <Widget>[
-    HomeStoryView(),
-    !showProfile.value? ExploreView():SeeAllProfileView(),
-    !isLogin.value ? LoginView():DetailProfileView()
+    const HomeStoryView(),
+    !showProfile.value? const ExploreView():const SeeAllProfileView(),
+    !isLogin.value ? const LoginView():const DetailProfileView()
   ];
 
   void changeSelectedItem(int index) {
@@ -20,21 +20,6 @@ class NavbarScreenController extends GetxController {
     // selectedItemIndex.value = index;
   }
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

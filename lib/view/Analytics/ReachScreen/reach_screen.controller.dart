@@ -31,20 +31,7 @@ class ReachScreenController extends GetxController {
       "username": "10.0k reach"
     }
   ];
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void increment() => count.value++;
 }

@@ -59,7 +59,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
             Center(
               child: CircleAvatar(
                 radius: 50.r,
-                backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+                backgroundImage: const AssetImage(ImagePickerImage.profileIcon),
               ),
             ),
             SizedBox(
@@ -88,12 +88,12 @@ class EditProfileScreen extends GetView<EditProfileController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(EditEmailScreen());
+                Get.to(const EditEmailScreen());
               },
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.r),
-                  color: ColorPicker.GrewhiteColor,
+                  color: ColorPicker.greWhiteColor,
                 ),
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -107,9 +107,9 @@ class EditProfileScreen extends GetView<EditProfileController> {
                       style: TextStyle(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w700,
-                          color: ColorPicker.offGreishColor),
+                          color: ColorPicker.offGreyLightColor),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       "jamesnelsona1@gmail.com",
                       style: TextStyle(
@@ -127,7 +127,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -141,9 +141,9 @@ class EditProfileScreen extends GetView<EditProfileController> {
                     style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreishColor),
+                        color: ColorPicker.offGreyLightColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "+2347039127480",
                     style: TextStyle(
@@ -160,7 +160,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -174,9 +174,9 @@ class EditProfileScreen extends GetView<EditProfileController> {
                     style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreishColor),
+                        color: ColorPicker.offGreyLightColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "Male",
                     style: TextStyle(
@@ -193,7 +193,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -207,9 +207,9 @@ class EditProfileScreen extends GetView<EditProfileController> {
                     style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreishColor),
+                        color: ColorPicker.offGreyLightColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "7 March, 2022",
                     style: TextStyle(
@@ -224,7 +224,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
               height: 230.h,
             ),
             Center(
-              child: ButtonWidget(
+              child: buttonWidget(
                 redius: 8.r,
                 context: context,
                 height: 55.h,

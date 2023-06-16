@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
 import 'package:searchfield/searchfield.dart';
+import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
-
-import '../../../app/common/app_button.dart';
-import '../../../app/common/appbar.dart';
-import '../../../app/constant/colour.dart';
-import '../../../app/constant/image.dart';
-import '../../../app/constant/string.dart';
-import '../../login/login_view.dart';
-import '../userdetail/userdetail_view.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/view/createAccount/userdetail/userdetail_view.dart';
+import 'package:storipod_app/view/login/login_view.dart';
 import 'username_controller.dart';
 import 'country.dart';
 
@@ -53,13 +50,13 @@ class UsernameView extends GetView<UsernameController> {
             SizedBox(
               height: 30.h,
             ),
-            Container(height: 55.h,
+            SizedBox(height: 55.h,
               child: SearchField<Country>(
                 searchInputDecoration: InputDecoration(
                   fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                   filled: true,
                   focusColor: ColorPicker.appButtonColor,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   hintText: AppStrings.enterUsername,
                   counter: null,
                   counterText: "",
@@ -76,7 +73,7 @@ class UsernameView extends GetView<UsernameController> {
                       )),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(4.r),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                           width: 1, color: ColorPicker.appButtonColor)),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(4.r),
@@ -139,13 +136,13 @@ class UsernameView extends GetView<UsernameController> {
               height: 27.h,
             ),
             Center(
-              child: ButtonWidget(
+              child: buttonWidget(
                 redius: 10.r,
                 context: context,
                 height: 55.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(UserdetailView());
+                  Get.to(const UserdetailView());
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -159,7 +156,7 @@ class UsernameView extends GetView<UsernameController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(LoginView());
+                Get.to(const LoginView());
               },
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

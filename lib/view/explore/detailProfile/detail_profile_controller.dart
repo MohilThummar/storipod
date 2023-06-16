@@ -10,20 +10,5 @@ class DetailProfileController extends GetxController {
     clicked.value = !clicked.value;
   }
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
   void increment() => count.value++;
 }

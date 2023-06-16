@@ -13,7 +13,7 @@ PreferredSizeWidget imageAppbarWidget({
     title: Padding(
       padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
       child: Image.asset(
-        ImagePickerImage.onbordingName,
+        ImagePickerImage.onBoardingName,
         height: 30.h,
         width: 75.w,
       ),
@@ -33,7 +33,7 @@ PreferredSizeWidget appbarWithBack({
     title: Padding(
       padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
       child: Image.asset(
-        ImagePickerImage.onbordingName,
+        ImagePickerImage.onBoardingName,
         height: 30.h,
         width: 75.w,
       ),
@@ -44,7 +44,7 @@ PreferredSizeWidget appbarWithBack({
       onTap: onTaped,
       child: Padding(
         padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
-        child: Icon(
+        child: const Icon(
           Icons.arrow_back_ios_new,
           color: ColorPicker.blackColor,
         ),
@@ -69,7 +69,7 @@ PreferredSizeWidget appbarWithSkip({
           child: Padding(
             padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
             child: icon == true
-                ? Icon(
+                ? const Icon(
                     Icons.info_outline,
                     color: ColorPicker.boderBlackColor,
                   )
@@ -87,7 +87,7 @@ PreferredSizeWidget appbarWithSkip({
     title: Padding(
       padding: EdgeInsets.only(bottom: 10.h, top: 35.h),
       child: Image.asset(
-        ImagePickerImage.onbordingName,
+        ImagePickerImage.onBoardingName,
         height: 30.h,
         width: 75.w,
       ),
@@ -120,7 +120,7 @@ PreferredSizeWidget appbarWithSearch({
           child: Padding(
               padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
               child: Image.asset(
-                ImagePickerImage.SearchImage,
+                ImagePickerImage.searchImage,
                 height: 20.h,
                 width: 20.w,
                 color: ColorPicker.blackColor,
@@ -132,7 +132,7 @@ PreferredSizeWidget appbarWithSearch({
     title: Padding(
       padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
       child: Image.asset(
-        ImagePickerImage.onbordingName,
+        ImagePickerImage.onBoardingName,
         height: 30.h,
         width: 75.w,
       ),
@@ -189,7 +189,7 @@ PreferredSizeWidget appbarWithNotification({
           child: Padding(
               padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
               child: Image.asset(
-                ImagePickerImage.SearchImage,
+                ImagePickerImage.searchImage,
                 height: 20.h,
                 width: 20.w,
                 color: ColorPicker.blackColor,
@@ -200,7 +200,7 @@ PreferredSizeWidget appbarWithNotification({
     title: Padding(
       padding: EdgeInsets.only(bottom: 8.h, right: 20.w, top: 24.h),
       child: Image.asset(
-        ImagePickerImage.onbordingName,
+        ImagePickerImage.onBoardingName,
         height: 30.h,
         width: 75.w,
       ),

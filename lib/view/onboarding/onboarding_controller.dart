@@ -5,7 +5,7 @@ import 'package:storipod_app/app/routes/app_pages.dart';
 
 class OnBoardingController extends GetxController {
   pageNavigate() {
-    Timer(const Duration(seconds: 3), () => Get.offAllNamed(Routes.INTRODUCTION));
+    Timer(const Duration(seconds: 3), () => Get.offAllNamed(Routes.introduction));
   }
 
   @override

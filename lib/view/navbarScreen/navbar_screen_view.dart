@@ -19,9 +19,9 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
       body: Obx(
               () {
            controller. screen = <Widget>[
-              HomeStoryView(),
-              !showProfile.value? ExploreView():SeeAllProfileView(),
-              !isLogin.value ? LoginView():DetailProfileView()
+              const HomeStoryView(),
+              !showProfile.value? const ExploreView():const SeeAllProfileView(),
+              !isLogin.value ? const LoginView():const DetailProfileView()
             ];
 
             return controller.screen[correntIndex.value];
@@ -29,7 +29,7 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
       ),
       bottomNavigationBar: Obx(
               () {
-            return Container(
+            return SizedBox(
               height: 75.h,
               child: BottomNavigationBar(
                 selectedFontSize: 12.sp,
@@ -83,12 +83,12 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
                           correntIndex.value = 1;
                         },
                         child: Image.asset(
-                          ImagePickerImage.SearchImage,
+                          ImagePickerImage.searchImage,
                           height: 26.h,
                           width: 24.w,
                           color: correntIndex.value == 1
                               ? ColorPicker.blackColor
-                              : Color(0xff838385),
+                              : const Color(0xff838385),
                         )),
                     label: AppStrings.explore,
                   ),
@@ -101,7 +101,7 @@ class NavbarScreenView extends GetView<NavbarScreenController> {
                       },
                       child: CircleAvatar(
                         radius: 18.r,
-                        backgroundImage: AssetImage(
+                        backgroundImage: const AssetImage(
                           ImagePickerImage.profileIcon,
                         ),
                       ),

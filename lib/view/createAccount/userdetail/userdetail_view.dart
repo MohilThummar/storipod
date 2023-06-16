@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -54,11 +54,11 @@ class UserdetailView extends GetView<UserdetailController> {
               height: 30.h,
             ),
             CustomTextField(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
               boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
               isDense: true,
-              suffixIconData1: Icon(null),
+              suffixIconData1: const Icon(null),
               controller: controller.emailController,
               hintText: AppStrings.enterEmail,
               onTap: () {},
@@ -71,10 +71,10 @@ class UserdetailView extends GetView<UserdetailController> {
               children: [
                 Expanded(
                   child: CustomTextField(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                     isDense: true,
-                    suffixIconData1: Icon(null),
+                    suffixIconData1: const Icon(null),
                     boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                     controller: controller.firstNameController,
                     hintText: AppStrings.firstName,
@@ -82,15 +82,15 @@ class UserdetailView extends GetView<UserdetailController> {
                     inputType: TextInputType.text,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
                 Expanded(
                   child: CustomTextField(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
                     isDense: true,
-                    suffixIconData1: Icon(null),
+                    suffixIconData1: const Icon(null),
                     boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
                     controller: controller.lastNameController,
                     hintText: AppStrings.lastName,
@@ -104,10 +104,10 @@ class UserdetailView extends GetView<UserdetailController> {
               height: 12.h,
             ),
             CustomTextField(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
               isDense: true,
-              suffixIconData1: Icon(null),
+              suffixIconData1: const Icon(null),
               boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
               controller: controller.phoneNumberController,
               hintText: AppStrings.phoneNumber,
@@ -118,13 +118,13 @@ class UserdetailView extends GetView<UserdetailController> {
               height: 20.h,
             ),
             Center(
-              child: ButtonWidget(
+              child: buttonWidget(
                 redius: 10.r,
                 context: context,
                 height: 55.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(SecureaccountView());
+                  Get.to(const SecureaccountView());
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,
@@ -138,7 +138,7 @@ class UserdetailView extends GetView<UserdetailController> {
             ),
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Divider(
                     height: 2,
                     color: ColorPicker.offGreyColor,
@@ -154,7 +154,7 @@ class UserdetailView extends GetView<UserdetailController> {
                       fontSize: 12.sp,
                       color: ColorPicker.boderBlackColor),
                 ),
-                Expanded(
+                const Expanded(
                   child: Divider(
                     height: 2,
                     color: ColorPicker.offGreyColor,
@@ -168,7 +168,7 @@ class UserdetailView extends GetView<UserdetailController> {
             SizedBox(
               height: 18.h,
             ),
-            ButtonIconWidget(
+            buttonIconWidget(
               context: context,
               height: 40.h,
               width: double.infinity,
@@ -184,12 +184,12 @@ class UserdetailView extends GetView<UserdetailController> {
             SizedBox(
               height: 16.h,
             ),
-            ButtonImageWidget(
+            buttonImageWidget(
               context: context,
               height: 40.h,
               width: double.infinity,
               onPressed: () {},
-              imageWidth: 22.w,imageheight: 22.h,
+              imageWidth: 22.w,imageHeight: 22.h,
               image: ImagePickerImage.googleIcon,
               textColor: ColorPicker.boderBlackColor,
               title: AppStrings.signInWithGoogle,

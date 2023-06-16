@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CustomImagePicker {
@@ -18,7 +18,7 @@ class CustomImagePicker {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                child: Text(
+                child: const Text(
                   'Gallery',
                   style: TextStyle(
                     fontSize: 18,
@@ -27,14 +27,21 @@ class CustomImagePicker {
                   ),
                 ),
                 onPressed: () async {
-                  final _pickedFile =
+                  final pickedFile =
                       await ImagePicker().getImage(source: ImageSource.gallery);
-                  Navigator.of(context).pop();
-                  image = _pickedFile == null ? null : File(_pickedFile.path);
+
+
+                  image = pickedFile == null ? null : File(pickedFile.path);
+                  if(
+                  pickedFile!=null
+                  ){
+
+             Get.back();
+                  }
                 },
               ),
               ElevatedButton(
-                child: Text(
+                child: const Text(
                   'Camera',
                   style: TextStyle(
                     fontSize: 18,
@@ -43,10 +50,11 @@ class CustomImagePicker {
                   ),
                 ),
                 onPressed: () async {
-                  final _pickedFile =
+                  final pickedFile =
                       await ImagePicker().getImage(source: ImageSource.camera);
-                  Navigator.of(context).pop();
-                  image = _pickedFile == null ? null : File(_pickedFile.path);
+
+                  image = pickedFile == null ? null : File(pickedFile.path);
+             Get.back();
                 },
               )
             ],

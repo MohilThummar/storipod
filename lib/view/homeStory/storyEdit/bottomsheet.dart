@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 
 import 'story_edit_controller.dart';
@@ -50,7 +49,7 @@ class DiscardStoeyView extends GetView<StoryEditController> {
                 ),
                 Divider(
                   height: 1,
-                  color: ColorPicker.greylightColor.withOpacity(0.4),
+                  color: ColorPicker.greyLightColor.withOpacity(0.4),
                 ),
                 GestureDetector(
                   onTap: () {
@@ -69,7 +68,7 @@ class DiscardStoeyView extends GetView<StoryEditController> {
                 ),
                 Divider(
                   height: 1,
-                  color: ColorPicker.greylightColor.withOpacity(0.4),
+                  color: ColorPicker.greyLightColor.withOpacity(0.4),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 10.h),

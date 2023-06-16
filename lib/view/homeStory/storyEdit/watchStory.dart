@@ -1,14 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-
-
-import '../../../app/constant/colour.dart';
-import '../viewStory.dart';
 import 'story_edit_controller.dart';
 
 class WatchStoryView extends GetView<StoryEditController> {
@@ -72,14 +66,14 @@ class WatchStoryView extends GetView<StoryEditController> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 162,
           ),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: GestureDetector(
               onTap: () {
-                Get.bottomSheet(WatchStorySheetView(),
+                Get.bottomSheet(const WatchStorySheetView(),
                     isDismissible: true, elevation: 2);
               },
               child: Center(
@@ -125,7 +119,7 @@ class WatchStorySheetView extends GetView<StoryEditController> {
                     fit: BoxFit.fill,
                     color: ColorPicker.whiteColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
@@ -206,7 +200,7 @@ class WatchStorySheetView extends GetView<StoryEditController> {
                             fontSize: 13.sp,
                             color: ColorPicker.whiteColor),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       CircleAvatar(
                         radius: 25.r,
                         backgroundColor: ColorPicker.whiteColor,

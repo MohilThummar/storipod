@@ -45,12 +45,12 @@ class ReactionsView extends GetView<ReactionsController> {
           ),
 
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(40),
+            preferredSize: const Size.fromHeight(40),
             child: Align(
               alignment: Alignment.centerLeft,
               child: TabBar(
                 isScrollable: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 controller: controller.tabController,
                 indicatorWeight: 2.h,
                 indicatorSize: TabBarIndicatorSize.tab,
@@ -58,7 +58,7 @@ class ReactionsView extends GetView<ReactionsController> {
                 labelColor: ColorPicker.appButtonColor,
                 unselectedLabelStyle: TextStyle(
                     fontSize: 14.sp,
-                    color: Color(0xff00000),
+                    color: const Color(0x0ff00000),
                     fontWeight: FontWeight.w600),
                 indicatorColor: ColorPicker.appButtonColor,
                 labelPadding: EdgeInsets.symmetric(
@@ -72,7 +72,7 @@ class ReactionsView extends GetView<ReactionsController> {
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 indicatorPadding: EdgeInsets.zero,
                 tabs: [
-                  Tab(
+                  const Tab(
                     child: Text(
                       "All",
                     ),
@@ -94,7 +94,7 @@ class ReactionsView extends GetView<ReactionsController> {
                         SizedBox(
                           width: 10.w,
                         ),
-                        Text(
+                        const Text(
                           "2",
                         ),
                       ],
@@ -113,7 +113,7 @@ class ReactionsView extends GetView<ReactionsController> {
                       SizedBox(
                         width: 10.w,
                       ),
-                      Text(
+                      const Text(
                         "3",
                       ),
                     ]),
@@ -127,7 +127,7 @@ class ReactionsView extends GetView<ReactionsController> {
         ),
         body: TabBarView(
           controller: controller.tabController,
-          children: [
+          children: const [
             AllviewTabScreen(),
             LikeTabScreen(),
             LaughTabScreen(),

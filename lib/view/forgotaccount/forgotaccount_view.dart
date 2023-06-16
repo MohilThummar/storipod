@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,16 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/app_text_field.dart';
+import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/view/login/login_view.dart';
 
-import '../../../view/login/login_view.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
-import '../../app/common/appbar.dart';
-import '../login/login_view.dart';
+
 import 'forgotaccount_controller.dart';
 
 class ForgotaccountView extends GetView<ForgotaccountController> {
@@ -29,7 +27,7 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
       appBar: appbarWithBack(
           context: context,
           onTaped: () {
-            Get.to(LoginView());
+            Get.to(const LoginView());
           }),
       body: commanPaddingWidget(
         child: Column(
@@ -62,9 +60,9 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
             CustomTextField(
               fillColor: ColorPicker.lightWhiteColor.withOpacity(0.3),
               boderColor: ColorPicker.boderBlackColor.withOpacity(0.3),
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               isDense: true,
-              suffixIconData1: Icon(null),
+              suffixIconData1: const Icon(null),
               controller: controller.emailIdController,
               hintText: AppStrings.emailAddress,
               onTap: () {},
@@ -74,7 +72,7 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
               height: 36.h,
             ),
             Center(
-              child: ButtonWidget(
+              child: buttonWidget(
                 redius: 10.r,
                 context: context,
                 height: 55.h,
@@ -84,13 +82,13 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                     context: context,
                     builder: (context) {
                       return Dialog(
-                        insetPadding: EdgeInsets.symmetric(
+                        insetPadding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 20),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
                         elevation: 16,
                         child: Padding(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,13 +115,13 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 14.sp,
-                                    color: ColorPicker.greyliColor),
+                                    color: ColorPicker.greyLiColor),
                               ),
                               SizedBox(
                                 height: 26.h,
                               ),
                               Center(
-                                child: ButtonWidget(
+                                child: buttonWidget(
                                     redius: 10.r,
                                     width: double.infinity,
                                     height: 55.h,

@@ -10,6 +10,7 @@ import '../../../view/navbarScreen/navbar_screen_view.dart';
 import '../../app/common/app_button.dart';
 import '../../app/constant/string.dart';
 import 'findnewstory_controller.dart';
+
 class FindnewstoryView extends GetView<FindnewstoryController> {
   const FindnewstoryView({Key? key}) : super(key: key);
 
@@ -59,9 +60,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                 child: PageView.builder(
                   controller: controller.pageController,
                   onPageChanged: (int page) {
-
-                      controller.activePage= page;
-
+                    controller.activePage = page;
                   },
                   itemCount: controller.pages.length,
                   itemBuilder: (BuildContext context, int index) {
@@ -73,13 +72,13 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                 height: 114.h,
               ),
               Center(
-                child: ButtonWidget(
+                child: buttonWidget(
                   redius: 10,
                   context: context,
                   height: 55.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.offAll(NavbarScreenView());
+                    Get.offAll(const NavbarScreenView());
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
@@ -98,25 +97,24 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List<Widget>.generate(
                     controller.pages.length,
-                        (index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 4),
-                      child: GestureDetector(
-                        onTap: () {
-                          controller.pageController.animateToPage(index,
-                              duration: const Duration(milliseconds: 200),
-                              curve: Curves.easeIn);
+                    (index) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.pageController.animateToPage(index,
+                                  duration: const Duration(milliseconds: 200),
+                                  curve: Curves.easeIn);
 
-                          controller.activePage == controller.pages;
-
-                        },
-                        child: CircleAvatar(
-                          radius: 4.r,
-                          backgroundColor: controller.activePage == index
-                              ? Colors.blueAccent
-                              : Colors.blueAccent.withOpacity(0.4),
-                        ),
-                      ),
-                    )),
+                              // controller.activePage == controller.pages;
+                            },
+                            child: CircleAvatar(
+                              radius: 4.r,
+                              backgroundColor: controller.activePage == index
+                                  ? Colors.blueAccent
+                                  : Colors.blueAccent.withOpacity(0.4),
+                            ),
+                          ),
+                        )),
               ),
             ),
           ],
@@ -126,9 +124,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
   }
 }
 
-
-
-PageOne() {
+pageOne() {
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
@@ -145,7 +141,7 @@ PageOne() {
             radius: 40.r,
             backgroundColor: ColorPicker.skyColor.withOpacity(0.2),
             child: CircleAvatar(
-              backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+              backgroundImage: const AssetImage(ImagePickerImage.profileIcon),
               radius: 36.r,
             ),
           ),
@@ -165,7 +161,7 @@ PageOne() {
   );
 }
 
-PageTwo() {
+pageTwo() {
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
@@ -182,7 +178,7 @@ PageTwo() {
             radius: 40.r,
             backgroundColor: ColorPicker.skyColor.withOpacity(0.2),
             child: CircleAvatar(
-              backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+              backgroundImage: const AssetImage(ImagePickerImage.profileIcon),
               radius: 36.r,
             ),
           ),
@@ -202,7 +198,7 @@ PageTwo() {
   );
 }
 
-PageThree() {
+pageThree() {
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, // Number of columns in the grid
@@ -219,7 +215,7 @@ PageThree() {
             radius: 40.r,
             backgroundColor: ColorPicker.skyColor.withOpacity(0.2),
             child: CircleAvatar(
-              backgroundImage: AssetImage(ImagePickerImage.profileIcon),
+              backgroundImage: const AssetImage(ImagePickerImage.profileIcon),
               radius: 36.r,
             ),
           ),

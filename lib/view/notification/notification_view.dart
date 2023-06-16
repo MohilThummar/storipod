@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
+
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
 import '../../app/common/app_button.dart';
 import 'notification_controller.dart';
 
@@ -71,7 +68,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ddImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ddImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -102,8 +99,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  ButtonWidget(
+                  const Spacer(),
+                  buttonWidget(
                     redius: 8.r,
                     context: context,
                     height: 26.h,
@@ -128,7 +125,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ggImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ggImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -159,7 +156,7 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "View story",
                     style: TextStyle(
@@ -178,7 +175,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.bbImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.bbImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -209,8 +206,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  Container(
+                  const Spacer(),
+                  SizedBox(
                       height: 26.h,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -218,7 +215,7 @@ class NotificationView extends GetView<NotificationController> {
                                 borderRadius: BorderRadius.circular(
                                     8.r), // Define the border radius
                               ),
-                              backgroundColor: Color(0xffF3F3F3)),
+                              backgroundColor: const Color(0xffF3F3F3)),
                           onPressed: () {},
                           child: Text(
                             "Following",
@@ -250,7 +247,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ddImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ddImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -281,8 +278,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  ButtonWidget(
+                  const Spacer(),
+                  buttonWidget(
                     redius: 8.r,
                     context: context,
                     height: 26.h,
@@ -307,7 +304,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ggImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ggImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -338,7 +335,7 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "View story",
                     style: TextStyle(
@@ -357,7 +354,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.bbImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.bbImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -388,8 +385,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  Container(
+                  const Spacer(),
+                  SizedBox(
                       height: 26.h,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -397,7 +394,7 @@ class NotificationView extends GetView<NotificationController> {
                                 borderRadius: BorderRadius.circular(
                                     8.r), // Define the border radius
                               ),
-                              backgroundColor: Color(0xffF3F3F3)),
+                              backgroundColor: const Color(0xffF3F3F3)),
                           onPressed: () {},
                           child: Text(
                             "Following",
@@ -413,7 +410,7 @@ class NotificationView extends GetView<NotificationController> {
               height: 32.h,
             ),
             Divider(
-              color: ColorPicker.subgreyColor.withOpacity(0.3),
+              color: ColorPicker.subGreyColor.withOpacity(0.3),
               height: 1,
               indent: 2,
               endIndent: 1,
@@ -440,7 +437,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ddImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ddImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -471,8 +468,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  ButtonWidget(
+                  const Spacer(),
+                  buttonWidget(
                     redius: 8.r,
                     context: context,
                     height: 26.h,
@@ -489,7 +486,7 @@ class NotificationView extends GetView<NotificationController> {
                   SizedBox(
                     width: 8.w,
                   ),
-                  Icon(Icons.close),
+                  const Icon(Icons.close),
                 ],
               ),
             ),
@@ -501,7 +498,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ddImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ddImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -532,8 +529,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  ButtonWidget(
+                  const Spacer(),
+                  buttonWidget(
                     redius: 8.r,
                     context: context,
                     height: 26.h,
@@ -550,7 +547,7 @@ class NotificationView extends GetView<NotificationController> {
                   SizedBox(
                     width: 8.w,
                   ),
-                  Icon(Icons.close),
+                  const Icon(Icons.close),
                 ],
               ),
             ),
@@ -562,7 +559,7 @@ class NotificationView extends GetView<NotificationController> {
                 children: [
                   CircleAvatar(
                     radius: 16.r,
-                    backgroundImage: AssetImage(ImagePickerImage.ddImage),
+                    backgroundImage: const AssetImage(ImagePickerImage.ddImage),
                   ),
                   SizedBox(
                     width: 12.w,
@@ -593,8 +590,8 @@ class NotificationView extends GetView<NotificationController> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  ButtonWidget(
+                  const Spacer(),
+                  buttonWidget(
                     redius: 8.r,
                     context: context,
                     height: 26.h,
@@ -611,7 +608,7 @@ class NotificationView extends GetView<NotificationController> {
                   SizedBox(
                     width: 8.w,
                   ),
-                  Icon(Icons.close),
+                  const Icon(Icons.close),
                 ],
               ),
             ),

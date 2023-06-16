@@ -14,13 +14,13 @@ class OnBoardingView extends GetView<OnBoardingController> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(ImagePickerImage.onbordingImage),
+            image: AssetImage(ImagePickerImage.onBoardingImage),
             fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: Image.asset(
-            ImagePickerImage.onbordingName,
+            ImagePickerImage.onBoardingName,
             width: 189.w,
           ),
         ),

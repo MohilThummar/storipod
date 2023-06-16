@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
-import '../editInformation/edit_information.screen.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/view/reactions/profileSetting/editInformation/edit_information.screen.dart';
 import 'account.controller.dart';
 
 class AccountScreen extends GetView<AccountController> {
@@ -57,7 +54,7 @@ class AccountScreen extends GetView<AccountController> {
             child: Text(
               "This information is private. To make public, please update your settings. ",
               style: TextStyle(
-                  color: ColorPicker.offGreishColor,
+                  color: ColorPicker.offGreyLightColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 12.sp),
             ),
@@ -65,12 +62,12 @@ class AccountScreen extends GetView<AccountController> {
           SizedBox(
             height: 33.h,
           ),
-          GestureDetector(onTap: (){    Get.to(EditInformationScreen());},
+          GestureDetector(onTap: (){    Get.to(const EditInformationScreen());},
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 20.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.GrewhiteColor,
+                color: ColorPicker.greWhiteColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -85,9 +82,9 @@ class AccountScreen extends GetView<AccountController> {
                     style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreishColor),
+                        color: ColorPicker.offGreyLightColor),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "jamesnelsona1@gmail.com",
                     style: TextStyle(
@@ -106,7 +103,7 @@ class AccountScreen extends GetView<AccountController> {
             margin: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              color: ColorPicker.GrewhiteColor,
+              color: ColorPicker.greWhiteColor,
             ),
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -121,9 +118,9 @@ class AccountScreen extends GetView<AccountController> {
                   style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w700,
-                      color: ColorPicker.offGreishColor),
+                      color: ColorPicker.offGreyLightColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   "+2347039127480",
                   style: TextStyle(
@@ -141,7 +138,7 @@ class AccountScreen extends GetView<AccountController> {
             margin: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              color: ColorPicker.GrewhiteColor,
+              color: ColorPicker.greWhiteColor,
             ),
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -156,9 +153,9 @@ class AccountScreen extends GetView<AccountController> {
                   style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w700,
-                      color: ColorPicker.offGreishColor),
+                      color: ColorPicker.offGreyLightColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   "Male",
                   style: TextStyle(
@@ -176,7 +173,7 @@ class AccountScreen extends GetView<AccountController> {
             margin: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              color: ColorPicker.GrewhiteColor,
+              color: ColorPicker.greWhiteColor,
             ),
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
@@ -191,9 +188,9 @@ class AccountScreen extends GetView<AccountController> {
                   style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w700,
-                      color: ColorPicker.offGreishColor),
+                      color: ColorPicker.offGreyLightColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   "7 March, 2022",
                   style: TextStyle(

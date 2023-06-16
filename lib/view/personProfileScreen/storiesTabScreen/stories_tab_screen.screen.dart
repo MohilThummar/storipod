@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
+import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
-
-import '../../../../app/constant/colour.dart';
-import '../../../../app/constant/image.dart';
-import '../../../../app/constant/string.dart';
 import 'stories_tab_screen.controller.dart';
 
 class StoriesTabScreenScreen extends GetView<StoriesTabScreenController> {
@@ -17,7 +14,7 @@ class StoriesTabScreenScreen extends GetView<StoriesTabScreenController> {
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
-      physics: AlwaysScrollableScrollPhysics(),
+      physics: const AlwaysScrollableScrollPhysics(),
       itemCount: 10,
       padding: EdgeInsets.only(top: 29.h, left: 15.w, right: 15.w),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -29,7 +26,7 @@ class StoriesTabScreenScreen extends GetView<StoriesTabScreenController> {
         return GestureDetector(
           onTap: () {
 
-            Get.to(Routes.REACTIONS);
+            Get.to(Routes.reactions);
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -51,7 +48,7 @@ class StoriesTabScreenScreen extends GetView<StoriesTabScreenController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 40.w,
                     child: Stack(
                       children: [
