@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 import 'notification.controller.dart';
 
 class NotificationScreen extends GetView<NotificationController> {
@@ -181,7 +182,7 @@ class NotificationScreen extends GetView<NotificationController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      // Get.to(ReachScreenScreen());
+                      Get.to(Routes.reachScreen);
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,

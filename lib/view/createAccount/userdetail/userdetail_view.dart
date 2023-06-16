@@ -124,7 +124,7 @@ class UserdetailView extends GetView<UserdetailController> {
                 height: 55.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.to(const SecureaccountView());
+                  Get.to(const SecureAccountView());
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,

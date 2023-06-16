@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:storipod_app/view/Analytics/Engagement/engagement.screen.dart';
+import 'package:storipod_app/view/Analytics/ReachScreen/reach_screen.screen.dart';
 import 'package:storipod_app/view/Analytics/analytics_binding.dart';
 import 'package:storipod_app/view/Analytics/analytics_view.dart';
 import 'package:storipod_app/view/createAccount/create_account_binding.dart';
@@ -35,6 +37,9 @@ import 'package:storipod_app/view/notification/notification_binding.dart';
 import 'package:storipod_app/view/notification/notification_view.dart';
 import 'package:storipod_app/view/onboarding/onboarding_binding.dart';
 import 'package:storipod_app/view/onboarding/onboarding_view.dart';
+import 'package:storipod_app/view/reactions/profileSetting/Wallet/wallet.screen.dart';
+import 'package:storipod_app/view/reactions/profileSetting/account/account.screen.dart';
+import 'package:storipod_app/view/reactions/profileSetting/changePassword/change_password.screen.dart';
 import 'package:storipod_app/view/reactions/profileSetting/profile_setting_binding.dart';
 import 'package:storipod_app/view/reactions/profileSetting/profile_setting_view.dart';
 import 'package:storipod_app/view/reactions/reactions_binding.dart';
@@ -83,7 +88,7 @@ class AppPages {
         ),
         GetPage(
           name: _Paths.secureAccount,
-          page: () => const SecureaccountView(),
+          page: () => const SecureAccountView(),
           binding: SecureaccountBinding(),
         ),
       ],
@@ -92,6 +97,11 @@ class AppPages {
       name: _Paths.forgotAccount,
       page: () => const ForgotaccountView(),
       binding: ForgotaccountBinding(),
+    ),
+    GetPage(
+      name: _Paths.changePassword,
+      page: () => const ChangePasswordScreen(),
+      binding: ReactionsBinding(),
     ),
     GetPage(
       name: _Paths.navbarScreen,
@@ -115,6 +125,7 @@ class AppPages {
         ),
       ],
     ),
+
     GetPage(
       name: _Paths.recommendation,
       page: () => const RecommendationView(),
@@ -152,14 +163,39 @@ class AppPages {
       binding: ReactionsBinding(),
     ),
     GetPage(
-      name: _Paths.profilSetting,
+      name: _Paths.profileSetting,
       page: () => const ProfileSettingView(),
       binding: ProfileSettingBinding(),
+
+    ),
+    GetPage(
+      name: _Paths.wallet,
+      page: () => const WalletScreen(),
+      binding: OnBoardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.account,
+      page: () =>  const AccountScreen(),
+      binding: OnBoardingBinding(),
     ),
     GetPage(
       name: _Paths.analytics,
       page: () => const AnalyticsView(),
       binding: AnalyticsBinding(),
+
     ),
+    GetPage(
+      name: _Paths.reachScreen,
+      page: () => const ReachScreenScreen(),
+      binding: AnalyticsBinding(),
+
+    ),
+    GetPage(
+        name: _Paths.reachScreen,
+        page: () => const EngagementScreen(),
+        binding: AnalyticsBinding(),
+
+    )
   ];
 }
+

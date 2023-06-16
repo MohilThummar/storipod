@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 
-import '../../../app/constant/colour.dart';
-import 'Wallet/wallet.screen.dart';
-import 'aboutApp/about_app.screen.dart';
-import 'account/account.screen.dart';
+
 import 'profile_setting_controller.dart';
 
 class ProfileSettingView extends GetView<ProfileSettingController> {
@@ -86,7 +85,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(const AccountScreen());
+                      Get.to(Routes.account);
 
                     },
                     child: Icon(
@@ -172,7 +171,8 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(const WalletScreen());
+                      Get.to(Routes.wallet);
+                      // Get.to(const WalletScreen());
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
@@ -217,7 +217,7 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(const AboutAppScreen());
+                      Get.to(Routes.account);
                     },
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,

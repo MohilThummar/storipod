@@ -29,14 +29,19 @@ abstract class Routes {
   static const detailProfile = _Paths.explore + _Paths.detailProfile;
   static const personProfileScreen = _Paths.profileScreen + _Paths.personProfileScreen;
   static const reactions = _Paths.reactions;
-  static const profileSetting = _Paths.profilSetting;
+  static const profileSetting = _Paths.profileSetting;
   static const userFollower = _Paths.userFollower;
   static const analytics = _Paths.analytics;
+  static const wallet = _Paths.wallet;
+  static const account = _Paths.account;
+  static const changePassword = _Paths.changePassword;
+  static const reachScreen = _Paths.reachScreen;
 }
 
 abstract class _Paths {
   _Paths._();
   static const home = '/home';
+  static const changePassword = '/changePassword';
 
   static const onBoarding = '/onboarding';
 
@@ -54,6 +59,7 @@ abstract class _Paths {
   static const findNewStory = '/findnewstory';
   static const homeStory = '/home-story';
   static const searchStory = '/searchstory';
+  static const wallet = '/wallet';
   static const storyEdit = '/story-edit';
 
   static const notification = '/notification';
@@ -63,7 +69,9 @@ abstract class _Paths {
   static const detailProfile = '/detail-profile';
   static const personProfileScreen = '/person-profile-screen';
   static const reactions = '/reactions';
-  static const profilSetting = '/profile-setting';
+  static const profileSetting = '/profile-setting';
   static const userFollower = '/user-follower';
   static const analytics = '/analytics';
+  static const account = '/account';
+  static const reachScreen = '/reachScreen';
 }

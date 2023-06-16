@@ -8,12 +8,13 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/navbarScreen/navbar_screen_view.dart';
 
 import 'secureaccount_controller.dart';
 
-class SecureaccountView extends GetView<SecureaccountController> {
-  const SecureaccountView({Key? key}) : super(key: key);
+class SecureAccountView extends GetView<SecureaccountController> {
+  const SecureAccountView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
 
@@ -100,7 +101,7 @@ class SecureaccountView extends GetView<SecureaccountController> {
                   onPressed: () {
                    // controller. correntIndex.value=1;
                    // controller. isLogin.value=true;
-                    Get.offAll(const NavbarScreenView());
+                    Get.offAll(Routes.navBarScreen);
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
