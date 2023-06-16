@@ -6,6 +6,7 @@ class SecureaccountController extends GetxController {
   TextEditingController confirmPasswordController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final count = 0.obs;
+
   RxBool showPassword = false.obs;
   RxBool conformShowPassword = false.obs;
 

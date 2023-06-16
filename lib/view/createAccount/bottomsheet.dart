@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:image_picker/image_picker.dart';
 
-import '../../constant/colour.dart';
-import '../../constant/string.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
 import 'create_account_controller.dart';
 
 class CustomBottomSheet extends StatelessWidget {

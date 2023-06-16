@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/personProfileScreen/draftTabScreen/draft_tab_screen.screen.dart';
-import 'package:storipod_app/app/modules/personProfileScreen/saveTabScreen/save_tab_screen.screen.dart';
-import 'package:storipod_app/app/modules/personProfileScreen/storiesTabScreen/stories_tab_screen.screen.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
-
-import '../../constant/colour.dart';
+import 'package:storipod_app/view/personProfileScreen/saveTabScreen/save_tab_screen.screen.dart';
+import 'package:storipod_app/view/personProfileScreen/storiesTabScreen/stories_tab_screen.screen.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
+import 'draftTabScreen/draft_tab_screen.screen.dart';
 import 'person_profile_screen_controller.dart';
 class PersonProfileScreenView extends GetView<PersonProfileScreenController> {
   const PersonProfileScreenView({Key? key}) : super(key: key);

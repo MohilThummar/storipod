@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/explore/detailProfile/detail_profile_view.dart';
-import 'package:storipod_app/app/modules/explore/explore_view.dart';
-import 'package:storipod_app/app/modules/login/login_view.dart';
-import 'package:storipod_app/main.dart';
-import '../../constant/string.dart';
-import '../explore/SeeAllProfile/views/see_all_profile_view.dart';
-import '../homeStory/views/home_story_view.dart';
+import 'package:storipod_app/app/constant/image.dart';import '../../../../app/constant/string.dart';
+import '../../main.dart';
+import '../explore/SeeAllProfile/see_all_profile_view.dart';
+import '../explore/detailProfile/detail_profile_view.dart';
+import '../explore/explore_view.dart';
+import '../homeStory/home_story_view.dart';
+import '../login/login_view.dart';
 import 'navbar_screen_controller.dart';
 class NavbarScreenView extends GetView<NavbarScreenController> {
   const NavbarScreenView({Key? key}) : super(key: key);

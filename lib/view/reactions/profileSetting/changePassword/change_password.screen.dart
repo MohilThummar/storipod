@@ -5,11 +5,11 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 
-import '../../../common/app_button.dart';
-import '../../../common/app_text_field.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+import '../../../../app/common/app_button.dart';
+import '../../../../app/common/app_text_field.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
 import 'change_password.controller.dart';
 
 class ChangePasswordScreen extends GetView<ChangePasswordController> {

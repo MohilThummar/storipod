@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
-import 'package:storipod_app/app/modules/personProfileScreen/person_profile_screen_view.dart';
-
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
+import '../person_profile_screen_view.dart';
 import 'save_tab_screen.controller.dart';
 
 class SaveTabScreenScreen extends GetView<SaveTabScreenController> {

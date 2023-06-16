@@ -7,7 +7,7 @@ import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
 import '../../app/common/app_button.dart';
 import '../../app/constant/colour.dart';
-import '../../app/modules/findnewstory/findnewstory_view.dart';
+
 import 'recommendation_controller.dart';
 
 class RecommendationView extends GetView<RecommendationController> {

@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:storipod_app/app/modules/homeStory/searchstory/searchstory_controller.dart';
+import 'package:storipod_app/view/homeStory/searchstory/searchstory_controller.dart';
 
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/string.dart';
+
 
 class SearchBottomSheet extends StatelessWidget {
   List<String> options = ['0', '1'];

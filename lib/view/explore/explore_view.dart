@@ -6,7 +6,7 @@ import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/main.dart';
 import '../../../view/homeStory/searchstory/searchstory_view.dart';
 import '../../../view/homeStory/viewStory.dart';
-import '../../constant/string.dart';
+import '../../app/constant/string.dart';
 import 'explore_controller.dart';
 
 class ExploreView extends GetView<ExploreController> {

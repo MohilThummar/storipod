@@ -5,8 +5,9 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/appbar.dart';import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
-import 'package:storipod_app/app/modules/homeStory/storyEdit/story_edit_view.dart';
-import 'package:storipod_app/app/modules/homeStory/searchstory/searchstory_view.dart';
+import 'package:storipod_app/view/homeStory/searchstory/searchstory_view.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/story_edit_view.dart';
+
 
 import '../../../view/notification/notification_view.dart';
 import 'home_story_controller.dart';

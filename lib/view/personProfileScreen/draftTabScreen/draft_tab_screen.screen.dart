@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 
-import '../../../constant/colour.dart';
+import '../../../../app/constant/colour.dart';
+
 import 'draft_tab_screen.controller.dart';
 
 class DraftTabScreenScreen extends GetView<DraftTabScreenController> {

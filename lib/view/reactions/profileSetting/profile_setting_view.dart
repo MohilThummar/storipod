@@ -1,17 +1,14 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/profileSetting/Wallet/wallet.screen.dart';
-import 'package:storipod_app/app/modules/profileSetting/aboutApp/about_app.screen.dart';
-import 'package:storipod_app/app/modules/profileSetting/account/account.screen.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
 
-import '../../constant/colour.dart';
+import '../../../app/constant/colour.dart';
+import 'Wallet/wallet.screen.dart';
+import 'aboutApp/about_app.screen.dart';
+import 'account/account.screen.dart';
 import 'profile_setting_controller.dart';
 
 class ProfileSettingView extends GetView<ProfileSettingController> {

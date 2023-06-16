@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 

@@ -4,9 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import '../../../common/app_text_field.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
+
+import '../../../app/common/app_text_field.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
 import 'engagement.controller.dart';
 
 class EngagementScreen extends GetView<EngagementController> {

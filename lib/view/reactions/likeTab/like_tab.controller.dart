@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
 
 import '../../../app/constant/image.dart';
-import '../../../constant/image.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
 
 class LikeTabController extends GetxController {
   //TODO: Implement LikeTabController

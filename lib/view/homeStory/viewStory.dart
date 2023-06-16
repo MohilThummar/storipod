@@ -5,10 +5,11 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/homeStory/storyEdit/story_edit_controller.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/story_edit_controller.dart';
 import 'package:story_view/widgets/story_view.dart';
 
-import '../../constant/string.dart';
+import '../../app/constant/string.dart';
+
 
 class WatchStoryLiveView extends GetView<StoryEditController> {
   WatchStoryLiveView({Key? key}) : super(key: key);

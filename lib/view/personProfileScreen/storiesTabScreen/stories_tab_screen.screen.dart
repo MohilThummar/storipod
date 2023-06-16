@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
 
-import '../../../../view/reactions/reactions_view.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
 import 'stories_tab_screen.controller.dart';
 
 class StoriesTabScreenScreen extends GetView<StoriesTabScreenController> {

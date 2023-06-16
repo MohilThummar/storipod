@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/modules/homeStory/storyEdit/watchStory.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/watchStory.dart';
+
 import 'story_edit_controller.dart';
 
 class SetBackGroundColorView extends GetView<StoryEditController> {

@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
 
 class ReachScreenController extends GetxController {
   //TODO: Implement ReachScreenController

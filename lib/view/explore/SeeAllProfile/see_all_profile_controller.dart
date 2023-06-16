@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
 
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+
 
 class SeeAllProfileController extends GetxController {
   //TODO: Implement SeeAllProfileController
@@ -16,7 +17,8 @@ class SeeAllProfileController extends GetxController {
 
   List storiesGrideData = [
     {
-      "color": ColorPicker.maroonColor,
+      "color":
+      ColorPicker.maroonColor,
       "image": ImagePickerImage.profileIcon,
       "username": AppStrings.profile2Name,
       "subName": AppStrings.SubProfile,

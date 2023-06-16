@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/searchfiled.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/modules/homeStory/searchstory/searchbottomsheet.dart';
+import 'package:storipod_app/view/homeStory/searchstory/searchbottomsheet.dart';
 
-import '../../../common/commanpaddingcolumn.dart';
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+import '../../../app/common/commanpaddingcolumn.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
 import 'searchstory_controller.dart';
 
 class SearchstoryView extends GetView<SearchstoryController> {

@@ -6,7 +6,8 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
 
-import '../../../constant/colour.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
 import 'notification.controller.dart';
 
 class NotificationScreen extends GetView<NotificationController> {

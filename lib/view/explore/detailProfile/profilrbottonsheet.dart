@@ -4,13 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/Analytics/analytics_view.dart';
-
-
-import '../../../../presentation/notification/notification.screen.dart';
-import '../../../../view/reactions/profileSetting/profile_setting_view.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+import '../../Analytics/analytics_view.dart';
+import '../../reactions/profileSetting/Notification/notification.screen.dart';
+import '../../reactions/profileSetting/profile_setting_view.dart';
 
 class ProfileBottomSheet extends StatelessWidget {
   const ProfileBottomSheet({Key? key}) : super(key: key);

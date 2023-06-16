@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
-import 'package:storipod_app/app/modules/createAccount/secureaccount/secureaccount_view.dart';
-import '../../../common/app_button.dart';
-import '../../../common/app_text_field.dart';
-import '../../../common/appbar.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
-import '../../../constant/string.dart';
+
+import '../../../app/common/app_button.dart';
+import '../../../app/common/app_text_field.dart';
+import '../../../app/common/appbar.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+import '../secureaccount/secureaccount_view.dart';
 import 'userdetail_controller.dart';
 
 class UserdetailView extends GetView<UserdetailController> {

@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:storipod_app/app/common/app_button.dart';
+import 'package:storipod_app/app/common/app_text_field.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 
 import '../../../view/login/login_view.dart';
-import '../../common/app_button.dart';
-import '../../common/app_dialog.dart';
-import '../../common/app_text_field.dart';
-import '../../common/appbar.dart';
-import '../../constant/colour.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
+import '../../app/common/appbar.dart';
 import '../login/login_view.dart';
 import 'forgotaccount_controller.dart';
 

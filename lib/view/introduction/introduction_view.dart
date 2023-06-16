@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 
 import '../../../view/login/login_view.dart';
 import '../../../view/recommendation/recommendation_view.dart';
-import '../../common/app_button.dart';
-import '../../constant/colour.dart';
+import '../../../../app/constant/colour.dart';
 
+import '../../app/common/app_button.dart';
 import 'introduction_controller.dart';
 
 class IntroductionScreen extends GetView<IntroductionController> {

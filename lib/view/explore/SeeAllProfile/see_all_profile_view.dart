@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import '../../../constant/colour.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
 import '../detailProfile/detail_profile_view.dart';
 import 'see_all_profile_controller.dart';
 

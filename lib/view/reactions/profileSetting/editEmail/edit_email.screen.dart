@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../../../app/common/app_button.dart';
+import '../../../../app/common/app_text_field.dart';
+import '../../../../app/common/commanpaddingcolumn.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
 import 'package:get/get.dart';
 
+import '../editProfile/edit_profile.screen.dart';
 import 'edit_email.controller.dart';
 
 class EditEmailScreen extends GetView<EditEmailController> {

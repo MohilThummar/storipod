@@ -5,13 +5,13 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/createAccount/create_account_view.dart';
-import '../../common/app_text_field.dart';
-import '../../common/commanpaddingcolumn.dart';
-import '../../constant/colour.dart';
-import '../../constant/string.dart';
-import '../explore/views/explore_view.dart';
-import '../forgotaccount/views/forgotaccount_view.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
+import '../../app/common/app_text_field.dart';
+import '../../app/common/commanpaddingcolumn.dart';
+import '../createAccount/create_account_view.dart';
+import '../forgotaccount/forgotaccount_view.dart';
 import 'login_controller.dart';
 
 class LoginView extends GetView<LoginController> {

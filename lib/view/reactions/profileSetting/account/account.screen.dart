@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:storipod_app/app/modules/profileSetting/editInformation/edit_information.screen.dart';
-
-import '../../../constant/colour.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../../../../app/constant/string.dart';
+import '../editInformation/edit_information.screen.dart';
 import 'account.controller.dart';
 
 class AccountScreen extends GetView<AccountController> {

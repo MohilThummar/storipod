@@ -4,13 +4,14 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
 import 'package:searchfield/searchfield.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
-import 'package:storipod_app/app/modules/createAccount/userdetail/userdetail_view.dart';
 
-import '../../../common/app_button.dart';
-import '../../../common/app_text_field.dart';
-import '../../../common/appbar.dart';
-import '../../../constant/colour.dart';
-import '../../../constant/string.dart';
+import '../../../app/common/app_button.dart';
+import '../../../app/common/appbar.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+import '../../login/login_view.dart';
+import '../userdetail/userdetail_view.dart';
 import 'username_controller.dart';
 import 'country.dart';
 

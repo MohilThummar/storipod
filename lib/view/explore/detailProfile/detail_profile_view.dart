@@ -3,11 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/common/app_button.dart';
-import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/explore/detailProfile/profilrbottonsheet.dart';
+import 'package:storipod_app/view/explore/detailProfile/profilrbottonsheet.dart';
+
 import '../../../../view/personProfileScreen/person_profile_screen_view.dart';
 import '../../../../view/reactions/profileSetting/editProfile/edit_profile.screen.dart';
-import '../../../constant/colour.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+import '../../../app/constant/colour.dart';
 import 'detail_profile_controller.dart';
 
 class DetailProfileView extends GetView<DetailProfileController> {

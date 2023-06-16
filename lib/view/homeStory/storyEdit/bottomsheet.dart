@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/modules/homeStory/storyEdit/story_edit_view.dart';
 
-import '../../../constant/string.dart';
 import 'story_edit_controller.dart';
 
 class DiscardStoeyView extends GetView<StoryEditController> {

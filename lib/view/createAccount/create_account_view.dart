@@ -8,12 +8,13 @@ import 'package:image_picker/image_picker.dart';
 import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/createAccount/username/username_view.dart';
-import 'package:storipod_app/app/modules/login/login_view.dart';
+import 'package:storipod_app/view/createAccount/username/username_view.dart';
 
-import '../../common/app_button.dart';
-import '../../constant/colour.dart';
-import '../../constant/string.dart';
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+import '../../app/common/app_button.dart';
+import '../login/login_view.dart';
 import 'bottomsheet.dart';
 import 'create_account_controller.dart';
 

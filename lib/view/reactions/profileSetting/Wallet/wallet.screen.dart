@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:storipod_app/app/modules/profileSetting/changePassword/change_password.screen.dart';
 
-import '../../../constant/colour.dart';
-import '../../../constant/image.dart';
+import '../../../../app/constant/colour.dart';
+import '../../../../app/constant/image.dart';
+import '../changePassword/change_password.screen.dart';
 import 'wallet.controller.dart';
 
 class WalletScreen extends GetView<WalletController> {

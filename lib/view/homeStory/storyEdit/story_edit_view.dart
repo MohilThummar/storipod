@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/modules/homeStory/storyEdit/searchkeyworkview.dart';
-import 'package:storipod_app/app/modules/homeStory/storyEdit/setbackgroundimage.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/searchkeyworkview.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/setbackgroundimage.dart';
 
 import 'bottomsheet.dart';
 import 'story_edit_controller.dart';

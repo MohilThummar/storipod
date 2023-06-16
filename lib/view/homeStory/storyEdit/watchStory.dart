@@ -6,7 +6,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:storipod_app/app/constant/image.dart';
 
-import '../../../constant/colour.dart';
+
+import '../../../app/constant/colour.dart';
 import '../viewStory.dart';
 import 'story_edit_controller.dart';
 

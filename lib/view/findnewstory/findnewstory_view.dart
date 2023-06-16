@@ -6,8 +6,9 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import '../../../view/navbarScreen/navbar_screen_view.dart';
-import '../../common/app_button.dart';
-import '../../constant/string.dart';
+
+import '../../app/common/app_button.dart';
+import '../../app/constant/string.dart';
 import 'findnewstory_controller.dart';
 class FindnewstoryView extends GetView<FindnewstoryController> {
   const FindnewstoryView({Key? key}) : super(key: key);

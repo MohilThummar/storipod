@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:storipod_app/app/modules/personProfileScreen/person_profile_screen_controller.dart';
+
+import '../person_profile_screen_controller.dart';
 
 class SaveTabScreenController extends GetxController {
   //TODO: Implement SaveTabScreenController

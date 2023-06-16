@@ -3,9 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
-import 'package:storipod_app/app/modules/Analytics/ReachScreen/reach_screen.screen.dart';
-import '../../common/app_text_field.dart';
-import '../../constant/colour.dart';
+
+import '../../../app/constant/colour.dart';
+import '../../../app/constant/image.dart';
+import '../../../app/constant/string.dart';
+import '../../app/common/app_text_field.dart';
+import 'ReachScreen/reach_screen.screen.dart';
 import 'analytics_controller.dart';
 
 class AnalyticsView extends GetView<AnalyticsController> {
