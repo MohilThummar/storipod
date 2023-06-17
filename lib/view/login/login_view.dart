@@ -236,7 +236,7 @@ class LoginView extends GetView<LoginController> {
             ),
             buttonImageWidget(
               context: context,
-              height: 40.h,
+              height: 48.h,
               width: double.infinity,
               onPressed: () {},
               imageHeight: 22.h,
@@ -248,6 +248,7 @@ class LoginView extends GetView<LoginController> {
               bgColor: ColorPicker.whiteColor,
               disableColor: ColorPicker.appButtonColor,
             ),
+            SizedBox(height: 20.h,)
           ],
         ),
       ),

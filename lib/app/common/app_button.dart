@@ -16,7 +16,7 @@ class AppButton extends StatelessWidget {
   final double? width;
   final Widget? child;
   final IconData? icon;
-  final Color?textColor;
+  final Color? textColor;
 
   final String? image;
 
@@ -44,13 +44,11 @@ class AppButton extends StatelessWidget {
       ),
       child: ElevatedButton(
         // onPressed: disableButton! ? null : onPressed,
-        onPressed:  onPressed,
+        onPressed: onPressed,
         onLongPress: disableButton! ? null : onLongPress,
         style: ElevatedButton.styleFrom(
           onPrimary: ColorPicker.appButtonColor,
           primary: ColorPicker.appButtonColor,
-
-
         ),
         child: child ??
             Row(
@@ -79,10 +77,9 @@ class AppButton extends StatelessWidget {
                 if (title!.isNotEmpty)
                   Text(
                     title!,
-                    textAlign: TextAlign.center,  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-
-                      color: textColor),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700, color: textColor),
                   )
               ],
             ),
@@ -94,25 +91,17 @@ class AppButton extends StatelessWidget {
 Widget textButton({
   BuildContext? context,
   Function()? onPressed,
-  double? redius,
   String? title,
-  double? height,
-  double? width,
 }) {
-  return SizedBox(
-    height: height,
-    width: width,
+  return GestureDetector(
+    onTap: onPressed,
     child: Padding(
       padding: EdgeInsets.only(right: 20.w, top: 15.h),
       child: Align(
         alignment: Alignment.topRight,
-        child: GestureDetector(
-          onTap: onPressed,
-          child: Text(
-            textAlign: TextAlign.end,
-            title!,
-            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
-          ),
+        child: Text(
+          title!,
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
         ),
       ),
     ),
@@ -167,38 +156,39 @@ Widget buttonImageWidget(
     double? imageWidth,
     double? width,
     double? fontSize}) {
-  return Card(
-    elevation: 5,
-    child: SizedBox(
-        height: height,
-        width: width,
-        child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                // elevation: 30,
-                disabledBackgroundColor: disableColor,
-                backgroundColor: bgColor),
-            onPressed: onPressed,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  image!,
-                  height: imageHeight,
-                  width: imageWidth,
-                ),
-                SizedBox(
-                  width: 15.w,
-                ),
-                Text(
-                  title!,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: fontSize,
-                      color: textColor),
-                ),
-              ],
-            ))),
-  );
+  return SizedBox(
+      height: height,
+      width: width,
+      child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.r),
+                // Define the border radius
+              ),
+              disabledBackgroundColor: disableColor,
+              backgroundColor: bgColor),
+          onPressed: onPressed,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                image!,
+                height: imageHeight,
+                width: imageWidth,
+              ),
+              SizedBox(
+                width: 15.w,
+              ),
+              Text(
+                title!,
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: fontSize,
+                    color: textColor),
+              ),
+            ],
+          )));
 }
 
 Widget buttonIconWidget(
@@ -219,6 +209,10 @@ Widget buttonIconWidget(
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.r),
+                // Define the border radius
+              ),
               disabledBackgroundColor: disableColor,
               backgroundColor: bgColor),
           onPressed: onPressed,

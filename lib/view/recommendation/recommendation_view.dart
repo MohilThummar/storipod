@@ -8,6 +8,7 @@ import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/findnewstory/findnewstory_binding.dart';
 import 'package:storipod_app/view/findnewstory/findnewstory_view.dart';
+import 'package:storipod_app/view/login/login_binding.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 
 import 'recommendation_controller.dart';
@@ -18,7 +19,10 @@ class RecommendationView extends GetView<RecommendationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWithSkip(context: context),
+      appBar: appbarWithSkip(context: context,onTaped: (){
+        Get.offAll(const LoginView(),binding: LoginBinding());
+
+      }),
       body: commanPaddingWidget(
         child:  Column(
             crossAxisAlignment: CrossAxisAlignment.center,

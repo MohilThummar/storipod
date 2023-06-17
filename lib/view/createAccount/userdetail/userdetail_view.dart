@@ -120,7 +120,7 @@ class UserdetailView extends GetView<UserdetailController> {
               child: buttonWidget(
                 redius: 12.r,
                 context: context,
-                height: 46.h,
+                height: 48.h,
                 width: double.infinity,
                 onPressed: () {
                   Get.toNamed(Routes.secureAccount);

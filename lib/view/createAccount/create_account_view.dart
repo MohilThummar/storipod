@@ -10,6 +10,7 @@ import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/username/username_view.dart';
+import 'package:storipod_app/view/login/login_binding.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 import 'bottomsheet.dart';
 import 'create_account_controller.dart';
@@ -21,7 +22,11 @@ class CreateAccountView extends GetView<CreateAccountController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
-      appBar: appbarWithSkip(context: context, onTaped: () {}),
+      appBar: appbarWithSkip(
+          context: context,
+          onTaped: () {
+            Get.to(const LoginView(), binding: LoginBinding());
+          }),
       body: commanPaddingWidget(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -105,9 +110,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
             ),
 
             Center(
-              child: 
-              
-              buttonWidget(
+              child: buttonWidget(
                 redius: 12.r,
                 context: context,
                 height: 48.h,
