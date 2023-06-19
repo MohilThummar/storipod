@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/common/app_text_field.dart';
@@ -9,6 +8,7 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
+import 'package:storipod_app/view/login/login_binding.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 
 import 'forgotaccount_controller.dart';
@@ -23,7 +23,7 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
       appBar: appbarWithBack(
           context: context,
           onTaped: () {
-            Get.to(const LoginView());
+            Get.to(const LoginView(), binding: LoginBinding());
           }),
       body: commanPaddingWidget(
         child: Column(
@@ -35,20 +35,14 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
             ),
             Text(
               AppStrings.restoreAccount,
-              style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 24.sp,
-                  color: ColorPicker.blackColor),
+              style: TextStyle(fontWeight: FontWeight.w800, fontSize: 24.sp, color: ColorPicker.blackColor),
             ),
             SizedBox(
               height: 12.h,
             ),
             Text(
               AppStrings.neverLose,
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.sp,
-                  color: ColorPicker.subBlackColor),
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: ColorPicker.subBlackColor),
             ),
             SizedBox(
               height: 35.h,
@@ -78,14 +72,11 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                     context: context,
                     builder: (context) {
                       return Dialog(
-                        insetPadding: const EdgeInsets.symmetric(
-                            horizontal: 16, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
+                        insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         elevation: 16,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisSize: MainAxisSize.min,
@@ -98,35 +89,20 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                               ),
                               Text(
                                 AppStrings.passwordReser,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18.sp,
-                                    color: ColorPicker.blackColor),
+                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18.sp, color: ColorPicker.blackColor),
                               ),
                               SizedBox(
                                 height: 8.h,
                               ),
                               Text(
                                 AppStrings.passwordDialogContain,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14.sp,
-                                    color: ColorPicker.greyLiColor),
+                                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14.sp, color: ColorPicker.greyLiColor),
                               ),
                               SizedBox(
                                 height: 26.h,
                               ),
                               Center(
-                                child: buttonWidget(
-                                    redius: 12.r,
-                                    width: double.infinity,
-                                    height: 48.h,
-                                    onPressed: () {},
-                                    bgColor: ColorPicker.appButtonColor,
-                                    context: context,
-                                    fontSize: 16.sp,
-                                    textColor: ColorPicker.whiteColor,
-                                    title: AppStrings.goToEmail),
+                                child: buttonWidget(redius: 12.r, width: double.infinity, height: 48.h, onPressed: () {}, bgColor: ColorPicker.appButtonColor, context: context, fontSize: 16.sp, textColor: ColorPicker.whiteColor, title: AppStrings.goToEmail),
                               )
                             ],
                           ),

@@ -78,8 +78,7 @@ class AppButton extends StatelessWidget {
                   Text(
                     title!,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w700, color: textColor),
+                    style: TextStyle(fontWeight: FontWeight.w700, color: textColor),
                   )
               ],
             ),
@@ -95,30 +94,23 @@ Widget textButton({
 }) {
   return GestureDetector(
     onTap: onPressed,
-    child: Padding(
-      padding: EdgeInsets.only(right: 20.w, top: 15.h),
-      child: Align(
-        alignment: Alignment.topRight,
-        child: Text(
-          title!,
-          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
+    child: Container(
+      color: Colors.red,
+      child: Padding(
+        padding: EdgeInsets.only(right: 20.w, top: 15.h),
+        child: Align(
+          alignment: Alignment.topRight,
+          child: Text(
+            title!,
+            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
+          ),
         ),
       ),
     ),
   );
 }
 
-Widget buttonWidget(
-    {BuildContext? context,
-    Color? textColor,
-    Function()? onPressed,
-    Color? bgColor,
-    double? redius,
-    Color? disableColor,
-    String? title,
-    double? height,
-    double? width,
-    double? fontSize}) {
+Widget buttonWidget({BuildContext? context, Color? textColor, Function()? onPressed, Color? bgColor, double? redius, Color? disableColor, String? title, double? height, double? width, double? fontSize}) {
   return SizedBox(
       height: height,
       width: width,
@@ -135,27 +127,11 @@ Widget buttonWidget(
           onPressed: onPressed,
           child: Text(
             title!,
-            style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: fontSize,
-                color: textColor),
+            style: TextStyle(fontWeight: FontWeight.w700, fontSize: fontSize, color: textColor),
           )));
 }
 
-Widget buttonImageWidget(
-    {BuildContext? context,
-    Color? disableColor,
-    Color? textColor,
-    Function()? onPressed,
-    Color? bgColor,
-    IconData? iconData,
-    String? title,
-    String? image,
-    double? height,
-    double? imageHeight,
-    double? imageWidth,
-    double? width,
-    double? fontSize}) {
+Widget buttonImageWidget({BuildContext? context, Color? disableColor, Color? textColor, Function()? onPressed, Color? bgColor, IconData? iconData, String? title, String? image, double? height, double? imageHeight, double? imageWidth, double? width, double? fontSize}) {
   return SizedBox(
       height: height,
       width: width,
@@ -182,27 +158,13 @@ Widget buttonImageWidget(
               ),
               Text(
                 title!,
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: fontSize,
-                    color: textColor),
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: fontSize, color: textColor),
               ),
             ],
           )));
 }
 
-Widget buttonIconWidget(
-    {BuildContext? context,
-    Color? disableColor,
-    Color? textColor,
-    Color? iconColor,
-    Function()? onPressed,
-    Color? bgColor,
-    IconData? iconData,
-    String? title,
-    double? height,
-    double? width,
-    double? fontSize}) {
+Widget buttonIconWidget({BuildContext? context, Color? disableColor, Color? textColor, Color? iconColor, Function()? onPressed, Color? bgColor, IconData? iconData, String? title, double? height, double? width, double? fontSize}) {
   return SizedBox(
       height: height,
       width: width,
@@ -228,10 +190,7 @@ Widget buttonIconWidget(
               ),
               Text(
                 title!,
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: fontSize,
-                    color: textColor),
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: fontSize, color: textColor),
               ),
             ],
           )));

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/view/reactions/reactions_binding.dart';
 
 import '../../app/common/app_text_field.dart';
 import 'ReachScreen/reach_screen.screen.dart';
@@ -13,8 +14,6 @@ class AnalyticsView extends GetView<AnalyticsController> {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       backgroundColor: ColorPicker.whiteColor,
       appBar: AppBar(
@@ -38,10 +37,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
           padding: EdgeInsets.only(top: 28.h, bottom: 16.h),
           child: Text(
             'Settings',
-            style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w700,
-                color: ColorPicker.blackColor),
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
           ),
         ),
 
@@ -86,23 +82,12 @@ class AnalyticsView extends GetView<AnalyticsController> {
               children: [
                 TextSpan(
                   text: "You've Reached",
-                  style: TextStyle(
-                      color: ColorPicker.offGreyLightColor,
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w600),
+                  style: TextStyle(color: ColorPicker.offGreyLightColor, fontSize: 14.sp, fontWeight: FontWeight.w600),
                 ),
-                TextSpan(
-                    text: ' +200% ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14.sp,
-                        color: const Color(0xff34A853))),
+                TextSpan(text: ' +200% ', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: const Color(0xff34A853))),
                 TextSpan(
                   text: "more Accounnts Beetween Jun 5 - Jun 14",
-                  style: TextStyle(
-                      color: ColorPicker.offGreyLightColor,
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w600),
+                  style: TextStyle(color: ColorPicker.offGreyLightColor, fontSize: 14.sp, fontWeight: FontWeight.w600),
                 )
               ],
             ),
@@ -124,10 +109,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
               children: [
                 Text(
                   "Accounts reached",
-                  style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w700,
-                      color: ColorPicker.blackColor),
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                 ),
                 const Spacer(),
                 Column(
@@ -135,20 +117,14 @@ class AnalyticsView extends GetView<AnalyticsController> {
                   children: [
                     Text(
                       "132",
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                          color: ColorPicker.blackColor),
+                      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                     ),
                     SizedBox(
                       height: 4.h,
                     ),
                     Text(
                       "+238%",
-                      style: TextStyle(
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w500,
-                          color: ColorPicker.blackEyeColor),
+                      style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w500, color: ColorPicker.blackEyeColor),
                     ),
                   ],
                 ),
@@ -157,7 +133,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(const ReachScreenScreen());
+                    Get.to(const ReachScreenScreen(), binding: ReactionsBinding());
                   },
                   child: Icon(
                     Icons.arrow_forward_ios_outlined,
@@ -185,10 +161,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
               children: [
                 Text(
                   "Accounts Engaged",
-                  style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w700,
-                      color: ColorPicker.blackColor),
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                 ),
                 const Spacer(),
                 Column(
@@ -196,20 +169,14 @@ class AnalyticsView extends GetView<AnalyticsController> {
                   children: [
                     Text(
                       "132",
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                          color: ColorPicker.blackColor),
+                      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                     ),
                     SizedBox(
                       height: 4.h,
                     ),
                     Text(
                       "+238%",
-                      style: TextStyle(
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w500,
-                          color: ColorPicker.blackEyeColor),
+                      style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w500, color: ColorPicker.blackEyeColor),
                     ),
                   ],
                 ),
@@ -241,10 +208,7 @@ class AnalyticsView extends GetView<AnalyticsController> {
               children: [
                 Text(
                   "Total followers",
-                  style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w700,
-                      color: ColorPicker.blackColor),
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                 ),
                 const Spacer(),
                 Column(
@@ -252,20 +216,14 @@ class AnalyticsView extends GetView<AnalyticsController> {
                   children: [
                     Text(
                       "132",
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                          color: ColorPicker.blackColor),
+                      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                     ),
                     SizedBox(
                       height: 4.h,
                     ),
                     Text(
                       "+238%",
-                      style: TextStyle(
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w500,
-                          color: ColorPicker.blackEyeColor),
+                      style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w500, color: ColorPicker.blackEyeColor),
                     ),
                   ],
                 ),

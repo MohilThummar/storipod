@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/story_edit_binding.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/watchStory.dart';
 
 import 'story_edit_controller.dart';
@@ -39,7 +40,7 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(const WatchStoryView());
+                    Get.to(const WatchStoryView(), binding: StoryEditBinding());
                   },
                   child: Container(
                       width: 60.w,
@@ -56,10 +57,7 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
                       child: Center(
                           child: Text(
                         'Post'.toUpperCase(),
-                        style: TextStyle(
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.w700,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                       ))),
                 ),
               ],
@@ -69,17 +67,13 @@ class SetBackGroundColorView extends GetView<StoryEditController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.bottomSheet(const BottomsheetImage(),
-                    elevation: 2, isDismissible: true);
+                Get.bottomSheet(const BottomsheetImage(), elevation: 2, isDismissible: true);
               },
               child: Center(
                 child: Text(
                   "Courtney Brown is here to give you the hottest gossip. Follow me through the next slides to get the full stories!",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 32.sp,
-                      fontWeight: FontWeight.w700,
-                      color: ColorPicker.whiteColor),
+                  style: TextStyle(fontSize: 32.sp, fontWeight: FontWeight.w700, color: ColorPicker.whiteColor),
                 ),
               ),
             ),
@@ -107,78 +101,71 @@ class BottomsheetImage extends GetView<StoryEditController> {
             topRight: Radius.circular(20.r),
           ),
         ),
-        child: Wrap(
-            crossAxisAlignment: WrapCrossAlignment.center,
-            alignment: WrapAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Center(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffF1F1F1),
-                            borderRadius: BorderRadius.circular(20.r),
-                          ),
-                          height: 5.h,
-                          width: 43.w,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 12.h,
-                      ),
-                      Text(
-                        "Choose a skin",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 14.sp,
-                            color: ColorPicker.blackColor),
-                      ),
-                      SizedBox(
-                        height: 12.h,
-                      ),
-                      Divider(
-                        color: ColorPicker.subGreyColor.withOpacity(0.3),
-                        height: 1,
-                        indent: 2,
-                        endIndent: 1,
-                        thickness: 1,
-                      ),
-                      SizedBox(
-                        height: 12.h,
-                      ),
-                      SizedBox(
-                        height: 225.h,
-                        child: GridView.builder(
-                            padding: EdgeInsets.symmetric(horizontal: 10.w),
-                            gridDelegate:
-                                const SliverGridDelegateWithMaxCrossAxisExtent(
-                                    maxCrossAxisExtent: 70,
-                                    // childAspectRatio: 3 / 4,
-                                    crossAxisSpacing: 10,
-                                    mainAxisSpacing: 10),
-                            itemCount: controller.imageList.length,
-                            itemBuilder: (BuildContext ctx, index) {
-                              return Center(
-                                child: CircleAvatar(
-                                  radius: 30.r,
-                                  backgroundImage: AssetImage(
-                                    controller.imageList[index],
-                                  ),
-                                ),
-                              );
-                            }),
-                      ),
-                    ],
+        child: Wrap(crossAxisAlignment: WrapCrossAlignment.center, alignment: WrapAlignment.start, children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              )
-            ]));
+                  Center(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xffF1F1F1),
+                        borderRadius: BorderRadius.circular(20.r),
+                      ),
+                      height: 5.h,
+                      width: 43.w,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  Text(
+                    "Choose a skin",
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14.sp, color: ColorPicker.blackColor),
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  Divider(
+                    color: ColorPicker.subGreyColor.withOpacity(0.3),
+                    height: 1,
+                    indent: 2,
+                    endIndent: 1,
+                    thickness: 1,
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  SizedBox(
+                    height: 225.h,
+                    child: GridView.builder(
+                        padding: EdgeInsets.symmetric(horizontal: 10.w),
+                        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 70,
+                            // childAspectRatio: 3 / 4,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10),
+                        itemCount: controller.imageList.length,
+                        itemBuilder: (BuildContext ctx, index) {
+                          return Center(
+                            child: CircleAvatar(
+                              radius: 30.r,
+                              backgroundImage: AssetImage(
+                                controller.imageList[index],
+                              ),
+                            ),
+                          );
+                        }),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ]));
   }
 }

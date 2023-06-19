@@ -9,11 +9,11 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/create_account_view.dart';
 import 'package:storipod_app/view/forgotaccount/forgotaccount_binding.dart';
 import 'package:storipod_app/view/forgotaccount/forgotaccount_view.dart';
 
+import '../createAccount/create_account_binding.dart';
 import 'login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -36,10 +36,7 @@ class LoginView extends GetView<LoginController> {
             ),
             Text(
               AppStrings.welcome,
-              style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 24.sp,
-                  color: ColorPicker.blackColor),
+              style: TextStyle(fontWeight: FontWeight.w800, fontSize: 24.sp, color: ColorPicker.blackColor),
             ),
             SizedBox(
               height: 8.h,
@@ -48,10 +45,7 @@ class LoginView extends GetView<LoginController> {
               children: [
                 Text(
                   AppStrings.backJames,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14.sp,
-                      color: ColorPicker.subBlackColor),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: ColorPicker.subBlackColor),
                 ),
                 Image.asset(
                   ImagePickerImage.smileyImage,
@@ -79,9 +73,7 @@ class LoginView extends GetView<LoginController> {
             ),
             Obx(() {
               return CustomPasswordTextField(
-                suffixIconData1: controller.showPassword.value
-                    ? ImagePickerImage.showEyeImage
-                    : ImagePickerImage.hiddenImage,
+                suffixIconData1: controller.showPassword.value ? ImagePickerImage.showEyeImage : ImagePickerImage.hiddenImage,
                 onTapSuffix: () {
                   controller.togglePasswordVisibility();
                 },
@@ -109,21 +101,15 @@ class LoginView extends GetView<LoginController> {
                   textDirection: TextDirection.rtl,
                   text: TextSpan(
                     text: AppStrings.forGotPassword,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12.sp,
-                        color: ColorPicker.subBlackColor),
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.sp, color: ColorPicker.subBlackColor),
                     children: <TextSpan>[
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(const ForgotaccountView(),binding: ForgotaccountBinding());
+                            Get.to(const ForgotaccountView(), binding: ForgotaccountBinding());
                           },
                         text: AppStrings.recover,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12.sp,
-                            color: ColorPicker.skyColor),
+                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12.sp, color: ColorPicker.skyColor),
                       ),
                     ],
                   ),
@@ -140,7 +126,7 @@ class LoginView extends GetView<LoginController> {
                 height: 0.055.sh,
                 width: double.infinity,
                 onPressed: () {
-                  Get.offAll(const CreateAccountView());
+                  Get.to(const CreateAccountView(), binding: CreateAccountBinding());
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.signIN,
@@ -162,21 +148,15 @@ class LoginView extends GetView<LoginController> {
                   textDirection: TextDirection.rtl,
                   text: TextSpan(
                     text: AppStrings.dontAccount,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12.sp,
-                        color: ColorPicker.subBlackColor),
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.sp, color: ColorPicker.subBlackColor),
                     children: <TextSpan>[
                       TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.offAll(const CreateAccountView());
+                            Get.to(const CreateAccountView(), binding: CreateAccountBinding());
                           },
                         text: AppStrings.createAccount,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12.sp,
-                            color: ColorPicker.skyColor),
+                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12.sp, color: ColorPicker.skyColor),
                       ),
                     ],
                   ),
@@ -199,10 +179,7 @@ class LoginView extends GetView<LoginController> {
                 ),
                 Text(
                   AppStrings.signInWith,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 12.sp,
-                      color: ColorPicker.boderBlackColor),
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.sp, color: ColorPicker.boderBlackColor),
                 ),
                 const Expanded(
                   child: Divider(
@@ -248,7 +225,9 @@ class LoginView extends GetView<LoginController> {
               bgColor: ColorPicker.whiteColor,
               disableColor: ColorPicker.appButtonColor,
             ),
-            SizedBox(height: 20.h,)
+            SizedBox(
+              height: 20.h,
+            )
           ],
         ),
       ),

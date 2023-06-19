@@ -5,10 +5,9 @@ import 'package:storipod_app/app/common/appbar.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/navbarScreen/navbar_screen_binding.dart';
-import '../../../view/navbarScreen/navbar_screen_view.dart';
 
+import '../../../view/navbarScreen/navbar_screen_view.dart';
 import '../../app/common/app_button.dart';
 import '../../app/constant/string.dart';
 import 'findnewstory_controller.dart';
@@ -33,10 +32,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
               Text(
                 AppStrings.findNEwStory,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 24.sp,
-                    color: ColorPicker.blackColor),
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 24.sp, color: ColorPicker.blackColor),
               ),
               SizedBox(
                 height: 4.h,
@@ -44,10 +40,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
               Text(
                 AppStrings.followPeople,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14.sp,
-                    color: ColorPicker.boderBlackColor),
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: ColorPicker.boderBlackColor),
               ),
               SizedBox(
                 height: 24.h,
@@ -62,12 +55,11 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                 child: PageView.builder(
                   controller: controller.pageController,
                   onPageChanged: (int page) {
-                    controller.activePage = page;
+                    controller.activePage.value = page;
                   },
                   itemCount: controller.pagesGrid.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return controller
-                        .pagesGrid[index % controller.pagesGrid.length];
+                    return controller.pagesGrid[index % controller.pagesGrid.length];
                   },
                 ),
               ),
@@ -81,8 +73,7 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                   height: 48.h,
                   width: double.infinity,
                   onPressed: () {
-                    Get.offAll(const NavbarScreenView(),
-                        binding: NavbarScreenBinding());
+                    Get.offAll(const NavbarScreenView(), binding: NavbarScreenBinding());
                   },
                   textColor: ColorPicker.whiteColor,
                   title: AppStrings.proceed,
@@ -105,16 +96,14 @@ class FindnewstoryView extends GetView<FindnewstoryController> {
                           padding: const EdgeInsets.symmetric(horizontal: 4),
                           child: GestureDetector(
                             onTap: () {
-                              controller.pageController.animateToPage(index,
-                                  duration: const Duration(milliseconds: 200),
-                                  curve: Curves.easeIn);
+                              controller.pageController.animateToPage(index, duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
                             },
-                            child: CircleAvatar(
-                              radius: 4.r,
-                              backgroundColor: controller.activePage == index
-                                  ? Colors.blueAccent
-                                  : Colors.blueAccent.withOpacity(0.4),
-                            ),
+                            child: Obx(() {
+                              return CircleAvatar(
+                                radius: 4.r,
+                                backgroundColor: controller.activePage.value == index ? Colors.blueAccent : Colors.blueAccent.withOpacity(0.4),
+                              );
+                            }),
                           ),
                         )),
               ),
@@ -152,10 +141,7 @@ pageOneDone() {
           ),
           Text(
             "Richard",
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14.sp,
-                color: ColorPicker.blackColor),
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: ColorPicker.blackColor),
           )
         ],
       );
@@ -189,10 +175,7 @@ pageTwoDone() {
           ),
           Text(
             "Richard",
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14.sp,
-                color: ColorPicker.blackColor),
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: ColorPicker.blackColor),
           )
         ],
       );
@@ -226,10 +209,7 @@ pageThreeDone() {
           ),
           Text(
             "Richard",
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14.sp,
-                color: ColorPicker.blackColor),
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp, color: ColorPicker.blackColor),
           )
         ],
       );

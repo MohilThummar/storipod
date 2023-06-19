@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/constant/image.dart';
+import 'package:storipod_app/view/reactions/profileSetting/editEmail/edit_email_binding.dart';
 
 import '../../../../app/common/commanpaddingcolumn.dart';
 import '../../../../app/constant/colour.dart';
@@ -40,10 +40,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
           padding: EdgeInsets.only(top: 28.h, bottom: 16.h),
           child: Text(
             'Edit profile',
-            style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w700,
-                color: ColorPicker.blackColor),
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
           ),
         ),
 
@@ -76,10 +73,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
               child: Center(
                 child: Text(
                   "Change profile photo",
-                  style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w600,
-                      color: ColorPicker.linkColor),
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600, color: ColorPicker.linkColor),
                 ),
               ),
             ),
@@ -88,7 +82,7 @@ class EditProfileScreen extends GetView<EditProfileController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(const EditEmailScreen());
+                Get.to(const EditEmailScreen(), binding: EditEmailBinding());
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -104,18 +98,12 @@ class EditProfileScreen extends GetView<EditProfileController> {
                     ),
                     Text(
                       "Email",
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                          color: ColorPicker.offGreyLightColor),
+                      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.offGreyLightColor),
                     ),
                     const Spacer(),
                     Text(
                       "jamesnelsona1@gmail.com",
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                          color: ColorPicker.blackColor),
+                      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                     ),
                   ],
                 ),
@@ -138,18 +126,12 @@ class EditProfileScreen extends GetView<EditProfileController> {
                   ),
                   Text(
                     "Phone",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreyLightColor),
+                    style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.offGreyLightColor),
                   ),
                   const Spacer(),
                   Text(
                     "+2347039127480",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
+                    style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                   ),
                 ],
               ),
@@ -171,18 +153,12 @@ class EditProfileScreen extends GetView<EditProfileController> {
                   ),
                   Text(
                     "Gender",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreyLightColor),
+                    style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.offGreyLightColor),
                   ),
                   const Spacer(),
                   Text(
                     "Male",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
+                    style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                   ),
                 ],
               ),
@@ -204,18 +180,12 @@ class EditProfileScreen extends GetView<EditProfileController> {
                   ),
                   Text(
                     "Date of birth",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.offGreyLightColor),
+                    style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.offGreyLightColor),
                   ),
                   const Spacer(),
                   Text(
                     "7 March, 2022",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
+                    style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                   ),
                 ],
               ),

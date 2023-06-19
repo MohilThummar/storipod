@@ -6,8 +6,9 @@ import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/view/explore/detailProfile/profilrbottonsheet.dart';
-import 'package:storipod_app/view/personProfileScreen/person_profile_screen_view.dart';
 import 'package:storipod_app/view/reactions/profileSetting/editProfile/edit_profile.screen.dart';
+
+import '../../../app/routes/app_pages.dart';
 import 'detail_profile_controller.dart';
 
 class DetailProfileView extends GetView<DetailProfileController> {
@@ -15,7 +16,6 @@ class DetailProfileView extends GetView<DetailProfileController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: ColorPicker.whiteColor,
         appBar: AppBar(
@@ -23,8 +23,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
           actions: [
             GestureDetector(
               onTap: () {
-                Get.bottomSheet(const ProfileBottomSheet(),
-                    isDismissible: true, enableDrag: true);
+                Get.bottomSheet(const ProfileBottomSheet(), isDismissible: true, enableDrag: true);
               },
               child: Padding(
                   padding: EdgeInsets.only(
@@ -46,10 +45,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
             ),
             child: Text(
               '@cojshka',
-              style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w700,
-                  color: ColorPicker.blackColor),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
             ),
           ),
           centerTitle: false,
@@ -71,24 +67,18 @@ class DetailProfileView extends GetView<DetailProfileController> {
                         children: [
                           Text(
                             "10.1k",
-                            style: TextStyle(
-                                color: ColorPicker.blackColor,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16.sp),
+                            style: TextStyle(color: ColorPicker.blackColor, fontWeight: FontWeight.w700, fontSize: 16.sp),
                           ),
                           Text(
                             "Followers",
-                            style: TextStyle(
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w600,
-                                color: ColorPicker.greySubColor),
+                            style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600, color: ColorPicker.greySubColor),
                           )
                         ],
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(const PersonProfileScreenView());
+                        Get.toNamed(Routes.personProfileScreen);
                       },
                       child: StatusView(
                         radius: 37.8.r,
@@ -108,17 +98,11 @@ class DetailProfileView extends GetView<DetailProfileController> {
                         children: [
                           Text(
                             "100",
-                            style: TextStyle(
-                                color: ColorPicker.blackColor,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16.sp),
+                            style: TextStyle(color: ColorPicker.blackColor, fontWeight: FontWeight.w700, fontSize: 16.sp),
                           ),
                           Text(
                             "Following",
-                            style: TextStyle(
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w600,
-                                color: ColorPicker.greySubColor),
+                            style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600, color: ColorPicker.greySubColor),
                           )
                         ],
                       ),
@@ -137,10 +121,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                   children: <Widget>[
                     Text(
                       "GistLover",
-                      style: TextStyle(
-                          color: ColorPicker.blackColor,
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w700),
+                      style: TextStyle(color: ColorPicker.blackColor, fontSize: 16.sp, fontWeight: FontWeight.w700),
                     ),
                     SizedBox(
                       width: 28.w,
@@ -157,10 +138,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                     ),
                     Text(
                       "@counBorawn",
-                      style: TextStyle(
-                          color: ColorPicker.offGreyLightColor,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w600),
+                      style: TextStyle(color: ColorPicker.offGreyLightColor, fontSize: 12.sp, fontWeight: FontWeight.w600),
                     )
                   ],
                 )),
@@ -173,10 +151,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                 child: Text(
                   "Journalist #web #GISTmystero #Software Aproko | #graphicdesigner #Artist 🇳🇬 | #fullgistLover",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w500,
-                      color: ColorPicker.blackColor),
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: ColorPicker.blackColor),
                 ),
               ),
               SizedBox(
@@ -203,9 +178,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                       return buttonWidget(
                           context: context,
                           // title: "UnFollow",
-                          title: controller.clicked.value
-                              ? "Follow Back"
-                              : "UnFollow",
+                          title: controller.clicked.value ? "Follow Back" : "UnFollow",
                           // context: context,
                           onPressed: () {
                             controller.buttonUnfollow();
@@ -213,13 +186,9 @@ class DetailProfileView extends GetView<DetailProfileController> {
                           fontSize: 14.sp,
                           height: 48.h,
                           width: 158.w,
-                          bgColor: controller.clicked.value
-                              ? ColorPicker.appButtonColor
-                              : ColorPicker.pureWhiteColor,
+                          bgColor: controller.clicked.value ? ColorPicker.appButtonColor : ColorPicker.pureWhiteColor,
                           redius: 12.r,
-                          textColor: controller.clicked.value
-                              ? ColorPicker.whiteColor
-                              : ColorPicker.blackColor);
+                          textColor: controller.clicked.value ? ColorPicker.whiteColor : ColorPicker.blackColor);
                     }),
                   ],
                 ),
@@ -235,21 +204,14 @@ class DetailProfileView extends GetView<DetailProfileController> {
                   children: [
                     Text(
                       "Stories",
-                      style: TextStyle(
-                          color: ColorPicker.blackColor,
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w700),
+                      style: TextStyle(color: ColorPicker.blackColor, fontSize: 14.sp, fontWeight: FontWeight.w700),
                     ),
                     GridView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: 10,
                       padding: EdgeInsets.only(top: 16.h),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3,
-                          mainAxisExtent: 128.h,
-                          crossAxisSpacing: 25,
-                          mainAxisSpacing: 25),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisExtent: 128.h, crossAxisSpacing: 25, mainAxisSpacing: 25),
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {},
@@ -277,22 +239,11 @@ class DetailProfileView extends GetView<DetailProfileController> {
                                     width: 40.w,
                                     child: Stack(
                                       children: [
-                                        Positioned(
-                                            child: CircleAvatar(
-                                                radius: 12.r,
-                                                backgroundColor: ColorPicker
-                                                    .yellowColor
-                                                    .withOpacity(0.4),
-                                                child: Image.asset(
-                                                    height: 12.h,
-                                                    width: 12.w,
-                                                    ImagePickerImage.laugh))),
+                                        Positioned(child: CircleAvatar(radius: 12.r, backgroundColor: ColorPicker.yellowColor.withOpacity(0.4), child: Image.asset(height: 12.h, width: 12.w, ImagePickerImage.laugh))),
                                         Positioned(
                                             left: 15,
                                             child: CircleAvatar(
-                                                backgroundColor: ColorPicker
-                                                    .redColor
-                                                    .withOpacity(0.4),
+                                                backgroundColor: ColorPicker.redColor.withOpacity(0.4),
                                                 radius: 12.r,
                                                 child: Icon(
                                                   Icons.favorite,
@@ -304,10 +255,7 @@ class DetailProfileView extends GetView<DetailProfileController> {
                                   ),
                                   Text(
                                     "200",
-                                    style: TextStyle(
-                                        color: ColorPicker.blackColor,
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500),
+                                    style: TextStyle(color: ColorPicker.blackColor, fontSize: 12.sp, fontWeight: FontWeight.w500),
                                   )
                                 ],
                               )

@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
-import 'package:storipod_app/view/Analytics/analytics_view.dart';
-import 'package:storipod_app/view/reactions/profileSetting/Notification/notification.screen.dart';
 import 'package:storipod_app/view/reactions/profileSetting/profile_setting_view.dart';
+
+import '../../reactions/profileSetting/profile_setting_binding.dart';
 
 class ProfileBottomSheet extends StatelessWidget {
   const ProfileBottomSheet({Key? key}) : super(key: key);
@@ -48,23 +48,19 @@ class ProfileBottomSheet extends StatelessWidget {
               // ),
               GestureDetector(
                 onTap: () {
-                  Get.to(const ProfileSettingView());
+                  Get.to(const ProfileSettingView(), binding: ProfileSettingBinding());
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5.h),
                   child: Row(
                     children: [
-                      Image.asset(ImagePickerImage.settingImage,
-                          height: 18.h, width: 18.w, fit: BoxFit.fill),
+                      Image.asset(ImagePickerImage.settingImage, height: 18.h, width: 18.w, fit: BoxFit.fill),
                       SizedBox(
                         width: 15.w,
                       ),
                       Text(
                         "Settings",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16.sp,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp, color: ColorPicker.blackColor),
                       ),
                     ],
                   ),
@@ -74,23 +70,20 @@ class ProfileBottomSheet extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Get.toNamed(Routes.analytics);
+
                   // Get.back();
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5..h),
                   child: Row(
                     children: [
-                      Image.asset(ImagePickerImage.analyticsImage,
-                          height: 18.h, width: 18.w, fit: BoxFit.fill),
+                      Image.asset(ImagePickerImage.analyticsImage, height: 18.h, width: 18.w, fit: BoxFit.fill),
                       SizedBox(
                         width: 15.w,
                       ),
                       Text(
                         "Analytics",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16.sp,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp, color: ColorPicker.blackColor),
                       ),
                     ],
                   ),
@@ -104,17 +97,13 @@ class ProfileBottomSheet extends StatelessWidget {
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5..h),
                   child: Row(
                     children: [
-                      Image.asset(ImagePickerImage.savedImage,
-                          height: 18.h, width: 18.w, fit: BoxFit.fill),
+                      Image.asset(ImagePickerImage.savedImage, height: 18.h, width: 18.w, fit: BoxFit.fill),
                       SizedBox(
                         width: 15.w,
                       ),
                       Text(
                         "Saved",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16.sp,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp, color: ColorPicker.blackColor),
                       ),
                     ],
                   ),
@@ -122,7 +111,7 @@ class ProfileBottomSheet extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(const NotificationScreen());
+                  Get.toNamed(Routes.notification);
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.0.w, bottom: 27.5..h),
@@ -140,10 +129,7 @@ class ProfileBottomSheet extends StatelessWidget {
                       ),
                       Text(
                         "Notifications",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16.sp,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp, color: ColorPicker.blackColor),
                       ),
                     ],
                   ),

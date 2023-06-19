@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
-import 'package:storipod_app/view/login/login_view.dart';
+import 'package:storipod_app/view/navbarScreen/navbar_screen_binding.dart';
+import 'package:storipod_app/view/navbarScreen/navbar_screen_view.dart';
 import 'package:storipod_app/view/recommendation/recommendation_binding.dart';
 import 'package:storipod_app/view/recommendation/recommendation_view.dart';
 
@@ -21,15 +21,9 @@ class IntroductionScreen extends GetView<IntroductionController> {
           children: [
             Container(
               decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/intro.png"), fit: BoxFit.fill),
+                image: DecorationImage(image: AssetImage("assets/intro.png"), fit: BoxFit.fill),
               ),
             ),
-            textButton(
-                onPressed: () {
-                  Get.offAll(const LoginView());
-                },
-                title: "  Skip"),
             PageView.builder(
               controller: controller.pageController,
               onPageChanged: (int page) {
@@ -53,16 +47,14 @@ class IntroductionScreen extends GetView<IntroductionController> {
                     padding: const EdgeInsets.symmetric(horizontal: 4),
                     child: GestureDetector(
                       onTap: () {
-                        controller.pageController.animateToPage(index,
-                            duration: const Duration(milliseconds: 200),
-                            curve: Curves.easeIn);
+                        controller.pageController.animateToPage(index, duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
                       },
-                      child: CircleAvatar(
-                        radius: 4.r,
-                        backgroundColor: controller.activePage.value == index
-                            ? Colors.blueAccent
-                            : Colors.blueAccent.withOpacity(0.4),
-                      ),
+                      child: Obx(() {
+                        return CircleAvatar(
+                          radius: 4.r,
+                          backgroundColor: controller.activePage.value == index ? Colors.blueAccent : Colors.blueAccent.withOpacity(0.4),
+                        );
+                      }),
                     ),
                   ),
                 ),
@@ -81,13 +73,26 @@ class IntroductionScreen extends GetView<IntroductionController> {
                     redius: 12.r,
                     textColor: ColorPicker.whiteColor,
                     onPressed: () {
-                      Get.offAll(const RecommendationView(),binding: RecommendationBinding());
+                      Get.to(const RecommendationView(), binding: RecommendationBinding());
                     },
                     width: double.infinity,
                     fontSize: 16.sp,
                     height: 48.h,
                     title: "Get started",
                   ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.topRight,
+              child: TextButton(
+                onPressed: () {
+                  Get.offAll(const NavbarScreenView(), binding: NavbarScreenBinding());
+                },
+                style: ButtonStyle(foregroundColor: MaterialStatePropertyAll(Colors.black)),
+                child: Text(
+                  "  Skip",
+                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
                 ),
               ),
             ),
@@ -107,27 +112,18 @@ pageOne() {
       children: [
         Text(
           "It's Shories Time !",
-          style: TextStyle(
-              fontSize: 24.sp,
-              color: ColorPicker.blackColor,
-              fontWeight: FontWeight.w800),
+          style: TextStyle(fontSize: 24.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w800),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Text(
             "Tell Your Story",
-            style: TextStyle(
-                fontSize: 14.sp,
-                color: ColorPicker.blackColor,
-                fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 14.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w600),
           ),
         ),
         Text(
           "Find New Ones",
-          style: TextStyle(
-              fontSize: 14.sp,
-              color: ColorPicker.blackColor,
-              fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 14.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w600),
         ),
       ],
     )),
@@ -143,27 +139,18 @@ pageTwo() {
       children: [
         Text(
           "It's Shories Time !",
-          style: TextStyle(
-              fontSize: 24.sp,
-              color: ColorPicker.blackColor,
-              fontWeight: FontWeight.w800),
+          style: TextStyle(fontSize: 24.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w800),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Text(
             "Tell Your Story",
-            style: TextStyle(
-                fontSize: 14.sp,
-                color: ColorPicker.blackColor,
-                fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 14.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w600),
           ),
         ),
         Text(
           "Find New Ones",
-          style: TextStyle(
-              fontSize: 14.sp,
-              color: ColorPicker.blackColor,
-              fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 14.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w600),
         ),
       ],
     )),
@@ -179,27 +166,18 @@ pageThree() {
       children: [
         Text(
           "It's Shories Time !",
-          style: TextStyle(
-              fontSize: 24.sp,
-              color: ColorPicker.blackColor,
-              fontWeight: FontWeight.w800),
+          style: TextStyle(fontSize: 24.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w800),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Text(
             "Tell Your Story",
-            style: TextStyle(
-                fontSize: 14.sp,
-                color: ColorPicker.blackColor,
-                fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 14.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w600),
           ),
         ),
         Text(
           "Find New Ones",
-          style: TextStyle(
-              fontSize: 14.sp,
-              color: ColorPicker.blackColor,
-              fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 14.sp, color: ColorPicker.blackColor, fontWeight: FontWeight.w600),
         ),
       ],
     )),

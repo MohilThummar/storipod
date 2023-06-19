@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:status_view/status_view.dart';
 import 'package:get/get.dart';
-import 'package:storipod_app/app/common/appbar.dart';import 'package:storipod_app/app/constant/colour.dart';
+import 'package:status_view/status_view.dart';
+import 'package:storipod_app/app/common/appbar.dart';
+import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/view/homeStory/searchstory/searchstory_binding.dart';
 import 'package:storipod_app/view/homeStory/searchstory/searchstory_view.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/story_edit_binding.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/story_edit_view.dart';
-
+import 'package:storipod_app/view/notification/notification_binding.dart';
 
 import '../../../view/notification/notification_view.dart';
 import 'home_story_controller.dart';
@@ -19,15 +20,13 @@ class HomeStoryView extends GetView<HomeStoryController> {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       appBar: appbarWithNotification(
           onTapedNotificaton: () {
-            Get.to(const NotificationView());
+            Get.to(const NotificationView(), binding: NotificationBinding());
           },
           onTaped: () {
-            Get.to(const SearchstoryView(),binding: SearchstoryBinding());
+            Get.to(const SearchstoryView(), binding: SearchstoryBinding());
           },
           context: context),
       body: SingleChildScrollView(
@@ -63,27 +62,21 @@ class HomeStoryView extends GetView<HomeStoryController> {
                     children: [
                       Text(
                         AppStrings.yourStory,
-                        style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w800,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w800, color: ColorPicker.blackColor),
                       ),
                       SizedBox(
                         height: 4.h,
                       ),
                       Text(
                         AppStrings.yearAgo,
-                        style: TextStyle(
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w600,
-                            color: ColorPicker.boderBlackColor),
+                        style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w600, color: ColorPicker.boderBlackColor),
                       ),
                     ],
                   ),
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.to(const StoryEditView(),binding: StoryEditBinding());
+                      Get.to(const StoryEditView(), binding: StoryEditBinding());
                     },
                     child: CircleAvatar(
                       radius: 21.r,
@@ -119,10 +112,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
               ),
               child: Text(
                 AppStrings.recent,
-                style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w800,
-                    color: ColorPicker.blackColor),
+                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w800, color: ColorPicker.blackColor),
               ),
             ),
             ListView.builder(
@@ -132,8 +122,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
               itemCount: controller.storyList.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 6.0.h, horizontal: 1.5.w),
+                  padding: EdgeInsets.symmetric(vertical: 6.0.h, horizontal: 1.5.w),
                   child: Row(
                     children: [
                       StatusView(
@@ -157,20 +146,14 @@ class HomeStoryView extends GetView<HomeStoryController> {
                           children: [
                             Text(
                               controller.storyList[index]["name"],
-                              style: TextStyle(
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w700,
-                                  color: ColorPicker.blackColor),
+                              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                             ),
                             SizedBox(
                               height: 4.h,
                             ),
                             Text(
                               controller.storyList[index]["subName"],
-                              style: TextStyle(
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.w600,
-                                  color: ColorPicker.boderBlackColor),
+                              style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600, color: ColorPicker.boderBlackColor),
                             ),
                           ],
                         ),
@@ -192,10 +175,7 @@ class HomeStoryView extends GetView<HomeStoryController> {
                           ),
                           Text(
                             controller.storyList[index]["time"],
-                            style: TextStyle(
-                                fontSize: 10.sp,
-                                fontWeight: FontWeight.w600,
-                                color: ColorPicker.boderBlackColor),
+                            style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w600, color: ColorPicker.boderBlackColor),
                           ),
                         ],
                       )

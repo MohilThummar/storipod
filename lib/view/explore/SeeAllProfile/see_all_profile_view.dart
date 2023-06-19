@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/view/explore/detailProfile/detail_profile_view.dart';
+
+import '../../../app/routes/app_pages.dart';
 import 'see_all_profile_controller.dart';
 
 class SeeAllProfileView extends GetView<SeeAllProfileController> {
@@ -11,7 +12,6 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorPicker.whiteColor,
@@ -30,10 +30,7 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
           padding: EdgeInsets.only(right: 12.w, top: 10.h),
           child: Text(
             'Top contributors',
-            style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w700,
-                color: ColorPicker.blackColor),
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
           ),
         ),
         centerTitle: true,
@@ -54,15 +51,14 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             onTap: () {
-              Get.to(const DetailProfileView());
+              Get.toNamed(Routes.detailProfile);
             },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage:
-                      AssetImage(controller.storiesGrideData[index]["image"]),
+                  backgroundImage: AssetImage(controller.storiesGrideData[index]["image"]),
                   radius: 45.r,
                 ),
                 SizedBox(
@@ -70,20 +66,14 @@ class SeeAllProfileView extends GetView<SeeAllProfileController> {
                 ),
                 Text(
                   controller.storiesGrideData[index]["username"],
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12.sp,
-                      color: ColorPicker.blackColor),
+                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12.sp, color: ColorPicker.blackColor),
                 ),
                 SizedBox(
                   height: 4.h,
                 ),
                 Text(
                   controller.storiesGrideData[index]["subName"],
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 10.sp,
-                      color: ColorPicker.boderBlackColor),
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 10.sp, color: ColorPicker.boderBlackColor),
                 ),
               ],
             ),

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:status_view/status_view.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
+
 import '../person_profile_screen_view.dart';
-import 'save_tab_screen.controller.dart';
+import 'save_tab_controller.dart';
 
 class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
   const SaveTabScreenScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return WillPopScope(
       onWillPop: () async {
         controller.personProfileScreenController.tabController.index = 1;
@@ -45,10 +44,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
             padding: EdgeInsets.only(top: 18.h, bottom: 16.h),
             child: Text(
               'Saved',
-              style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w700,
-                  color: ColorPicker.blackColor),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
             ),
           ),
           centerTitle: true,
@@ -58,11 +54,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
           physics: const AlwaysScrollableScrollPhysics(),
           itemCount: 10,
           padding: EdgeInsets.only(top: 24.h, left: 10.w, right: 10.w),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              mainAxisExtent: 120.h,
-              crossAxisSpacing: 25,
-              mainAxisSpacing: 25),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisExtent: 120.h, crossAxisSpacing: 25, mainAxisSpacing: 25),
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {},
@@ -90,20 +82,11 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
                         width: 40.w,
                         child: Stack(
                           children: [
-                            Positioned(
-                                child: CircleAvatar(
-                                    radius: 12.r,
-                                    backgroundColor: ColorPicker.yellowColor
-                                        .withOpacity(0.4),
-                                    child: Image.asset(
-                                        height: 12.h,
-                                        width: 12.w,
-                                        ImagePickerImage.laugh))),
+                            Positioned(child: CircleAvatar(radius: 12.r, backgroundColor: ColorPicker.yellowColor.withOpacity(0.4), child: Image.asset(height: 12.h, width: 12.w, ImagePickerImage.laugh))),
                             Positioned(
                                 left: 15,
                                 child: CircleAvatar(
-                                    backgroundColor:
-                                        ColorPicker.redColor.withOpacity(0.4),
+                                    backgroundColor: ColorPicker.redColor.withOpacity(0.4),
                                     radius: 12.r,
                                     child: Icon(
                                       Icons.favorite,
@@ -115,10 +98,7 @@ class SaveTabScreenScreen extends GetView<SaveTabScreenController> {
                       ),
                       Text(
                         "200",
-                        style: TextStyle(
-                            color: ColorPicker.blackColor,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w500),
+                        style: TextStyle(color: ColorPicker.blackColor, fontSize: 12.sp, fontWeight: FontWeight.w500),
                       )
                     ],
                   )

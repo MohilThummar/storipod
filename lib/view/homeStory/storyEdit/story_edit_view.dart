@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/searchkeyworkview.dart';
 import 'package:storipod_app/view/homeStory/storyEdit/setbackgroundimage.dart';
+import 'package:storipod_app/view/homeStory/storyEdit/story_edit_binding.dart';
 
 import 'bottomsheet.dart';
 import 'story_edit_controller.dart';
@@ -16,8 +16,6 @@ class StoryEditView extends GetView<StoryEditController> {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       backgroundColor: ColorPicker.blackColor,
       appBar: AppBar(
@@ -57,10 +55,7 @@ class StoryEditView extends GetView<StoryEditController> {
             child: Center(
                 child: Text(
               'Title'.toUpperCase(),
-              style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w700,
-                  color: ColorPicker.whiteColor),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: ColorPicker.whiteColor),
             ))),
         centerTitle: true,
       ),
@@ -103,10 +98,7 @@ class StoryEditView extends GetView<StoryEditController> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          Get.bottomSheet(const DiscardStoeyView(),
-                              isDismissible: true,
-                              backgroundColor: Colors.transparent,
-                              elevation: 2);
+                          Get.bottomSheet(const DiscardStoeyView(), isDismissible: true, backgroundColor: Colors.transparent, elevation: 2);
                         },
                         child: Image.asset(
                           ImagePickerImage.deleteImage,
@@ -118,7 +110,7 @@ class StoryEditView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(const SetBackGroundColorView());
+                    Get.to(const SetBackGroundColorView(), binding: StoryEditBinding());
                   },
                   child: Container(
                       width: 60.w,
@@ -135,10 +127,7 @@ class StoryEditView extends GetView<StoryEditController> {
                       child: Center(
                           child: Text(
                         'Post'.toUpperCase(),
-                        style: TextStyle(
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.w700,
-                            color: ColorPicker.blackColor),
+                        style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w700, color: ColorPicker.blackColor),
                       ))),
                 ),
               ],
@@ -172,16 +161,12 @@ class StoryEditView extends GetView<StoryEditController> {
                     itemBuilder: (context, index) {
                       return Container(
                           margin: const EdgeInsets.symmetric(horizontal: 4),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 8.h, horizontal: 12.w),
+                          padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
                           decoration: BoxDecoration(
-                            color: controller.isSelected .value== false
-                                ? ColorPicker.boderBlackColor
-                                : ColorPicker.blackColor,
+                            color: controller.isSelected.value == false ? ColorPicker.boderBlackColor : ColorPicker.blackColor,
                             borderRadius: BorderRadius.circular(30.0),
                             border: Border.all(
-                              color:
-                                  ColorPicker.boderBlackColor.withOpacity(0.3),
+                              color: ColorPicker.boderBlackColor.withOpacity(0.3),
                               width: 2.0,
                             ),
                           ),
@@ -191,9 +176,7 @@ class StoryEditView extends GetView<StoryEditController> {
                             style: TextStyle(
                               fontSize: 13.sp,
                               fontWeight: FontWeight.w700,
-                              color: controller.isSelected.value == true
-                                  ? ColorPicker.boderBlackColor
-                                  : ColorPicker.blackColor,
+                              color: controller.isSelected.value == true ? ColorPicker.boderBlackColor : ColorPicker.blackColor,
                             ),
                           )));
                     },
@@ -224,10 +207,7 @@ class StoryEditView extends GetView<StoryEditController> {
                         child: Center(
                           child: Text(
                             controller.colorBox[index]["name"],
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 7.sp,
-                                color: controller.colorBox[index]["textColor"]),
+                            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 7.sp, color: controller.colorBox[index]["textColor"]),
                           ),
                         ),
                       );
@@ -236,13 +216,14 @@ class StoryEditView extends GetView<StoryEditController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(const SearchKeyWordView());
+                    Get.to(const SearchKeyWordView(), binding: StoryEditBinding());
                   },
                   child: CircleAvatar(
                     backgroundColor: ColorPicker.whiteColor,
                     radius: 24.r,
                     child: Icon(
-                      Icons.add,size: 12.sp,
+                      Icons.add,
+                      size: 12.sp,
                       color: ColorPicker.sky2Color,
                     ),
                   ),
