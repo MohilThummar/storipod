@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/common/app_button.dart';
 import 'package:storipod_app/app/constant/colour.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
+import 'package:storipod_app/view/login/login_binding.dart';
 import 'package:storipod_app/view/login/login_view.dart';
 import 'package:storipod_app/view/recommendation/recommendation_binding.dart';
 import 'package:storipod_app/view/recommendation/recommendation_view.dart';
@@ -16,31 +18,36 @@ class IntroductionScreen extends GetView<IntroductionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/intro.png"), fit: BoxFit.fill),
-              ),
+      appBar: AppBar(backgroundColor: Colors.white, elevation: 0, actions: [
+        textButton(
+            context: context,
+            onPressed: () {
+              log("--------");
+              Get.to(LoginView(), binding: LoginBinding());
+              print("sasf");
+            },
+            title: "  Skip"),
+      ]),
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/intro.png"), fit: BoxFit.fill),
             ),
-            textButton(
-                onPressed: () {
-                  Get.offAll(const LoginView());
-                },
-                title: "  Skip"),
-            PageView.builder(
-              controller: controller.pageController,
-              onPageChanged: (int page) {
-                controller.activePage.value = page;
-              },
-              itemCount: controller.pages.length,
-              itemBuilder: (BuildContext context, int index) {
-                return controller.pages[index % controller.pages.length];
-              },
-            ),
-            Positioned(
+          ),
+          PageView.builder(
+            controller: controller.pageController,
+            onPageChanged: (int page) {
+              controller.activePage.value = page;
+            },
+            itemCount: controller.pages.length,
+            itemBuilder: (BuildContext context, int index) {
+              return controller.pages[index % controller.pages.length];
+            },
+          ),
+          Obx(() {
+            return Positioned(
               bottom: 220.h,
               left: 0,
               right: 0,
@@ -67,32 +74,33 @@ class IntroductionScreen extends GetView<IntroductionController> {
                   ),
                 ),
               ),
-            ),
-            Positioned(
-              bottom: 8.h,
-              left: 0,
-              right: 0,
-              height: 0.22.sh,
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: buttonWidget(
-                    bgColor: ColorPicker.appButtonColor,
-                    redius: 12.r,
-                    textColor: ColorPicker.whiteColor,
-                    onPressed: () {
-                      Get.offAll(const RecommendationView(),binding: RecommendationBinding());
-                    },
-                    width: double.infinity,
-                    fontSize: 16.sp,
-                    height: 48.h,
-                    title: "Get started",
-                  ),
+            );
+          }),
+          Positioned(
+            bottom: 8.h,
+            left: 0,
+            right: 0,
+            height: 0.22.sh,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                child: buttonWidget(
+                  bgColor: ColorPicker.appButtonColor,
+                  redius: 12.r,
+                  textColor: ColorPicker.whiteColor,
+                  onPressed: () {
+                    Get.offAll(const RecommendationView(),
+                        binding: RecommendationBinding());
+                  },
+                  width: double.infinity,
+                  fontSize: 16.sp,
+                  height: 48.h,
+                  title: "Get started",
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -93,17 +93,14 @@ Widget textButton({
   Function()? onPressed,
   String? title,
 }) {
-  return GestureDetector(
-    onTap: onPressed,
-    child: Padding(
-      padding: EdgeInsets.only(right: 20.w, top: 15.h),
-      child: Align(
-        alignment: Alignment.topRight,
-        child: Text(
-          title!,
-          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
-        ),
-      ),
+  return TextButton(
+    onPressed: onPressed,
+    child: Text(
+      title!,
+      style: TextStyle(
+          fontSize: 16.sp,
+          color: ColorPicker.blackColor,
+          fontWeight: FontWeight.w600),
     ),
   );
 }

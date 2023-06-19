@@ -9,7 +9,6 @@ import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
-import 'package:storipod_app/view/navbarScreen/navbar_screen_view.dart';
 
 import 'secureaccount_controller.dart';
 

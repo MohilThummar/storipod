@@ -9,7 +9,6 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/constant/string.dart';
-import 'package:storipod_app/app/routes/app_pages.dart';
 import 'package:storipod_app/view/createAccount/create_account_view.dart';
 import 'package:storipod_app/view/forgotaccount/forgotaccount_binding.dart';
 import 'package:storipod_app/view/forgotaccount/forgotaccount_view.dart';

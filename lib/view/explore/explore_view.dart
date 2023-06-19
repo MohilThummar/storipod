@@ -7,7 +7,6 @@ import 'package:storipod_app/main.dart';
 import 'package:storipod_app/view/explore/SeeAllProfile/see_all_profile_binding.dart';
 import 'package:storipod_app/view/homeStory/home_story_binding.dart';
 import 'package:storipod_app/view/homeStory/searchstory/searchstory_binding.dart';
-import 'package:storipod_app/view/homeStory/storyEdit/watchStory.dart';
 import '../../../view/homeStory/searchstory/searchstory_view.dart';
 import '../../../view/homeStory/viewStory.dart';
 import '../../app/constant/string.dart';
@@ -224,11 +223,11 @@ class ExploreView extends GetView<ExploreController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // showProfile.value=true;
+                      showProfile.value=true;
                       // // print("===object");
-                      // // showNavBar.value=true;
-                      // correntIndex.value=1;
-                      Get.to(SeeAllProfileView(),binding: SeeAllProfileBinding());
+                      // showNavBar.value=true;
+                      correntIndex.value=1;
+                      // Get.to(const SeeAllProfileView(),binding: SeeAllProfileBinding());
                     },
                     child: Text(
                       AppStrings.seeAll,

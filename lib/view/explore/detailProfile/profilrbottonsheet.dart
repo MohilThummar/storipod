@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
-import 'package:storipod_app/view/Analytics/analytics_view.dart';
 import 'package:storipod_app/view/reactions/profileSetting/Notification/notification.screen.dart';
 import 'package:storipod_app/view/reactions/profileSetting/profile_setting_view.dart';
 
