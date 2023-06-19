@@ -6,7 +6,6 @@ import 'package:storipod_app/app/routes/app_pages.dart';
 
 import '../../../../app/constant/colour.dart';
 import '../../../../app/constant/image.dart';
-import '../changePassword/change_password.screen.dart';
 import 'wallet.controller.dart';
 
 class WalletScreen extends GetView<WalletController> {

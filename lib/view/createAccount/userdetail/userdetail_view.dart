@@ -10,7 +10,6 @@ import '../../../app/common/appbar.dart';
 import '../../../app/constant/colour.dart';
 import '../../../app/constant/image.dart';
 import '../../../app/constant/string.dart';
-import '../secureaccount/secureaccount_view.dart';
 import 'userdetail_controller.dart';
 
 class UserdetailView extends GetView<UserdetailController> {

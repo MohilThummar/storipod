@@ -8,13 +8,13 @@ import 'package:storipod_app/app/common/commanpaddingcolumn.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/string.dart';
 import 'package:storipod_app/app/routes/app_pages.dart';
-import 'package:storipod_app/view/createAccount/userdetail/userdetail_view.dart';
-import 'package:storipod_app/view/login/login_view.dart';
+import 'package:storipod_app/main.dart';
 import 'username_controller.dart';
 import 'country.dart';
 
 class UsernameView extends GetView<UsernameController> {
   const UsernameView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final countries = data.map((e) => Country.fromMap(e)).toList();
@@ -144,7 +144,8 @@ class UsernameView extends GetView<UsernameController> {
                 height: 48.h,
                 width: double.infinity,
                 onPressed: () {
-                  Get.toNamed(Routes.userDetail);
+                  isLogin.value=true;
+                  // Get.toNamed(Routes.userDetail);
                 },
                 textColor: ColorPicker.whiteColor,
                 title: AppStrings.proceed,

@@ -353,21 +353,16 @@ class CustomBottomSheet extends StatelessWidget {
                       elevation: 2, isDismissible: true, enableDrag: true);
                 },
               ),
-              GestureDetector(
-                child: Padding(
-                  padding:
-                      EdgeInsets.only(left: 20.0.w, top: 16.h, bottom: 30.h),
-                  child: Text(
-                    AppStrings.save,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14.sp,
-                        color: ColorPicker.subBlackColor),
-                  ),
+              Padding(
+                padding:
+                    EdgeInsets.only(left: 20.0.w, top: 16.h, bottom: 30.h),
+                child: Text(
+                  AppStrings.save,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.sp,
+                      color: ColorPicker.subBlackColor),
                 ),
-                onTap: () {
-                  Get.back();
-                },
               ),
               SizedBox(
                 height: 25.h,

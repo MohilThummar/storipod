@@ -56,45 +56,43 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
             ),
 
             ///Account===================
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.greWhiteColor,
-              ),
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
-              child: Row(
-                children: [
-                  Image.asset(
-                    ImagePickerImage.person,
-                    height: 15.h,
-                    width: 15.w,
-                    fit: BoxFit.fill,
-                  ),
-                  SizedBox(
-                    width: 12.w,
-                  ),
-                  Text(
-                    "Accounts",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.account);
-
-                    },
-                    child: Icon(
+            GestureDetector(onTap: () {
+              Get.toNamed(Routes.account);
+            },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: ColorPicker.greWhiteColor,
+                ),
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      ImagePickerImage.person,
+                      height: 15.h,
+                      width: 15.w,
+                      fit: BoxFit.fill,
+                    ),
+                    SizedBox(
+                      width: 12.w,
+                    ),
+                    Text(
+                      "Accounts",
+                      style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w700,
+                          color: ColorPicker.blackColor),
+                    ),
+                    const Spacer(),
+                    Icon(
                       Icons.arrow_forward_ios_outlined,
                       color: ColorPicker.offGreyLightColor,
                       size: 16.sp,
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -102,39 +100,43 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
             ),
 
             /// Security==================
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.greWhiteColor,
-              ),
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
-              child: Row(
-                children: [
-                  Image.asset(
-                    ImagePickerImage.security,
-                    height: 15.h,
-                    width: 15.w,
-                    fit: BoxFit.fill,
-                  ),
-                  SizedBox(
-                    width: 12.w,
-                  ),
-                  Text(
-                    "Security",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
-                  ),
-                  const Spacer(),
-                  Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    color: ColorPicker.offGreyLightColor,
-                    size: 16.sp,
-                  )
-                ],
+            GestureDetector(onTap: () {
+              // Get.toNamed(Routes.account);
+            },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: ColorPicker.greWhiteColor,
+                ),
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      ImagePickerImage.security,
+                      height: 15.h,
+                      width: 15.w,
+                      fit: BoxFit.fill,
+                    ),
+                    SizedBox(
+                      width: 12.w,
+                    ),
+                    Text(
+                      "Security",
+                      style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w700,
+                          color: ColorPicker.blackColor),
+                    ),
+                    const Spacer(),
+                    Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: ColorPicker.offGreyLightColor,
+                      size: 16.sp,
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -142,45 +144,47 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
             ),
 
             /// Wallet==========================
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.greWhiteColor,
-              ),
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
-              child: Row(
-                children: [
-                  Image.asset(
-                    ImagePickerImage.wellet,
-                    height: 15.h,
-                    width: 15.w,
-                    fit: BoxFit.fill,
-                  ),
-                  SizedBox(
-                    width: 12.w,
-                  ),
-                  Text(
-                    "Wallet",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.wallet);
-                      // Get.to(const WalletScreen());
-                    },
-                    child: Icon(
-                      Icons.arrow_forward_ios_outlined,
-                      color: ColorPicker.offGreyLightColor,
-                      size: 16.sp,
+            GestureDetector(
+              onTap: () {
+                Get.toNamed(Routes.wallet);
+                // Get.to(const WalletScreen());
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: ColorPicker.greWhiteColor,
+                ),
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      ImagePickerImage.wellet,
+                      height: 15.h,
+                      width: 15.w,
+                      fit: BoxFit.fill,
                     ),
-                  )
-                ],
+                    SizedBox(
+                      width: 12.w,
+                    ),
+                    Text(
+                      "Wallet",
+                      style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w700,
+                          color: ColorPicker.blackColor),
+                    ),
+                    const Spacer(),
+
+                      Icon(
+                        Icons.arrow_forward_ios_outlined,
+                        color: ColorPicker.offGreyLightColor,
+                        size: 16.sp,
+                      ),
+
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -188,44 +192,44 @@ class ProfileSettingView extends GetView<ProfileSettingController> {
             ),
 
             /// About===================
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.r),
-                color: ColorPicker.greWhiteColor,
-              ),
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
-              child: Row(
-                children: [
-                  Image.asset(
-                    ImagePickerImage.about,
-                    height: 15.h,
-                    width: 15.w,
-                    fit: BoxFit.fill,
-                  ),
-                  SizedBox(
-                    width: 12.w,
-                  ),
-                  Text(
-                    "About",
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                        color: ColorPicker.blackColor),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Get.to(Routes.account);
-                    },
-                    child: Icon(
+            GestureDetector(
+              onTap: () {
+                Get.to(Routes.account);
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: ColorPicker.greWhiteColor,
+                ),
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      ImagePickerImage.about,
+                      height: 15.h,
+                      width: 15.w,
+                      fit: BoxFit.fill,
+                    ),
+                    SizedBox(
+                      width: 12.w,
+                    ),
+                    Text(
+                      "About",
+                      style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w700,
+                          color: ColorPicker.blackColor),
+                    ),
+                    const Spacer(),
+                    Icon(
                       Icons.arrow_forward_ios_outlined,
                       color: ColorPicker.offGreyLightColor,
                       size: 16.sp,
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(

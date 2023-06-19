@@ -83,7 +83,12 @@ class ForgotaccountView extends GetView<ForgotaccountController> {
                             // mainAxisSize: MainAxisSize.max,
 
                             children: [
-                              Image.asset(ImagePickerImage.doneImage),
+                              Image.asset(
+                                ImagePickerImage.doneImage,
+                                height: 48.h,
+                                width: 48.w,
+                                fit: BoxFit.fill,
+                              ),
                               SizedBox(
                                 height: 16.h,
                               ),

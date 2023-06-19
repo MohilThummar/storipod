@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:storipod_app/app/constant/colour.dart';
 import 'package:storipod_app/app/constant/image.dart';
-import 'package:storipod_app/view/explore/SeeAllProfile/see_all_profile_binding.dart';
-import 'package:storipod_app/view/explore/detail_profile_binding.dart';
-import 'package:storipod_app/view/explore/explore_binding.dart';
+
 import '../../../../app/constant/string.dart';
 import '../../main.dart';
 import '../explore/SeeAllProfile/see_all_profile_view.dart';

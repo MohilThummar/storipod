@@ -28,7 +28,7 @@ class CustomImagePicker {
                 ),
                 onPressed: () async {
                   final pickedFile =
-                      await ImagePicker().getImage(source: ImageSource.gallery);
+                      await ImagePicker().pickImage(source: ImageSource.gallery);
 
 
                   image = pickedFile == null ? null : File(pickedFile.path);
