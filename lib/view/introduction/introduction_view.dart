@@ -17,7 +17,9 @@ class IntroductionScreen extends GetView<IntroductionController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+
+      Scaffold(
       body: SafeArea(
         child: Stack(
           children: [
